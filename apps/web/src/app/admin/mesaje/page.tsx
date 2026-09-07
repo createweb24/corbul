@@ -2,7 +2,7 @@
 
 /**
  * `/admin/mesaje` — corespondența redacției (SPEC §9):
- * mesajele din formularul de contact și ponturile trimise anonim.
+ * mesajele din formularul de contact și cele trimise anonim.
  * Marcarea ca tratat și ștergerea trec doar prin Modal + Toast.
  */
 
@@ -30,7 +30,7 @@ type HandledFilter = "" | "true" | "false";
 
 const KIND_LABEL: Record<MessageKind, string> = {
   contact: "Contact",
-  tip: "Pont",
+  tip: "Mesaj securizat",
 };
 
 export default function MesajePage() {
@@ -120,8 +120,8 @@ export default function MesajePage() {
     <>
       <PageHead
         kicker="Corespondență"
-        title="Mesaje și ponturi"
-        description="Sesizările primite prin formularul de contact și ponturile trimise anonim de cititori. Tratează-le și marchează-le."
+        title="Mesaje primite"
+        description="Sesizările primite prin formularul de contact și mesajele securizate trimise anonim de cititori. Tratează-le și marchează-le."
         action={
           unread > 0 ? (
             <Badge tone="warn">{unread} netratate</Badge>
@@ -148,7 +148,7 @@ export default function MesajePage() {
           >
             <option value="">Toate tipurile</option>
             <option value="contact">Contact</option>
-            <option value="tip">Ponturi</option>
+            <option value="tip">Mesaje securizate</option>
           </Select>
         </div>
         <div className="w-44">
@@ -179,7 +179,7 @@ export default function MesajePage() {
             message={
               kind || handled || debounced
                 ? "Niciun mesaj nu corespunde filtrelor alese."
-                : "Formularul de contact și caseta de ponturi sunt încă tăcute."
+                : "Formularul de contact și caseta securizată sunt încă tăcute."
             }
           />
         ) : (
@@ -215,7 +215,7 @@ export default function MesajePage() {
                     <p className="mt-2 font-display text-base leading-snug text-ivory">
                       {message.subject?.trim() ||
                         (message.kind === "tip"
-                          ? "Pont fără subiect"
+                          ? "Mesaj fără subiect"
                           : "Mesaj fără subiect")}
                     </p>
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { AdSlot, splitAfterParagraph } from "@/components/ads";
 import {
   Avatar,
   Badge,
@@ -105,6 +106,15 @@ export default async function ArticlePage({
     t("article.paywall.benefit2"),
     t("article.paywall.benefit3"),
   ];
+
+  // Reclama din corpul textului (ADS-SPEC §3): după al treilea paragraf.
+  // La un articol trunchiat de paywall nu tăiem în text — fragmentul e scurt
+  // și se termină oricum într-o estompare — ci o punem înaintea casetei.
+  // Dacă textul are mai puțin de trei paragrafe de nivel superior, `split`
+  // este null și reclama coboară sub conținut, fără să atingă marcajul.
+  const contentSplit = article.contentIsTruncated
+    ? null
+    : splitAfterParagraph(article.content, 3);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -281,7 +291,15 @@ export default async function ArticlePage({
                 article.contentIsTruncated ? "pb-28" : ""
               }`}
             >
-              <Prose html={article.content} size="lg" dropcap />
+              {contentSplit ? (
+                <>
+                  <Prose html={contentSplit.head} size="lg" dropcap />
+                  <AdSlot zoneKey="article_inline" className="py-10" />
+                  <Prose html={contentSplit.tail} size="lg" />
+                </>
+              ) : (
+                <Prose html={article.content} size="lg" dropcap />
+              )}
 
               {article.contentIsTruncated ? (
                 <div
@@ -290,6 +308,12 @@ export default async function ArticlePage({
                 />
               ) : null}
             </div>
+
+            {/* text prea scurt pentru o tăietură curată, sau trunchiat de
+                paywall: reclama stă sub conținut, înaintea casetei */}
+            {contentSplit ? null : (
+              <AdSlot zoneKey="article_inline" className="pt-10" />
+            )}
 
             {/* -------------------------------------------------------- */}
             {/* Paywall                                                  */}

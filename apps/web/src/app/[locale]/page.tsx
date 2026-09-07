@@ -172,8 +172,10 @@ export default async function HomePage({
       {/* ------------------------------------------------------------ */}
       {/* Bandă publicitară — primul element sub banda rulantă          */}
       {/* ------------------------------------------------------------ */}
-      <Container className="pt-6">
-        <AdSlot zoneKey="header_leaderboard" />
+      {/* spațierea stă pe AdSlot, nu pe Container: fără reclamă componenta
+          nu randează nimic, iar containerul rămâne de înălțime zero */}
+      <Container>
+        <AdSlot zoneKey="header_leaderboard" className="pt-6" />
       </Container>
 
       {/* ------------------------------------------------------------ */}
@@ -255,45 +257,46 @@ export default async function HomePage({
       {/* ------------------------------------------------------------ */}
       {bands.map((band, index) => (
         <Fragment key={band.key}>
-        <section className="border-t border-line">
-          <Container className="py-12 lg:py-16">
-            <SectionHead
-              kicker={t(`home.bands.${band.key}.kicker`)}
-              title={t(`home.bands.${band.key}.title`)}
-              href={band.href}
-              roman={index + 1}
-              locale={locale}
-            />
-            {/* primul card e „emphasis" și ocupă două coloane: numărul de
-                coloane urmează numărul de materiale, ca banda să nu rămână
-                cu o celulă goală când o categorie are puține articole */}
-            <div
-              className={`mt-8 grid gap-8 sm:grid-cols-2 ${
-                band.items.length >= 3
-                  ? "lg:grid-cols-4"
-                  : band.items.length === 2
-                    ? "lg:grid-cols-3"
-                    : "lg:grid-cols-2"
-              }`}
-            >
-              {band.items.map((article, position) => (
-                <Card
-                  key={article.id}
-                  article={article}
-                  locale={locale}
-                  variant="standard"
-                  emphasis={position === 0}
-                />
-              ))}
-            </div>
-          </Container>
-        </section>
+          <section className="border-t border-line">
+            <Container className="py-12 lg:py-16">
+              <SectionHead
+                kicker={t(`home.bands.${band.key}.kicker`)}
+                title={t(`home.bands.${band.key}.title`)}
+                href={band.href}
+                roman={index + 1}
+                locale={locale}
+              />
+              {/* primul card e „emphasis" și ocupă două coloane: numărul de
+                  coloane urmează numărul de materiale, ca banda să nu rămână
+                  cu o celulă goală când o categorie are puține articole */}
+              <div
+                className={`mt-8 grid gap-8 sm:grid-cols-2 ${
+                  band.items.length >= 3
+                    ? "lg:grid-cols-4"
+                    : band.items.length === 2
+                      ? "lg:grid-cols-3"
+                      : "lg:grid-cols-2"
+                }`}
+              >
+                {band.items.map((article, position) => (
+                  <Card
+                    key={article.id}
+                    article={article}
+                    locale={locale}
+                    variant="standard"
+                    emphasis={position === 0}
+                  />
+                ))}
+              </div>
+            </Container>
+          </section>
 
-        {index === infeedAfter ? (
-          <Container className="border-t border-line py-10">
-            <AdSlot zoneKey="home_infeed" />
-          </Container>
-        ) : null}
+          {/* În flux: reclama stă între banda „Economie" și următoarea */}
+          {index === infeedAfter ? (
+            <Container>
+              <AdSlot zoneKey="home_infeed" className="py-10" />
+            </Container>
+          ) : null}
         </Fragment>
       ))}
 

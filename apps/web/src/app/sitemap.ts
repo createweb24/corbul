@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { qs, safeFetch } from "@/lib/api";
 import type { AuthorDto, CategoryDto } from "@/lib/types";
+import { AD_SERVICE_SLUGS } from "./[locale]/publicitate/_data/services";
 import { CATEGORY_SEEDS } from "./_lib/categories";
 import { getAllArticles } from "./_lib/data";
 import { absoluteUrl, languageAlternates, LOCALES } from "./_lib/site";
@@ -24,6 +25,9 @@ const STATIC_PATHS: { path: string; priority: number; freq: Frequency }[] = [
   { path: "/instrumente", priority: 0.6, freq: "monthly" },
   { path: "/confidentialitate", priority: 0.3, freq: "yearly" },
   { path: "/termeni", priority: 0.3, freq: "yearly" },
+  // secțiunea comercială (ADS-SPEC §7)
+  { path: "/publicitate", priority: 0.7, freq: "monthly" },
+  { path: "/publicitate/media-kit", priority: 0.5, freq: "monthly" },
   // `/cautare` lipsește intenționat: pagina este `noindex`
 ];
 
@@ -64,6 +68,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       : CATEGORY_SEEDS.map((seed) => seed.slug);
   for (const slug of categorySlugs) {
     out.push(...entry(`/${slug}`, now, 0.7, "daily"));
+  }
+
+  // paginile celor șase servicii comerciale (ADS-SPEC §7)
+  for (const slug of AD_SERVICE_SLUGS) {
+    out.push(...entry(`/publicitate/${slug}`, now, 0.6, "monthly"));
   }
 
   for (const author of authors ?? []) {

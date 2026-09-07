@@ -173,7 +173,11 @@
       "title": "Cele mai citite"
     },
     "empty": "Nu există încă materiale în această secțiune.",
-    "more": "Mai multe materiale"
+    "more": "Mai multe materiale",
+    "contactCta": {
+      "body": "Primim mesaje și documente prin canal securizat. Nu îți cerem identitatea.",
+      "cta": "Trimite un mesaj"
+    }
   },
   "article": {
     "breadcrumbHome": "Acasă",
@@ -296,8 +300,8 @@
     },
     "contactCta": {
       "title": "Ai un document?",
-      "body": "Primim ponturi și documente prin canal securizat. Nu îți cerem identitatea.",
-      "cta": "Trimite un pont"
+      "body": "Primim mesaje și documente prin canal securizat. Nu îți cerem identitatea.",
+      "cta": "Trimite un mesaj"
     }
   },
   "team": {
@@ -347,22 +351,22 @@
     },
     "tip": {
       "kicker": "Canal securizat",
-      "title": "Trimite un pont securizat",
+      "title": "Trimite un mesaj securizat",
       "text": "Ai un document, un contract sau o informație care ar trebui să fie publică? Scrie-ne fără să îți dai numele. Nu înregistrăm adresa IP și nu îți cerem identitatea.",
       "placeholder": "Descrie pe scurt ce ai și de unde. Poți lăsa un mod de contact, dacă vrei.",
       "contactOptional": "Contact (opțional)",
-      "send": "Trimite pontul",
+      "send": "Trimite mesajul",
       "sending": "Se trimite…",
-      "success": "Pontul a ajuns la redacție. Îl verificăm și revenim doar dacă ne-ai lăsat un contact.",
-      "error": "Pontul nu a putut fi trimis. Încearcă din nou.",
+      "success": "Mesajul a ajuns la redacție. Îl verificăm și revenim doar dacă ne-ai lăsat un contact.",
+      "error": "Mesajul nu a putut fi trimis. Încearcă din nou.",
       "note": "Pentru documente voluminoase sau situații sensibile, scrie-ne mai întâi un rând și îți indicăm un canal criptat."
     },
     "press": {
       "title": "Presă și republicare",
       "text": "Materialele pot fi citate cu link activ spre sursă. Republicarea integrală se face doar cu acordul redacției."
     },
-    "metaTitle": "Contact și ponturi securizate",
-    "metaDescription": "Scrie redacției Corbul.md: date de contact, formular și canal securizat pentru ponturi și documente. Confidențialitatea surselor este garantată."
+    "metaTitle": "Contact și mesaje securizate",
+    "metaDescription": "Scrie redacției Corbul.md: date de contact, formular și canal securizat pentru mesaje și documente. Confidențialitatea surselor este garantată."
   },
   "subscribe": {
     "title": "Corbul Premium",
@@ -400,7 +404,8 @@
     },
     "demo": {
       "title": "Mod demonstrativ",
-      "text": "Plățile nu sunt încă activate pe această instalare. Formularul funcționează, dar nu se face nicio tranzacție reală."
+      "text": "Plățile nu sunt încă activate pe această instalare. Formularul funcționează, dar nu se face nicio tranzacție reală.",
+      "continue": "Continuă (mod demonstrativ)"
     },
     "faq": {
       "title": "Întrebări frecvente",
@@ -833,7 +838,7 @@
       "subscribe": "Abonament",
       "partners": "Parteneriate",
       "search": "Căutare",
-      "tip": "Trimite un pont",
+      "tip": "Trimite un mesaj",
       "corrections": "Politica de corecții",
       "privacy": "Confidențialitate",
       "terms": "Termeni de utilizare",
@@ -896,7 +901,7 @@
     "privacy": {
       "title": "Politica de confidențialitate",
       "description": "Cum colectează, folosește și protejează Corbul.md datele cititorilor, abonaților și surselor, conform Legii nr. 133/2011 privind protecția datelor cu caracter personal.",
-      "intro": "Corbul.md tratează datele personale cu aceeași rigoare cu care verifică o sursă. Această politică explică ce date colectăm, de ce, cât timp le păstrăm și ce drepturi ai. Se aplică site-ului, buletinului informativ, abonamentului Premium și canalului de ponturi.",
+      "intro": "Corbul.md tratează datele personale cu aceeași rigoare cu care verifică o sursă. Această politică explică ce date colectăm, de ce, cât timp le păstrăm și ce drepturi ai. Se aplică site-ului, buletinului informativ, abonamentului Premium și canalului securizat de mesaje.",
       "sections": {
         "operator": {
           "title": "Operatorul de date",
@@ -907,8 +912,8 @@
           "body": "Colectăm doar datele pe care ni le transmiți direct: adresa de e-mail la abonarea la buletin sau la Corbul Premium, numele, e-mailul și mesajul din formularul de contact, datele de plată procesate de Stripe. Nu cumpărăm și nu vindem baze de date și nu construim profiluri publicitare."
         },
         "tips": {
-          "title": "Ponturi și protecția surselor",
-          "body": "Formularul de ponturi nu cere niciun câmp de identificare. Nu înregistrăm adresa IP a expeditorului și nu asociem pontul cu alte date. Identitatea surselor care ni se dezvăluie este protejată de redacție conform Legii cu privire la libertatea de exprimare și nu este divulgată terților decât cu acordul explicit al sursei."
+          "title": "Mesaje securizate și protecția surselor",
+          "body": "Formularul securizat nu cere niciun câmp de identificare. Nu înregistrăm adresa IP a expeditorului și nu asociem mesajul cu alte date. Identitatea surselor care ni se dezvăluie este protejată de redacție conform Legii cu privire la libertatea de exprimare și nu este divulgată terților decât cu acordul explicit al sursei."
         },
         "purpose": {
           "title": "Scopul și temeiul prelucrării",
@@ -959,5 +964,9 @@
         }
       }
     }
+  },
+  "ads": {
+    "label": "PUBLICITATE",
+    "linkLabel": "Deschide reclama într-o filă nouă"
   }
 }

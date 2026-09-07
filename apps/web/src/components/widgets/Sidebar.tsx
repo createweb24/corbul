@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { AdSlot } from "@/components/ads";
 import type { ArticleListDto, PricingSettings, WidgetsDto } from "@/lib/types";
 import { MostRead } from "./MostRead";
 import { NewsletterBox } from "./NewsletterBox";
@@ -45,6 +46,9 @@ export function Sidebar({
 
         <SupportBox pricing={pricing ?? null} />
 
+        {/* ADS-SPEC §3 — `sidebar_top` înaintea widgetului de vreme */}
+        <AdSlot zoneKey="sidebar_top" />
+
         {widgets?.weather ? (
           <WeatherWidget weather={widgets.weather} stale={widgets.stale} />
         ) : null}
@@ -59,6 +63,13 @@ export function Sidebar({
         ) : null}
 
         <NewsletterBox variant="sidebar" />
+
+        {/* ADS-SPEC §3 cere `sidebar_bottom` „după «Cele mai citite»", pornind
+            de la o coloană în care acel bloc era ultimul. Aici „Cele mai
+            citite" este PRIMUL widget, iar sub el zgârie-norul de 300×600 ar
+            ajunge deasupra zonei numite `sidebar_top`. Păstrăm deci sensul —
+            jos de tot — nu litera. */}
+        <AdSlot zoneKey="sidebar_bottom" />
       </div>
     </aside>
   );

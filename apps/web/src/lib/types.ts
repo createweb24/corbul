@@ -204,6 +204,10 @@ export interface CheckoutResponseDto {
   url: string | null;
   demo?: boolean;
   message?: string;
+  /** identificatorul sesiunii demonstrative */
+  sessionId?: string;
+  /** în mod demonstrativ, calea care duce fluxul până la capăt */
+  successUrl?: string;
 }
 
 export interface PaymentSessionDto {

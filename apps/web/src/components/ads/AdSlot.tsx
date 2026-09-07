@@ -134,12 +134,19 @@ export function AdSlot({ zoneKey, className, label = true }: AdSlotProps) {
   if (state.status === "empty") return null;
 
   const size = sizeOf(ad?.zone, zoneKey);
-  // eticheta se traduce local până când cheile `ads.*` ajung în messages/*.json
+  // Textele au rezervă locală: cheile `ads.*` se adaugă în messages/*.json de
+  // proprietarul lor, iar până atunci eticheta trebuie să arate corect, nu să
+  // afișeze numele cheii.
   const labelText = t.has("label")
     ? t("label")
     : locale === "ru"
       ? "РЕКЛАМА"
       : "PUBLICITATE";
+  const linkLabel = t.has("linkLabel")
+    ? t("linkLabel")
+    : locale === "ru"
+      ? "Открыть рекламу в новой вкладке"
+      : "Deschide reclama într-o filă nouă";
 
   return (
     <div
@@ -153,12 +160,19 @@ export function AdSlot({ zoneKey, className, label = true }: AdSlotProps) {
           </p>
         ) : null}
 
+        {/* Cât timp răspunsul nu a sosit, spațiul e rezervat dar INVIZIBIL:
+            majoritatea zonelor n-au banner vândut, iar o casetă cu chenar
+            care apare și dispare la fiecare încărcare arată ca un defect.
+            Chenarul se aprinde abia când există efectiv o reclamă. */}
         <div
-          className="relative w-full overflow-hidden border border-line bg-coal"
+          className={cn(
+            "relative w-full overflow-hidden transition-colors duration-200",
+            ad ? "border border-line bg-coal" : "border border-transparent",
+          )}
           style={{ aspectRatio: `${size.width} / ${size.height}` }}
         >
           {ad?.provider === "DIRECT" ? (
-            <DirectAd ad={ad} size={size} fallbackAlt={labelText} />
+            <DirectAd ad={ad} size={size} fallbackAlt={linkLabel} />
           ) : null}
 
           {ad?.provider === "ADSENSE" ? (

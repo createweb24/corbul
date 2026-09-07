@@ -100,6 +100,15 @@ const NAV: NavItem[] = [
     ),
   },
   {
+    href: "/admin/publicitate",
+    label: "Publicitate",
+    icon: (
+      <svg viewBox="0 0 20 20" className="size-4" aria-hidden="true">
+        <path {...stroke} d="M2.5 6.5h9v7h-9zM14 5.5v9M17 3.5v13" />
+      </svg>
+    ),
+  },
+  {
     href: "/admin/mesaje",
     label: "Mesaje",
     icon: (

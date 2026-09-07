@@ -208,6 +208,122 @@ const CATEGORIES: SeedCategory[] = [
 ];
 
 /* ------------------------------------------------------------------ */
+/* Publicitate — cele 5 zone (ADS-SPEC §1)                             */
+/* `priceMonthly` este în bani (MDL × 100).                            */
+/* ------------------------------------------------------------------ */
+
+interface SeedZone {
+  key: string;
+  name: string;
+  width: number;
+  height: number;
+  priceMonthly: number;
+  order: number;
+}
+
+const AD_ZONES: SeedZone[] = [
+  {
+    key: 'header_leaderboard',
+    name: 'Bandă sub antet',
+    width: 970,
+    height: 90,
+    priceMonthly: 5_000_000,
+    order: 1,
+  },
+  {
+    key: 'home_infeed',
+    name: 'În flux, prima pagină',
+    width: 970,
+    height: 250,
+    priceMonthly: 4_500_000,
+    order: 2,
+  },
+  {
+    key: 'article_inline',
+    name: 'În corpul articolului',
+    width: 728,
+    height: 90,
+    priceMonthly: 3_500_000,
+    order: 3,
+  },
+  {
+    key: 'sidebar_top',
+    name: 'Coloană laterală, sus',
+    width: 300,
+    height: 250,
+    priceMonthly: 3_000_000,
+    order: 4,
+  },
+  {
+    key: 'sidebar_bottom',
+    name: 'Coloană laterală, jos',
+    width: 300,
+    height: 600,
+    priceMonthly: 4_000_000,
+    order: 5,
+  },
+];
+
+const DEMO_ADVERTISER = {
+  companyName: 'Casa de avocatură Lupu & Asociații',
+  contactName: 'Victor Lupu',
+  email: 'contact@lupu-asociatii.md',
+  phone: '+373 22 27 84 10',
+  website: 'https://lupu-asociatii.md',
+};
+
+const DEMO_CAMPAIGN_NAME = 'Prezență permanentă 2026';
+const DEMO_TARGET_URL = 'https://lupu-asociatii.md';
+
+/**
+ * Marcaj propriu pentru bannerele demonstrative: fără imagini externe, ca
+ * site-ul să arate complet și fără rețea. Culorile vin din tokenii temei
+ * (`--color-*`), cu valori de rezervă pentru contextele fără CSS încărcat.
+ */
+function demoBannerHtml(orientation: 'portrait' | 'landscape'): string {
+  const row = orientation === 'landscape';
+  return [
+    `<div style="display:flex;flex-direction:${row ? 'row' : 'column'};align-items:center;justify-content:center;`,
+    'gap:' + (row ? '18px' : '8px') + ';width:100%;height:100%;box-sizing:border-box;padding:12px 18px;text-align:center;',
+    'background:var(--color-coal-2,#191d28);border:1px solid var(--color-gold,#d4af37);border-radius:var(--radius,4px);">',
+    '<span style="font-family:var(--font-sans,system-ui,sans-serif);font-size:10px;letter-spacing:0.2em;',
+    'text-transform:uppercase;color:var(--color-mist,#6b7288);white-space:nowrap;">Spațiu publicitar</span>',
+    '<span style="font-family:var(--font-display,Georgia,serif);font-size:' + (row ? '20px' : '19px') + ';',
+    'line-height:1.2;font-weight:700;color:var(--color-gold,#d4af37);">Casa de avocatură Lupu &amp; Asociații</span>',
+    '<span style="font-family:var(--font-sans,system-ui,sans-serif);font-size:11px;',
+    'color:var(--color-fog,#9aa2b5);">Drept comercial, fiscal și societar · Chișinău</span>',
+    '</div>',
+  ].join('');
+}
+
+interface SeedBanner {
+  name: string;
+  zoneKey: string;
+  html: string;
+  alt: string;
+  weight: number;
+}
+
+const DEMO_BANNERS: SeedBanner[] = [
+  {
+    name: 'Lupu & Asociații — coloană laterală',
+    zoneKey: 'sidebar_top',
+    html: demoBannerHtml('portrait'),
+    alt: 'Casa de avocatură Lupu & Asociații — drept comercial și fiscal',
+    weight: 1,
+  },
+  {
+    name: 'Lupu & Asociații — bandă sub antet',
+    zoneKey: 'header_leaderboard',
+    html: demoBannerHtml('landscape'),
+    alt: 'Casa de avocatură Lupu & Asociații — drept comercial și fiscal',
+    weight: 1,
+  },
+];
+
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+/* ------------------------------------------------------------------ */
 
 const CONTENT_PATH = join(__dirname, '../../../.content/seed-content.json');
 
@@ -403,6 +519,104 @@ async function main(): Promise<void> {
     },
   });
   console.log('✓ administrator admin@corbul.md');
+
+  /* --- publicitate: zone ----------------------------------------- */
+  const zoneIds = new Map<string, number>();
+  for (const zone of AD_ZONES) {
+    const row = await prisma.adZone.upsert({
+      where: { key: zone.key },
+      update: {
+        name: zone.name,
+        width: zone.width,
+        height: zone.height,
+        priceMonthly: zone.priceMonthly,
+        order: zone.order,
+        active: true,
+      },
+      create: zone,
+    });
+    zoneIds.set(row.key, row.id);
+  }
+  console.log(`✓ ${zoneIds.size} zone de publicitate`);
+
+  // `adsenseClientId` se completează din admin: seed-ul doar creează cheia,
+  // fără să suprascrie un identificator deja introdus.
+  await prisma.setting.upsert({
+    where: { key: 'ads' },
+    update: {},
+    create: { key: 'ads', value: { adsenseClientId: null } },
+  });
+
+  /* --- publicitate: client, campanie și bannere demonstrative ----- */
+  const advertiser = await prisma.advertiser.upsert({
+    where: { email: DEMO_ADVERTISER.email },
+    update: {
+      companyName: DEMO_ADVERTISER.companyName,
+      contactName: DEMO_ADVERTISER.contactName,
+      phone: DEMO_ADVERTISER.phone,
+      website: DEMO_ADVERTISER.website,
+    },
+    create: DEMO_ADVERTISER,
+  });
+
+  // `AdCampaign` n-are cheie naturală unică: identificăm campania demo prin
+  // (nume, client) ca seed-ul să rămână idempotent.
+  const now = Date.now();
+  const campaignData = {
+    status: 'ACTIVE',
+    startsAt: new Date(now - 7 * DAY_MS),
+    endsAt: new Date(now + 60 * DAY_MS),
+  };
+  const existingCampaign = await prisma.adCampaign.findFirst({
+    where: { name: DEMO_CAMPAIGN_NAME, advertiserId: advertiser.id },
+    select: { id: true },
+  });
+  const campaign = existingCampaign
+    ? await prisma.adCampaign.update({
+        where: { id: existingCampaign.id },
+        data: campaignData,
+      })
+    : await prisma.adCampaign.create({
+        data: {
+          name: DEMO_CAMPAIGN_NAME,
+          advertiserId: advertiser.id,
+          ...campaignData,
+        },
+      });
+
+  for (const banner of DEMO_BANNERS) {
+    const zoneId = zoneIds.get(banner.zoneKey);
+    if (zoneId === undefined) {
+      throw new Error(
+        `Bannerul „${banner.name}" trimite la o zonă necunoscută: ${banner.zoneKey}`,
+      );
+    }
+
+    const data = {
+      zoneId,
+      imageUrl: null,
+      html: banner.html,
+      targetUrl: DEMO_TARGET_URL,
+      alt: banner.alt,
+      weight: banner.weight,
+      active: true,
+    };
+
+    const existingBanner = await prisma.adBanner.findFirst({
+      where: { name: banner.name, campaignId: campaign.id },
+      select: { id: true },
+    });
+    if (existingBanner) {
+      await prisma.adBanner.update({ where: { id: existingBanner.id }, data });
+    } else {
+      await prisma.adBanner.create({
+        data: { name: banner.name, campaignId: campaign.id, ...data },
+      });
+    }
+  }
+  console.log(
+    `✓ client demo „${advertiser.companyName}", 1 campanie ACTIVE, ${DEMO_BANNERS.length} bannere`,
+  );
 }
 
 main()

@@ -30,10 +30,13 @@ function Notice({
   tone,
   title,
   text,
+  action,
 }: {
   tone: "gold" | "error";
   title: string;
   text: string;
+  /** buton opțional — în modul demonstrativ duce fluxul până la capăt */
+  action?: { href: string; label: string };
 }) {
   const isGold = tone === "gold";
   return (
@@ -45,6 +48,14 @@ function Notice({
     >
       <p className={`kicker ${isGold ? "" : "text-ember"}`}>{title}</p>
       <p className="mt-2 font-serif text-sm leading-relaxed text-fog">{text}</p>
+      {action ? (
+        <a
+          href={action.href}
+          className="press mt-4 inline-flex items-center border border-gold-solid bg-gold-solid px-5 py-2.5 font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-on-gold transition-colors hover:border-gold-solid-2 hover:bg-gold-solid-2"
+        >
+          {action.label}
+        </a>
+      ) : null}
     </div>
   );
 }
@@ -70,6 +81,8 @@ export function PremiumPlans({
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
+  // în modul demonstrativ serverul întoarce calea care activează accesul
+  const [demoUrl, setDemoUrl] = useState<string | null>(null);
   const [emailError, setEmailError] = useState<string | undefined>();
 
   const saving = Math.max(0, monthly * 12 - annual);
@@ -115,6 +128,7 @@ export function PremiumPlans({
         return;
       }
       setMessage(response.message ?? t("subscribe.demo.text"));
+      setDemoUrl(response.successUrl ?? null);
       setStatus("demo");
     } catch {
       setStatus("error");
@@ -201,6 +215,11 @@ export function PremiumPlans({
           tone="gold"
           title={t("subscribe.demo.title")}
           text={message || t("subscribe.demo.text")}
+          action={
+            demoUrl
+              ? { href: demoUrl, label: t("subscribe.demo.continue") }
+              : undefined
+          }
         />
       ) : null}
       {status === "error" ? (
@@ -244,6 +263,8 @@ export function PartnerForm({
   const [months, setMonths] = useState("3");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
+  // în modul demonstrativ serverul întoarce calea care activează accesul
+  const [demoUrl, setDemoUrl] = useState<string | null>(null);
   const [errors, setErrors] = useState<{ company?: string; email?: string }>({});
 
   const monthCount = Math.min(36, Math.max(1, Number.parseInt(months, 10) || 1));
@@ -279,6 +300,7 @@ export function PartnerForm({
         return;
       }
       setMessage(response.message ?? t("subscribe.demo.text"));
+      setDemoUrl(response.successUrl ?? null);
       setStatus("demo");
     } catch {
       setStatus("error");
@@ -425,6 +447,11 @@ export function PartnerForm({
           tone="gold"
           title={t("subscribe.demo.title")}
           text={message || t("subscribe.demo.text")}
+          action={
+            demoUrl
+              ? { href: demoUrl, label: t("subscribe.demo.continue") }
+              : undefined
+          }
         />
       ) : null}
       {status === "error" ? (

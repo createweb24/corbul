@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { AdSlot } from "@/components/ads";
 import { Card, Container, EmptyState, Pagination } from "@/components/ui";
 import { Sidebar } from "@/components/widgets";
 import { Link } from "@/i18n/navigation";
@@ -160,6 +161,9 @@ export default async function CategoryPage({
             {t("category.count", { count: total })}
           </p>
         </header>
+
+        {/* Bandă publicitară sub titlul rubricii (ADS-SPEC §3) */}
+        <AdSlot zoneKey="header_leaderboard" className="pt-8" />
 
         {list.items.length === 0 ? (
           <div className="py-20">

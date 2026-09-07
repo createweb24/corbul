@@ -251,3 +251,67 @@ Orice asemănare cu fapte reale este întâmplătoare.
 ---
 
 © 2026 Corbul.md
+
+---
+
+## Punere online (Vercel + API separat)
+
+Depozitul este un **monorepo**: `apps/web` (Next.js) și `apps/api` (NestJS).
+Vercel rulează doar aplicația web; API-ul NestJS are nevoie de un proces care
+stă pornit și de PostgreSQL, deci se găzduiește separat.
+
+### 1. Frontend pe Vercel
+
+În Vercel → **Project Settings → General**:
+
+| Setare | Valoare |
+|---|---|
+| Root Directory | `apps/web` |
+| Include files outside root directory | **activat** (monorepo cu npm workspaces) |
+| Framework Preset | Next.js (detectat automat) |
+
+**Dacă Root Directory rămâne rădăcina depozitului, Vercel nu găsește
+aplicația Next și fiecare adresă întoarce 404-ul platformei**
+(`404: NOT_FOUND`, cu un `ID: fra1::…`). Acesta este cel mai frecvent motiv
+al unui deployment „gol".
+
+Variabile de mediu (Settings → Environment Variables):
+
+```
+API_URL=https://<api-ul-tău>/api          # citit pe server
+NEXT_PUBLIC_API_URL=https://<api-ul-tău>/api   # citit în browser (admin, reclame)
+NEXT_PUBLIC_SITE_URL=https://<domeniul-tău>    # canonical, hreflang, sitemap, OG
+```
+
+### 2. API + bază de date
+
+API-ul nu poate rula ca funcție serverless fără adaptare, așa că merge pe o
+platformă cu proces persistent — Railway, Render sau Fly.io — plus o bază
+PostgreSQL gestionată (Neon, Supabase, Railway Postgres).
+
+```
+Root Directory : apps/api
+Build          : npm install && npx prisma generate && npm run build
+Start          : npx prisma migrate deploy && node dist/main.js
+```
+
+Variabile:
+
+```
+DATABASE_URL=postgresql://...
+JWT_SECRET=<șir lung, aleator>          # obligatoriu în producție
+WEB_URL=https://<domeniul-tău>          # CORS + redirecturi Stripe
+PORT=4100
+TRUST_PROXY=1                            # în spatele unui proxy/CDN
+STRIPE_SECRET_KEY=                       # gol ⇒ mod demonstrativ
+STRIPE_WEBHOOK_SECRET=
+```
+
+După prima pornire, populează conținutul: `npm run db:seed`.
+
+### 3. Fără API
+
+Site-ul se randează și dacă API-ul lipsește — toate citirile de date sunt
+tolerante la eroare — dar paginile vor arăta stări goale, iar panoul de
+administrare nu se poate autentifica. Pentru o demonstrație completă,
+pornește întâi API-ul.

@@ -20,6 +20,9 @@ import { PaymentsModule } from './payments/payments.module';
 import { SubscribersModule } from './subscribers/subscribers.module';
 import { InboxModule } from './inbox/inbox.module';
 
+// publicitate (ADS-SPEC §2)
+import { AdsModule } from './ads/ads.module';
+
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
@@ -35,6 +38,7 @@ import { InboxModule } from './inbox/inbox.module';
     PaymentsModule,
     SubscribersModule,
     InboxModule,
+    AdsModule,
   ],
 })
 export class AppModule {}
