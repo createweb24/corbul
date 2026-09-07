@@ -209,7 +209,8 @@ const CATEGORIES: SeedCategory[] = [
 
 /* ------------------------------------------------------------------ */
 /* Publicitate — cele 5 zone (ADS-SPEC §1)                             */
-/* `priceMonthly` este în bani (MDL × 100).                            */
+/* `priceMonthly` este în bani (MDL × 100). Tarifele sunt aliniate la grila
+   de servicii exprimată în euro (≈350/300/220/160/200 € pe lună).                            */
 /* ------------------------------------------------------------------ */
 
 interface SeedZone {
@@ -227,7 +228,7 @@ const AD_ZONES: SeedZone[] = [
     name: 'Bandă sub antet',
     width: 970,
     height: 90,
-    priceMonthly: 5_000_000,
+    priceMonthly: 700_000,
     order: 1,
   },
   {
@@ -235,7 +236,7 @@ const AD_ZONES: SeedZone[] = [
     name: 'În flux, prima pagină',
     width: 970,
     height: 250,
-    priceMonthly: 4_500_000,
+    priceMonthly: 600_000,
     order: 2,
   },
   {
@@ -243,7 +244,7 @@ const AD_ZONES: SeedZone[] = [
     name: 'În corpul articolului',
     width: 728,
     height: 90,
-    priceMonthly: 3_500_000,
+    priceMonthly: 440_000,
     order: 3,
   },
   {
@@ -251,7 +252,7 @@ const AD_ZONES: SeedZone[] = [
     name: 'Coloană laterală, sus',
     width: 300,
     height: 250,
-    priceMonthly: 3_000_000,
+    priceMonthly: 320_000,
     order: 4,
   },
   {
@@ -259,7 +260,7 @@ const AD_ZONES: SeedZone[] = [
     name: 'Coloană laterală, jos',
     width: 300,
     height: 600,
-    priceMonthly: 4_000_000,
+    priceMonthly: 400_000,
     order: 5,
   },
 ];

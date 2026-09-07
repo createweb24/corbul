@@ -967,6 +967,91 @@
   },
   "ads": {
     "label": "PUBLICITATE",
-    "linkLabel": "Deschide reclama într-o filă nouă"
+    "linkLabel": "Deschide reclama într-o filă nouă",
+    "kicker": "Publicitate",
+    "allServices": "Toate serviciile",
+    "mediaKitLink": "Media kit",
+    "priceFrom": "De la",
+    "priceMonthly": "pe lună",
+    "vatNote": "Prețurile sunt în lei, fără TVA. Facturăm pe persoană juridică, cu contract.",
+    "includesTitle": "Ce include",
+    "forWhomTitle": "Cui i se potrivește",
+    "turnaroundTitle": "Termen de livrare",
+    "priceTitle": "Preț",
+    "disclosureTitle": "Transparență editorială",
+    "quoteCta": "Cere ofertă",
+    "otherServicesTitle": "Celelalte servicii",
+    "backToIndex": "Toate serviciile de publicitate",
+    "contactEmailLabel": "Departamentul comercial",
+    "index": {
+      "metaTitle": "Publicitate pe Corbul.md",
+      "metaDescription": "Advertoriale, director de servicii profesionale, backlinkuri, guest posturi, promovare de evenimente și pachete de vizibilitate — cu marcaj clar și fără acoperire editorială de vânzare.",
+      "title": "Publicitate pe Corbul.md",
+      "subtitle": "Șase formate comerciale și cinci zone de banner, toate marcate ca atare. Vindem atenția unui public care citește documente până la capăt — nu vindem ceea ce scrie redacția despre dumneavoastră.",
+      "introTitle": "Cum lucrăm",
+      "intro1": "Corbul.md își acoperă costurile din abonamente, parteneriate și publicitate. Partea comercială este condusă separat de redacție: departamentul comercial nu are acces la subiectele în lucru, iar redacția nu are acces la lista de clienți. Este singurul aranjament în care ambele părți își pot face treaba fără să mintă pe nimeni.",
+      "intro2": "Practic, asta înseamnă trei reguli fixe: orice material plătit poartă marcajul „Conținut comercial”, orice legătură plătită poartă atributul rel=\"sponsored\", iar niciun contract nu conține vreo clauză despre acoperirea jurnalistică a clientului. Le găsiți repetate pe fiecare pagină de mai jos, pentru că sunt partea cea mai importantă a ofertei.",
+      "independenceTitle": "Ce nu se vinde",
+      "independenceBody": "Nu vindem poziții în secțiunile editoriale, nu vindem tăcerea redacției și nu retragem, contra cost, materiale publicate. Nu acceptăm publicitate politică sau electorală, nici reclamă pentru operatori de jocuri de noroc fără licență, scheme de investiții cu randament garantat sau servicii de ștergere a informațiilor de interes public. Ne rezervăm dreptul de a refuza orice creație sau text, fără să motivăm.",
+      "servicesTitle": "Servicii comerciale",
+      "servicesIntro": "Fiecare serviciu are pagina lui, cu ce include, cui i se potrivește, termenul de livrare și mențiunea de transparență care i se aplică.",
+      "zonesTitle": "Zone de banner",
+      "zonesIntro": "Cinci poziții fixe, aceleași pentru toți clienții, cu dimensiunile și prețul lunar afișate public. Fiecare afișare este contorizată de noi și raportată lunar.",
+      "zonesFooter": "Bannerele sunt marcate „Publicitate” deasupra creației și nu pot imita elementele de interfață ale site-ului sau formatul unei știri.",
+      "whyTitle": "De ce Corbul.md",
+      "whyIntro": "Nu avem cel mai mare trafic din Republica Moldova și nu îl căutăm. Avem un public îngust și scump: oameni care iau decizii cu bani și cu documente în față.",
+      "why": {
+        "legal": {
+          "title": "Juridic",
+          "body": "Avocați, juriști de corporație, executori și consilieri care urmăresc dosarele de corupție, achizițiile publice și practica instanțelor. Vin pentru documentele atașate materialelor, nu pentru titluri."
+        },
+        "finance": {
+          "title": "Finanțe",
+          "body": "Bancheri, analiști, contabili-șefi și consultanți fiscali. Rubrica „Economie și Finanțe” și instrumentele de calcul de pe site îi aduc înapoi săptămânal."
+        },
+        "industry": {
+          "title": "Industrie și energie",
+          "body": "Directori din energie, transport, agroindustrie și construcții, plus responsabilii lor de achiziții. Urmăresc licitațiile, tarifele și infrastructura — subiecte pe care le acoperim constant."
+        },
+        "consulting": {
+          "title": "Consultanță",
+          "body": "Firme de audit, consultanți în management, agenții de comunicare și organizații de dezvoltare. Citesc pentru context și îl folosesc mai departe în rapoartele lor."
+        }
+      },
+      "contactTitle": "Discutăm o campanie",
+      "contactBody": "Scrieți-ne ce vreți să obțineți și în ce interval. Răspundem cu o propunere concretă, cu formate, poziții și preț, în două zile lucrătoare. Dacă ceea ce ne cereți nu se poate face fără să încălcăm regulile de mai sus, v-o spunem direct."
+    },
+    "zones": {
+      "zone": "Zonă",
+      "size": "Dimensiune",
+      "price": "Preț lunar",
+      "onRequest": "La cerere"
+    },
+    "mediaKit": {
+      "metaTitle": "Media kit — publicitate pe Corbul.md",
+      "metaDescription": "Cifrele de audiență ale Corbul.md, profilul cititorului, formatele publicitare disponibile, tarifele și condițiile editoriale.",
+      "title": "Media kit",
+      "subtitle": "Cifrele, publicul, formatele și condițiile — pe o singură pagină, actualizată trimestrial.",
+      "audienceTitle": "Audiență",
+      "audienceNote": "Date proprii de trafic, media ultimelor trei luni calendaristice. Măsurăm cu propria contorizare de afișări; nu folosim estimări de panel și nu rotunjim în sus.",
+      "readerTitle": "Profilul cititorului",
+      "readerNote": "Structura publicului, din chestionarul anual al abonaților și din datele agregate de sesiune. Procentele sunt rotunjite la unitate.",
+      "formatsTitle": "Formate disponibile",
+      "formatsNote": "Creațiile se livrează în JPG, PNG sau HTML, sub 150 KB, cu o variantă pentru fiecare temă a site-ului (luminoasă și întunecată) sau cu fundal propriu.",
+      "ratesTitle": "Tarife",
+      "ratesNote": "Prețuri de pornire, în lei, fără TVA. Pachetele pe mai multe luni și combinațiile de formate se tarifează individual.",
+      "termsTitle": "Condiții editoriale",
+      "termsIntro": "Aceleași pentru toți clienții, indiferent de sumă. Fac parte din contract.",
+      "terms": {
+        "t1": "Orice material plătit poartă marcajul „Conținut comercial” deasupra titlului și la finalul textului.",
+        "t2": "Toate legăturile din conținut plătit poartă atributul rel=\"sponsored\". Nu vindem legături în articolele redacției.",
+        "t3": "Contractele comerciale nu conțin clauze despre acoperirea jurnalistică a clientului și nu pot fi invocate pentru a obține, opri sau amâna un material.",
+        "t4": "Materialele comerciale sunt excluse din fluxul editorial, din Google News și din rubricile de investigație.",
+        "t5": "Nu acceptăm publicitate politică sau electorală, jocuri de noroc fără licență, scheme de investiții cu randament garantat și servicii de ștergere a informațiilor publice.",
+        "t6": "Redacția poate scrie despre orice client comercial, în orice moment, fără preaviz și fără drept de vizionare a textului înainte de publicare."
+      },
+      "contactTitle": "Contact comercial",
+      "contactBody": "Pentru oferte, disponibilitatea zonelor și machetele de creație, scrieți departamentului comercial. Redacția are o adresă separată, iar mesajele trimise acolo nu ajung la noi."
+    }
   }
 }
