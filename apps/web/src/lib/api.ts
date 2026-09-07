@@ -10,9 +10,19 @@
  * `null` — paginile publice trebuie să se randeze și cu API-ul oprit.
  */
 
-const SERVER_BASE = process.env.API_URL ?? "http://localhost:4100/api";
-const CLIENT_BASE =
-  process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:4100/api";
+/**
+ * Adresa API-ului când nu e configurată nicio variabilă de mediu: în
+ * dezvoltare, procesul local; în producție, serviciul public — ca un
+ * deployment fără variabile setate să afișeze totuși conținutul, nu pagini
+ * goale. `API_URL` / `NEXT_PUBLIC_API_URL` au întâietate oriunde sunt puse.
+ */
+const FALLBACK_BASE =
+  process.env.NODE_ENV === "production"
+    ? "https://corbul-api.vercel.app/api"
+    : "http://localhost:4100/api";
+
+const SERVER_BASE = process.env.API_URL ?? FALLBACK_BASE;
+const CLIENT_BASE = process.env.NEXT_PUBLIC_API_URL ?? FALLBACK_BASE;
 
 export function apiBaseUrl(): string {
   return typeof window === "undefined" ? SERVER_BASE : CLIENT_BASE;
@@ -157,7 +167,13 @@ export async function safeFetch<T>(
 ): Promise<T | null> {
   try {
     return await apiFetch<T>(path, opts);
-  } catch {
+  } catch (error) {
+    // Pagina se randează oricum, dar o cădere tăcută e imposibil de depanat în
+    // producție: pe server lăsăm o urmă cu adresa cerută și motivul.
+    if (typeof window === "undefined") {
+      const reason = error instanceof Error ? error.message : String(error);
+      console.warn(`[api] ${apiBaseUrl()}${path} → ${reason}`);
+    }
     return null;
   }
 }

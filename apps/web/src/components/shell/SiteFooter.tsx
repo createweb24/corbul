@@ -247,6 +247,18 @@ export function SiteFooter({ categories, contact, tagline }: SiteFooterProps) {
           <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-[12px] text-mist">
               {t("rights", { year: String(new Date().getFullYear()) })}
+              {" · "}
+              <span className="whitespace-nowrap">
+                powered by{" "}
+                <a
+                  href="https://landings.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-mist transition-colors duration-200 hover:text-gold"
+                >
+                  landings.md
+                </a>
+              </span>
             </p>
             <div className="flex items-center gap-4 text-[12px]">
               {/* Adminul este un root layout paralel: navigarea trebuie să fie o

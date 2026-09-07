@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "npm install --include=dev",
+  "buildCommand": "npx prisma generate && npx nest build",
+  "outputDirectory": "public",
+  "functions": {
+    "api/[[...path]].js": {
+      "maxDuration": 30
+    }
+  }
+}
