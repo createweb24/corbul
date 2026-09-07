@@ -3,7 +3,7 @@
 # Împărțirea rolurilor:
 #   • Vercel  → aplicația web (Next.js), vezi vercel.json
 #   • Render  → acest serviciu, API-ul NestJS (are nevoie de proces pornit)
-#   • Neon    → baza PostgreSQL (plan gratuit permanent)
+#   • Neon    → baza PostgreSQL (plan gratuit permanent), schema `corbul`
 #
 # Folosire: render.com → New → Blueprint → alege depozitul.
 # Render creează serviciul, îi cere cele două adrese de bază de date, apoi
@@ -22,15 +22,22 @@ services:
     branch: main
     # instalarea pornește din rădăcina monorepo-ului (npm workspaces),
     # apoi se generează clientul Prisma, se compilează și se populează baza
-    buildCommand: npm install && npm run build --workspace=api && npm run db:seed
+    # „--include=dev" e obligatoriu: NODE_ENV=production (mai jos) face ca
+    # `npm install` să sară peste devDependencies, iar build-ul are nevoie de
+    # prisma, ts-node și @nestjs/cli, care stau exact acolo.
+    buildCommand: npm install --include=dev && npm run build --workspace=api && npm run db:seed
     startCommand: npm run start --workspace=api
     healthCheckPath: /api/health
     envVars:
-      # Neon → Connection string CU „-pooler" în gazdă (conexiuni scurte, multe)
+      # Neon → connection string FĂRĂ „-pooler" în gazdă, cu „&schema=corbul" la
+      # coadă. Schema separată ține Corbul departe de celelalte site-uri din
+      # același proiect Neon, iar pooler-ul refuză parametrul `search_path`,
+      # deci schema separată cere conexiune directă. Un proces care stă pornit
+      # oricum nu are nevoie de pooler.
+      #   postgresql://USER:PAROLA@ep-….aws.neon.tech/neondb?sslmode=require&schema=corbul
       - key: DATABASE_URL
         sync: false
-      # Neon → aceeași adresă, dar FĂRĂ „-pooler": migrările au nevoie de o
-      # sesiune adevărată, pe care pooler-ul nu o oferă
+      # aceeași valoare: migrările cer o sesiune adevărată
       - key: DIRECT_URL
         sync: false
       - key: JWT_SECRET

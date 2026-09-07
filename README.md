@@ -285,15 +285,35 @@ NEXT_PUBLIC_SITE_URL=https://<domeniul-tău>    # canonical, hreflang, sitemap, 
 
 ### 2. Baza de date — Neon
 
-<https://neon.tech> → proiect nou, regiunea Frankfurt. Din tabul **Connect**
-copiază două adrese:
+<https://neon.tech> → proiect, regiunea Frankfurt. Planul gratuit nu expiră.
 
-| Variabilă | Care adresă |
-|---|---|
-| `DATABASE_URL` | cea **cu `-pooler`** în gazdă — conexiuni scurte și multe, cum face un API |
-| `DIRECT_URL` | aceeași, dar **fără `-pooler`** — migrările au nevoie de o sesiune reală |
+Un proiect Neon poate fi împărțit cu alte site-uri. Tabelele Corbul au nume
+generice (`Article`, `Author`, `Category`, `Setting`, `Partner`, `Message`) care
+se ciocnesc cu ale altor aplicații din schema `public`, așa că **Corbul stă
+într-o schemă proprie, `corbul`**. Celelalte scheme rămân neatinse.
 
-Ambele se termină cu `?sslmode=require`. Planul gratuit Neon nu expiră.
+Din butonul **Connect** al proiectului copiază adresa și adaugă `&schema=corbul`:
+
+```
+DATABASE_URL=postgresql://USER:PAROLA@ep-….eu-central-1.aws.neon.tech/neondb?sslmode=require&schema=corbul
+DIRECT_URL=aceeași valoare
+```
+
+Amândouă folosesc gazda **fără `-pooler`**. Pooler-ul Neon refuză parametrul de
+pornire `search_path` (`unsupported startup parameter in options: search_path`),
+deci cu o schemă separată conexiunea prin pooler nu merge. Nu se pierde nimic:
+pooler-ul e util funcțiilor serverless, iar API-ul de pe Render e un proces care
+stă pornit și își ține singur pool-ul de conexiuni.
+
+Prima încărcare a datelor se poate face și de pe calculatorul local:
+
+```
+DATABASE_URL='…&schema=corbul' DIRECT_URL='…&schema=corbul' npm run db:deploy
+DATABASE_URL='…&schema=corbul' DIRECT_URL='…&schema=corbul' npm run db:seed
+```
+
+Seed-ul este format numai din `upsert`: reluat, nu șterge și nu dublează nimic,
+și nu atinge alte scheme din bază.
 
 ### 3. API-ul — Render
 
@@ -305,7 +325,7 @@ opțional, cheile Stripe), apoi rulează singur migrările și seed-ul.
 Alternativ, manual, pe orice platformă cu proces persistent:
 
 ```
-Build : npm install && npm run build --workspace=api && npm run db:seed
+Build : npm install --include=dev && npm run build --workspace=api && npm run db:seed
 Start : npm run start --workspace=api
 ```
 
