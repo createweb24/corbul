@@ -4,8 +4,11 @@
   "buildCommand": "npx prisma generate && npx nest build",
   "outputDirectory": "public",
   "functions": {
-    "api/[[...path]].js": {
+    "api/server.js": {
       "maxDuration": 30
     }
-  }
+  },
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "/api/server" }
+  ]
 }
