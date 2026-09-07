@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ads";
 import { Button, Container, RavenMark } from "@/components/ui";
 import { Link } from "@/i18n/navigation";
-import { formatMoney, truncate } from "@/lib/format";
+import { truncate } from "@/lib/format";
 import type { Locale } from "@/lib/types";
 import JsonLd from "../../../_lib/JsonLd";
 import { getSettings } from "../../../_lib/data";
@@ -13,6 +13,7 @@ import { absoluteUrl, organizationNode } from "../../../_lib/site";
 import { ADS_EMAIL, adsText } from "../_data/copy";
 import {
   AD_SERVICE_SLUGS,
+  formatServicePrice,
   getAdService,
   localizeAdService,
   localizedAdServices,
@@ -100,10 +101,22 @@ export default async function AdServicePage({
         provider: organization,
         offers: {
           "@type": "Offer",
-          price: service.priceFromMdl,
-          priceCurrency: "MDL",
+          price: service.priceFromEur,
+          priceCurrency: "EUR",
           availability: "https://schema.org/InStock",
           url,
+          // tariful lunar se declară ca atare, ca prețul să nu fie citit
+          // drept plată unică (UN/CEFACT: `MON` = lună)
+          ...(service.priceUnit === "month"
+            ? {
+                priceSpecification: {
+                  "@type": "UnitPriceSpecification",
+                  price: service.priceFromEur,
+                  priceCurrency: "EUR",
+                  unitCode: "MON",
+                },
+              }
+            : {}),
         },
       },
       {
@@ -215,10 +228,13 @@ export default async function AdServicePage({
                 {s("ads.priceFrom")}
               </p>
               <p className="headline mt-1 text-4xl text-gold">
-                {formatMoney(service.priceFromMdl, locale, "MDL")}
+                {formatServicePrice(service, locale, s("ads.priceUnitMonth"))}
               </p>
               <p className="mt-4 font-sans text-xs leading-relaxed text-mist">
-                {s("ads.vatNote")}
+                {s("ads.priceNoteEur")}
+              </p>
+              <p className="mt-2 font-sans text-xs leading-relaxed text-mist">
+                {s("ads.billingNote")}
               </p>
 
               <div className="mt-8 border-t border-line pt-7">
@@ -308,7 +324,7 @@ export default async function AdServicePage({
                   <span className="mt-5 font-sans text-xs uppercase tracking-[0.16em] text-mist">
                     {s("ads.priceFrom")}{" "}
                     <span className="tracking-normal text-gold">
-                      {formatMoney(item.priceFromMdl, locale, "MDL")}
+                      {formatServicePrice(item, locale, s("ads.priceUnitMonth"))}
                     </span>
                   </span>
                 </Link>

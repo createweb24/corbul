@@ -1,7 +1,8 @@
+import { formatMoney } from "@/lib/format";
 import type { Locale } from "@/lib/types";
 
 /**
- * Cele șase servicii comerciale ale Corbul.md (ADS-SPEC §7).
+ * Cele paisprezece servicii comerciale ale Corbul.md (ADS-SPEC §7).
  *
  * Conținutul stă aici, nu în `messages/*.json`: sunt texte lungi, de vânzare,
  * pe care le editează redacția comercială, nu traducătorul de interfață.
@@ -11,7 +12,14 @@ import type { Locale } from "@/lib/types";
  * Registrul textelor este cel al unui portal de investigație: fiecare
  * serviciu spune explicit că materialul este marcat drept comercial și că
  * redacția nu vinde acoperire editorială.
+ *
+ * Prețurile sunt afișate în euro, fără TVA: este moneda în care se negociază
+ * grila. Facturarea rămâne în lei, la cursul BNM din ziua emiterii facturii —
+ * mențiunea o poartă fiecare pagină, sub preț.
  */
+
+/** Plată unică pentru o livrare sau tarif recurent, pe lună. */
+export type AdPriceUnit = "once" | "month";
 
 export interface AdService {
   slug: string;
@@ -29,8 +37,10 @@ export interface AdService {
   /** cui i se potrivește */
   forWhomRo: string;
   forWhomRu: string;
-  /** preț „de la", în lei moldovenești */
-  priceFromMdl: number;
+  /** preț „de la", în euro, fără TVA */
+  priceFromEur: number;
+  /** plată unică sau tarif lunar */
+  priceUnit: AdPriceUnit;
   /** termen de livrare */
   turnaroundRo: string;
   turnaroundRu: string;
@@ -81,7 +91,8 @@ export const AD_SERVICES: AdService[] = [
       "Companiilor care au ceva concret de explicat — un raport anual, o investiție, o schimbare de acționariat, o poziție într-un dosar public — și care preferă un text documentat unui banner.",
     forWhomRu:
       "Компаниям, которым есть что объяснить по существу — годовой отчёт, инвестиция, смена собственника, позиция по публичному делу, — и которые предпочитают аргументированный текст баннеру.",
-    priceFromMdl: 12000,
+    priceFromEur: 80,
+    priceUnit: "once",
     turnaroundRo:
       "5 zile lucrătoare de la primirea materialelor; 2 zile pentru textele livrate gata scrise.",
     turnaroundRu:
@@ -90,6 +101,165 @@ export const AD_SERVICES: AdService[] = [
       "Advertorialele sunt marcate „Conținut comercial”, stau în afara fluxului editorial și a Google News, iar legăturile lor poartă rel=\"sponsored\". Redacția nu vinde acoperire editorială: un contract de publicitate nu oprește, nu amână și nu modifică un material jurnalistic despre client.",
     disclosureRu:
       "Адверториалы помечены как «Коммерческий контент», находятся вне редакционного потока и вне Google News, а их ссылки имеют атрибут rel=\"sponsored\". Редакция не продаёт редакционное освещение: рекламный договор не останавливает, не откладывает и не меняет журналистский материал о клиенте.",
+  },
+
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "articole-platite",
+    nameRo: "Articole plătite",
+    nameRu: "Платные статьи",
+    leadRo:
+      "Textul dumneavoastră, trimis gata scris: îl verificăm pentru conformitate, îl publicăm în secțiunea comercială și îl păstrăm la o adresă permanentă.",
+    leadRu:
+      "Ваш готовый текст: мы проверяем его на соответствие правилам, публикуем в коммерческом разделе и оставляем по постоянному адресу.",
+    bodyRo: [
+      "Formatul acesta pornește de la premisa că textul există deja — l-a scris agenția dumneavoastră sau departamentul propriu de comunicare — și că vă trebuie doar o publicație serioasă care să îl găzduiască, cu marcaj corect și cu o adresă care rezistă în timp. Nu îl rescriem și nu îi schimbăm mesajul; îl citim, îl verificăm și îl punem în pagină.",
+      "Verificarea nu este o formalitate. Cerem sursă pentru fiecare cifră, tăiem afirmațiile despre concurenți nominalizați care nu pot fi susținute cu un document și refuzăm promisiunile de tipul „cel mai bun de pe piață” fără o măsurătoare în spate. Verificăm și dacă activitatea promovată are nevoie de o licență și dacă emitentul o are — pentru servicii financiare, medicale, farmaceutice și de asigurări este obligatoriu.",
+      "Materialul apare în secțiunea comercială, cu eticheta „Conținut comercial” deasupra titlului și repetată la final, la o adresă proprie și permanentă. Nu intră în fluxul editorial, nu este trimis către Google News și nu apare în partea redacțională a buletinului. Toate legăturile din corpul lui poartă atributul rel=\"sponsored\".",
+      "Ce nu se cumpără odată cu publicarea: o opinie a redacției despre dumneavoastră, o poziție în rubricile de investigație sau vreo formă de imunitate. Dacă a doua zi apare un subiect de interes public despre compania dumneavoastră, redacția îl scrie, iar articolul plătit rămâne unde este, neatins.",
+    ],
+    bodyRu: [
+      "Этот формат исходит из того, что текст у вас уже есть — его написало ваше агентство или собственный отдел коммуникаций — и нужна лишь серьёзная площадка, которая его разместит: с корректной маркировкой и по адресу, который останется рабочим спустя годы. Мы не переписываем текст и не меняем его посыл; мы его читаем, проверяем и верстаем.",
+      "Проверка — не формальность. Мы запрашиваем источник для каждой цифры, снимаем утверждения о названных конкурентах, которые нельзя подтвердить документом, и отклоняем обещания вроде «лучший на рынке» без измерения за ними. Проверяем и другое: требует ли продвигаемая деятельность лицензии и есть ли она у заказчика — для финансовых, медицинских, фармацевтических и страховых услуг это обязательно.",
+      "Материал выходит в коммерческом разделе, с пометкой «Коммерческий контент» над заголовком и повторно в конце, по собственному постоянному адресу. Он не попадает в редакционный поток, не уходит в Google News и не появляется в редакционной части рассылки. Все ссылки внутри него имеют атрибут rel=\"sponsored\".",
+      "Что не покупается вместе с публикацией: мнение редакции о вас, место в расследовательских рубриках и какая-либо неприкосновенность. Если завтра появится общественно значимая тема о вашей компании, редакция её напишет, а платная статья останется на своём месте — нетронутой.",
+    ],
+    includesRo: [
+      "Publicarea unui text de 2 500–5 000 de semne, primit gata redactat, în română sau în rusă.",
+      "Verificare de conformitate: cifre cu sursă, afirmații comerciale susținute, licențele cerute de lege.",
+      "Adresă proprie și permanentă, cu marcajul „Conținut comercial” deasupra titlului.",
+      "Până la trei imagini și două legături către site-ul dumneavoastră, cu rel=\"sponsored\".",
+      "Un tur de corecturi și corectura ortografică a variantei finale.",
+      "Raport la treizeci de zile: afișări, timp mediu de lectură și clicuri pe legături.",
+    ],
+    includesRu: [
+      "Публикация текста объёмом 2 500–5 000 знаков, полученного в готовом виде, на румынском или русском.",
+      "Проверка на соответствие: источники цифр, обоснованность коммерческих утверждений, требуемые законом лицензии.",
+      "Собственный постоянный адрес с пометкой «Коммерческий контент» над заголовком.",
+      "До трёх изображений и две ссылки на ваш сайт с атрибутом rel=\"sponsored\".",
+      "Один круг правок и корректорская вычитка финального варианта.",
+      "Отчёт через тридцать дней: показы, среднее время чтения и клики по ссылкам.",
+    ],
+    forWhomRo:
+      "Companiilor și agențiilor care au textul scris și au nevoie de o platformă cu cititori profesioniști, nu de încă un redactor — plus de certitudinea că materialul va fi marcat corect.",
+    forWhomRu:
+      "Компаниям и агентствам, у которых текст уже написан и которым нужна площадка с профессиональной аудиторией, а не ещё один редактор, — и уверенность, что материал будет правильно помечен.",
+    priceFromEur: 80,
+    priceUnit: "once",
+    turnaroundRo:
+      "2 zile lucrătoare de la primirea textului final; 3 zile dacă este nevoie de traducere în a doua limbă.",
+    turnaroundRu:
+      "2 рабочих дня с момента получения финального текста; 3 дня, если нужен перевод на второй язык.",
+    disclosureRo:
+      "Articolele plătite poartă marcajul „Conținut comercial”, stau în afara fluxului editorial și a Google News, iar legăturile lor au atributul rel=\"sponsored\". Redacția nu vinde acoperire editorială și nu retrage, contra cost, materiale deja publicate.",
+    disclosureRu:
+      "Платные статьи снабжены пометкой «Коммерческий контент», находятся вне редакционного потока и вне Google News, а их ссылки имеют атрибут rel=\"sponsored\". Редакция не продаёт редакционное освещение и не снимает за плату уже опубликованные материалы.",
+  },
+
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "publicitate-prin-articole",
+    nameRo: "Publicitate prin articole",
+    nameRu: "Реклама через статьи",
+    leadRo:
+      "Un program de materiale comerciale întins pe câteva luni, cu un calendar de subiecte convenit dinainte și un preț pe material care scade cu volumul.",
+    leadRu:
+      "Программа коммерческих материалов на несколько месяцев: заранее согласованный календарь тем и цена за материал, снижающаяся с объёмом.",
+    bodyRo: [
+      "Un singur text face treaba unui anunț, nu a unei explicații. Când aveți de lămurit un subiect cu mai multe fețe — o schimbare de reglementare care vă afectează clienții, un produs cu trei categorii de utilizatori, o metodologie pe care concurenții o simplifică abuziv — vă trebuie o serie, nu o apariție. Programul acoperă de la trei până la opt materiale, publicate la intervale convenite.",
+      "Calendarul se construiește pornind de la ceea ce caută publicul, nu de la calendarul dumneavoastră de comunicare. Fiecare material are un subiect propriu, o întrebare la care răspunde și o pagină-destinație proprie pe site-ul dumneavoastră. Materialele se leagă între ele și trimit către paginile potrivite, toate cu atributul rel=\"sponsored\".",
+      "Toate aparițiile stau în secțiunea comercială, poartă marcajul „Conținut comercial” și rămân la adrese permanente. Raportul lunar arată, pentru fiecare material, afișările, sursele de trafic și clicurile — cifre din contorizarea noastră, nu estimări. Materialele slabe se văd imediat în raport, iar calendarul se corectează din mers.",
+      "Programul nu include și nu poate include comentariul unui jurnalist din redacție, includerea în rubricile de investigație sau vreo formă de acoperire editorială. Dacă în timpul contractului redacția publică un material critic despre dumneavoastră, seria continuă neschimbată — sau se încheie, dacă așa decideți; ceea ce nu se întâmplă este ca articolul redacției să dispară.",
+    ],
+    bodyRu: [
+      "Один текст выполняет работу объявления, а не объяснения. Когда нужно разобрать тему с несколькими гранями — изменение регулирования, задевающее ваших клиентов, продукт с тремя категориями пользователей, методику, которую конкуренты упрощают до передёргивания, — нужна серия, а не разовое появление. Программа охватывает от трёх до восьми материалов, выходящих с согласованным интервалом.",
+      "Календарь строится от того, что ищет аудитория, а не от вашего календаря коммуникаций. У каждого материала своя тема, свой вопрос, на который он отвечает, и своя посадочная страница на вашем сайте. Материалы связаны между собой и ведут на нужные страницы — все ссылки с атрибутом rel=\"sponsored\".",
+      "Все публикации находятся в коммерческом разделе, снабжены пометкой «Коммерческий контент» и остаются по постоянным адресам. Ежемесячный отчёт показывает по каждому материалу показы, источники трафика и клики — цифры из нашего счётчика, а не оценки. Слабые материалы видны в отчёте сразу, и календарь корректируется на ходу.",
+      "Программа не включает и не может включать комментарий журналиста редакции, попадание в расследовательские рубрики или какое-либо редакционное освещение. Если во время действия договора редакция опубликует критический материал о вас, серия продолжится без изменений — или закончится, если вы так решите; чего не произойдёт, так это исчезновения редакционного материала.",
+    ],
+    includesRo: [
+      "Calendar de trei până la opt materiale, convenit în scris înainte de prima publicare.",
+      "Redactarea sau editarea fiecărui text, de 3 000–6 000 de semne, în limba aleasă.",
+      "Legături între materialele seriei și către paginile dumneavoastră, cu rel=\"sponsored\".",
+      "Marcaj „Conținut comercial” și adresă permanentă pentru fiecare apariție.",
+      "O apariție pe lună în blocul comercial al buletinului săptămânal.",
+      "Raport lunar pe fiecare material: afișări, surse de trafic, clicuri și evoluția în căutări.",
+    ],
+    includesRu: [
+      "Календарь из трёх–восьми материалов, письменно согласованный до первой публикации.",
+      "Написание или редактура каждого текста объёмом 3 000–6 000 знаков на выбранном языке.",
+      "Ссылки между материалами серии и на ваши страницы с атрибутом rel=\"sponsored\".",
+      "Пометка «Коммерческий контент» и постоянный адрес для каждой публикации.",
+      "Одно появление в месяц в коммерческом блоке еженедельной рассылки.",
+      "Ежемесячный отчёт по каждому материалу: показы, источники трафика, клики и динамика в поиске.",
+    ],
+    forWhomRo:
+      "Companiilor cu un mesaj care nu încape într-un singur text — bănci care lansează o linie de produse, dezvoltatori, grupuri industriale, firme de consultanță care își explică metodologia.",
+    forWhomRu:
+      "Компаниям, чьё сообщение не умещается в один текст, — банкам, запускающим линейку продуктов, девелоперам, промышленным группам, консалтинговым фирмам, объясняющим свою методику.",
+    priceFromEur: 80,
+    priceUnit: "once",
+    turnaroundRo:
+      "Primul material apare în 5 zile lucrătoare de la aprobarea calendarului; următoarele, la intervalul convenit. Prețul este pe material, la o serie de minimum trei.",
+    turnaroundRu:
+      "Первый материал выходит в течение 5 рабочих дней после утверждения календаря, последующие — с согласованным интервалом. Цена указана за материал, при серии от трёх.",
+    disclosureRo:
+      "Fiecare material din serie este marcat „Conținut comercial”, stă în afara fluxului editorial și a Google News, iar legăturile lui poartă rel=\"sponsored\". Contractul nu conține și nu poate conține clauze despre acoperirea jurnalistică a clientului.",
+    disclosureRu:
+      "Каждый материал серии помечен как «Коммерческий контент», находится вне редакционного потока и вне Google News, а его ссылки имеют атрибут rel=\"sponsored\". Договор не содержит и не может содержать положений о журналистском освещении клиента.",
+  },
+
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "branded-content",
+    nameRo: "Branded content",
+    nameRu: "Брендированный контент",
+    leadRo:
+      "Un material produs de la zero de studioul comercial: documentare, interviuri, date prelucrate, fotografie și punere în pagină proprie — marcat, ca orice conținut plătit.",
+    leadRu:
+      "Материал, созданный с нуля коммерческой студией: сбор фактуры, интервью, обработанные данные, съёмка и собственная вёрстка — с пометкой, как любой оплаченный контент.",
+    bodyRo: [
+      "Este cel mai laborios format din ofertă și singurul în care producem materialul integral. Studioul comercial — o echipă separată, care lucrează exclusiv pe comenzi plătite și nu are acces la subiectele redacției — merge la fața locului, ia interviuri, adună datele, le verifică și construiește o pagină cu punere în scenă proprie.",
+      "Standardul de exactitate este cel al redacției, chiar dacă echipa este alta. Fiecare cifră primește o sursă indicată sub grafic, fiecare citat este confirmat de persoana care l-a rostit, iar afirmațiile pe care nu le putem susține nu ajung în text — inclusiv atunci când sunt afirmațiile dumneavoastră despre dumneavoastră. Un material pe care nimeni nu-l citește până la capăt nu vă folosește la nimic, iar cititorii noștri detectează exagerarea din al doilea paragraf.",
+      "Rezultatul este o pagină cu identitate proprie: text lung, grafice construite din datele dumneavoastră, cu metodologia declarată, galerie foto sau video, citate cu nume și funcție. Are variantă pentru tema luminoasă și pentru cea întunecată a site-ului, funcționează pe telefon și poartă, ca orice material plătit, marcajul „Conținut comercial” și legături cu rel=\"sponsored\".",
+      "Aveți dreptul să citiți materialul înainte de publicare și să cereți corectarea faptelor care vă privesc — un drept pe care nu îl are niciun subiect al unui material editorial, tocmai pentru că acesta este un produs comercial, nu unul jurnalistic. Nu aveți, în schimb, dreptul de a decide ce scrie redacția despre dumneavoastră în restul site-ului, nici înainte, nici după campanie.",
+    ],
+    bodyRu: [
+      "Это самый трудоёмкий формат в прайсе и единственный, где материал производим мы целиком. Коммерческая студия — отдельная команда, работающая исключительно по оплаченным заказам и не имеющая доступа к темам редакции, — выезжает на место, берёт интервью, собирает данные, проверяет их и собирает страницу с собственной подачей.",
+      "Требования к точности — редакционные, хотя команда другая. У каждой цифры указан источник под графиком, каждая цитата подтверждена тем, кто её произнёс, а утверждения, которые мы не можем обосновать, в текст не попадают — в том числе когда это ваши утверждения о себе. Материал, который никто не дочитывает, вам ничего не даёт, а наши читатели распознают преувеличение со второго абзаца.",
+      "Результат — страница с собственным обликом: длинный текст, графики, построенные на ваших данных с указанной методикой, фотогалерея или видео, цитаты с именем и должностью. Есть вариант для светлой и для тёмной темы сайта, страница работает на телефоне и, как любой оплаченный материал, несёт пометку «Коммерческий контент» и ссылки с rel=\"sponsored\".",
+      "Вы вправе прочитать материал до публикации и потребовать исправления фактов, которые вас касаются, — права, которого нет ни у одного героя редакционного материала, именно потому, что это коммерческий продукт, а не журналистский. Но у вас нет права решать, что редакция напишет о вас в остальной части сайта — ни до кампании, ни после.",
+    ],
+    includesRo: [
+      "Documentare la fața locului: până la patru interviuri și o sesiune foto sau video.",
+      "Text de 6 000–12 000 de semne, produs de studioul comercial, în română și în rusă.",
+      "Grafice construite din datele dumneavoastră, cu metodologia declarată sub fiecare.",
+      "Punere în pagină proprie, cu variantă pentru tema luminoasă și cea întunecată.",
+      "Marcaj „Conținut comercial”, adresă permanentă și legături cu rel=\"sponsored\".",
+      "Distribuție: buletin, canale sociale marcate ca publicitate și o săptămână de rotație în zonele de banner.",
+    ],
+    includesRu: [
+      "Работа на месте: до четырёх интервью и одна фото- или видеосъёмка.",
+      "Текст объёмом 6 000–12 000 знаков, созданный коммерческой студией, на румынском и русском.",
+      "Графики на основе ваших данных с указанием методики под каждым.",
+      "Собственная вёрстка страницы с вариантом для светлой и тёмной темы.",
+      "Пометка «Коммерческий контент», постоянный адрес и ссылки с атрибутом rel=\"sponsored\".",
+      "Дистрибуция: рассылка, социальные каналы с пометкой «реклама» и неделя ротации в баннерных зонах.",
+    ],
+    forWhomRo:
+      "Companiilor mari și organizațiilor care au de povestit un proces, nu un produs — o investiție industrială, o restructurare, un raport de sustenabilitate, un studiu propriu de piață.",
+    forWhomRu:
+      "Крупным компаниям и организациям, которым есть что рассказать о процессе, а не о продукте, — промышленная инвестиция, реструктуризация, отчёт об устойчивом развитии, собственное исследование рынка.",
+    priceFromEur: 400,
+    priceUnit: "once",
+    turnaroundRo:
+      "15–20 de zile lucrătoare de la brief: documentare, două runde de corecturi și punerea în pagină.",
+    turnaroundRu:
+      "15–20 рабочих дней с момента брифа: сбор материала, два круга правок и вёрстка.",
+    disclosureRo:
+      "Branded contentul este produs de studioul comercial, nu de redacție, și este marcat „Conținut comercial” pe toată lungimea paginii. Nu apare în fluxul editorial și în Google News, iar legăturile lui poartă rel=\"sponsored\". Dreptul de a citi textul înainte de publicare se aplică exclusiv acestui material plătit, nu și materialelor redacției.",
+    disclosureRu:
+      "Брендированный контент создаёт коммерческая студия, а не редакция; пометка «Коммерческий контент» сопровождает страницу по всей длине. Он не попадает в редакционный поток и в Google News, а его ссылки имеют атрибут rel=\"sponsored\". Право прочитать текст до публикации распространяется только на этот оплаченный материал, но не на материалы редакции.",
   },
 
   /* ---------------------------------------------------------------- */
@@ -133,7 +303,8 @@ export const AD_SERVICES: AdService[] = [
       "Caselor de avocatură, birourilor de audit și contabilitate, consultanților fiscali și experților tehnici — profesiile pe care cititorii noștri le caută imediat după ce citesc un dosar.",
     forWhomRu:
       "Адвокатским бюро, аудиторским и бухгалтерским фирмам, налоговым консультантам и техническим экспертам — тем профессиям, которые наши читатели ищут сразу после прочтения досье.",
-    priceFromMdl: 4800,
+    priceFromEur: 30,
+    priceUnit: "month",
     turnaroundRo:
       "3 zile lucrătoare de la confirmarea datelor firmei; verificarea se face înainte de facturare.",
     turnaroundRu:
@@ -185,7 +356,8 @@ export const AD_SERVICES: AdService[] = [
       "Agențiilor de marketing și companiilor care își construiesc un profil de legături curat și au nevoie de un domeniu de presă real, nu de o rețea de site-uri făcute pentru motoare.",
     forWhomRu:
       "Маркетинговым агентствам и компаниям, которые выстраивают чистый ссылочный профиль и которым нужен настоящий медийный домен, а не сетка сайтов под поисковики.",
-    priceFromMdl: 3600,
+    priceFromEur: 60,
+    priceUnit: "once",
     turnaroundRo:
       "2 zile lucrătoare pentru plasarea într-un material existent; 5 zile pentru un material nou.",
     turnaroundRu:
@@ -194,6 +366,59 @@ export const AD_SERVICES: AdService[] = [
       "Toate legăturile plătite poartă rel=\"sponsored\" și stau în pagini marcate „Conținut comercial”. Nu vindem legături în articolele redacției și nu ștergem, contra cost, informații publicate — cererile de acest fel sunt refuzate din start.",
     disclosureRu:
       "Все оплаченные ссылки имеют атрибут rel=\"sponsored\" и находятся на страницах с пометкой «Коммерческий контент». Мы не продаём ссылки в редакционных статьях и не удаляем за плату опубликованную информацию — такие запросы отклоняются сразу.",
+  },
+
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "link-building-local",
+    nameRo: "Link building local",
+    nameRu: "Локальный линкбилдинг",
+    leadRo:
+      "Un pachet de legături sponsorizate în materiale cu ancorare geografică reală — pentru companiile care se măsoară în căutări locale, nu în trafic național.",
+    leadRu:
+      "Пакет спонсорских ссылок в материалах с настоящей географической привязкой — для компаний, которые измеряются локальным поиском, а не национальным трафиком.",
+    bodyRo: [
+      "Pachetul cuprinde de la trei până la cinci legături plasate în materiale comerciale distincte, fiecare ancorat într-un context regional real: raionul în care aveți sediul, orașul în care deschideți, sectorul în care lucrați. Textele-ancoră numesc serviciul și locul, pentru că așa are sens fraza pentru un cititor — nu pentru că am număra cuvinte-cheie.",
+      "Regula de bază rămâne cea de la orice legătură plătită: atribut rel=\"sponsored\", pagină-gazdă marcată „Conținut comercial”, zero excepții. Ce vă dă în plus ancorarea locală este contextul: o mențiune a firmei într-un material despre piața din regiunea dumneavoastră cântărește altfel decât o mențiune într-un text generic. Ce nu vă putem da este o poziție în rezultatele Google — nimeni nu poate, iar cine v-o promite vinde altceva decât spune.",
+      "Înainte de plasare verificăm ce primește legătura: pagina-destinație trebuie să existe, să se încarce și să conțină efectiv informația despre localitatea invocată. Verificăm și coerența datelor de contact — denumire, adresă, telefon — între materialele pe care le plasăm, pentru că inconsecvența lor este cel mai frecvent motiv pentru care o firmă nu apare unde ar trebui. Paginile-clonă, adresele fictive și schemele de schimb de legături le refuzăm.",
+      "Primiți lista completă a adreselor înainte de plată, iar legăturile rămân active cel puțin douăzeci și patru de luni. Nu lucrăm cu rețele private de bloguri, nu revindem plasări cumpărate în altă parte și nu vindem legături în articolele redacției — nici pentru un client local, nici pentru altul.",
+    ],
+    bodyRu: [
+      "Пакет включает от трёх до пяти ссылок в разных коммерческих материалах, каждый из которых привязан к реальному региональному контексту: район, где у вас офис, город, где вы открываетесь, сектор, в котором вы работаете. Анкоры называют услугу и место — потому что так фраза осмысленна для читателя, а не потому, что мы считаем ключевые слова.",
+      "Базовое правило то же, что и для любой оплаченной ссылки: атрибут rel=\"sponsored\", страница-носитель с пометкой «Коммерческий контент», без исключений. Локальная привязка добавляет контекст: упоминание компании в материале о рынке вашего региона весит иначе, чем упоминание в общем тексте. Чего мы дать не можем — позиции в выдаче Google; их не может дать никто, а тот, кто обещает, продаёт не то, о чём говорит.",
+      "До размещения мы смотрим, что именно получает ссылку: страница назначения должна существовать, открываться и действительно содержать информацию о заявленном населённом пункте. Проверяем и единообразие контактных данных — название, адрес, телефон — между размещаемыми материалами: их разнобой чаще всего и мешает компании появляться там, где следует. Страницы-клоны, вымышленные адреса и схемы обмена ссылками мы отклоняем.",
+      "Полный список адресов вы получаете до оплаты, а ссылки остаются активными не менее двадцати четырёх месяцев. Мы не работаем с сетями сателлитов, не перепродаём размещения, купленные в другом месте, и не продаём ссылки в редакционных статьях — ни локальному клиенту, ни любому другому.",
+    ],
+    includesRo: [
+      "Trei până la cinci legături sponsorizate, în materiale comerciale distincte.",
+      "Ancorare într-un context regional real: localitatea, raionul sau sectorul în care lucrați.",
+      "Verificarea coerenței datelor de contact — denumire, adresă, telefon — între plasări.",
+      "Atributul rel=\"sponsored\" pe fiecare legătură și marcaj „Conținut comercial” pe fiecare pagină-gazdă.",
+      "Lista completă a adreselor, comunicată înainte de plată.",
+      "Raport de indexare la treizeci de zile și legături active cel puțin douăzeci și patru de luni.",
+    ],
+    includesRu: [
+      "От трёх до пяти спонсорских ссылок в разных коммерческих материалах.",
+      "Привязка к реальному региональному контексту: населённый пункт, район или сектор вашей работы.",
+      "Проверка единообразия контактных данных — название, адрес, телефон — между размещениями.",
+      "Атрибут rel=\"sponsored\" на каждой ссылке и пометка «Коммерческий контент» на каждой странице-носителе.",
+      "Полный список адресов, сообщённый до оплаты.",
+      "Отчёт об индексации через тридцать дней и активность ссылок не менее двадцати четырёх месяцев.",
+    ],
+    forWhomRo:
+      "Cabinetelor de avocatură cu birou într-un singur oraș, clinicilor private, firmelor de construcții, service-urilor și rețelelor regionale care își aduc clienții dintr-o singură zonă.",
+    forWhomRu:
+      "Адвокатским бюро с офисом в одном городе, частным клиникам, строительным компаниям, сервисам и региональным сетям, которые получают клиентов из одной зоны.",
+    priceFromEur: 200,
+    priceUnit: "once",
+    turnaroundRo:
+      "7 zile lucrătoare pentru întregul pachet, dacă materialele-gazdă există deja; 12 zile dacă le scriem noi.",
+    turnaroundRu:
+      "7 рабочих дней на весь пакет, если материалы-носители уже существуют; 12 дней, если мы пишем их сами.",
+    disclosureRo:
+      "Toate legăturile din pachet poartă rel=\"sponsored\" și stau în pagini marcate „Conținut comercial”. Nu vindem legături în articolele redacției, nu promitem poziții în rezultatele căutării și nu ștergem, contra cost, informații publicate.",
+    disclosureRu:
+      "Все ссылки пакета имеют атрибут rel=\"sponsored\" и находятся на страницах с пометкой «Коммерческий контент». Мы не продаём ссылки в редакционных статьях, не обещаем позиций в поисковой выдаче и не удаляем за плату опубликованную информацию.",
   },
 
   /* ---------------------------------------------------------------- */
@@ -237,7 +462,8 @@ export const AD_SERVICES: AdService[] = [
       "Profesioniștilor care vor să fie cunoscuți pentru ceea ce știu — avocați, auditori, fiscaliști, ingineri, economiști — și companiilor care își promovează experții, nu ofertele.",
     forWhomRu:
       "Профессионалам, которые хотят быть известны тем, что они знают, — адвокатам, аудиторам, налоговикам, инженерам, экономистам — и компаниям, продвигающим своих экспертов, а не свои прайсы.",
-    priceFromMdl: 6000,
+    priceFromEur: 100,
+    priceUnit: "once",
     turnaroundRo:
       "4 zile lucrătoare de la primirea textului, incluzând un tur de corecturi.",
     turnaroundRu:
@@ -246,6 +472,59 @@ export const AD_SERVICES: AdService[] = [
       "Guest posturile stau într-o secțiune separată de opiniile redacției, poartă mențiunea „Material comercial” și numele autorului. Redacția nu își asumă tezele autorului și nu oferă, în schimbul publicării, acoperire editorială.",
     disclosureRu:
       "Гостевые публикации размещаются отдельно от редакционных мнений, снабжены пометкой «Коммерческий материал» и именем автора. Редакция не разделяет позицию автора и не предоставляет взамен редакционного освещения.",
+  },
+
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "comunicate-de-presa",
+    nameRo: "Comunicate de presă",
+    nameRu: "Пресс-релизы",
+    leadRo:
+      "Comunicatul dumneavoastră, publicat integral în secțiunea de comunicate, fără intervenție asupra conținutului și cu marcaj comercial.",
+    leadRu:
+      "Ваш пресс-релиз, опубликованный целиком в разделе пресс-релизов: без вмешательства в содержание и с коммерческой маркировкой.",
+    bodyRo: [
+      "Este cel mai simplu și cel mai ieftin format din ofertă, pentru că nu conține muncă redacțională. Comunicatul apare așa cum ni l-ați trimis, în secțiunea dedicată: nu îl rescriem, nu îi punem un titlu de-al nostru, nu îl interpretăm și nu îi adăugăm context. Ce facem este să confirmăm cine îl emite.",
+      "Confirmarea emitentului nu se negociază: cerem denumirea juridică, o persoană de contact și un canal oficial prin care putem verifica textul. Refuzăm comunicatele care conțin acuzații la adresa unor persoane nominalizate fără un document în spate, afirmații despre terți care nu pot fi verificate sau oferte pentru activități ce necesită o licență pe care emitentul nu o are. Un comunicat nu devine adevărat pentru că a fost plătit.",
+      "Marcajul este cel obișnuit: „Conținut comercial”, secțiune separată, în afara fluxului editorial și a Google News, fără prezență în partea redacțională a buletinului, cu legături rel=\"sponsored\". Un comunicat publicat aici nu este o știre a Corbul.md și nu poate fi citat ca atare — nici de dumneavoastră, nici de altcineva.",
+      "Dacă subiectul comunicatului este de interes public, redacția își va face propriul material, cu propriile surse și cu propriile întrebări. Plata pentru publicarea comunicatului nu cumpără acel material, nu îl grăbește și nu îl oprește; sunt două lucruri complet separate, iar noi le ținem separate inclusiv atunci când asta ne costă un client.",
+    ],
+    bodyRu: [
+      "Это самый простой и самый недорогой формат в прайсе, потому что он не содержит редакционной работы. Пресс-релиз выходит в том виде, в каком вы его прислали, в отдельном разделе: мы его не переписываем, не ставим свой заголовок, не интерпретируем и не добавляем контекст. Что мы делаем — подтверждаем, кто его выпускает.",
+      "Подтверждение отправителя не обсуждается: мы запрашиваем юридическое наименование, контактное лицо и официальный канал, по которому можем сверить текст. Мы отклоняем релизы с обвинениями в адрес названных лиц без документа, с непроверяемыми утверждениями о третьих сторонах и с предложениями услуг, требующих лицензии, которой у отправителя нет. Пресс-релиз не становится правдой оттого, что за него заплатили.",
+      "Маркировка стандартная: «Коммерческий контент», отдельный раздел, вне редакционного потока и вне Google News, без присутствия в редакционной части рассылки, ссылки с атрибутом rel=\"sponsored\". Опубликованный здесь релиз не является новостью Corbul.md и не может цитироваться как таковая — ни вами, ни кем-либо ещё.",
+      "Если тема релиза общественно значима, редакция сделает собственный материал — со своими источниками и своими вопросами. Оплата публикации релиза этот материал не покупает, не ускоряет и не останавливает; это две совершенно разные вещи, и мы держим их порознь даже тогда, когда это стоит нам клиента.",
+    ],
+    includesRo: [
+      "Publicarea integrală a comunicatului, până la 3 000 de semne, în forma trimisă.",
+      "Adresă permanentă în secțiunea de comunicate, cu marcajul „Conținut comercial”.",
+      "Datele de contact ale emitentului și o legătură către site, cu rel=\"sponsored\".",
+      "O imagine sau o siglă și, la cerere, un document atașat în format PDF.",
+      "Verificarea identității emitentului înainte de publicare.",
+      "Corectura ortografică, dacă o cereți — conținutul rămâne neschimbat.",
+    ],
+    includesRu: [
+      "Публикация пресс-релиза целиком, до 3 000 знаков, в присланном виде.",
+      "Постоянный адрес в разделе пресс-релизов с пометкой «Коммерческий контент».",
+      "Контактные данные отправителя и ссылка на сайт с атрибутом rel=\"sponsored\".",
+      "Изображение или логотип и, по запросу, приложенный документ в формате PDF.",
+      "Проверка личности отправителя до публикации.",
+      "Корректорская вычитка по вашей просьбе — содержание остаётся без изменений.",
+    ],
+    forWhomRo:
+      "Instituțiilor, asociațiilor patronale, companiilor și birourilor de presă care trebuie să facă publică o poziție oficială, o numire sau un rezultat financiar, la o adresă citabilă.",
+    forWhomRu:
+      "Учреждениям, объединениям работодателей, компаниям и пресс-службам, которым нужно обнародовать официальную позицию, назначение или финансовый результат по цитируемому адресу.",
+    priceFromEur: 50,
+    priceUnit: "once",
+    turnaroundRo:
+      "24 de ore lucrătoare de la primirea comunicatului și confirmarea emitentului.",
+    turnaroundRu:
+      "24 рабочих часа с момента получения релиза и подтверждения отправителя.",
+    disclosureRo:
+      "Comunicatele sunt marcate „Conținut comercial”, stau într-o secțiune separată, în afara fluxului editorial și a Google News, iar legăturile lor poartă rel=\"sponsored\". Publicarea unui comunicat nu obligă redacția la nimic și nu o împiedică să scrie critic despre emitent.",
+    disclosureRu:
+      "Пресс-релизы помечены как «Коммерческий контент», размещаются в отдельном разделе вне редакционного потока и вне Google News, а их ссылки имеют атрибут rel=\"sponsored\". Публикация релиза ни к чему редакцию не обязывает и не мешает ей писать об отправителе критически.",
   },
 
   /* ---------------------------------------------------------------- */
@@ -289,7 +568,8 @@ export const AD_SERVICES: AdService[] = [
       "Organizatorilor de conferințe profesionale, camerelor de comerț, asociațiilor patronale, instituțiilor financiare și companiilor care lansează un produs sau un raport public.",
     forWhomRu:
       "Организаторам профессиональных конференций, торговым палатам, объединениям работодателей, финансовым институтам и компаниям, представляющим продукт или публичный отчёт.",
-    priceFromMdl: 9500,
+    priceFromEur: 40,
+    priceUnit: "once",
     turnaroundRo:
       "Anunțul intră online în 3 zile lucrătoare; rezervarea zonelor de banner se face cu minimum 10 zile înainte.",
     turnaroundRu:
@@ -298,6 +578,165 @@ export const AD_SERVICES: AdService[] = [
       "Întregul pachet este publicitate și este marcat „Conținut comercial”. Contractul nu obligă redacția să acopere jurnalistic evenimentul și nu o împiedică să scrie critic despre el sau despre organizatorii lui.",
     disclosureRu:
       "Весь пакет является рекламой и помечен как «Коммерческий контент». Договор не обязывает редакцию освещать мероприятие журналистски и не мешает ей писать о нём или об организаторах критически.",
+  },
+
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "sponsorizare-newsletter",
+    nameRo: "Sponsorizare newsletter",
+    nameRu: "Спонсорство рассылки",
+    leadRo:
+      "Un bloc marcat în buletinul săptămânal al Corbul.md, un singur sponsor pe ediție, cu raport de deschideri și clicuri la 72 de ore.",
+    leadRu:
+      "Помеченный блок в еженедельной рассылке Corbul.md: один спонсор на выпуск и отчёт об открытиях и кликах через 72 часа.",
+    bodyRo: [
+      "Buletinul săptămânal adună selecția redacției pentru cei care nu au timp să treacă zilnic pe site: avocați, bancheri, contabili-șefi, funcționari și consultanți care l-au cerut ei înșiși. Sponsorizarea înseamnă un singur bloc, la un singur sponsor pe ediție, plasat după selecția editorială și despărțit vizibil de ea, cu eticheta „Publicitate” deasupra.",
+      "Blocul are un titlu de până la 60 de semne, un text de până la 400, sigla și o singură legătură. Îl scrieți dumneavoastră sau îl scriem noi, dacă ne trimiteți brieful. Ce nu se vinde: subiectul mesajului, primul ecran al buletinului, poziția în selecția editorială și expedierile separate, „dedicate” — nu trimitem abonaților mesaje care conțin doar publicitate.",
+      "Nu predăm lista de abonați nimănui, în nicio formă, și nu acceptăm în buletin pixeli de urmărire ai advertiserului sau ai agenției lui. Măsurarea este a noastră: raportăm trimiterile, deschiderile, clicurile pe legătura dumneavoastră și rata de dezabonare a ediției — inclusiv atunci când cifrele sunt sub media pe care ați sperat-o. Nu raportăm procente de industrie și nu rotunjim în sus.",
+      "Selecția editorială a fiecărei ediții se face înainte ca redacția să afle cine este sponsorul săptămânii, iar prezența unui sponsor nu adaugă, nu scoate și nu mută niciun material din buletin.",
+    ],
+    bodyRu: [
+      "Еженедельная рассылка собирает редакционную подборку для тех, у кого нет времени заходить на сайт каждый день: адвокатов, банкиров, главных бухгалтеров, чиновников и консультантов, которые сами на неё подписались. Спонсорство — это один блок, один спонсор на выпуск, размещённый после редакционной подборки и визуально отделённый от неё, с пометкой «Реклама» сверху.",
+      "В блоке — заголовок до 60 знаков, текст до 400, логотип и одна ссылка. Текст пишете вы или пишем мы, если пришлёте бриф. Что не продаётся: тема письма, первый экран рассылки, место в редакционной подборке и отдельные, «выделенные» рассылки — писем, состоящих из одной рекламы, мы подписчикам не отправляем.",
+      "Мы не передаём список подписчиков никому и ни в каком виде и не допускаем в рассылку трекинговые пиксели рекламодателя или его агентства. Измеряем мы сами: отчитываемся об отправках, открытиях, кликах по вашей ссылке и уровне отписок выпуска — в том числе когда цифры ниже ожидаемых. Отраслевых средних мы не приводим и вверх не округляем.",
+      "Редакционная подборка каждого выпуска формируется до того, как редакция узнаёт, кто спонсор недели, и присутствие спонсора не добавляет, не убирает и не передвигает в рассылке ни один материал.",
+    ],
+    includesRo: [
+      "Un bloc sponsorizat într-o ediție a buletinului săptămânal, marcat „Publicitate”.",
+      "Titlu de până la 60 de semne, text de până la 400 și siglă, în limba ediției.",
+      "O legătură urmărită către pagina dumneavoastră, cu etichetele de campanie convenite.",
+      "Redactarea blocului de către noi, dacă trimiteți doar brieful.",
+      "Exclusivitate: un singur sponsor pe ediție, fără alte blocuri comerciale.",
+      "Raport la 72 de ore: trimiteri, deschideri, clicuri și rata de dezabonare a ediției.",
+    ],
+    includesRu: [
+      "Спонсорский блок в одном выпуске еженедельной рассылки с пометкой «Реклама».",
+      "Заголовок до 60 знаков, текст до 400 и логотип на языке выпуска.",
+      "Отслеживаемая ссылка на вашу страницу с согласованными метками кампании.",
+      "Написание блока с нашей стороны, если вы присылаете только бриф.",
+      "Эксклюзивность: один спонсор на выпуск, без других коммерческих блоков.",
+      "Отчёт через 72 часа: отправки, открытия, клики и уровень отписок выпуска.",
+    ],
+    forWhomRo:
+      "Serviciilor profesionale, evenimentelor cu bilet, produselor financiare și programelor de formare care au nevoie de un singur contact bine țintit, nu de afișări în masă.",
+    forWhomRu:
+      "Профессиональным услугам, платным мероприятиям, финансовым продуктам и образовательным программам, которым нужен один точный контакт, а не массовые показы.",
+    priceFromEur: 60,
+    priceUnit: "once",
+    turnaroundRo:
+      "Rezervarea ediției se face cu 7 zile înainte; textul și sigla se trimit cu cel puțin 3 zile înainte de expediere.",
+    turnaroundRu:
+      "Выпуск бронируется за 7 дней; текст и логотип присылаются не позднее чем за 3 дня до отправки.",
+    disclosureRo:
+      "Blocul sponsorizat este marcat „Publicitate” și separat de selecția redacției, care se face independent de contractele comerciale. Nu vindem subiectul mesajului, nu facem expedieri exclusiv publicitare și nu punem la dispoziție lista de abonați.",
+    disclosureRu:
+      "Спонсорский блок помечен как «Реклама» и отделён от редакционной подборки, которая формируется независимо от коммерческих договоров. Мы не продаём тему письма, не делаем чисто рекламных рассылок и не предоставляем список подписчиков.",
+  },
+
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "publicitate-locala",
+    nameRo: "Publicitate locală",
+    nameRu: "Локальная реклама",
+    leadRo:
+      "Un pachet pentru o singură regiune: bannere afișate cititorilor din zona aleasă și un material comercial ancorat în contextul ei.",
+    leadRu:
+      "Пакет для одного региона: баннеры, показанные читателям выбранной зоны, и коммерческий материал, привязанный к её контексту.",
+    bodyRo: [
+      "Traficul național nu folosește la nimic unei firme care lucrează într-un singur raion. Pachetul limitează livrarea bannerelor la cititorii aflați în regiunea aleasă și o dublează cu un material comercial despre prezența dumneavoastră acolo — o deschidere, o investiție, un serviciu nou, o echipă locală.",
+      "Delimitarea geografică se face după adresa IP a cititorului, la nivel de regiune. Este o aproximare și o numim așa: nu cumpărăm date de localizare, nu construim profiluri de utilizator și nu instalăm urmăritoare ale terților pe site pentru asta. Raportul de final arată onest câte dintre afișări au căzut efectiv în regiunea-țintă și câte în afara ei.",
+      "Pachetul acoperă treizeci de zile de rotație în zonele alese, materialul comercial și, dacă promovați o deschidere sau un eveniment, o mențiune în agendă. Toate elementele poartă marcajele obișnuite: „Publicitate” deasupra creației, „Conținut comercial” pe material, rel=\"sponsored\" pe legături.",
+      "Un lucru care trebuie spus direct, pentru că în presa regională se practică des contrariul: nu vindem „liniște” și nu vindem protecție. Faptul că o companie este client într-o regiune nu ne împiedică să scriem despre licitațiile din acea regiune, despre administrația ei sau despre client. Refuzăm și publicitatea electorală, indiferent cum este ambalată.",
+    ],
+    bodyRu: [
+      "Национальный трафик бесполезен фирме, которая работает в одном районе. Пакет ограничивает показ баннеров читателями выбранного региона и дополняет их коммерческим материалом о вашем присутствии там — открытие, инвестиция, новая услуга, местная команда.",
+      "Географическое ограничение работает по IP-адресу читателя, на уровне региона. Это приближение, и мы так его и называем: мы не покупаем данные о местоположении, не строим профили пользователей и не ставим ради этого сторонние трекеры на сайт. Итоговый отчёт честно показывает, сколько показов пришлось на целевой регион, а сколько — за его пределы.",
+      "Пакет включает тридцать дней ротации в выбранных зонах, коммерческий материал и, если вы продвигаете открытие или мероприятие, упоминание в календаре. Все элементы несут обычные пометки: «Реклама» над креативом, «Коммерческий контент» на материале, rel=\"sponsored\" на ссылках.",
+      "Одну вещь нужно сказать прямо, потому что в региональной прессе часто практикуют обратное: мы не продаём «тишину» и не продаём защиту. То, что компания является рекламодателем в регионе, не мешает нам писать о тендерах в этом регионе, о его администрации и о самом клиенте. Предвыборную рекламу мы тоже не берём — в какую бы упаковку она ни была завёрнута.",
+    ],
+    includesRo: [
+      "Treizeci de zile de rotație în zonele de banner alese, limitate la regiunea convenită.",
+      "Un material comercial de 3 000–5 000 de semne, ancorat în contextul local.",
+      "Adaptarea creațiilor pentru tema luminoasă și cea întunecată, dacă nu le aveți.",
+      "Marcaj „Publicitate” deasupra fiecărei creații și „Conținut comercial” pe material.",
+      "Menționare în agendă, dacă promovați o deschidere sau un eveniment local.",
+      "Raport final: afișări, clicuri, CTR și ponderea afișărilor căzute în regiunea-țintă.",
+    ],
+    includesRu: [
+      "Тридцать дней ротации в выбранных баннерных зонах с ограничением по согласованному региону.",
+      "Коммерческий материал объёмом 3 000–5 000 знаков, привязанный к местному контексту.",
+      "Адаптация креативов под светлую и тёмную тему, если у вас их нет.",
+      "Пометка «Реклама» над каждым креативом и «Коммерческий контент» на материале.",
+      "Упоминание в календаре, если вы продвигаете открытие или локальное мероприятие.",
+      "Итоговый отчёт: показы, клики, CTR и доля показов, пришедшихся на целевой регион.",
+    ],
+    forWhomRo:
+      "Dezvoltatorilor imobiliari, rețelelor de retail, clinicilor private, fermelor mari și furnizorilor de servicii industriale care își aduc clienții dintr-o singură zonă.",
+    forWhomRu:
+      "Девелоперам, розничным сетям, частным клиникам, крупным фермам и поставщикам промышленных услуг, которые получают клиентов из одной зоны.",
+    priceFromEur: 150,
+    priceUnit: "once",
+    turnaroundRo:
+      "Campania pornește în 5 zile lucrătoare de la primirea creațiilor și a materialelor pentru text.",
+    turnaroundRu:
+      "Кампания стартует в течение 5 рабочих дней после получения креативов и материалов для текста.",
+    disclosureRo:
+      "Întregul pachet este publicitate și este marcat ca atare. Delimitarea geografică este aproximativă și se raportează ca atare. Nu vindem tăcerea redacției într-o regiune și nu acceptăm publicitate electorală.",
+    disclosureRu:
+      "Весь пакет является рекламой и помечен соответственно. Географическое ограничение приблизительно, и в отчёте оно указано именно так. Мы не продаём молчание редакции в регионе и не принимаем предвыборную рекламу.",
+  },
+
+  /* ---------------------------------------------------------------- */
+  {
+    slug: "pr-local",
+    nameRo: "PR local",
+    nameRu: "Локальный PR",
+    leadRo:
+      "Un abonament lunar de prezență comercială într-o regiune: un material pe lună, rotație de bannere locală și consultanță de comunicare — fără nicio promisiune editorială.",
+    leadRu:
+      "Ежемесячная подписка на коммерческое присутствие в регионе: один материал в месяц, локальная ротация баннеров и консультации по коммуникации — без каких-либо редакционных обещаний.",
+    bodyRo: [
+      "Diferența dintre o apariție și o prezență este ritmul. Abonamentul acoperă, în fiecare lună, un material comercial la alegere — comunicat, advertorial sau interviu cu un director —, o rotație de bannere limitată la regiunea convenită și un loc fix în blocul comercial al buletinului. Contractul se face pe trei, șase sau douăsprezece luni și se poate întrerupe cu un preaviz de treizeci de zile.",
+      "Partea de consultanță este cea pentru care companiile regionale plătesc de fapt: vă ajutăm să formulați mesaje care rezistă la o citire critică. Ce date puteți publica și ce date vă vor fi cerute mai departe, ce afirmații puteți susține cu un document, cum se răspunde public atunci când ceva a mers prost și de ce tăcerea costă, de regulă, mai mult decât un răspuns incomod. Consultăm; nu plasăm materiale în alte publicații și nu „aranjăm” nimic cu colegi din alte redacții.",
+      "Aici trebuie spus fără menajamente ce nu cuprinde serviciul, pentru că exact aceste lucruri se vând sub numele de „PR local” în Republica Moldova: nu oferim acoperire favorabilă, nu oferim retragerea unui material publicat, nu oferim intermediere cu redacția și nu vindem tăcerea nimănui. Dacă cineva vă propune așa ceva în numele Corbul.md, minte — scrieți-ne, vrem să știm.",
+      "Redacția află despre existența contractului la fel ca despre oricare altul: din lista contabilă, la sfârșit de lună. Nu are acces la ședințele de consultanță, iar consultanții nu au acces la subiectele în lucru. Raportul lunar rămâne verificabil: afișări, clicuri, materiale publicate, zone ocupate.",
+    ],
+    bodyRu: [
+      "Разница между появлением и присутствием — в ритме. Подписка включает ежемесячно один коммерческий материал на выбор — пресс-релиз, адверториал или интервью с руководителем, — ротацию баннеров с ограничением по согласованному региону и постоянное место в коммерческом блоке рассылки. Договор заключается на три, шесть или двенадцать месяцев и расторгается с уведомлением за тридцать дней.",
+      "Консультационная часть — это то, за что региональные компании платят на самом деле: мы помогаем формулировать сообщения, выдерживающие критическое прочтение. Какие данные можно публиковать и какие у вас после этого спросят, какие утверждения вы сможете подтвердить документом, как отвечать публично, когда что-то пошло не так, и почему молчание обычно обходится дороже неудобного ответа. Мы консультируем; мы не размещаем материалы в других изданиях и ничего не «улаживаем» с коллегами из других редакций.",
+      "Здесь нужно без обиняков сказать, чего услуга не включает, — потому что именно это в Молдове и продают под названием «локальный PR»: мы не предлагаем благоприятного освещения, не предлагаем снятия опубликованного материала, не предлагаем посредничества с редакцией и не продаём ничьего молчания. Если кто-то предлагает вам подобное от имени Corbul.md — он лжёт; напишите нам, мы хотим об этом знать.",
+      "О существовании договора редакция узнаёт так же, как о любом другом: из бухгалтерского списка в конце месяца. Доступа к консультационным встречам у неё нет, а у консультантов нет доступа к темам в работе. Ежемесячный отчёт остаётся проверяемым: показы, клики, опубликованные материалы, занятые зоны.",
+    ],
+    includesRo: [
+      "Un material comercial pe lună — comunicat, advertorial sau interviu, la alegere.",
+      "Rotație lunară de bannere, limitată la regiunea convenită, cu limitare de frecvență.",
+      "Un loc fix, marcat, în blocul comercial al buletinului săptămânal.",
+      "O ședință lunară de consultanță pe mesaje și pe comunicarea în situații dificile.",
+      "Prioritate la rezervarea zonelor și a datelor de publicare, în limita disponibilului.",
+      "Raport lunar: afișări, clicuri, materiale publicate și zonele ocupate.",
+    ],
+    includesRu: [
+      "Один коммерческий материал в месяц — пресс-релиз, адверториал или интервью, на выбор.",
+      "Ежемесячная ротация баннеров с ограничением по региону и по частоте показа.",
+      "Постоянное помеченное место в коммерческом блоке еженедельной рассылки.",
+      "Ежемесячная консультационная встреча по сообщениям и коммуникации в сложных ситуациях.",
+      "Приоритет при бронировании зон и дат публикации в пределах доступного.",
+      "Ежемесячный отчёт: показы, клики, опубликованные материалы и занятые зоны.",
+    ],
+    forWhomRo:
+      "Companiilor regionale cu miză publică — fabrici, ferme mari, dezvoltatori, operatori privați de servicii comunale — care comunică lunar și vor s-o facă fără ambiguități.",
+    forWhomRu:
+      "Региональным компаниям с публичной значимостью — заводам, крупным фермам, девелоперам, частным операторам коммунальных услуг, — которые общаются с публикой ежемесячно и хотят делать это без двусмысленностей.",
+    priceFromEur: 300,
+    priceUnit: "month",
+    turnaroundRo:
+      "Prima lună începe în 7 zile lucrătoare de la semnare; materialele se planifică la începutul fiecărei luni.",
+    turnaroundRu:
+      "Первый месяц начинается в течение 7 рабочих дней после подписания; материалы планируются в начале каждого месяца.",
+    disclosureRo:
+      "PR local înseamnă vizibilitate comercială, nu influență. Toate aparițiile sunt marcate ca publicitate, iar contractul nu conține clauze despre acoperirea jurnalistică: redacția scrie despre client și despre regiunea lui exact ca despre oricine altcineva.",
+    disclosureRu:
+      "Локальный PR — это коммерческая видимость, а не влияние. Все размещения помечены как реклама, а договор не содержит положений о журналистском освещении: о клиенте и о его регионе редакция пишет ровно так же, как обо всех остальных.",
   },
 
   /* ---------------------------------------------------------------- */
@@ -341,7 +780,8 @@ export const AD_SERVICES: AdService[] = [
       "Băncilor, companiilor de asigurări, operatorilor din energie, grupurilor industriale și caselor de avocatură mari — cui îi trebuie prezență constantă, nu o singură apariție.",
     forWhomRu:
       "Банкам, страховым компаниям, энергетическим операторам, промышленным группам и крупным адвокатским бюро — тем, кому нужно постоянное присутствие, а не разовое появление.",
-    priceFromMdl: 24000,
+    priceFromEur: 250,
+    priceUnit: "month",
     turnaroundRo:
       "Campania pornește în 7 zile lucrătoare de la semnare și de la primirea creațiilor.",
     turnaroundRu:
@@ -374,7 +814,8 @@ export interface LocalizedAdService {
   body: string[];
   includes: string[];
   forWhom: string;
-  priceFromMdl: number;
+  priceFromEur: number;
+  priceUnit: AdPriceUnit;
   turnaround: string;
   disclosure: string;
 }
@@ -391,7 +832,8 @@ export function localizeAdService(
     body: ru ? service.bodyRu : service.bodyRo,
     includes: ru ? service.includesRu : service.includesRo,
     forWhom: ru ? service.forWhomRu : service.forWhomRo,
-    priceFromMdl: service.priceFromMdl,
+    priceFromEur: service.priceFromEur,
+    priceUnit: service.priceUnit,
     turnaround: ru ? service.turnaroundRu : service.turnaroundRo,
     disclosure: ru ? service.disclosureRu : service.disclosureRo,
   };
@@ -399,4 +841,26 @@ export function localizeAdService(
 
 export function localizedAdServices(locale: Locale): LocalizedAdService[] {
   return AD_SERVICES.map((service) => localizeAdService(service, locale));
+}
+
+/**
+ * Suma singură: „80 €" / „80 €" (ru). `narrowSymbol` pentru că ro-RO
+ * scrie altfel „80 EUR", iar grila comercială se citește în simbol.
+ */
+export function formatEur(amount: number, locale: Locale): string {
+  return formatMoney(amount, locale, "EUR", { currencyDisplay: "narrowSymbol" });
+}
+
+/**
+ * Eticheta de preț a unui serviciu: „80 €" sau „30 € / lună".
+ * Sufixul lunar vine din stratul de interfață (`ads.priceUnitMonth`), ca să
+ * rămână traductibil; datele nu cunosc textele de interfață.
+ */
+export function formatServicePrice(
+  service: Pick<LocalizedAdService, "priceFromEur" | "priceUnit">,
+  locale: Locale,
+  monthSuffix: string,
+): string {
+  const amount = formatEur(service.priceFromEur, locale);
+  return service.priceUnit === "month" ? `${amount} ${monthSuffix}` : amount;
 }

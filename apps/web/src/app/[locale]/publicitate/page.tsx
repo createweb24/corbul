@@ -9,13 +9,14 @@ import { getSettings } from "../../_lib/data";
 import { buildMetadata } from "../../_lib/seo";
 import { absoluteUrl, organizationNode } from "../../_lib/site";
 import { ADS_EMAIL, adsText } from "./_data/copy";
-import { localizedAdServices } from "./_data/services";
+import { formatServicePrice, localizedAdServices } from "./_data/services";
 import { getAdZones, zoneName, zoneNote, zonePriceMdl } from "./_data/zones";
 
 /**
  * `/publicitate` — pagina-index a secțiunii comerciale (ADS-SPEC §7).
  *
- * Intro, grila celor șase servicii, zonele de banner cu dimensiuni și preț
+ * Intro, grila celor paisprezece servicii, formatele „la cerere" (bannere și
+ * native ads), zonele de banner cu dimensiuni și preț
  * (din `GET /api/ads/zones`, cu grila din seed ca rezervă), argumentarea de
  * audiență și îndemnul spre departamentul comercial.
  */
@@ -40,7 +41,7 @@ export async function generateMetadata({
     locale,
     path: "/publicitate",
     title: s("ads.index.metaTitle"),
-    description: s("ads.index.metaDescription"),
+    description: s("ads.index.metaDescription14"),
     absoluteTitle: true,
   });
 }
@@ -67,7 +68,7 @@ export default async function AdvertisingIndexPage({
       {
         "@type": "CollectionPage",
         name: s("ads.index.metaTitle"),
-        description: s("ads.index.metaDescription"),
+        description: s("ads.index.metaDescription14"),
         url: absoluteUrl(locale, "/publicitate"),
         isPartOf: { "@id": `${absoluteUrl(locale, "")}/#website` },
         publisher: organization,
@@ -88,9 +89,20 @@ export default async function AdvertisingIndexPage({
             provider: { "@id": `${organization["@id"] as string}` },
             offers: {
               "@type": "Offer",
-              price: service.priceFromMdl,
-              priceCurrency: "MDL",
+              price: service.priceFromEur,
+              priceCurrency: "EUR",
               availability: "https://schema.org/InStock",
+              // tarifele lunare se declară ca atare (UN/CEFACT: `MON` = lună)
+              ...(service.priceUnit === "month"
+                ? {
+                    priceSpecification: {
+                      "@type": "UnitPriceSpecification",
+                      price: service.priceFromEur,
+                      priceCurrency: "EUR",
+                      unitCode: "MON",
+                    },
+                  }
+                : {}),
             },
           },
         })),
@@ -118,7 +130,7 @@ export default async function AdvertisingIndexPage({
             </h1>
             <div className="rule-gold mt-8 w-40" />
             <p className="mt-8 font-serif text-xl leading-relaxed text-fog md:text-2xl">
-              {s("ads.index.subtitle")}
+              {s("ads.index.subtitle14")}
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button variant="gold" href="/contact?subiect=publicitate">
@@ -159,7 +171,7 @@ export default async function AdvertisingIndexPage({
       </Container>
 
       {/* ------------------------------------------------------------ */}
-      {/* Cele șase servicii                                            */}
+      {/* Cele paisprezece servicii + formatele „la cerere"             */}
       {/* ------------------------------------------------------------ */}
       <section
         aria-labelledby="servicii"
@@ -198,7 +210,11 @@ export default async function AdvertisingIndexPage({
                   <span className="mt-7 flex items-baseline gap-2 font-sans text-xs uppercase tracking-[0.16em] text-mist">
                     {s("ads.priceFrom")}
                     <span className="text-sm font-semibold tracking-normal text-gold">
-                      {formatMoney(service.priceFromMdl, locale, "MDL")}
+                      {formatServicePrice(
+                        service,
+                        locale,
+                        s("ads.priceUnitMonth"),
+                      )}
                     </span>
                   </span>
                 </Link>
@@ -207,8 +223,57 @@ export default async function AdvertisingIndexPage({
           </ul>
 
           <p className="mt-8 font-sans text-xs leading-relaxed text-mist">
-            {s("ads.vatNote")}
+            {s("ads.priceNoteEur")}
           </p>
+          <p className="mt-2 font-sans text-xs leading-relaxed text-mist">
+            {s("ads.billingNote")}
+          </p>
+
+          {/* ---- La cerere: bannere și native ads ------------------- */}
+          <div className="mt-16 border-t border-line pt-12">
+            <h3
+              id="la-cerere"
+              className="headline text-2xl text-ivory md:text-3xl"
+            >
+              {s("ads.index.onRequestTitle")}
+            </h3>
+            <p className="mt-5 max-w-3xl font-serif leading-relaxed text-fog">
+              {s("ads.index.onRequestIntro")}
+            </p>
+
+            <ul className="mt-10 grid gap-px bg-line md:grid-cols-2">
+              <li className="bg-coal px-6 py-8 md:px-9">
+                <div className="flex flex-wrap items-baseline justify-between gap-3">
+                  <h4 className="headline text-xl text-ivory">
+                    {s("ads.index.onRequest.banners.title")}
+                  </h4>
+                  <span className="font-sans text-[0.6875rem] uppercase tracking-[0.16em] text-gold">
+                    {s("ads.priceOnRequest")}
+                  </span>
+                </div>
+                <p className="mt-4 font-serif text-sm leading-relaxed text-fog">
+                  {s("ads.index.onRequest.banners.body")}
+                </p>
+                <p className="mt-5 font-sans text-xs leading-relaxed text-mist">
+                  {zones.map((zone) => zoneName(zone, locale)).join(" · ")}
+                </p>
+              </li>
+
+              <li className="bg-coal px-6 py-8 md:px-9">
+                <div className="flex flex-wrap items-baseline justify-between gap-3">
+                  <h4 className="headline text-xl text-ivory">
+                    {s("ads.index.onRequest.native.title")}
+                  </h4>
+                  <span className="font-sans text-[0.6875rem] uppercase tracking-[0.16em] text-gold">
+                    {s("ads.priceOnRequest")}
+                  </span>
+                </div>
+                <p className="mt-4 font-serif text-sm leading-relaxed text-fog">
+                  {s("ads.index.onRequest.native.body")}
+                </p>
+              </li>
+            </ul>
+          </div>
         </Container>
       </section>
 

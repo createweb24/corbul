@@ -70,7 +70,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     out.push(...entry(`/${slug}`, now, 0.7, "daily"));
   }
 
-  // paginile celor șase servicii comerciale (ADS-SPEC §7)
+  // paginile serviciilor comerciale, toate cele din grilă (ADS-SPEC §7)
   for (const slug of AD_SERVICE_SLUGS) {
     out.push(...entry(`/publicitate/${slug}`, now, 0.6, "monthly"));
   }

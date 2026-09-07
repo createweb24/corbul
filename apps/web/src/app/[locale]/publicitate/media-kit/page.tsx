@@ -14,7 +14,7 @@ import {
   MEDIA_KIT_STATS,
   READER_PROFILE,
 } from "../_data/copy";
-import { localizedAdServices } from "../_data/services";
+import { formatServicePrice, localizedAdServices } from "../_data/services";
 import { getAdZones, zoneName, zonePriceMdl } from "../_data/zones";
 
 /**
@@ -305,7 +305,11 @@ export default async function MediaKitPage({
                   <span className="mt-5 font-sans text-xs uppercase tracking-[0.16em] text-mist">
                     {s("ads.priceFrom")}{" "}
                     <span className="tracking-normal text-gold">
-                      {formatMoney(service.priceFromMdl, locale, "MDL")}
+                      {formatServicePrice(
+                        service,
+                        locale,
+                        s("ads.priceUnitMonth"),
+                      )}
                     </span>
                   </span>
                 </Link>
@@ -314,7 +318,7 @@ export default async function MediaKitPage({
           </ul>
 
           <p className="mt-8 max-w-3xl font-sans text-xs leading-relaxed text-mist">
-            {s("ads.mediaKit.ratesNote")}
+            {s("ads.mediaKit.ratesNoteEur")}
           </p>
         </Container>
       </section>

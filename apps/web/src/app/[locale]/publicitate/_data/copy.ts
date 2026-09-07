@@ -23,9 +23,22 @@ export const AD_TEXT = {
   "ads.mediaKitLink": { ro: "Media kit", ru: "Медиакит" },
   "ads.priceFrom": { ro: "De la", ru: "От" },
   "ads.priceMonthly": { ro: "pe lună", ru: "в месяц" },
-  "ads.vatNote": {
-    ro: "Prețurile sunt în lei, fără TVA. Facturăm pe persoană juridică, cu contract.",
-    ru: "Цены указаны в леях без НДС. Счёт выставляется юридическому лицу, по договору.",
+  /** sufixul de după sumă, la serviciile cu tarif lunar: „30 € / lună" */
+  "ads.priceUnitMonth": { ro: "/ lună", ru: "/ месяц" },
+  "ads.priceOnRequest": { ro: "Preț la cerere", ru: "Цена по запросу" },
+  /**
+   * `ads.vatNote` există deja în `messages/*.json` cu textul vechi, în lei, iar
+   * fișierele de mesaje nu sunt ale noastre (ADS-SPEC §6.3). Grila fiind acum
+   * în euro, folosim chei noi: cheia lipsind din mesaje, `adsText` cade pe
+   * varianta de aici și pagina afișează moneda corectă.
+   */
+  "ads.priceNoteEur": {
+    ro: "Prețurile sunt „de la”, în euro, fără TVA. Facturăm pe persoană juridică, cu contract.",
+    ru: "Цены указаны «от», в евро, без НДС. Работаем по договору, с юридическими лицами.",
+  },
+  "ads.billingNote": {
+    ro: "Facturarea se face în lei moldovenești, la cursul oficial BNM din ziua emiterii facturii.",
+    ru: "Счёт выставляется в молдавских леях по официальному курсу НБМ на день выставления счёта.",
   },
   "ads.includesTitle": { ro: "Ce include", ru: "Что входит" },
   "ads.forWhomTitle": { ro: "Cui i se potrivește", ru: "Кому подходит" },
@@ -63,6 +76,17 @@ export const AD_TEXT = {
     ro: "Șase formate comerciale și cinci zone de banner, toate marcate ca atare. Vindem atenția unui public care citește documente până la capăt — nu vindem ceea ce scrie redacția despre dumneavoastră.",
     ru: "Шесть коммерческих форматов и пять баннерных зон — все с соответствующей маркировкой. Мы продаём внимание аудитории, которая дочитывает документы до конца, но не продаём то, что редакция пишет о вас.",
   },
+  /* Variantele „14 servicii" ale antetului. Cheile fără sufix există deja în
+     `messages/*.json` cu textul vechi, de șase formate; nu le putem edita
+     acolo, așa că oferta extinsă are chei proprii. */
+  "ads.index.metaDescription14": {
+    ro: "Paisprezece formate comerciale pe Corbul.md: advertoriale, articole plătite, comunicate, guest posturi, backlinkuri, sponsorizări de newsletter, branded content, publicitate și PR local — cu marcaj clar și fără acoperire editorială de vânzare.",
+    ru: "Четырнадцать коммерческих форматов на Corbul.md: адверториалы, платные статьи, пресс-релизы, гостевые публикации, обратные ссылки, спонсорство рассылки, брендированный контент, локальная реклама и PR — с ясной маркировкой и без продажи редакционного освещения.",
+  },
+  "ads.index.subtitle14": {
+    ro: "Paisprezece formate comerciale, cinci zone de banner și native ads la cerere, toate marcate ca atare. Vindem atenția unui public care citește documente până la capăt — nu vindem ceea ce scrie redacția despre dumneavoastră.",
+    ru: "Четырнадцать коммерческих форматов, пять баннерных зон и нативная реклама по запросу — всё с соответствующей маркировкой. Мы продаём внимание аудитории, которая дочитывает документы до конца, но не продаём то, что редакция пишет о вас.",
+  },
   "ads.index.introTitle": {
     ro: "Cum lucrăm",
     ru: "Как мы работаем",
@@ -90,6 +114,28 @@ export const AD_TEXT = {
   "ads.index.servicesIntro": {
     ro: "Fiecare serviciu are pagina lui, cu ce include, cui i se potrivește, termenul de livrare și mențiunea de transparență care i se aplică.",
     ru: "У каждой услуги есть своя страница: что входит, кому подходит, срок исполнения и относящаяся к ней оговорка о прозрачности.",
+  },
+  /* ---- „La cerere": bannere și native ads ------------------------- */
+  "ads.index.onRequestTitle": { ro: "La cerere", ru: "По запросу" },
+  "ads.index.onRequestIntro": {
+    ro: "Două formate care nu au preț de grilă, pentru că se tarifează după volum, poziție și durată. Le calculăm la cerere, în aceeași zi.",
+    ru: "Два формата без прайсовой цены: они тарифицируются по объёму, позиции и сроку. Рассчитываем по запросу, в тот же день.",
+  },
+  "ads.index.onRequest.banners.title": {
+    ro: "Bannere",
+    ru: "Баннеры",
+  },
+  "ads.index.onRequest.banners.body": {
+    ro: "Zonele fixe de mai jos, rezervate pe săptămâni sau pe luni, cu rotație și limitare de frecvență. Tabelul arată tariful lunar de referință al fiecărei zone; prețul final depinde de perioadă, de volumul de afișări și de exclusivitate, așa că îl confirmăm la cerere. Fiecare afișare este contorizată de noi și raportată lunar, iar creațiile poartă marcajul „Publicitate” și nu pot imita interfața site-ului.",
+    ru: "Фиксированные зоны, перечисленные ниже, бронируются на недели или месяцы, с ротацией и ограничением частоты. В таблице — ориентировочный месячный тариф каждой зоны; итоговая цена зависит от срока, объёма показов и эксклюзивности, поэтому мы подтверждаем её по запросу. Каждый показ считаем мы сами и отчитываемся ежемесячно, а креативы несут пометку «Реклама» и не могут имитировать интерфейс сайта.",
+  },
+  "ads.index.onRequest.native.title": {
+    ro: "Native ads",
+    ru: "Нативная реклама",
+  },
+  "ads.index.onRequest.native.body": {
+    ro: "Blocuri promovate în fluxul de lectură, construite din titlu, imagine și o legătură către un material comercial. Poartă eticheta „Conținut comercial” în interiorul blocului, sunt vizibil despărțite de recomandările redacției și nu intră niciodată în listele editoriale. Se tarifează pe mia de afișări sau pe clic, cu volum minim convenit.",
+    ru: "Промоблоки внутри потока чтения: заголовок, изображение и ссылка на коммерческий материал. Внутри блока — пометка «Коммерческий контент»; блоки визуально отделены от редакционных рекомендаций и никогда не попадают в редакционные подборки. Тарифицируются за тысячу показов или за клик, с согласованным минимальным объёмом.",
   },
   "ads.index.zonesTitle": {
     ro: "Zone de banner",
@@ -176,6 +222,11 @@ export const AD_TEXT = {
   "ads.mediaKit.ratesNote": {
     ro: "Prețuri de pornire, în lei, fără TVA. Pachetele pe mai multe luni și combinațiile de formate se tarifează individual.",
     ru: "Стартовые цены в леях без НДС. Многомесячные пакеты и комбинации форматов тарифицируются индивидуально.",
+  },
+  /** varianta în euro; vezi nota de la `ads.priceNoteEur` */
+  "ads.mediaKit.ratesNoteEur": {
+    ro: "Prețuri de pornire, în euro, fără TVA. Facturarea se face în lei, la cursul oficial BNM din ziua emiterii facturii. Pachetele pe mai multe luni și combinațiile de formate se tarifează individual.",
+    ru: "Стартовые цены в евро, без НДС. Счёт выставляется в леях по официальному курсу НБМ на день выставления счёта. Многомесячные пакеты и комбинации форматов тарифицируются индивидуально.",
   },
   "ads.mediaKit.termsTitle": { ro: "Condiții editoriale", ru: "Редакционные условия" },
   "ads.mediaKit.termsIntro": {
