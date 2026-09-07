@@ -12,6 +12,7 @@
     "prisma:migrate": "prisma migrate dev",
     "prisma:deploy": "prisma migrate deploy",
     "prisma:seed": "prisma db seed",
+    "prisma:import": "ts-node prisma/import-articles.ts",
     "prisma:studio": "prisma studio"
   },
   "prisma": {

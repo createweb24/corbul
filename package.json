@@ -17,6 +17,7 @@
     "db:migrate": "npm run prisma:migrate --workspace=api",
     "db:deploy": "npm run prisma:deploy --workspace=api",
     "db:seed": "npm run prisma:seed --workspace=api",
+    "db:import": "npm run prisma:import --workspace=api",
     "db:studio": "npm run prisma:studio --workspace=api",
     "typecheck": "npm run typecheck --workspace=api && npm run typecheck --workspace=web",
     "lint": "npm run lint --workspace=web",
