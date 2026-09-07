@@ -1,0 +1,205 @@
+// Corbul.md — schema de date (contract SPEC §3)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id       Int       @id @default(autoincrement())
+  slug     String    @unique
+  hue      Int
+  order    Int
+  nameRo   String
+  nameRu   String
+  descRo   String
+  descRu   String
+  articles Article[]
+}
+
+model Author {
+  id       Int       @id @default(autoincrement())
+  slug     String    @unique // 'ana-corbeanu'
+  name     String
+  initials String
+  email    String
+  roleRo   String
+  roleRu   String
+  bioRo    String    @db.Text
+  bioRu    String    @db.Text
+  articles Article[]
+}
+
+model Article {
+  id          Int       @id @default(autoincrement())
+  slug        String    @unique
+  categoryId  Int
+  category    Category  @relation(fields: [categoryId], references: [id])
+  authorId    Int
+  author      Author    @relation(fields: [authorId], references: [id])
+  titleRo     String
+  titleRu     String
+  summaryRo   String    @db.Text
+  summaryRu   String    @db.Text
+  contentRo   String    @db.Text // HTML
+  contentRu   String    @db.Text
+  tagsRo      String[]
+  tagsRu      String[]
+  sources     Json // [{label, url}]
+  coverSeed   Int
+  featured    Boolean   @default(false)
+  breaking    Boolean   @default(false)
+  premium     Boolean   @default(false)
+  published   Boolean   @default(true)
+  views       Int       @default(0)
+  readMin     Int       @default(5)
+  publishedAt DateTime
+  updatedAt   DateTime?
+  createdAt   DateTime  @default(now())
+
+  @@index([categoryId, publishedAt])
+  @@index([publishedAt])
+  @@index([authorId, publishedAt])
+}
+
+model AdminUser {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String // bcrypt
+  name      String
+  createdAt DateTime @default(now())
+}
+
+model Subscriber {
+  id                   Int       @id @default(autoincrement())
+  email                String    @unique
+  stripeCustomerId     String?
+  stripeSubscriptionId String?
+  plan                 String? // 'monthly' | 'annual'
+  status               String    @default("pending") // pending|active|canceled|past_due
+  currentPeriodEnd     DateTime?
+  accessToken          String    @unique // token opac pt. cititor (cookie)
+  createdAt            DateTime  @default(now())
+
+  @@index([stripeSubscriptionId])
+}
+
+model Partner {
+  id              Int       @id @default(autoincrement())
+  company         String
+  email           String
+  contactName     String
+  tier            String // 'bronze' | 'silver' | 'gold'
+  months          Int       @default(1)
+  amountMdl       Int
+  status          String    @default("pending") // pending|paid|active|expired
+  stripeSessionId String?
+  startsAt        DateTime?
+  endsAt          DateTime?
+  websiteUrl      String?
+  createdAt       DateTime  @default(now())
+
+  @@index([stripeSessionId])
+}
+
+model NewsletterSignup {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  locale    String   @default("ro")
+  createdAt DateTime @default(now())
+}
+
+model Message {
+  id        Int      @id @default(autoincrement())
+  kind      String // 'contact' | 'tip'
+  name      String?
+  email     String?
+  subject   String?
+  body      String   @db.Text
+  handled   Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([handled, createdAt])
+}
+
+model Setting {
+  key   String @id
+  value Json
+}
+
+/* ------------------------------------------------------------------ */
+/* Publicitate (ADS-SPEC §1)                                           */
+/* ------------------------------------------------------------------ */
+
+model Advertiser {
+  id          Int          @id @default(autoincrement())
+  companyName String
+  contactName String
+  email       String       @unique
+  phone       String?
+  website     String?
+  campaigns   AdCampaign[]
+  createdAt   DateTime     @default(now())
+}
+
+model AdZone {
+  id            Int        @id @default(autoincrement())
+  key           String     @unique // header_leaderboard, sidebar_top, sidebar_bottom, article_inline, home_infeed
+  name          String
+  width         Int
+  height        Int
+  adsenseSlotId String?
+  priceMonthly  Int? // în bani (MDL × 100)
+  active        Boolean    @default(true)
+  order         Int        @default(0)
+  banners       AdBanner[]
+}
+
+model AdCampaign {
+  id              Int        @id @default(autoincrement())
+  name            String
+  status          String     @default("DRAFT") // DRAFT|PENDING_PAYMENT|ACTIVE|PAUSED|COMPLETED|CANCELLED
+  startsAt        DateTime
+  endsAt          DateTime
+  advertiser      Advertiser @relation(fields: [advertiserId], references: [id], onDelete: Cascade)
+  advertiserId    Int
+  stripeSessionId String?    @unique
+  banners         AdBanner[]
+  createdAt       DateTime   @default(now())
+
+  @@index([status, startsAt, endsAt])
+}
+
+model AdBanner {
+  id         Int           @id @default(autoincrement())
+  name       String
+  campaign   AdCampaign    @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  campaignId Int
+  zone       AdZone        @relation(fields: [zoneId], references: [id])
+  zoneId     Int
+  imageUrl   String?
+  html       String?       @db.Text
+  targetUrl  String
+  alt        String?
+  weight     Int           @default(1)
+  active     Boolean       @default(true)
+  stats      AdStatDaily[]
+  createdAt  DateTime      @default(now())
+
+  @@index([zoneId, active])
+}
+
+model AdStatDaily {
+  id          Int      @id @default(autoincrement())
+  banner      AdBanner @relation(fields: [bannerId], references: [id], onDelete: Cascade)
+  bannerId    Int
+  date        DateTime @db.Date
+  impressions Int      @default(0)
+  clicks      Int      @default(0)
+
+  @@unique([bannerId, date])
+}

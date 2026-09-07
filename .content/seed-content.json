@@ -1,0 +1,1099 @@
+{
+  "settings": {
+    "tagline_ro": "Analiză & Investigații",
+    "tagline_ru": "Аналитика и расследования",
+    "ticker_ro": [
+      "Autoritatea de Integritate verifică averile a 14 șefi de agenții de stat",
+      "Licitația pentru drumul Chișinău–Leova, suspendată de instanță",
+      "BNM menține rata de bază la 6,5%",
+      "Contractul de gaze, renegociat: formula de preț se schimbă din octombrie",
+      "Procurorii anticorupție au ridicat documente de la două ministere",
+      "Exporturile de cereale, sub monitorizare specială după ancheta Corbul"
+    ],
+    "ticker_ru": [
+      "Орган по неподкупности проверяет имущество 14 глав госагентств",
+      "Тендер на дорогу Кишинёв–Леова приостановлен судом",
+      "НБМ сохраняет базовую ставку на уровне 6,5%",
+      "Газовый контракт пересмотрен: ценовая формула изменится с октября",
+      "Антикоррупционные прокуроры изъяли документы в двух министерствах",
+      "Экспорт зерна — под особым мониторингом после расследования Corbul"
+    ],
+    "adminPassword": "corbul2026"
+  },
+  "authors": [
+    {
+      "id": "ana-corbeanu",
+      "name": "Ana Corbeanu",
+      "initials": "AC",
+      "role_ro": "Redactor-șef",
+      "role_ru": "Главный редактор",
+      "bio_ro": "Jurnalistă cu peste 18 ani de experiență în presa de investigație din Republica Moldova. A coordonat proiecte editoriale premiate la nivel regional și este membră a unei rețele europene de jurnalism de investigație. La Corbul.md răspunde de standardele editoriale și de politica de verificare din două surse independente.",
+      "bio_ru": "Журналистка с более чем 18-летним опытом работы в расследовательской прессе Республики Молдова. Координировала редакционные проекты, отмеченные региональными наградами, и является членом европейской сети журналистов-расследователей. В Corbul.md отвечает за редакционные стандарты и политику проверки информации из двух независимых источников.",
+      "email": "ana.corbeanu@corbul.md"
+    },
+    {
+      "id": "victor-munteanu",
+      "name": "Victor Munteanu",
+      "initials": "VM",
+      "role_ro": "Editor investigații",
+      "role_ru": "Редактор отдела расследований",
+      "bio_ro": "Specializat în achiziții publice și fluxuri financiare transfrontaliere, cu 12 ani de teren în Moldova și România. Investigațiile sale au stat la baza mai multor sesizări oficiale către instituțiile de control. Laureat al unui premiu național pentru jurnalism de investigație în 2023.",
+      "bio_ru": "Специализируется на государственных закупках и трансграничных финансовых потоках, за плечами 12 лет полевой работы в Молдове и Румынии. Его расследования легли в основу ряда официальных обращений в контролирующие органы. Лауреат национальной премии за журналистские расследования 2023 года.",
+      "email": "victor.munteanu@corbul.md"
+    },
+    {
+      "id": "doina-rusnac",
+      "name": "Doina Rusnac",
+      "initials": "DR",
+      "role_ro": "Analist economic",
+      "role_ru": "Экономический аналитик",
+      "bio_ro": "Economistă de formație, a lucrat șase ani în cercetare macroeconomică înainte de a trece în presă. Analizează politica monetară, bugetul public și sectorul bancar. Este autoarea unui raport anual despre finanțele publice, citat frecvent în mediul academic și de organizațiile de profil.",
+      "bio_ru": "Экономист по образованию, шесть лет проработала в сфере макроэкономических исследований, прежде чем перейти в журналистику. Анализирует монетарную политику, государственный бюджет и банковский сектор. Автор ежегодного доклада о публичных финансах, на который часто ссылаются академическое сообщество и профильные организации.",
+      "email": "doina.rusnac@corbul.md"
+    },
+    {
+      "id": "sergiu-balan",
+      "name": "Sergiu Bălan",
+      "initials": "SB",
+      "role_ro": "Jurist-comentator",
+      "role_ru": "Юрист-обозреватель",
+      "bio_ro": "Licențiat în drept, cu masterat în drept european, a practicat avocatura timp de opt ani înainte de a se dedica analizei juridice în presă. Scrie despre justiție, integritate și reforma instituțiilor. Colaborează cu clinici juridice universitare din Chișinău.",
+      "bio_ru": "Лиценциат права с магистратурой по европейскому праву, восемь лет занимался адвокатской практикой, прежде чем посвятить себя юридической аналитике в прессе. Пишет о юстиции, неподкупности и реформе институтов. Сотрудничает с университетскими юридическими клиниками Кишинёва.",
+      "email": "sergiu.balan@corbul.md"
+    },
+    {
+      "id": "irina-cazacu",
+      "name": "Irina Cazacu",
+      "initials": "IC",
+      "role_ro": "Corespondent energie",
+      "role_ru": "Корреспондент по энергетике",
+      "bio_ro": "Acoperă sectorul energetic din 2016: gaze naturale, energie electrică, interconectări regionale. A relatat de la principalele negocieri energetice ale ultimului deceniu și întreține o bază de date proprie a contractelor publice din domeniu, folosită ca referință de alte redacții.",
+      "bio_ru": "Освещает энергетический сектор с 2016 года: природный газ, электроэнергия, региональные интерконнекторы. Вела репортажи с ключевых энергетических переговоров последнего десятилетия и поддерживает собственную базу данных публичных контрактов отрасли, которой пользуются как справочником другие редакции.",
+      "email": "irina.cazacu@corbul.md"
+    },
+    {
+      "id": "andrei-lupu",
+      "name": "Andrei Lupu",
+      "initials": "AL",
+      "role_ro": "Editor opinie",
+      "role_ru": "Редактор отдела мнений",
+      "bio_ro": "Editorialist și fost corespondent parlamentar, cu 15 ani de experiență în presa scrisă. Coordonează paginile de opinie și dezbaterile publice ale redacției. Predă un curs de etică jurnalistică la o universitate din Chișinău.",
+      "bio_ru": "Колумнист и бывший парламентский корреспондент с 15-летним опытом работы в печатной прессе. Курирует полосы мнений и публичные дебаты редакции. Преподаёт курс журналистской этики в одном из университетов Кишинёва.",
+      "email": "andrei.lupu@corbul.md"
+    }
+  ],
+  "articles": [
+    {
+      "id": "a01",
+      "slug": "reteaua-offshore-din-spatele-licitatiilor-pentru-drumurile-nationale",
+      "category": "investigatii",
+      "title_ro": "Rețeaua offshore din spatele licitațiilor pentru drumurile naționale",
+      "title_ru": "Офшорная сеть за тендерами на национальные дороги",
+      "summary_ro": "Trei firme aparent concurente, câștigătoare a contracte de peste 900 de milioane de lei, se întâlnesc în același nod offshore din Cipru. Ancheta Corbul.md reconstituie traseul banilor.",
+      "summary_ru": "Три формально конкурирующие фирмы, выигравшие контракты более чем на 900 миллионов леев, сходятся в одном офшорном узле на Кипре. Расследование Corbul.md восстанавливает маршрут денег.",
+      "content_ro": "<p>Trei companii de construcții care s-au prezentat ani la rând drept concurente au câștigat, între 2022 și 2026, licitații publice pentru reabilitarea drumurilor naționale în valoare cumulată de peste 900 de milioane de lei. O anchetă Corbul.md, bazată pe extrase din registre comerciale din trei jurisdicții, arată că toate cele trei firme se întâlnesc, prin lanțuri de intermediari, în același nod offshore înregistrat la Limassol, în Cipru.</p><p>Documentele consultate de redacție arată că firmele au depus oferte în aceleași proceduri, creând aparența unei competiții reale. În cel puțin șapte licitații, diferența dintre ofertele depuse a fost mai mică de un procent — un tipar pe care experții în achiziții publice îl consideră un indiciu clasic de coordonare între ofertanți.</p><h2>Trei firme, un singur beneficiar</h2><p>La suprafață, cele trei companii au administratori diferiți și sedii în orașe diferite. Lanțul de proprietate urcă însă, în fiecare caz, către societăți-mamă înregistrate în aceeași clădire din Limassol și administrate de același agent fiduciar. Două dintre societățile-mamă au fost înființate în aceeași zi, la interval de o oră, potrivit extraselor obținute de redacție din registrul cipriot al companiilor.</p><p>În perioada analizată, firmele și-au împărțit loturile cu o regularitate remarcabilă: atunci când una câștiga un tronson, celelalte două se retrăgeau sau depuneau oferte cu vicii de formă care duceau la descalificare. Rotația se repetă în nouă din cele unsprezece proceduri examinate de Corbul.md.</p><blockquote>„Când aceleași persoane controlează și oferta câștigătoare, și ofertele de acoperire, licitația devine un spectacol cu final scris dinainte. Statul plătește biletul, iar publicul nici nu știe că a fost la teatru\", spune un expert în achiziții publice consultat de redacție.</blockquote><h2>Prețuri cu până la 40% peste media regională</h2><p>Comparația cu lucrări similare contractate în aceeași perioadă în raioane vecine arată că prețul mediu pe kilometru de drum reabilitat de cele trei firme a fost cu 28% până la 40% mai mare. Diferența, raportată la volumul total al contractelor, depășește 200 de milioane de lei — echivalentul a aproximativ 60 de kilometri de drum care nu au mai fost construiți.</p><ul><li>11 licitații analizate, dintre care 9 prezintă tiparul de rotație a câștigătorului;</li><li>diferențe sub 1% între oferte în 7 proceduri;</li><li>toate traseele de proprietate duc la același agent fiduciar din Limassol.</li></ul><p>Instituția responsabilă de administrarea drumurilor a transmis redacției că „va sesiza organele competente\" după publicarea anchetei, iar Autoritatea de Integritate a confirmat că are în lucru verificări privind conflicte de interese în două dintre proceduri. Corbul.md a solicitat poziția celor trei companii prin adresele oficiale; până la publicare, niciuna nu a răspuns. Ancheta continuă.</p>",
+      "content_ru": "<p>Три строительные компании, годами выступавшие как конкуренты, выиграли в период с 2022 по 2026 год государственные тендеры на восстановление национальных дорог на общую сумму свыше 900 миллионов леев. Расследование Corbul.md, основанное на выписках из коммерческих реестров трёх юрисдикций, показывает: все три фирмы через цепочки посредников сходятся в одном офшорном узле, зарегистрированном в Лимасоле, на Кипре.</p><p>Изученные редакцией документы свидетельствуют, что фирмы подавали заявки в одних и тех же процедурах, создавая видимость реальной конкуренции. Как минимум в семи тендерах разница между поданными офертами составляла менее одного процента — классический, по мнению экспертов по госзакупкам, признак сговора участников.</p><h2>Три фирмы — один бенефициар</h2><p>Внешне у трёх компаний разные администраторы и офисы в разных городах. Однако цепочка собственности в каждом случае ведёт к материнским структурам, зарегистрированным в одном и том же здании в Лимасоле и управляемым одним и тем же фидуциарным агентом. Две из материнских компаний были учреждены в один день с разницей в час, следует из выписок кипрского реестра компаний, полученных редакцией.</p><p>В анализируемый период фирмы делили лоты с удивительной регулярностью: когда одна выигрывала участок, две другие снимались с торгов или подавали заявки с формальными дефектами, ведущими к дисквалификации. Ротация повторяется в девяти из одиннадцати процедур, изученных Corbul.md.</p><blockquote>«Когда одни и те же лица контролируют и победившую оферту, и оферты прикрытия, тендер превращается в спектакль с заранее написанным финалом. Государство платит за билет, а публика даже не знает, что была в театре», — говорит эксперт по государственным закупкам, к которому обратилась редакция.</blockquote><h2>Цены на 40% выше средних по региону</h2><p>Сравнение с аналогичными работами, законтрактованными в тот же период в соседних районах, показывает: средняя цена километра дороги, восстановленной этими тремя фирмами, была выше на 28–40%. Разница в пересчёте на общий объём контрактов превышает 200 миллионов леев — эквивалент примерно 60 километров дорог, которые так и не были построены.</p><ul><li>проанализировано 11 тендеров, в 9 из них — схема ротации победителя;</li><li>разница между офертами менее 1% в 7 процедурах;</li><li>все цепочки собственности ведут к одному фидуциарному агенту в Лимасоле.</li></ul><p>Учреждение, отвечающее за администрирование дорог, сообщило редакции, что «обратится в компетентные органы» после публикации расследования, а Орган по неподкупности подтвердил, что проверяет возможные конфликты интересов в двух процедурах. Corbul.md запросил позицию всех трёх компаний по официальным адресам; к моменту публикации ни одна не ответила. Расследование продолжается.</p>",
+      "author": "victor-munteanu",
+      "date": "2026-09-05T07:40:00",
+      "updated": "2026-09-05T10:15:00",
+      "coverSeed": 17,
+      "featured": true,
+      "breaking": true,
+      "views": 5430,
+      "readMin": 8,
+      "tags_ro": [
+        "achiziții publice",
+        "offshore",
+        "drumuri",
+        "licitații"
+      ],
+      "tags_ru": [
+        "госзакупки",
+        "офшоры",
+        "дороги",
+        "тендеры"
+      ],
+      "sources": [
+        {
+          "label": "Registrul de stat al achizițiilor publice, extrase 2022–2026",
+          "url": "#"
+        },
+        {
+          "label": "Registrul companiilor din Cipru, extras nr. HE-2214",
+          "url": "#"
+        },
+        {
+          "label": "Raport de monitorizare a achizițiilor, societatea civilă, 2025",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a02",
+      "slug": "aparate-medicale-la-pret-triplu-licitatia-impartita-a-spitalelor-raionale",
+      "category": "investigatii",
+      "title_ro": "Aparate medicale la preț triplu: licitația împărțită a spitalelor raionale",
+      "title_ru": "Медицинское оборудование втридорога: поделённый тендер районных больниц",
+      "summary_ro": "Douăsprezece spitale raionale au cumpărat ecografe și analizoare la prețuri de două-trei ori peste cele de catalog, de la doi furnizori legați între ei. Banii proveneau dintr-un program de modernizare finanțat din bugetul de stat.",
+      "summary_ru": "Двенадцать районных больниц закупили УЗИ-аппараты и анализаторы по ценам в два-три раза выше каталожных у двух связанных между собой поставщиков. Деньги поступали из программы модернизации, финансируемой из госбюджета.",
+      "content_ro": "<p>Un program de modernizare a spitalelor raionale, cu un buget de 180 de milioane de lei, a fost aproape integral absorbit de doi furnizori de echipamente medicale. Corbul.md a comparat prețurile de achiziție cu listele oficiale ale producătorilor și cu licitații similare din România: pentru aceleași modele, spitalele moldovenești au plătit de două până la trei ori mai mult.</p><p>Cei doi furnizori, formal independenți, au un trecut comun: au fost fondați de aceleași două persoane, și-au împărțit ulterior acționariatul și folosesc același depozit logistic de la marginea Chișinăului. În licitațiile analizate, unul depunea oferta „scumpă\", iar celălalt câștiga cu un preț doar puțin mai mic — dar tot mult peste piață.</p><h2>Prețuri de catalog versus prețuri de licitație</h2><p>Un ecograf de clasă medie, listat de producător la echivalentul a 480 de mii de lei, a fost facturat unui spital raional cu 1,34 milioane de lei. Un analizor hematologic cotat la 210 mii de lei a costat 605 mii. În total, pe cele douăsprezece loturi examinate, diferența față de prețurile de referință depășește 74 de milioane de lei.</p><blockquote>„Ni s-a transmis că lista furnizorilor agreați vine de sus și că nu are rost să căutăm alternative. Am semnat ce ni s-a pus în față\", a declarat, sub protecția anonimatului, directorul unuia dintre spitalele beneficiare.</blockquote><h2>Caietul de sarcini, croit pe măsură</h2><p>Specificațiile tehnice din caietele de sarcini reproduc, uneori cu tot cu greșeli de tastare, broșura comercială a unuia dintre cei doi furnizori. Metadatele unuia dintre documentele de licitație, obținute de redacție, indică drept autor un angajat al firmei câștigătoare — nu al autorității contractante.</p><p>După solicitările Corbul.md, ministerul de resort a anunțat suspendarea plăților rămase și declanșarea unui audit intern asupra întregului program. Agenția Națională pentru Soluționarea Contestațiilor a confirmat că două proceduri fuseseră deja contestate în 2025, dar contestațiile au fost respinse pe motive de formă.</p><p>Redacția a transmis întrebări ambilor furnizori. Unul a refuzat orice comentariu; celălalt a susținut că prețurile „reflectă costurile de instruire și mentenanță incluse\". Documentele contractuale analizate nu conțin însă clauze distincte de instruire sau mentenanță. Publicăm setul integral de date comparative în format deschis.</p>",
+      "content_ru": "<p>Программа модернизации районных больниц с бюджетом 180 миллионов леев была почти полностью освоена двумя поставщиками медицинского оборудования. Corbul.md сравнил закупочные цены с официальными прайс-листами производителей и с аналогичными тендерами в Румынии: за те же модели молдавские больницы заплатили в два-три раза больше.</p><p>Два поставщика, формально независимые, имеют общее прошлое: они были основаны одними и теми же двумя лицами, позднее разделили акционерный капитал и пользуются одним логистическим складом на окраине Кишинёва. В проанализированных тендерах один подавал «дорогую» оферту, а второй побеждал с ценой лишь немного ниже — но всё равно значительно выше рыночной.</p><h2>Каталожные цены против тендерных</h2><p>УЗИ-аппарат среднего класса, указанный производителем по цене, эквивалентной 480 тысячам леев, был выставлен районной больнице по счёту на 1,34 миллиона леев. Гематологический анализатор, котирующийся на уровне 210 тысяч леев, обошёлся в 605 тысяч. В сумме по двенадцати изученным лотам разница с референтными ценами превышает 74 миллиона леев.</p><blockquote>«Нам передали, что список одобренных поставщиков спущен сверху и что искать альтернативы нет смысла. Мы подписали то, что нам положили на стол», — заявил на условиях анонимности директор одной из больниц-бенефициаров.</blockquote><h2>Техническое задание, сшитое по мерке</h2><p>Технические спецификации в тендерной документации воспроизводят — порой вместе с опечатками — коммерческую брошюру одного из двух поставщиков. Метаданные одного из тендерных документов, полученных редакцией, указывают в качестве автора сотрудника фирмы-победителя, а не закупающего органа.</p><p>После запросов Corbul.md профильное министерство объявило о приостановке оставшихся платежей и о начале внутреннего аудита всей программы. Национальное агентство по рассмотрению жалоб подтвердило, что две процедуры уже оспаривались в 2025 году, однако жалобы были отклонены по формальным основаниям.</p><p>Редакция направила вопросы обоим поставщикам. Один отказался от любых комментариев; второй заявил, что цены «отражают включённые расходы на обучение и обслуживание». Однако в проанализированных контрактах отдельных положений об обучении или обслуживании нет. Полный набор сравнительных данных мы публикуем в открытом формате.</p>",
+      "author": "ana-corbeanu",
+      "date": "2026-08-19T09:15:00",
+      "updated": null,
+      "coverSeed": 84,
+      "featured": false,
+      "breaking": false,
+      "views": 9240,
+      "readMin": 7,
+      "tags_ro": [
+        "sănătate",
+        "achiziții publice",
+        "spitale",
+        "supraprețuri"
+      ],
+      "tags_ru": [
+        "здравоохранение",
+        "госзакупки",
+        "больницы",
+        "завышенные цены"
+      ],
+      "sources": [
+        {
+          "label": "Contracte de achiziție, program de modernizare 2024–2026",
+          "url": "#"
+        },
+        {
+          "label": "Liste de prețuri ale producătorilor, 2025–2026",
+          "url": "#"
+        },
+        {
+          "label": "Decizii ANSC nr. 03D-441/25 și 03D-518/25",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a03",
+      "slug": "graul-din-rezerva-de-stat-vandut-printr-un-intermediar-fantoma",
+      "category": "investigatii",
+      "title_ro": "Grâul din rezerva de stat, vândut printr-un intermediar-fantomă",
+      "title_ru": "Зерно из госрезерва продано через фирму-призрак",
+      "summary_ro": "40 de mii de tone de grâu din rezerva de stat au fost vândute sub prețul pieței unei firme fără angajați, care le-a revândut în aceeași zi cu un adaos de 22%. Diferența: aproximativ 18 milioane de lei.",
+      "summary_ru": "40 тысяч тонн зерна из госрезерва были проданы ниже рыночной цены фирме без сотрудников, которая перепродала их в тот же день с наценкой 22%. Разница — около 18 миллионов леев.",
+      "content_ro": "<p>În primăvara lui 2026, instituția care administrează rezervele de stat a scos la vânzare 40 de mii de tone de grâu alimentar, invocând necesitatea rotirii stocurilor. Tranzacția, aparent banală, ascunde un detaliu care schimbă totul: cumpărătorul a fost o firmă înregistrată cu doar trei luni înainte, cu un capital social de 5 000 de lei, fără angajați și fără istoric comercial.</p><p>Prețul de vânzare a fost stabilit cu circa 12% sub cotațiile regionale din acea săptămână, pe motiv că „loturile necesită recondiționare\". Rapoartele de calitate consultate de Corbul.md arată însă că grâul se încadra în parametrii standard, fără mențiuni de degradare.</p><h2>Marja unei singure zile</h2><p>Documentele vamale și contractele obținute de redacție arată că firma-intermediar a revândut întreaga cantitate în aceeași zi către un exportator consacrat, cu un adaos de 22%. Profitul brut al unei operațiuni de câteva ore: aproximativ 18 milioane de lei. Banii au plecat, în săptămânile următoare, către un cont dintr-o jurisdicție cu regim fiscal preferențial.</p><blockquote>„Nimeni nu vinde marfă de stat sub piață unei firme de trei luni fără să știe exact ce face. Întrebarea nu este dacă a existat o înțelegere, ci cine a semnat-o\", afirmă un analist al pieței agricole regionale.</blockquote><h2>Cine a aprobat tranzacția</h2><p>Vânzarea a fost avizată de o comisie internă din care făceau parte cinci funcționari. Procesul-verbal al ședinței decisive lipsește din arhiva instituției — redacției i s-a comunicat că documentul „nu poate fi identificat\". Doi membri ai comisiei au refuzat să discute cu Corbul.md, invocând clauze de confidențialitate care, potrivit juriștilor consultați, nu pot acoperi acte administrative de interes public.</p><p>Instituția susține, într-un răspuns oficial, că procedura „a respectat cadrul legal în vigoare\" și că prețul „a reflectat condițiile momentului\". La solicitarea redacției, Procuratura Anticorupție a confirmat că a înregistrat o sesizare pe marginea tranzacției, iar în Parlament a fost depusă o întrebare adresată ministerului de resort.</p><p>Corbul.md continuă să documenteze traseul banilor și publică, împreună cu acest articol, cronologia completă a operațiunii și copiile documentelor care pot fi făcute publice fără a periclita sursele.</p>",
+      "content_ru": "<p>Весной 2026 года учреждение, управляющее государственными резервами, выставило на продажу 40 тысяч тонн продовольственной пшеницы, сославшись на необходимость ротации запасов. Внешне рутинная сделка скрывает деталь, которая меняет всё: покупателем оказалась фирма, зарегистрированная всего за три месяца до этого, с уставным капиталом 5 000 леев, без сотрудников и без коммерческой истории.</p><p>Цена продажи была установлена примерно на 12% ниже региональных котировок той недели — на том основании, что «партии требуют доработки». Однако отчёты о качестве, изученные Corbul.md, показывают: зерно соответствовало стандартным параметрам, без каких-либо отметок о порче.</p><h2>Маржа одного дня</h2><p>Таможенные документы и контракты, полученные редакцией, свидетельствуют: фирма-посредник перепродала весь объём в тот же день признанному экспортёру с наценкой 22%. Валовая прибыль операции длиной в несколько часов — около 18 миллионов леев. В последующие недели деньги ушли на счёт в юрисдикции с льготным налоговым режимом.</p><blockquote>«Никто не продаёт государственный товар ниже рынка трёхмесячной фирме, не понимая точно, что делает. Вопрос не в том, был ли сговор, а в том, кто его подписал», — утверждает аналитик регионального аграрного рынка.</blockquote><h2>Кто одобрил сделку</h2><p>Продажу завизировала внутренняя комиссия из пяти чиновников. Протокол решающего заседания в архиве учреждения отсутствует — редакции сообщили, что документ «не удаётся идентифицировать». Два члена комиссии отказались разговаривать с Corbul.md, сославшись на положения о конфиденциальности, которые, по мнению опрошенных юристов, не могут распространяться на административные акты, представляющие публичный интерес.</p><p>В официальном ответе учреждение утверждает, что процедура «соответствовала действующему законодательству», а цена «отражала условия момента». По запросу редакции Антикоррупционная прокуратура подтвердила, что зарегистрировала обращение по поводу сделки, а в парламенте был подан вопрос профильному министерству.</p><p>Corbul.md продолжает документировать маршрут денег и публикует вместе с этой статьёй полную хронологию операции и копии документов, которые можно обнародовать без риска для источников.</p>",
+      "author": "victor-munteanu",
+      "date": "2026-07-22T11:05:00",
+      "updated": null,
+      "coverSeed": 233,
+      "featured": false,
+      "breaking": false,
+      "views": 4110,
+      "readMin": 6,
+      "tags_ro": [
+        "rezerva de stat",
+        "cereale",
+        "export",
+        "firme-fantomă"
+      ],
+      "tags_ru": [
+        "госрезерв",
+        "зерно",
+        "экспорт",
+        "фирмы-призраки"
+      ],
+      "sources": [
+        {
+          "label": "Contract de vânzare-cumpărare nr. RS-114/2026",
+          "url": "#"
+        },
+        {
+          "label": "Declarații vamale de export, aprilie 2026",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a04",
+      "slug": "reforma-achizitiilor-publice-blocata-a-treia-oara-in-comisie",
+      "category": "politica",
+      "title_ro": "Reforma achizițiilor publice, blocată a treia oară în comisie",
+      "title_ru": "Реформа госзакупок в третий раз заблокирована в комиссии",
+      "summary_ro": "Proiectul de lege care ar obliga publicarea în timp real a tuturor contractelor statului a fost amânat din nou. Amendamentele depuse peste noapte golesc de conținut exact articolele-cheie.",
+      "summary_ru": "Законопроект, обязывающий публиковать в реальном времени все контракты государства, снова отложен. Внесённые за одну ночь поправки выхолащивают именно ключевые статьи.",
+      "content_ro": "<p>Comisia parlamentară de profil a amânat, pentru a treia oară în acest an, dezbaterea proiectului de lege privind transparența achizițiilor publice. Oficial, motivul este „necesitatea unor avize suplimentare\". Neoficial, potrivit a trei surse parlamentare consultate de Corbul.md, blocajul vine dintr-un pachet de amendamente depuse în ultimul moment, care ar transforma legea într-o formalitate.</p><p>Proiectul, elaborat cu asistență tehnică europeană, ar introduce trei schimbări majore:</p><ul><li>publicarea în timp real, în format deschis, a tuturor contractelor semnate de instituțiile statului;</li><li>interdicția atribuirii directe peste un plafon coborât semnificativ;</li><li>registrul public al beneficiarilor reali pentru orice firmă care contractează cu statul.</li></ul><h2>Amendamentele care golesc legea</h2><p>Cele 27 de amendamente depuse cu o seară înainte de ședință exceptează de la publicare contractele „cu caracter urgent\" și pe cele „cu impact asupra securității aprovizionării\" — formulări suficient de largi încât, aplicate pe datele din 2025, ar fi acoperit aproape 40% din valoarea totală a achizițiilor, potrivit unui calcul făcut de redacție pe registrul existent.</p><blockquote>„Nu am văzut niciodată o lege lăudată de toți și dorită de nimeni. Fiecare partid o susține public și o amendează discret\", observă un expert în politici publice care a participat la consultări.</blockquote><h2>Cine pierde din întârziere</h2><p>Estimările organizațiilor de monitorizare arată că lipsa transparenței în timp real costă bugetul între 3% și 7% din valoarea achizițiilor anuale — sute de milioane de lei. Întârzierea afectează și calendarul angajamentelor asumate în procesul de aderare europeană, unde capitolul achizițiilor figurează printre condiționalități.</p><p>Următoarea ședință a comisiei este programată pentru finalul lunii septembrie. Corbul.md va publica lista nominală a voturilor și pozițiile fiecărei fracțiuni, așa cum a procedat și la precedentele două amânări.</p>",
+      "content_ru": "<p>Профильная парламентская комиссия в третий раз за год отложила обсуждение законопроекта о прозрачности государственных закупок. Официальная причина — «необходимость дополнительных заключений». Неофициально, по словам трёх парламентских источников Corbul.md, блокировка связана с пакетом поправок, внесённых в последний момент, которые превратили бы закон в формальность.</p><p>Проект, разработанный при европейской технической поддержке, вводит три ключевых изменения:</p><ul><li>публикация в реальном времени, в открытом формате, всех контрактов, подписанных государственными учреждениями;</li><li>запрет прямых закупок сверх существенно сниженного потолка;</li><li>публичный реестр конечных бенефициаров для любой фирмы, заключающей контракты с государством.</li></ul><h2>Поправки, выхолащивающие закон</h2><p>27 поправок, внесённых вечером накануне заседания, освобождают от публикации контракты «срочного характера» и «влияющие на безопасность снабжения» — формулировки настолько широкие, что в применении к данным 2025 года они охватили бы почти 40% общей стоимости закупок, согласно расчёту редакции по существующему реестру.</p><blockquote>«Я никогда не видел закона, который хвалят все и которого не хочет никто. Каждая партия публично его поддерживает и незаметно правит», — отмечает эксперт по публичным политикам, участвовавший в консультациях.</blockquote><h2>Кто теряет от промедления</h2><p>По оценкам мониторинговых организаций, отсутствие прозрачности в реальном времени обходится бюджету в 3–7% годовой стоимости закупок — сотни миллионов леев. Задержка бьёт и по календарю обязательств, взятых в процессе европейской интеграции, где глава о закупках входит в число условий.</p><p>Следующее заседание комиссии назначено на конец сентября. Corbul.md опубликует поимённые результаты голосования и позиции каждой фракции, как и при двух предыдущих переносах.</p>",
+      "author": "andrei-lupu",
+      "date": "2026-09-02T14:30:00",
+      "updated": null,
+      "coverSeed": 351,
+      "featured": true,
+      "breaking": false,
+      "views": 3680,
+      "readMin": 5,
+      "tags_ro": [
+        "parlament",
+        "transparență",
+        "achiziții publice",
+        "legislație"
+      ],
+      "tags_ru": [
+        "парламент",
+        "прозрачность",
+        "госзакупки",
+        "законодательство"
+      ],
+      "sources": [
+        {
+          "label": "Proiectul de lege nr. 187/2026 și amendamentele depuse",
+          "url": "#"
+        },
+        {
+          "label": "Stenograma ședinței comisiei, 1 septembrie 2026",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a05",
+      "slug": "harta-banilor-pentru-primarii-criteriul-invizibil-al-culorii-politice",
+      "category": "politica",
+      "title_ro": "Harta banilor pentru primării: criteriul invizibil al culorii politice",
+      "title_ru": "Карта денег для примэрий: невидимый критерий политического цвета",
+      "summary_ro": "Analiza a peste 300 de alocări din fondul național de dezvoltare arată că localitățile conduse de primari afiliați puterii au primit, în medie, de două ori mai mulți bani pe cap de locuitor.",
+      "summary_ru": "Анализ более 300 выделений из национального фонда развития показывает: населённые пункты с примарами, аффилированными с властью, получили в среднем вдвое больше денег на душу населения.",
+      "content_ro": "<p>Corbul.md a analizat toate alocările din fondul național de dezvoltare regională și locală aprobate între 2024 și mijlocul lui 2026 — peste 300 de decizii, în valoare totală de aproape 2 miliarde de lei. Rezultatul, verificat prin trei metode statistice diferite, indică un tipar constant: apartenența politică a primarului este cel mai puternic predictor al sumei primite, înaintea numărului de locuitori, a stării infrastructurii sau a calității proiectului depus.</p><p>Metodologia a fost simplă și replicabilă: am asociat fiecare alocare cu localitatea beneficiară, populația acesteia, afilierea politică a primarului la data deciziei și punctajul oficial obținut de proiect în evaluare. Setul de date, anonimizat la nivel de persoane, este publicat integral alături de articol.</p><h2>De două ori mai mulți lei pe cap de locuitor</h2><p>Localitățile conduse de primari afiliați coaliției de guvernare au primit, în medie, 1 460 de lei pe cap de locuitor. Cele conduse de primari ai opoziției — 710 lei. Diferența persistă și după ajustarea pentru mărimea localității și pentru punctajul proiectelor: la punctaje egale, șansa unui proiect depus de o primărie „de altă culoare\" de a fi finanțat scade cu aproximativ o treime.</p><blockquote>„Depunem aceleași dosare, cu aceiași consultanți, la aceleași termene. Ale noastre pierd la mustață, ale lor câștigă la mustață. După patru ani, mustața asta seamănă a sistem\", spune un primar de comună, sub protecția anonimatului.</blockquote><h2>Explicațiile ministerului</h2><p>Ministerul de resort respinge acuzația de partizanat și invocă „calitatea diferită a documentațiilor tehnice\". Datele oficiale de evaluare arată însă că proiectele respinse ale primăriilor de opoziție au avut, în medie, punctaje egale sau superioare multora dintre proiectele finanțate.</p><p>Practica europeană oferă un contrast instructiv: în mai multe state membre, alocările din fonduri similare se fac pe formule publice, cu criterii ponderate transparent, tocmai pentru a elimina discreția politică. Experți consultați de redacție recomandă publicarea grilei de punctaj în timp real și motivarea scrisă a fiecărei respingeri.</p><p>Până la o reformă a mecanismului, harta banilor rămâne, în Moldova, o hartă politică. Corbul.md va actualiza analiza după fiecare rundă nouă de alocări.</p>",
+      "content_ru": "<p>Corbul.md проанализировал все выделения из национального фонда регионального и местного развития, утверждённые с 2024 по середину 2026 года, — более 300 решений на общую сумму почти 2 миллиарда леев. Результат, проверенный тремя разными статистическими методами, указывает на устойчивую закономерность: политическая принадлежность примара — самый сильный предиктор полученной суммы, важнее числа жителей, состояния инфраструктуры или качества поданного проекта.</p><p>Методология была простой и воспроизводимой: мы сопоставили каждое выделение с населённым пунктом-получателем, его населением, политической аффилиацией примара на дату решения и официальным баллом проекта в оценке. Набор данных, анонимизированный на уровне персон, публикуется полностью вместе со статьёй.</p><h2>Вдвое больше леев на душу населения</h2><p>Населённые пункты, возглавляемые примарами правящей коалиции, получили в среднем 1 460 леев на душу населения. Возглавляемые примарами оппозиции — 710 леев. Разница сохраняется и после поправки на размер населённого пункта и балл проектов: при равных баллах шанс проекта примэрии «другого цвета» получить финансирование снижается примерно на треть.</p><blockquote>«Мы подаём те же досье, с теми же консультантами, в те же сроки. Наши проигрывают на волосок, их — выигрывают на волосок. Через четыре года этот волосок начинает походить на систему», — говорит примар одной из коммун на условиях анонимности.</blockquote><h2>Объяснения министерства</h2><p>Профильное министерство отвергает обвинения в партийности и ссылается на «разное качество технической документации». Однако официальные данные оценки показывают: отклонённые проекты оппозиционных примэрий имели в среднем баллы, равные или превышающие баллы многих профинансированных проектов.</p><p>Европейская практика даёт поучительный контраст: в ряде стран-членов средства из аналогичных фондов распределяются по публичным формулам с прозрачно взвешенными критериями — именно чтобы исключить политическое усмотрение. Опрошенные редакцией эксперты рекомендуют публиковать оценочную шкалу в реальном времени и письменно мотивировать каждый отказ.</p><p>До реформы механизма карта денег в Молдове остаётся политической картой. Corbul.md будет обновлять анализ после каждого нового раунда распределений.</p>",
+      "author": "andrei-lupu",
+      "date": "2026-07-30T10:20:00",
+      "updated": null,
+      "coverSeed": 402,
+      "featured": false,
+      "breaking": false,
+      "views": 2170,
+      "readMin": 6,
+      "tags_ro": [
+        "administrație locală",
+        "fonduri publice",
+        "clientelism",
+        "date deschise"
+      ],
+      "tags_ru": [
+        "местная администрация",
+        "публичные фонды",
+        "клиентелизм",
+        "открытые данные"
+      ],
+      "sources": [
+        {
+          "label": "Deciziile de alocare din fondul de dezvoltare, 2024–2026",
+          "url": "#"
+        },
+        {
+          "label": "Setul de date Corbul.md, format deschis",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a06",
+      "slug": "inflatia-coboara-cosul-alimentar-nu-anatomia-unui-paradox",
+      "category": "economie",
+      "title_ro": "Inflația coboară, coșul alimentar nu: anatomia unui paradox",
+      "title_ru": "Инфляция снижается, продовольственная корзина — нет: анатомия парадокса",
+      "summary_ro": "Inflația anuală a coborât la 4,8%, dar coșul alimentar de bază s-a scumpit cu 11% într-un an. Explicația ține de secetă, logistică și de concentrarea pieței de retail.",
+      "summary_ru": "Годовая инфляция опустилась до 4,8%, но базовая продовольственная корзина подорожала за год на 11%. Объяснение — в засухе, логистике и концентрации розничного рынка.",
+      "content_ro": "<p>Statistica oficială anunță o veste bună: inflația anuală a coborât la 4,8%, cel mai redus nivel din ultimii patru ani, iar banca centrală a putut menține rata de bază la 6,5%. La tejghea, însă, vestea nu se simte: un coș alimentar de bază — pâine, lactate, ouă, legume, ulei — calculat lunar de Corbul.md după prețurile din piețele și magazinele din Chișinău, Bălți și Cahul, s-a scumpit cu 11% față de anul trecut.</p><p>Paradoxul are o explicație aritmetică și trei explicații economice. Cea aritmetică: indicele general al prețurilor include servicii, combustibili și bunuri de folosință îndelungată, unde presiunile s-au temperat. Alimentele, cu o pondere de circa o treime în coșul oficial, merg însă în direcția opusă.</p><h2>Ce măsoară, de fapt, inflația</h2><p>Pentru o gospodărie cu venituri mici, care își cheltuie mai bine de jumătate din buget pe mâncare, inflația „personală\" este aproape dublă față de cea oficială. Este motivul pentru care percepția publică și statistica par să descrie două țări diferite — și ambele au dreptate, fiecare pentru altcineva.</p><h2>Trei cauze, un singur bon de casă</h2><ul><li>Seceta din vară a redus producția internă de legume și furaje, scumpind în lanț lactatele și carnea;</li><li>costurile de logistică au crescut odată cu redirecționarea rutelor regionale de transport;</li><li>concentrarea retailului: două rețele controlează peste jumătate din vânzările urbane, iar marjele pe alimentele proaspete s-au lărgit vizibil, potrivit datelor de bilanț analizate de redacție.</li></ul><blockquote>„Politica monetară poate tempera cererea, dar nu poate face să plouă și nici să apară un al treilea concurent pe raftul de lactate\", rezumă un economist consultat de Corbul.md.</blockquote><p>Consiliul Concurenței a anunțat în august o analiză sectorială a retailului alimentar, cu termen de finalizare în primăvara lui 2027. Până atunci, singurul instrument rapid rămâne monitorizarea publică a prețurilor — iar redacția își va actualiza coșul lunar, cu metodologia publicată transparent.</p><p>Pe termen mediu, economiștii văd o singură ieșire durabilă din paradox: investiții în irigații și depozitare, care să reducă dependența ofertei interne de capriciile unui singur sezon agricol.</p>",
+      "content_ru": "<p>Официальная статистика сообщает хорошую новость: годовая инфляция опустилась до 4,8%, минимального уровня за последние четыре года, и центральный банк смог сохранить базовую ставку на уровне 6,5%. Но у прилавка эта новость не ощущается: базовая продовольственная корзина — хлеб, молочные продукты, яйца, овощи, масло, — которую Corbul.md ежемесячно рассчитывает по ценам рынков и магазинов Кишинёва, Бельц и Кагула, подорожала на 11% по сравнению с прошлым годом.</p><p>У парадокса есть одно арифметическое объяснение и три экономических. Арифметическое: общий индекс цен включает услуги, топливо и товары длительного пользования, где давление ослабло. Продукты же, занимающие около трети официальной корзины, движутся в противоположном направлении.</p><h2>Что на самом деле измеряет инфляция</h2><p>Для домохозяйства с низкими доходами, тратящего больше половины бюджета на еду, «личная» инфляция почти вдвое выше официальной. Именно поэтому общественное восприятие и статистика словно описывают две разные страны — и обе правы, каждая для своей аудитории.</p><h2>Три причины — один кассовый чек</h2><ul><li>летняя засуха сократила внутреннее производство овощей и кормов, по цепочке подорожали молочные продукты и мясо;</li><li>логистические издержки выросли вместе с перенаправлением региональных транспортных маршрутов;</li><li>концентрация ритейла: две сети контролируют больше половины городских продаж, а маржа на свежих продуктах заметно расширилась, свидетельствуют балансовые данные, проанализированные редакцией.</li></ul><blockquote>«Монетарная политика может охладить спрос, но не может вызвать дождь или создать третьего конкурента на молочной полке», — резюмирует экономист, опрошенный Corbul.md.</blockquote><p>Совет по конкуренции объявил в августе о секторальном анализе продовольственного ритейла со сроком завершения весной 2027 года. До тех пор единственным быстрым инструментом остаётся публичный мониторинг цен — и редакция будет ежемесячно обновлять свою корзину с прозрачно опубликованной методологией.</p><p>В среднесрочной перспективе экономисты видят лишь один устойчивый выход из парадокса: инвестиции в ирригацию и хранение, снижающие зависимость внутреннего предложения от капризов одного сельскохозяйственного сезона.</p>",
+      "author": "doina-rusnac",
+      "date": "2026-08-27T08:45:00",
+      "updated": null,
+      "coverSeed": 119,
+      "featured": false,
+      "breaking": false,
+      "views": 5890,
+      "readMin": 6,
+      "tags_ro": [
+        "inflație",
+        "prețuri",
+        "BNM",
+        "retail"
+      ],
+      "tags_ru": [
+        "инфляция",
+        "цены",
+        "НБМ",
+        "ритейл"
+      ],
+      "sources": [
+        {
+          "label": "Buletinul statistic lunar, august 2026",
+          "url": "#"
+        },
+        {
+          "label": "Coșul de prețuri Corbul.md, metodologie și date",
+          "url": "#"
+        },
+        {
+          "label": "Raportul de politică monetară al BNM, T2 2026",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a07",
+      "slug": "creditarea-micilor-afaceri-la-minimul-ultimilor-cinci-ani",
+      "category": "economie",
+      "title_ro": "Creditarea micilor afaceri, la minimul ultimilor cinci ani",
+      "title_ru": "Кредитование малого бизнеса — на минимуме за последние пять лет",
+      "summary_ro": "Portofoliul de credite pentru întreprinderile mici s-a comprimat cu 14% în termeni reali. Băncile preferă titlurile de stat, iar programul public de garanții rămâne folosit sub un sfert din capacitate.",
+      "summary_ru": "Портфель кредитов для малых предприятий сжался на 14% в реальном выражении. Банки предпочитают государственные ценные бумаги, а публичная программа гарантий используется меньше чем на четверть мощности.",
+      "content_ro": "<p>Întreprinderile mici din Moldova se împrumută tot mai greu: portofoliul de credite bancare pentru acest segment s-a comprimat cu 14% în termeni reali în ultimele douăsprezece luni, arată datele agregate din rapoartele băncilor, analizate de Corbul.md. Este cel mai scăzut nivel din ultimii cinci ani, într-o perioadă în care lichiditatea sistemului bancar se află, paradoxal, la maxime istorice.</p><p>Explicația ține de un calcul simplu pe care îl face fiecare trezorerie de bancă: titlurile de stat oferă randamente atractive, risc zero contabil și zero costuri de administrare. Un credit pentru o firmă mică oferă un randament doar puțin mai mare, la un risc și la costuri operaționale incomparabil mai mari.</p><h2>Băncile aleg titlurile de stat</h2><p>Expunerea cumulată a băncilor pe titluri de stat a crescut cu aproape o treime într-un an și reprezintă acum echivalentul a peste un sfert din activele sistemului. „Statul aspiră economisirea internă, iar firmele mici rămân cu firimiturile\", descrie situația un fost membru al comitetului executiv al unei bănci comerciale.</p><blockquote>„Am cerut 400 de mii de lei pentru un utilaj care și-ar fi scos banii în doi ani. Mi s-au cerut garanții de un milion două sute și trei luni de acte. Am renunțat și am cumpărat utilajul la mâna a doua, cu banii jos\", povestește proprietarul unui mic atelier de tâmplărie din nordul țării.</blockquote><h2>Garanțiile care nu ajung la firme</h2><p>Programul public de garantare a creditelor, gândit exact pentru astfel de situații, funcționează sub un sfert din capacitate. Motivele, identificate în discuțiile redacției cu bănci și antreprenori: plafoane mici, dosare stufoase și termene de răspuns care depășesc frecvent 60 de zile — un ritm incompatibil cu deciziile de investiții ale unei firme mici.</p><p>Ministerul de resort promite o simplificare a programului până la finalul anului, inclusiv un dosar standard depus integral online. Băncile, la rândul lor, invocă cerințele prudențiale și lipsa istoricului de creditare al firmelor mici — un cerc vicios pe care doar infrastructura de date financiare deschise l-ar putea rupe.</p><p>Miza nu este abstractă: sectorul micilor întreprinderi asigură aproape jumătate din locurile de muncă din economia formală. O economie în care doar statul se împrumută ieftin este o economie care își amână propria creștere.</p>",
+      "content_ru": "<p>Малым предприятиям Молдовы всё труднее занимать: портфель банковских кредитов для этого сегмента сжался на 14% в реальном выражении за последние двенадцать месяцев, показывают агрегированные данные банковских отчётов, проанализированные Corbul.md. Это самый низкий уровень за последние пять лет — и это в период, когда ликвидность банковской системы, как ни парадоксально, находится на исторических максимумах.</p><p>Объяснение сводится к простому расчёту, который делает каждое банковское казначейство: государственные ценные бумаги дают привлекательную доходность, нулевой бухгалтерский риск и нулевые издержки администрирования. Кредит малой фирме приносит лишь немногим больше — при несравнимо более высоких рисках и операционных затратах.</p><h2>Банки выбирают госбумаги</h2><p>Совокупная экспозиция банков на государственные ценные бумаги выросла почти на треть за год и теперь эквивалентна более чем четверти активов системы. «Государство всасывает внутренние сбережения, а малым фирмам остаются крошки», — так описывает ситуацию бывший член исполнительного комитета одного из коммерческих банков.</p><blockquote>«Я просил 400 тысяч леев на станок, который окупился бы за два года. С меня потребовали залог на миллион двести и три месяца бумаг. Я плюнул и купил станок с рук, за наличные», — рассказывает владелец небольшой столярной мастерской на севере страны.</blockquote><h2>Гарантии, которые не доходят до фирм</h2><p>Публичная программа кредитных гарантий, задуманная именно для таких ситуаций, работает меньше чем на четверть мощности. Причины, выявленные редакцией в разговорах с банками и предпринимателями: низкие потолки, громоздкие досье и сроки ответа, зачастую превышающие 60 дней, — ритм, несовместимый с инвестиционными решениями малой фирмы.</p><p>Профильное министерство обещает упростить программу до конца года, включая стандартное досье, подаваемое полностью онлайн. Банки, в свою очередь, ссылаются на пруденциальные требования и отсутствие кредитной истории у малых фирм — порочный круг, разорвать который могла бы лишь инфраструктура открытых финансовых данных.</p><p>Ставка не абстрактна: сектор малых предприятий обеспечивает почти половину рабочих мест в формальной экономике. Экономика, в которой дёшево занимает только государство, — это экономика, откладывающая собственный рост.</p>",
+      "author": "doina-rusnac",
+      "date": "2026-07-15T16:10:00",
+      "updated": null,
+      "coverSeed": 578,
+      "featured": false,
+      "breaking": false,
+      "views": 1460,
+      "readMin": 5,
+      "tags_ro": [
+        "credite",
+        "IMM",
+        "bănci",
+        "investiții"
+      ],
+      "tags_ru": [
+        "кредиты",
+        "МСП",
+        "банки",
+        "инвестиции"
+      ],
+      "sources": [
+        {
+          "label": "Rapoartele financiare trimestriale ale băncilor, T2 2026",
+          "url": "#"
+        },
+        {
+          "label": "Raportul programului de garantare a creditelor, 2025",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a08",
+      "slug": "clauza-din-contractul-de-gaze-care-costa-moldova-milioane-in-fiecare-luna",
+      "category": "energie",
+      "title_ro": "Clauza din contractul de gaze care costă Moldova milioane în fiecare lună",
+      "title_ru": "Пункт газового контракта, который ежемесячно обходится Молдове в миллионы",
+      "summary_ro": "O formulă de preț moștenită, indexată la un coș petrolier, ține gazul contractat peste cotațiile pieței spot de paisprezece luni consecutive. Fereastra de renegociere se deschide în octombrie.",
+      "summary_ru": "Унаследованная ценовая формула, индексируемая по нефтяной корзине, четырнадцать месяцев подряд держит контрактный газ выше котировок спотового рынка. Окно для пересмотра открывается в октябре.",
+      "content_ro": "<p>De paisprezece luni consecutive, gazul cumpărat de Moldova pe contractul principal de furnizare costă mai mult decât ar costa aceeași cantitate cumpărată pe piața spot europeană. Diferența, calculată de Corbul.md pe baza volumelor lunare publicate și a cotațiilor de referință, variază între 2 și 6 milioane de euro pe lună. Cauza nu este conjunctura, ci o clauză: formula de preț.</p><p>Formula, moștenită dintr-o generație veche de contracte, indexează prețul gazului la un coș de produse petroliere cu o întârziere de nouă luni. Când petrolul urcă, gazul contractat se scumpește automat — chiar dacă piața europeană a gazului, între timp, s-a relaxat. Exact acest decalaj s-a produs în ultimul an.</p><h2>Formula moștenită din altă epocă</h2><p>Indexarea petrolieră avea sens într-o piață fără burse lichide de gaz. Astăzi, majoritatea contractelor europene s-au mutat pe referințe de tip hub, care reflectă cererea și oferta reală de gaz. Vecinii Moldovei au făcut tranziția: contractele de import ale României și Ucrainei folosesc preponderent referințe spot sau mixte.</p><ul><li>România: peste 80% din importuri legate de cotații de hub;</li><li>Ucraina: achiziții lunare prin licitații deschise, la prețuri spot;</li><li>Moldova: contract principal indexat petrolier, cu decalaj de nouă luni.</li></ul><blockquote>„Nu există gaz ieftin sau scump în sine, există contracte bine sau prost negociate. O formulă întârziată cu nouă luni înseamnă că plătești iarna trecută la prețul verii viitoare\", explică un consultant în piețe energetice care a lucrat la renegocieri similare în regiune.</blockquote><h2>Fereastra din octombrie</h2><p>Contractul prevede o fereastră de revizuire a formulei, care se deschide în octombrie și durează 60 de zile. Dacă părțile nu ajung la un acord, prețul rămâne pe vechea formulă încă un an. Potrivit surselor Corbul.md, echipa de negociere pregătește trei scenarii, de la o indexare mixtă până la trecerea integrală pe referință de hub cu un coridor de protecție.</p><p>Miza depășește factura lunară: de formula de preț depind tarifele reglementate, compensațiile bugetare pentru consumatorii vulnerabili și, în ultimă instanță, credibilitatea întregii politici energetice. Corbul.md va urmări negocierile și va publica formula finală, oricare ar fi ea.</p>",
+      "content_ru": "<p>Четырнадцать месяцев подряд газ, закупаемый Молдовой по основному контракту на поставку, стоит дороже, чем обошёлся бы тот же объём на европейском спотовом рынке. Разница, рассчитанная Corbul.md на основе публикуемых месячных объёмов и референтных котировок, колеблется от 2 до 6 миллионов евро в месяц. Причина не в конъюнктуре, а в одном пункте: ценовой формуле.</p><p>Формула, унаследованная от старого поколения контрактов, индексирует цену газа по корзине нефтепродуктов с запаздыванием в девять месяцев. Когда нефть дорожает, контрактный газ автоматически растёт в цене — даже если европейский рынок газа за это время успокоился. Именно такой разрыв и произошёл за последний год.</p><h2>Формула из другой эпохи</h2><p>Нефтяная индексация имела смысл на рынке без ликвидных газовых бирж. Сегодня большинство европейских контрактов перешло на хабовые референции, отражающие реальный спрос и предложение газа. Соседи Молдовы этот переход совершили: импортные контракты Румынии и Украины опираются преимущественно на спотовые или смешанные референции.</p><ul><li>Румыния: более 80% импорта привязано к котировкам хабов;</li><li>Украина: ежемесячные закупки через открытые аукционы по спотовым ценам;</li><li>Молдова: основной контракт с нефтяной индексацией и девятимесячным лагом.</li></ul><blockquote>«Не бывает дешёвого или дорогого газа самого по себе — бывают хорошо или плохо выторгованные контракты. Формула с девятимесячным запаздыванием означает, что за прошлую зиму вы платите по цене будущего лета», — объясняет консультант по энергетическим рынкам, работавший над похожими пересмотрами в регионе.</blockquote><h2>Октябрьское окно</h2><p>Контракт предусматривает окно пересмотра формулы, которое открывается в октябре и длится 60 дней. Если стороны не придут к согласию, цена останется по старой формуле ещё на год. По данным источников Corbul.md, переговорная команда готовит три сценария — от смешанной индексации до полного перехода на хабовую референцию с защитным коридором.</p><p>Ставка выходит за пределы месячного счёта: от ценовой формулы зависят регулируемые тарифы, бюджетные компенсации уязвимым потребителям и, в конечном счёте, доверие ко всей энергетической политике. Corbul.md будет следить за переговорами и опубликует итоговую формулу, какой бы она ни была.</p>",
+      "author": "irina-cazacu",
+      "date": "2026-09-03T18:25:00",
+      "updated": "2026-09-04T09:00:00",
+      "coverSeed": 46,
+      "featured": true,
+      "breaking": false,
+      "views": 8720,
+      "readMin": 7,
+      "tags_ro": [
+        "gaze naturale",
+        "contracte",
+        "prețuri",
+        "securitate energetică"
+      ],
+      "tags_ru": [
+        "природный газ",
+        "контракты",
+        "цены",
+        "энергетическая безопасность"
+      ],
+      "sources": [
+        {
+          "label": "Rapoartele lunare de piață ale operatorului de sistem, 2025–2026",
+          "url": "#"
+        },
+        {
+          "label": "Cotațiile de referință ale hub-urilor europene, arhivă",
+          "url": "#"
+        },
+        {
+          "label": "Analiza comparativă a contractelor regionale, institut de profil",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a09",
+      "slug": "cine-castiga-din-fiecare-megawatt-importat-culisele-pietei-de-echilibrare",
+      "category": "energie",
+      "title_ro": "Cine câștigă din fiecare megawatt importat: culisele pieței de echilibrare",
+      "title_ru": "Кто зарабатывает на каждом импортированном мегаватте: закулисье балансирующего рынка",
+      "summary_ro": "Doi traderi concentrează peste 70% din tranzacțiile pieței de echilibrare a energiei electrice, cu marje care ajung la de patru ori nivelul practicat pe piețele vecine. Designul licitațiilor face diferența.",
+      "summary_ru": "Два трейдера концентрируют более 70% сделок балансирующего рынка электроэнергии с маржой, вчетверо превышающей уровень соседних рынков. Разницу делает дизайн аукционов.",
+      "content_ro": "<p>Piața de echilibrare — mecanismul prin care sistemul electroenergetic acoperă, în timp real, diferențele dintre consumul prognozat și cel efectiv — a devenit, în Moldova, una dintre cele mai profitabile nișe din energie. Datele de tranzacționare din ultimele optsprezece luni, analizate de Corbul.md, arată că doi traderi concentrează peste 70% din volumul tranzacțiilor și obțin marje care ajung la de patru ori nivelul practicat pe piețele similare din România sau Ucraina.</p><p>Mecanismul a fost gândit pentru urgențe: când vântul nu bate, când o centrală iese neplanificat din funcțiune sau când consumul sare peste prognoză, operatorul de sistem cumpără rapid energie de echilibrare. Prin definiție, aceste achiziții se fac sub presiunea timpului — iar presiunea timpului este mediul natural al marjelor mari.</p><h2>Un mecanism gândit pentru urgențe, folosit ca regulă</h2><p>Problema Moldovei nu este existența pieței de echilibrare, ci frecvența utilizării ei: volumele tranzacționate pe acest segment sunt, raportat la consum, de aproape trei ori mai mari decât media regională. Prognozele de consum ratate sistematic și lipsa unei piețe intrazilnice lichide împing operatorul, zi de zi, în brațele licitațiilor de urgență.</p><blockquote>„Când un mecanism de excepție rulează zilnic, el nu mai este o plasă de siguranță, ci un model de business. Iar modelele de business își apără singure existența\", spune un fost membru al consiliului de administrație al autorității de reglementare.</blockquote><h2>Marja care se vede doar în facturi</h2><p>Costurile echilibrării se distribuie în tarifele finale, unde devin invizibile pentru consumator: nimeni nu vede pe factură linia „dezechilibre\". Calculele redacției, bazate pe rapoartele operatorului, arată că un gospodărie medie plătește anual echivalentul a circa 340 de lei pentru acest segment — de peste două ori mai mult decât ar plăti la marje regionale normale.</p><p>Autoritatea de reglementare a anunțat o revizuire a regulilor pieței de echilibrare, inclusiv publicarea în timp real a ofertelor anonimizate și lărgirea cercului de participanți eligibili. Traderii vizați de analiza redacției nu au răspuns solicitărilor de comentariu până la publicare.</p><p>Experiența regională sugerează că simpla transparență schimbă comportamentele: în România, publicarea ofertelor a comprimat marjele cu peste o treime în primul an. Uneori, cea mai eficientă reformă este un reflector.</p>",
+      "content_ru": "<p>Балансирующий рынок — механизм, с помощью которого энергосистема в реальном времени покрывает разницу между прогнозным и фактическим потреблением, — стал в Молдове одной из самых прибыльных ниш энергетики. Торговые данные за последние восемнадцать месяцев, проанализированные Corbul.md, показывают: два трейдера концентрируют более 70% объёма сделок и получают маржу, вчетверо превышающую уровень аналогичных рынков Румынии или Украины.</p><p>Механизм задумывался для чрезвычайных ситуаций: когда не дует ветер, когда станция внепланово выходит из строя или когда потребление превышает прогноз, системный оператор быстро докупает балансирующую энергию. По определению такие закупки происходят в цейтноте — а цейтнот является естественной средой больших маржей.</p><h2>Механизм для чрезвычайных ситуаций, ставший правилом</h2><p>Проблема Молдовы не в существовании балансирующего рынка, а в частоте его использования: объёмы сделок на этом сегменте в пересчёте на потребление почти втрое превышают средние по региону. Систематически ошибающиеся прогнозы потребления и отсутствие ликвидного внутридневного рынка изо дня в день толкают оператора в объятия чрезвычайных аукционов.</p><blockquote>«Когда исключительный механизм работает ежедневно, он перестаёт быть страховочной сеткой и становится бизнес-моделью. А бизнес-модели сами защищают своё существование», — говорит бывший член административного совета регулирующего органа.</blockquote><h2>Маржа, которую видно только в счетах</h2><p>Издержки балансирования распределяются по конечным тарифам, где становятся невидимыми для потребителя: никто не видит в счёте строку «небалансы». Расчёты редакции на основе отчётов оператора показывают: среднее домохозяйство ежегодно платит за этот сегмент эквивалент примерно 340 леев — вдвое с лишним больше, чем платило бы при нормальной региональной марже.</p><p>Регулирующий орган объявил о пересмотре правил балансирующего рынка, включая публикацию анонимизированных оферт в реальном времени и расширение круга допущенных участников. Трейдеры, о которых идёт речь в анализе редакции, не ответили на запросы о комментарии к моменту публикации.</p><p>Региональный опыт подсказывает, что уже сама прозрачность меняет поведение: в Румынии публикация оферт сжала маржу более чем на треть за первый год. Иногда самая эффективная реформа — это прожектор.</p>",
+      "author": "irina-cazacu",
+      "date": "2026-08-08T12:50:00",
+      "updated": null,
+      "coverSeed": 690,
+      "featured": false,
+      "breaking": false,
+      "views": 3040,
+      "readMin": 6,
+      "tags_ro": [
+        "energie electrică",
+        "piața de echilibrare",
+        "traderi",
+        "tarife"
+      ],
+      "tags_ru": [
+        "электроэнергия",
+        "балансирующий рынок",
+        "трейдеры",
+        "тарифы"
+      ],
+      "sources": [
+        {
+          "label": "Rapoartele de tranzacționare ale operatorului de sistem, 2025–2026",
+          "url": "#"
+        },
+        {
+          "label": "Analiza comparativă a piețelor de echilibrare din regiune",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a10",
+      "slug": "promovati-cu-avize-negative-scurtcircuit-in-evaluarea-judecatorilor",
+      "category": "juridic",
+      "title_ro": "Promovați cu avize negative: scurtcircuit în evaluarea judecătorilor",
+      "title_ru": "Повышены вопреки отрицательным заключениям: сбой в системе оценки судей",
+      "summary_ro": "Cinci judecători au fost promovați în instanțe superioare deși comisia de integritate emisese avize negative în dreptul lor. O lacună procedurală transformă avizele în simple recomandări.",
+      "summary_ru": "Пять судей получили повышение в вышестоящие инстанции, хотя комиссия по неподкупности вынесла по ним отрицательные заключения. Процедурная лазейка превращает заключения в простые рекомендации.",
+      "content_ro": "<p>Cel puțin cinci judecători promovați în ultimul an în instanțe superioare primiseră, anterior, avize negative din partea comisiei de evaluare a integrității — arată o analiză Corbul.md a hotărârilor publicate și a rapoartelor comisiei. Avizele semnalau, de la caz la caz, averi nejustificate prin veniturile declarate, conflicte de interese nedeclarate sau incompatibilități.</p><p>Promovările au fost totuși posibile printr-o lacună de procedură: avizul comisiei este consultativ, iar organul de administrare a magistraturii îl poate depăși printr-un vot motivat. În practică, „motivarea\" s-a redus, în cele cinci cazuri, la formulări aproape identice, de tipul „comisia a apreciat ansamblul activității profesionale\".</p><h2>Avizul care nu obligă pe nimeni</h2><p>Arhitectura evaluării a fost gândită ca un filtru dublu: comisia verifică integritatea, organul de administrare cântărește meritele profesionale. Filtrul funcționează însă doar dacă al doilea nivel tratează avizul negativ ca pe o barieră serioasă, nu ca pe o formalitate. Statistica analizată de redacție arată contrariul: din unsprezece avize negative emise în perioada studiată, șase au fost pur și simplu depășite prin vot.</p><blockquote>„Un aviz negativ depășit prin vot fără motivare substanțială nu este o decizie administrativă, este un mesaj. Iar mesajul către sistem sună așa: evaluarea integrității este opțională\", avertizează un profesor de drept constituțional consultat de Corbul.md.</blockquote><h2>Precedentul care golește reforma</h2><p>Miza depășește cele cinci cariere: pre-vettingul și evaluarea integrității au fost condiții centrale ale sprijinului extern pentru reforma justiției. Partenerii de dezvoltare au semnalat deja, în rapoartele de monitorizare, „riscul ca mecanismele de integritate să fie neutralizate prin practică administrativă\".</p><p>Organul de administrare a magistraturii a răspuns solicitării redacției printr-o precizare generală: fiecare promovare „a respectat procedura legală\". Comisia de evaluare, contactată separat, a confirmat avizele negative și a precizat că nu a fost invitată să își susțină concluziile înaintea voturilor decisive.</p><p>În Parlament există un proiect care ar transforma avizul negativ în impediment absolut la promovare, cu drept de contestare în instanță. Proiectul așteaptă avizul Guvernului din luna mai. Până atunci, precedentul rămâne deschis — și, cum arată cifrele, folosit.</p>",
+      "content_ru": "<p>Как минимум пять судей, повышенных за последний год в вышестоящие инстанции, ранее получили отрицательные заключения комиссии по оценке неподкупности — показывает анализ Corbul.md опубликованных решений и отчётов комиссии. Заключения указывали, в зависимости от случая, на имущество, не подтверждённое задекларированными доходами, незаявленные конфликты интересов или несовместимость должностей.</p><p>Повышения тем не менее стали возможны из-за процедурной лазейки: заключение комиссии носит консультативный характер, и орган самоуправления магистратуры может преодолеть его мотивированным голосованием. На практике «мотивировка» во всех пяти случаях свелась к почти одинаковым формулировкам вроде «комиссия оценила профессиональную деятельность в целом».</p><h2>Заключение, которое никого не обязывает</h2><p>Архитектура оценки задумывалась как двойной фильтр: комиссия проверяет неподкупность, орган самоуправления взвешивает профессиональные заслуги. Но фильтр работает лишь тогда, когда второй уровень воспринимает отрицательное заключение как серьёзный барьер, а не как формальность. Статистика, проанализированная редакцией, говорит об обратном: из одиннадцати отрицательных заключений, вынесенных за изученный период, шесть были попросту преодолены голосованием.</p><blockquote>«Отрицательное заключение, преодолённое голосованием без содержательной мотивировки, — это не административное решение, это сигнал. И сигнал системе звучит так: оценка неподкупности необязательна», — предупреждает профессор конституционного права, опрошенный Corbul.md.</blockquote><h2>Прецедент, выхолащивающий реформу</h2><p>Ставка выше пяти карьер: предварительная проверка и оценка неподкупности были центральными условиями внешней поддержки реформы юстиции. Партнёры по развитию уже отметили в мониторинговых отчётах «риск нейтрализации механизмов неподкупности административной практикой».</p><p>Орган самоуправления магистратуры ответил на запрос редакции общим уточнением: каждое повышение «соответствовало законной процедуре». Комиссия по оценке, к которой редакция обратилась отдельно, подтвердила отрицательные заключения и уточнила, что её не приглашали отстоять свои выводы перед решающими голосованиями.</p><p>В парламенте находится проект, который превратил бы отрицательное заключение в абсолютное препятствие для повышения с правом обжалования в суде. Проект ждёт заключения правительства с мая. До тех пор прецедент остаётся открытым — и, как показывают цифры, востребованным.</p>",
+      "author": "sergiu-balan",
+      "date": "2026-08-31T09:35:00",
+      "updated": null,
+      "coverSeed": 271,
+      "featured": false,
+      "breaking": false,
+      "views": 4570,
+      "readMin": 7,
+      "tags_ro": [
+        "justiție",
+        "integritate",
+        "judecători",
+        "reformă"
+      ],
+      "tags_ru": [
+        "юстиция",
+        "неподкупность",
+        "судьи",
+        "реформа"
+      ],
+      "sources": [
+        {
+          "label": "Hotărârile de promovare publicate, 2025–2026",
+          "url": "#"
+        },
+        {
+          "label": "Rapoartele comisiei de evaluare a integrității",
+          "url": "#"
+        },
+        {
+          "label": "Raport de monitorizare a reformei justiției, 2026",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a11",
+      "slug": "dosarele-marilor-fraude-prinse-in-bucla-amanarilor",
+      "category": "juridic",
+      "title_ro": "Dosarele marilor fraude, prinse în bucla amânărilor",
+      "title_ru": "Дела о крупных махинациях застряли в петле переносов",
+      "summary_ro": "Paisprezece dosare de fraudă cu prejudicii de peste 10 milioane de lei fiecare stau în instanțe, în medie, de patru ani și jumătate. Șase din zece ședințe se amână, iar prescripția bate la ușă în cel puțin trei cazuri.",
+      "summary_ru": "Четырнадцать дел о махинациях с ущербом свыше 10 миллионов леев каждое находятся в судах в среднем четыре с половиной года. Шесть из десяти заседаний переносятся, а в как минимум трёх делах на пороге — срок давности.",
+      "content_ro": "<p>Corbul.md a urmărit, pe parcursul unui an, traseul în instanță a paisprezece dosare de fraudă economică majoră — fiecare cu un prejudiciu estimat de peste 10 milioane de lei. Radiografia rezultată este un studiu de caz despre cum se pierde timpul judiciar: vechimea medie a dosarelor este de patru ani și jumătate, iar șase din zece ședințe programate se amână.</p><p>Cifrele agregate din monitorizare:</p><ul><li>412 ședințe programate în cele 14 dosare, într-un singur an;</li><li>247 amânate — 60% din total;</li><li>cauzele principale: absența avocaților (34%), absența martorilor (22%), expertize întârziate (18%), lipsa completului (11%).</li></ul><h2>Anatomia unei amânări</h2><p>Într-unul dintre dosare, aceeași expertiză contabilă a fost dispusă de trei ori, cu trei formulări ușor diferite, fiecare adăugând între cinci și opt luni. În altul, apărarea a schimbat șapte avocați în doi ani — fiecare schimbare repornind, practic, cronometrul familiarizării cu dosarul. Niciuna dintre aceste tactici nu este ilegală; cumulate, ele fac însă procesul imposibil de finalizat.</p><blockquote>„Amânarea nu este un accident al sistemului, este o strategie a apărării și o resemnare a acuzării. Fiecare lună câștigată apropie prescripția, iar prescripția este achitarea care nu se pronunță niciodată cu voce tare\", spune un fost procuror anticorupție.</blockquote><h2>Cursa cu prescripția</h2><p>În cel puțin trei dintre dosarele monitorizate, termenul de prescripție se împlinește în următoarele optsprezece luni. Dacă se ajunge acolo, prejudicii cumulate de peste 90 de milioane de lei rămân definitiv nerecuperate, iar răspunderea penală se stinge fără verdict.</p><p>Soluțiile există și sunt cunoscute: completuri specializate în criminalitate economică, termene procedurale stricte pentru expertize, sancționarea efectivă a abuzului de drept procesual. Un pachet legislativ în acest sens a trecut de prima lectură în iunie și așteaptă lectura a doua în sesiunea de toamnă.</p><p>Până atunci, redacția publică lista celor paisprezece dosare, cu vechimea, stadiul și următorul termen al fiecăruia — un instrument public de urmărire pe care îl vom actualiza după fiecare ședință.</p>",
+      "content_ru": "<p>Corbul.md в течение года отслеживал судебный путь четырнадцати дел о крупных экономических махинациях — каждое с оценочным ущербом более 10 миллионов леев. Получившаяся рентгенограмма — наглядное пособие о том, как теряется судебное время: средний возраст дел составляет четыре с половиной года, а шесть из десяти назначенных заседаний переносятся.</p><p>Агрегированные цифры мониторинга:</p><ul><li>412 заседаний, назначенных по 14 делам за один год;</li><li>247 перенесено — 60% от общего числа;</li><li>главные причины: неявка адвокатов (34%), неявка свидетелей (22%), запаздывающие экспертизы (18%), отсутствие состава суда (11%).</li></ul><h2>Анатомия переноса</h2><p>В одном из дел одна и та же бухгалтерская экспертиза назначалась трижды, в трёх слегка различающихся формулировках, и каждая добавляла от пяти до восьми месяцев. В другом защита сменила семь адвокатов за два года — и каждая замена фактически перезапускала отсчёт времени на ознакомление с делом. Ни одна из этих тактик не является незаконной; но в сумме они делают процесс незавершимым.</p><blockquote>«Перенос — не сбой системы, а стратегия защиты и смирение обвинения. Каждый выигранный месяц приближает срок давности, а срок давности — это оправдательный приговор, который никогда не произносят вслух», — говорит бывший антикоррупционный прокурор.</blockquote><h2>Гонка со сроком давности</h2><p>Как минимум в трёх из отслеживаемых дел срок давности истекает в ближайшие восемнадцать месяцев. Если до этого дойдёт, совокупный ущерб более 90 миллионов леев останется невозмещённым навсегда, а уголовная ответственность погаснет без вердикта.</p><p>Решения существуют и известны: специализированные составы по экономической преступности, жёсткие процессуальные сроки для экспертиз, действенные санкции за злоупотребление процессуальными правами. Соответствующий законодательный пакет прошёл первое чтение в июне и ждёт второго в осеннюю сессию.</p><p>А пока редакция публикует список всех четырнадцати дел — с возрастом, стадией и следующей датой каждого: публичный инструмент отслеживания, который мы будем обновлять после каждого заседания.</p>",
+      "author": "sergiu-balan",
+      "date": "2026-07-09T13:40:00",
+      "updated": null,
+      "coverSeed": 813,
+      "featured": false,
+      "breaking": false,
+      "views": 2830,
+      "readMin": 6,
+      "tags_ro": [
+        "instanțe",
+        "fraude",
+        "prescripție",
+        "monitorizare"
+      ],
+      "tags_ru": [
+        "суды",
+        "махинации",
+        "срок давности",
+        "мониторинг"
+      ],
+      "sources": [
+        {
+          "label": "Monitorizarea ședințelor de judecată Corbul.md, 2025–2026",
+          "url": "#"
+        },
+        {
+          "label": "Agenda instanțelor, portalul oficial",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a12",
+      "slug": "tariful-nescris-de-la-vama-cat-plateste-un-camion-ca-sa-nu-astepte",
+      "category": "coruptie",
+      "title_ro": "Tariful nescris de la vamă: cât plătește un camion ca să nu aștepte",
+      "title_ru": "Неписаный тариф на таможне: сколько платит грузовик, чтобы не стоять в очереди",
+      "summary_ro": "Șoferi și expeditori descriu un sistem informal de „urgentare\" la un punct de trecere a frontierei: sume fixe, intermediari cunoscuți, rezultate garantate. Datele despre timpii de așteptare confirmă tiparul.",
+      "summary_ru": "Водители и экспедиторы описывают неформальную систему «ускорения» на одном из пунктов пересечения границы: фиксированные суммы, известные посредники, гарантированный результат. Данные о времени ожидания подтверждают закономерность.",
+      "content_ro": "<p>Pe hârtie, ordinea trecerii camioanelor printr-un punct de frontieră este dată de coada electronică. În practică, spun unsprezece șoferi și trei expeditori intervievați de Corbul.md în ultimele patru luni, există și o „bandă rapidă\" nescrisă: contra unei sume fixe, plătite printr-un intermediar cunoscut în zonă, un camion „prinde\" o programare devansată sau un control „fluidizat\".</p><p>Sumele descrise independent de sursele redacției coincid până la detalii: echivalentul a 150–200 de euro pentru o devansare de programare, 300–400 pentru un camion cu marfă perisabilă „urgentată\" în aceeași zi. Plata nu se face niciodată direct către un funcționar — intermediarii sunt firme mici de „consultanță logistică\" apărute în jurul punctului de trecere.</p><h2>Coada care dispare contra cost</h2><p>Redacția a analizat datele publice ale cozii electronice pe șase luni: un subset recurent de transportatori traversează sistematic în mai puțin de o treime din timpul median de așteptare. Aceleași firme apar în evidențele contabile, obținute de redacție, ca fiind clienți fideli ai intermediarilor de „consultanță\". Corelația nu este o dovadă penală, dar este exact tiparul pe care îl descriu sursele.</p><blockquote>„Nu dai nimănui nimic în mână și nimeni nu-ți cere nimic. Suni un număr, achiți o factură de consultanță și camionul pleacă. Toată lumea știe, nimeni nu vede\", povestește un șofer cu cincisprezece ani de curse internaționale.</blockquote><h2>Ce arată datele despre timpii de așteptare</h2><p>Pentru transportatorii care nu plătesc, media de așteptare la punctul analizat a crescut cu 40% într-un an — o taxă invizibilă plătită în motorină, termene ratate și contracte pierdute. Asociațiile de transport estimează costul total al întârzierilor la frontieră la peste 300 de milioane de lei anual, la nivelul întregii economii.</p><p>Serviciul Vamal a răspuns solicitării Corbul.md că „nu tolerează practici informale\", că a dispus verificări interne la punctul vizat și că va extinde monitorizarea video a fluxurilor. Doi angajați au fost, între timp, suspendați preventiv, potrivit unui răspuns actualizat primit înainte de publicare.</p><p>Redacția își protejează sursele: detaliile care ar putea duce la identificarea șoferilor au fost modificate, iar documentele contabile sunt păstrate în afara țării. Sesizările pot fi transmise redacției prin canalul securizat indicat în pagina de contact.</p>",
+      "content_ru": "<p>На бумаге очерёдность проезда грузовиков через пункт пропуска определяет электронная очередь. На практике, рассказывают одиннадцать водителей и три экспедитора, опрошенные Corbul.md за последние четыре месяца, существует и неписаная «быстрая полоса»: за фиксированную сумму, уплаченную через известного в округе посредника, грузовик «ловит» более ранний слот или «ускоренный» контроль.</p><p>Суммы, названные источниками редакции независимо друг от друга, совпадают до деталей: эквивалент 150–200 евро за перенос записи на более ранний срок, 300–400 — за грузовик со скоропортящимся товаром, «ускоренный» в тот же день. Оплата никогда не идёт напрямую чиновнику — посредниками выступают мелкие фирмы «логистического консалтинга», выросшие вокруг пункта пропуска.</p><h2>Очередь, исчезающая за деньги</h2><p>Редакция проанализировала открытые данные электронной очереди за шесть месяцев: повторяющееся подмножество перевозчиков систематически пересекает границу менее чем за треть медианного времени ожидания. Те же фирмы фигурируют в бухгалтерских записях, полученных редакцией, как постоянные клиенты «консалтинговых» посредников. Корреляция — не уголовное доказательство, но это в точности та схема, которую описывают источники.</p><blockquote>«Ты никому ничего не даёшь в руки, и никто у тебя ничего не просит. Звонишь по номеру, оплачиваешь счёт за консультацию — и грузовик едет. Все знают, никто не видит», — рассказывает водитель с пятнадцатью годами международных рейсов.</blockquote><h2>Что показывают данные о времени ожидания</h2><p>Для перевозчиков, которые не платят, среднее время ожидания на анализируемом пункте выросло за год на 40% — невидимый налог, оплачиваемый соляркой, сорванными сроками и потерянными контрактами. Транспортные ассоциации оценивают совокупные издержки задержек на границе более чем в 300 миллионов леев в год в масштабах всей экономики.</p><p>Таможенная служба ответила на запрос Corbul.md, что «не терпит неформальных практик», что назначила внутренние проверки на указанном пункте и расширит видеомониторинг потоков. Двое сотрудников, согласно обновлённому ответу, полученному перед публикацией, тем временем превентивно отстранены.</p><p>Редакция защищает свои источники: детали, которые могли бы привести к идентификации водителей, изменены, а бухгалтерские документы хранятся за пределами страны. Сообщения можно передать редакции через защищённый канал, указанный на странице контактов.</p>",
+      "author": "victor-munteanu",
+      "date": "2026-08-13T17:55:00",
+      "updated": null,
+      "coverSeed": 145,
+      "featured": false,
+      "breaking": false,
+      "views": 7690,
+      "readMin": 6,
+      "tags_ro": [
+        "vamă",
+        "frontieră",
+        "mită",
+        "transport"
+      ],
+      "tags_ru": [
+        "таможня",
+        "граница",
+        "взятки",
+        "транспорт"
+      ],
+      "sources": [
+        {
+          "label": "Datele publice ale cozii electronice, ianuarie–iunie 2026",
+          "url": "#"
+        },
+        {
+          "label": "Interviuri cu transportatori, arhiva redacției",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a13",
+      "slug": "averea-invizibila-a-unui-director-de-agentie-de-stat",
+      "category": "coruptie",
+      "title_ro": "Averea invizibilă a unui director de agenție de stat",
+      "title_ru": "Невидимое состояние директора государственного агентства",
+      "summary_ro": "Trei imobile folosite de familia unui director de agenție sunt înscrise pe numele unor rude cu venituri modeste, iar mașina de serviciu personală vine printr-un leasing rulat printr-o firmă din Dubai. Declarația de avere nu pomenește nimic din toate acestea.",
+      "summary_ru": "Три объекта недвижимости, которыми пользуется семья директора агентства, записаны на родственников со скромными доходами, а личный автомобиль оформлен через лизинг дубайской фирмы. В декларации об имуществе ничего этого нет.",
+      "content_ro": "<p>Declarația de avere a directorului unei agenții de stat cu atribuții de control descrie o viață modestă: un apartament, un automobil de zece ani, venituri exclusiv salariale. Realitatea documentată de Corbul.md pe parcursul a cinci luni arată altceva: familia directorului folosește trei imobile evaluate cumulat la peste 12 milioane de lei, înscrise pe numele unor rude ale căror venituri oficiale nu ar acoperi nici avansul.</p><p>Casa de la marginea Chișinăului, cu piscină și teren de 14 ari, aparține scriptic soacrei — pensionară, cu o pensie lunară echivalentă cu 4 200 de lei. Apartamentul din centrul capitalei, folosit de fiica directorului, e pe numele unui văr care lucrează, potrivit propriului profil public, ca șofer în Germania. Al treilea imobil, un spațiu comercial închiriat unei rețele de farmacii, aparține unei firme deținute de același văr.</p><h2>Casele care nu apar în declarație</h2><p>Legea cere declararea bunurilor folosite efectiv, nu doar a celor deținute formal — tocmai pentru a împiedica artificiul înscrierii pe rude. Juriștii consultați de redacție sunt unanimi: utilizarea constantă, documentată foto și prin martori, a celor trei imobile ar fi trebuit reflectată în declarație. Omisiunea poate atrage răspundere contravențională și, în caz de diferențe substanțiale nejustificate, confiscarea averii.</p><blockquote>„Averile nedeclarate nu se ascund în seifuri, se ascund în rubedenii. De aceea verificarea trebuie să urmeze folosința, nu semnătura din registru\", explică un fost inspector de integritate.</blockquote><h2>Ruta prin Dubai</h2><p>Automobilul de teren de lux folosit zilnic de director — înmatriculat pe o firmă de leasing din Dubai — completează tabloul. Contractul de leasing, obținut de redacție, indică o rată lunară echivalentă cu de două ori salariul oficial al directorului. Plățile sunt efectuate de o companie moldovenească al cărei unic client este, potrivit rapoartelor financiare, chiar agenția condusă de director — printr-un contract de „servicii de mentenanță\" atribuit direct.</p><p>Contactat de Corbul.md, directorul a calificat ancheta drept „o interpretare tendențioasă a unor relații de familie\" și a refuzat să explice proveniența fondurilor. Agenția nu a răspuns întrebărilor legate de contractul de mentenanță. Autoritatea Națională de Integritate a confirmat, după solicitarea redacției, inițierea unui control al averii și al intereselor personale.</p><p>Publicăm, în anexa articolului, extrasele cadastrale, contractul de leasing și schema completă a fluxurilor — cu datele personale ale terților protejate conform standardelor editoriale ale redacției.</p>",
+      "content_ru": "<p>Декларация об имуществе директора одного из государственных агентств с контрольными полномочиями описывает скромную жизнь: квартира, десятилетний автомобиль, доходы исключительно из зарплаты. Реальность, задокументированная Corbul.md за пять месяцев, выглядит иначе: семья директора пользуется тремя объектами недвижимости совокупной оценкой более 12 миллионов леев, записанными на родственников, чьи официальные доходы не покрыли бы и первоначального взноса.</p><p>Дом на окраине Кишинёва, с бассейном и участком в 14 соток, формально принадлежит тёще — пенсионерке с ежемесячной пенсией, эквивалентной 4 200 леям. Квартира в центре столицы, где живёт дочь директора, записана на двоюродного брата, работающего, судя по его собственному публичному профилю, водителем в Германии. Третий объект — коммерческое помещение, сданное сети аптек, — принадлежит фирме того же кузена.</p><h2>Дома, которых нет в декларации</h2><p>Закон требует декларировать имущество, находящееся в фактическом пользовании, а не только в формальной собственности — именно чтобы пресечь трюк с записью на родственников. Опрошенные редакцией юристы единодушны: постоянное пользование тремя объектами, задокументированное фотографиями и показаниями свидетелей, должно было быть отражено в декларации. Умолчание может повлечь административную ответственность, а при существенных необоснованных расхождениях — конфискацию имущества.</p><blockquote>«Незадекларированные состояния прячут не в сейфах, а в родственниках. Поэтому проверка должна идти за пользованием, а не за подписью в реестре», — объясняет бывший инспектор по неподкупности.</blockquote><h2>Маршрут через Дубай</h2><p>Люксовый внедорожник, которым директор пользуется ежедневно, — зарегистрированный на лизинговую фирму из Дубая — довершает картину. Лизинговый контракт, полученный редакцией, указывает ежемесячный платёж, эквивалентный двум официальным зарплатам директора. Платежи вносит молдавская компания, единственным клиентом которой, согласно финансовой отчётности, является само агентство, возглавляемое директором, — по напрямую присуждённому контракту на «услуги технического обслуживания».</p><p>В разговоре с Corbul.md директор назвал расследование «тенденциозной интерпретацией семейных отношений» и отказался объяснить происхождение средств. Агентство не ответило на вопросы о контракте на обслуживание. Национальный орган по неподкупности после запроса редакции подтвердил начало контроля имущества и личных интересов.</p><p>В приложении к статье мы публикуем кадастровые выписки, лизинговый контракт и полную схему потоков — персональные данные третьих лиц защищены в соответствии с редакционными стандартами.</p>",
+      "author": "ana-corbeanu",
+      "date": "2026-09-01T06:50:00",
+      "updated": null,
+      "coverSeed": 927,
+      "featured": false,
+      "breaking": false,
+      "views": 6120,
+      "readMin": 7,
+      "tags_ro": [
+        "declarații de avere",
+        "integritate",
+        "offshore",
+        "funcționari publici"
+      ],
+      "tags_ru": [
+        "декларации об имуществе",
+        "неподкупность",
+        "офшоры",
+        "госслужащие"
+      ],
+      "sources": [
+        {
+          "label": "Extrase din registrul bunurilor imobile, 2026",
+          "url": "#"
+        },
+        {
+          "label": "Declarațiile de avere și interese, portal public",
+          "url": "#"
+        },
+        {
+          "label": "Contract de leasing, arhiva redacției",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a14",
+      "slug": "bnm-mentine-rata-de-baza-la-6-5-la-suta",
+      "category": "finante",
+      "title_ro": "Banca Națională menține rata de bază la 6,5%: pariul prudenței într-o toamnă cu inflație lipicioasă",
+      "title_ru": "Нацбанк сохраняет базовую ставку на уровне 6,5%: ставка на осторожность осенью с «липкой» инфляцией",
+      "summary_ro": "Comitetul executiv al BNM a lăsat neschimbată rata de bază pentru a treia ședință consecutiv, invocând presiuni persistente pe prețurile serviciilor și incertitudinea tarifelor la energie.",
+      "summary_ru": "Исполнительный комитет НБМ третье заседание подряд оставил базовую ставку без изменений, ссылаясь на устойчивое давление на цены услуг и неопределённость энергетических тарифов.",
+      "content_ro": "<p>Banca Națională a Moldovei a anunțat joi dimineață că rata de bază rămâne la 6,5% anual, nivel la care se află din luna mai. Este a treia ședință consecutivă în care Comitetul executiv alege statu-quoul, iar coridorul format de facilitățile permanente — 4,5% la depozite overnight și 8,5% la credite overnight — rămâne, la rândul lui, neatins. Decizia era anticipată de majoritatea analiștilor consultați de Corbul.md, dar tonul comunicatului este vizibil mai precaut decât în iulie.</p><h2>De ce nu scade rata</h2><p>Inflația anuală a coborât în august la 5,9%, în interiorul intervalului-țintă de 5% ± 1,5 puncte procentuale, însă structura ei rămâne incomodă. Prețurile serviciilor cresc cu 7,4% anual — de la reparații auto la chirii —, iar inflația de bază, cea care exclude alimentele și energia, refuză să coboare sub 6%. În jargonul băncilor centrale, este o inflație „lipicioasă”: nu mai urcă, dar nici nu se dezumflă în ritmul promis de modele.</p><p>Peste acest tablou se suprapune necunoscuta tarifelor. Cererile de ajustare depuse de furnizorii de energie termică pentru sezonul rece nu au fost încă examinate de regulator, iar BNM notează explicit că o corecție de tarife în trimestrul patru ar putea adăuga până la 0,8 puncte procentuale la inflația din iarnă. A tăia rata acum, pentru ca apoi tarifele să împingă prețurile în sus, ar fi scenariul pe care banca centrală vrea cu orice preț să îl evite.</p><blockquote>„Balanța riscurilor rămâne înclinată în direcție proinflaționistă. Vom acționa doar atunci când dezinflația serviciilor va fi confirmată de cel puțin două runde de date”, se arată în comunicatul Comitetului executiv.</blockquote><h2>Ce înseamnă pentru credite și depozite</h2><p>Pentru debitori, decizia înseamnă încă un trimestru fără ieftiniri vizibile. Dobânzile medii la creditele noi în lei s-au oprit în jurul valorii de 9,3%, iar băncile comerciale — cu lichidități abundente plasate în certificate BNM — nu au niciun motiv să concureze agresiv pe preț. La depozite, în schimb, randamentul real rămâne pozitiv: un depozit la termen în lei plătește în medie 5,1%, sub inflație doar marginal, iar la maturitățile lungi peste ea.</p><p>Piața titlurilor de stat s-a așezat și ea în așteptare. Randamentele la bonurile de trezorerie pe 91 de zile au scăzut cu doar 10 puncte de bază de la începutul verii, semn că dealerii primari nu anticipează relaxare înainte de final de an. „Curba e plată ca o masă de biliard — toată lumea așteaptă același semnal”, ne-a spus trezorierul unei bănci din top cinci, sub protecția anonimatului.</p><h2>Fereastra din decembrie</h2><p>Următoarea rundă de prognoză a BNM, programată pentru începutul lui noiembrie, va fi primul moment în care banca ar putea pregăti terenul pentru o tăiere. Condițiile puse de instituție sunt trei: tarifele la termie clarificate, inflația serviciilor sub 7% și leul stabil în raport cu euro. Dacă toate trei se aliniază, prima reducere — probabil de 0,5 puncte — ar veni în ședința din decembrie.</p><p>Până atunci, mesajul e unul de răbdare instituțională. Într-un an în care presiunile politice pentru bani mai ieftini cresc odată cu apropierea iernii, banca centrală alege să își apere cel mai valoros activ: predictibilitatea. Este un pariu pe termen lung, plătit cu un preț pe termen scurt — și, deocamdată, piețele îl consideră corect.</p>",
+      "content_ru": "<p>Национальный банк Молдовы объявил в четверг утром, что базовая ставка остаётся на уровне 6,5% годовых — на этой отметке она находится с мая. Это третье заседание подряд, на котором Исполнительный комитет выбирает статус-кво, а коридор постоянных инструментов — 4,5% по депозитам овернайт и 8,5% по кредитам овернайт — также остаётся нетронутым. Решение ожидалось большинством аналитиков, опрошенных Corbul.md, однако тон коммюнике заметно осторожнее июльского.</p><h2>Почему ставка не снижается</h2><p>Годовая инфляция в августе опустилась до 5,9% — внутрь целевого интервала 5% ± 1,5 процентного пункта, однако её структура остаётся неудобной. Цены на услуги растут на 7,4% в год — от авторемонта до аренды жилья, — а базовая инфляция, исключающая продовольствие и энергию, отказывается опускаться ниже 6%. На жаргоне центральных банков это «липкая» инфляция: она уже не растёт, но и не сдувается в темпе, обещанном моделями.</p><p>На эту картину накладывается неизвестность с тарифами. Заявки поставщиков тепловой энергии о корректировке тарифов на холодный сезон регулятор ещё не рассмотрел, и НБМ прямо отмечает: пересмотр тарифов в четвёртом квартале может добавить до 0,8 процентного пункта к зимней инфляции. Снизить ставку сейчас, чтобы затем тарифы толкнули цены вверх, — сценарий, которого центральный банк хочет избежать любой ценой.</p><blockquote>«Баланс рисков остаётся смещённым в проинфляционную сторону. Мы будем действовать лишь тогда, когда дезинфляция услуг будет подтверждена как минимум двумя раундами данных», — говорится в коммюнике Исполнительного комитета.</blockquote><h2>Что это значит для кредитов и депозитов</h2><p>Для заёмщиков решение означает ещё один квартал без заметного удешевления. Средние ставки по новым кредитам в леях остановились около 9,3%, а коммерческие банки — с избыточной ликвидностью, размещённой в сертификатах НБМ, — не имеют никаких причин агрессивно конкурировать по цене. По депозитам, напротив, реальная доходность остаётся положительной: срочный депозит в леях приносит в среднем 5,1% — лишь незначительно ниже инфляции, а на длинных сроках выше неё.</p><p>Рынок государственных бумаг также занял выжидательную позицию. Доходность казначейских обязательств на 91 день с начала лета снизилась всего на 10 базисных пунктов — знак того, что первичные дилеры не ждут смягчения до конца года. «Кривая плоская, как бильярдный стол, — все ждут одного и того же сигнала», — сказал нам казначей одного из банков первой пятёрки на условиях анонимности.</p><h2>Декабрьское окно</h2><p>Следующий прогнозный раунд НБМ, назначенный на начало ноября, станет первым моментом, когда банк сможет подготовить почву для снижения. Условий у регулятора три: ясность с тарифами на тепло, инфляция услуг ниже 7% и стабильный лей по отношению к евро. Если все три сойдутся, первое снижение — вероятно, на 0,5 пункта — состоится на декабрьском заседании.</p><p>До тех пор послание одно — институциональное терпение. В год, когда политическое давление в пользу более дешёвых денег растёт с приближением зимы, центральный банк выбирает защиту своего самого ценного актива — предсказуемости. Это долгосрочная ставка, оплачиваемая краткосрочной ценой, и пока рынки считают её верной.</p>",
+      "author": "doina-rusnac",
+      "date": "2026-09-03T09:15:00",
+      "updated": null,
+      "coverSeed": 214,
+      "featured": true,
+      "breaking": false,
+      "views": 4820,
+      "readMin": 6,
+      "tags_ro": [
+        "BNM",
+        "rata de bază",
+        "inflație",
+        "politică monetară"
+      ],
+      "tags_ru": [
+        "НБМ",
+        "базовая ставка",
+        "инфляция",
+        "монетарная политика"
+      ],
+      "sources": [
+        {
+          "label": "Comunicatul BNM privind decizia de politică monetară, septembrie 2026",
+          "url": "#"
+        },
+        {
+          "label": "Raportul asupra inflației nr. 3/2026, Banca Națională a Moldovei",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a15",
+      "slug": "prima-emisiune-obligatiuni-corporative-testeaza-piata-de-capital",
+      "category": "finante",
+      "title_ro": "Prima emisiune majoră de obligațiuni corporative din ultimul deceniu testează piața de capital moldovenească",
+      "title_ru": "Первая за десятилетие крупная эмиссия корпоративных облигаций испытывает молдавский рынок капитала",
+      "summary_ro": "Grupul agroindustrial „AgroNord” listează obligațiuni de 120 de milioane de lei la Bursa de Valori. Dacă emisiunea se închide integral, Moldova ar putea avea, în sfârșit, un început de piață a datoriei private.",
+      "summary_ru": "Агропромышленная группа «АгроНорд» размещает на Фондовой бирже облигации на 120 миллионов леев. Если эмиссия закроется полностью, у Молдовы наконец может появиться зачаток рынка частного долга.",
+      "content_ro": "<p>Comisia Națională a Pieței Financiare a aprobat la mijlocul lui august prospectul de emisiune al grupului agroindustrial „AgroNord”, care oferă investitorilor obligațiuni în valoare totală de 120 de milioane de lei, cu maturitate de trei ani și un cupon fix de 8,2% anual, plătit semestrial. Este cea mai mare emisiune de datorie corporativă listată la Bursa de Valori a Moldovei din ultimii zece ani — și, pentru o piață în care statul a fost aproape singurul emitent care contează, un test cu miză mult peste suma în sine.</p><h2>De ce contează 120 de milioane</h2><p>La prima vedere, suma este modestă: statul împrumută atât într-o singură licitație de bonuri de trezorerie. Diferența este de natură, nu de mărime. O piață de capital funcțională presupune că o companie privată sănătoasă poate ocoli ghișeul bancar și se poate împrumuta direct de la public, la un preț stabilit transparent. În Moldova, acest circuit practic nu a existat: finanțarea corporativă înseamnă credit bancar în proporție de peste 95%, iar bursa a rămas, ani la rând, o scenă pe care se tranzacționau mai degrabă pachete de acțiuni moștenite din privatizare decât capital nou.</p><p>Emitentul mizează pe un argument simplu: cuponul de 8,2% bate cu aproape trei puncte procentuale dobânda medie la depozitele populației și rămâne peste randamentul titlurilor de stat comparabile. Riscul suplimentar este acoperit, susține compania, de un gaj pe active de depozitare cerealieră evaluate la 180 de milioane de lei și de un istoric de șapte ani de audit fără rezerve.</p><blockquote>„Nu vindem doar un cupon, vindem un precedent. Dacă noi plătim la timp trei ani la rând, următorul emitent va împrumuta mai ieftin, iar al treilea și mai ieftin. Așa se construiește o curbă de randament privată”, a declarat pentru Corbul.md directorul financiar al grupului.</blockquote><h2>Cine cumpără și cine ezită</h2><p>Cererea, spun brokerii, vine din trei direcții: companiile de asigurări, obligate să își diversifice plasamentele; câteva fonduri de pensii facultative aflate la început de drum; și, surprinzător, persoane fizice cu depozite mari, atrase de cupon. Băncile, în schimb, privesc de pe margine — pentru ele, fiecare leu plasat în obligațiuni corporative este un leu care nu mai trece prin propriul bilanț de creditare.</p><p>Scepticii au și ei argumente solide. Lichiditatea secundară va fi, cel puțin la început, aproape nulă: cine cumpără trebuie să fie pregătit să țină titlul până la scadență. Iar cadrul de insolvență, deși reformat pe hârtie, nu a fost testat niciodată cu un default de obligațiuni listate. „Piața de capital se construiește pe încredere acumulată, nu pe prospecte frumoase”, avertizează un fost membru al conducerii CNPF.</p><p>Subscrierea se închide pe 25 septembrie. Un eșec ar confirma reflexul vechi — banii stau în depozite, firmele stau la mâna băncilor. O închidere integrală, în schimb, ar transmite semnalul că economia moldovenească poate finanța creștere și altfel decât prin creditul bancar și banii europeni. Pentru o piață care așteaptă de un deceniu un motiv de optimism, miza este disproporționat de mare față de cifra de pe prospect.</p>",
+      "content_ru": "<p>Национальная комиссия по финансовому рынку в середине августа утвердила проспект эмиссии агропромышленной группы «АгроНорд», предлагающей инвесторам облигации на общую сумму 120 миллионов леев со сроком обращения три года и фиксированным купоном 8,2% годовых с полугодовой выплатой. Это крупнейшая эмиссия корпоративного долга, размещаемая на Фондовой бирже Молдовы за последние десять лет, — и для рынка, где практически единственным значимым эмитентом было государство, тест со ставками куда выше самой суммы.</p><h2>Почему важны эти 120 миллионов</h2><p>На первый взгляд сумма скромна: столько государство занимает за один аукцион казначейских обязательств. Разница — в природе, а не в размере. Работающий рынок капитала предполагает, что здоровая частная компания может обойти банковское окошко и занять напрямую у публики по прозрачно установленной цене. В Молдове этот контур практически не существовал: корпоративное финансирование более чем на 95% означает банковский кредит, а биржа годами оставалась сценой, где торговались скорее пакеты акций, унаследованные от приватизации, чем новый капитал.</p><p>Эмитент делает ставку на простой аргумент: купон 8,2% почти на три процентных пункта превышает среднюю ставку по депозитам населения и остаётся выше доходности сопоставимых государственных бумаг. Дополнительный риск, утверждает компания, покрыт залогом зернохранилищ, оценённых в 180 миллионов леев, и семилетней историей аудита без оговорок.</p><blockquote>«Мы продаём не просто купон — мы продаём прецедент. Если мы будем платить вовремя три года подряд, следующий эмитент займёт дешевле, а третий — ещё дешевле. Так строится частная кривая доходности», — заявил Corbul.md финансовый директор группы.</blockquote><h2>Кто покупает, а кто колеблется</h2><p>Спрос, говорят брокеры, идёт с трёх сторон: страховые компании, обязанные диверсифицировать вложения; несколько факультативных пенсионных фондов, делающих первые шаги; и, неожиданно, физические лица с крупными депозитами, привлечённые купоном. Банки же наблюдают со стороны — для них каждый лей, вложенный в корпоративные облигации, это лей, который больше не проходит через их собственный кредитный баланс.</p><p>У скептиков тоже весомые аргументы. Вторичная ликвидность, по крайней мере вначале, будет почти нулевой: покупатель должен быть готов держать бумагу до погашения. А режим несостоятельности, хоть и реформированный на бумаге, ни разу не проверялся дефолтом по листингованным облигациям. «Рынок капитала строится на накопленном доверии, а не на красивых проспектах», — предупреждает бывший член руководства НКФР.</p><p>Подписка закрывается 25 сентября. Провал подтвердил бы старый рефлекс: деньги лежат в депозитах, фирмы зависят от банков. Полное закрытие книги, напротив, послало бы сигнал, что молдавская экономика способна финансировать рост не только банковским кредитом и европейскими деньгами. Для рынка, десятилетие ждущего повода для оптимизма, ставки несоизмеримо выше цифры на проспекте.</p>",
+      "author": "doina-rusnac",
+      "date": "2026-08-18T11:40:00",
+      "updated": null,
+      "coverSeed": 587,
+      "featured": false,
+      "breaking": false,
+      "views": 2140,
+      "readMin": 5,
+      "tags_ro": [
+        "piața de capital",
+        "obligațiuni",
+        "Bursa de Valori",
+        "CNPF"
+      ],
+      "tags_ru": [
+        "рынок капитала",
+        "облигации",
+        "Фондовая биржа",
+        "НКФР"
+      ],
+      "sources": [
+        {
+          "label": "Hotărârea CNPF de aprobare a prospectului de emisiune, august 2026",
+          "url": "#"
+        },
+        {
+          "label": "Prospectul de emisiune al obligațiunilor „AgroNord”, seria ON-1",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a16",
+      "slug": "pod-peste-raut-inchis-de-urgenta-la-recea-fisuri-grinzi",
+      "category": "infrastructura",
+      "title_ro": "Podul peste Răut de la Recea, închis de urgență: expertiza a găsit fisuri în grinzile de rezistență",
+      "title_ru": "Мост через Реут у села Речя экстренно закрыт: экспертиза выявила трещины в несущих балках",
+      "summary_ro": "Circulația pe podul construit în 1968 a fost oprită azi-noapte, după ce raportul de expertiză tehnică a clasificat structura la gradul maxim de risc. Ocolul pentru cele 11 localități afectate depășește 18 kilometri.",
+      "summary_ru": "Движение по мосту, построенному в 1968 году, было остановлено этой ночью: отчёт технической экспертизы отнёс сооружение к высшей степени риска. Объезд для 11 затронутых населённых пунктов превышает 18 километров.",
+      "content_ro": "<p>Administrația de stat a drumurilor a închis în noaptea de joi spre vineri circulația pe podul peste râul Răut de lângă satul Recea, după ce raportul de expertiză tehnică, finalizat miercuri seara, a încadrat structura la categoria V — „stare critică, risc iminent de cedare”. Decizia a fost luată în ședință de urgență, la ora 23:40, iar barierele de beton au fost montate până la ora 4 dimineața. Podul, construit în 1968 și lung de 86 de metri, era traversat zilnic de aproximativ 2 400 de vehicule, inclusiv rutele de autobuz care leagă 11 localități de orașul-reședință de raion.</p><h2>Ce a găsit expertiza</h2><p>Potrivit raportului, consultat de Corbul.md, două dintre cele patru grinzi principale din beton precomprimat prezintă fisuri transversale cu deschidere de peste 0,6 milimetri, iar armătura este expusă și corodată pe segmente de până la doi metri. Inspectorii au constatat și tasarea unei pile centrale cu patru centimetri față de măsurătorile din 2019 — efect al eroziunii albiei, accelerată de viiturile din primăvară. Sarcina maximă admisibilă, redusă în 2021 la 12 tone, nu mai poate fi garantată „pentru nicio categorie de vehicule”, conchide documentul.</p><blockquote>„Nu închizi un pod pentru că vrei, îl închizi pentru că alternativa e să îl închidă gravitația. Semnalele existau din 2019 — noi doar am pus cifrele cap la cap”, a declarat inginerul-șef al echipei de expertiză.</blockquote><h2>Ocolul și lucrările</h2><p>Ruta ocolitoare oficială trece prin podul de la Ordășei și adaugă 18 kilometri — în practică, până la 40 de minute pentru autobuzele școlare și ambulanțe. Ministerul Infrastructurii a anunțat vineri dimineață că va instala în maximum trei săptămâni o traversare pietonală provizorie pe structură metalică independentă, iar pentru vehicule analizează un pod modular de tip Bailey, cu termen de montaj de 60 de zile și cost estimat la 14 milioane de lei.</p><p>Reconstrucția integrală, evaluată preliminar la 96 de milioane de lei, ar urma să fie inclusă în programul național de reabilitare a podurilor, finanțat din împrumutul BEI semnat în februarie. Problema este coada de așteptare: pe lista aceluiași program figurează alte 34 de poduri clasificate la gradul IV de risc, iar Recea abia acum intră în listă.</p><p>Cazul redeschide o discuție pe care Corbul.md a documentat-o pe parcursul verii: din cele 987 de poduri aflate în gestiunea administrației drumurilor, peste 60% au depășit durata normată de exploatare, iar ultima inventariere completă a stării lor datează din 2014. Expertiza de la Recea a fost declanșată nu de o inspecție planificată, ci de sesizarea unui șofer de autobuz care a filmat vibrațiile tablierului și a trimis imaginile autorităților în luna mai.</p><p>Până la finalul zilei, ministerul promite un calendar public al lucrărilor și un audit accelerat pentru alte șase poduri din bazinul Răutului, construite în aceeași perioadă și după același proiect-tip. Locuitorii din Recea au deja o certitudine mai amară: până la primul termen realist de redeschidere, copiii lor vor face naveta la școală pe un drum cu 18 kilometri mai lung.</p>",
+      "content_ru": "<p>Государственная администрация дорог в ночь с четверга на пятницу закрыла движение по мосту через реку Реут у села Речя после того, как отчёт технической экспертизы, завершённый в среду вечером, отнёс сооружение к категории V — «критическое состояние, неминуемый риск обрушения». Решение было принято на экстренном заседании в 23:40, а бетонные барьеры установили к четырём часам утра. По мосту, построенному в 1968 году и имеющему длину 86 метров, ежедневно проезжало около 2 400 автомобилей, включая автобусные маршруты, связывающие 11 населённых пунктов с районным центром.</p><h2>Что обнаружила экспертиза</h2><p>Согласно отчёту, с которым ознакомился Corbul.md, две из четырёх главных балок из преднапряжённого бетона имеют поперечные трещины с раскрытием более 0,6 миллиметра, а арматура обнажена и корродирована на участках длиной до двух метров. Инспекторы также зафиксировали осадку центральной опоры на четыре сантиметра по сравнению с измерениями 2019 года — следствие эрозии русла, ускоренной весенними паводками. Максимально допустимая нагрузка, сниженная в 2021 году до 12 тонн, больше не может быть гарантирована «ни для одной категории транспортных средств», заключает документ.</p><blockquote>«Мост закрывают не потому, что хотят, а потому, что иначе его закроет гравитация. Сигналы были с 2019 года — мы лишь сложили цифры вместе», — заявил главный инженер экспертной группы.</blockquote><h2>Объезд и работы</h2><p>Официальный объезд проходит через мост у Ордэшей и добавляет 18 километров — на практике до 40 минут для школьных автобусов и машин скорой помощи. Министерство инфраструктуры объявило в пятницу утром, что максимум за три недели установит временный пешеходный переход на независимой металлической конструкции, а для транспорта рассматривает модульный мост типа Бейли со сроком монтажа 60 дней и ориентировочной стоимостью 14 миллионов леев.</p><p>Полная реконструкция, предварительно оценённая в 96 миллионов леев, должна войти в национальную программу реабилитации мостов, финансируемую из кредита ЕИБ, подписанного в феврале. Проблема — очередь: в списке той же программы значатся ещё 34 моста IV степени риска, а Речя только сейчас попадает в перечень.</p><p>Случай вновь открывает дискуссию, которую Corbul.md документировал в течение лета: из 987 мостов, находящихся в ведении дорожной администрации, более 60% превысили нормативный срок эксплуатации, а последняя полная инвентаризация их состояния датируется 2014 годом. Экспертизу в Рече запустила не плановая инспекция, а обращение водителя автобуса, снявшего на видео вибрации пролёта и отправившего кадры властям в мае.</p><p>До конца дня министерство обещает публичный график работ и ускоренный аудит ещё шести мостов в бассейне Реута, построенных в тот же период по тому же типовому проекту. У жителей Речи уже есть более горькая определённость: до первого реалистичного срока открытия их дети будут ездить в школу по дороге, которая длиннее на 18 километров.</p>",
+      "author": "irina-cazacu",
+      "date": "2026-09-05T07:50:00",
+      "updated": "2026-09-05T10:20:00",
+      "coverSeed": 91,
+      "featured": false,
+      "breaking": true,
+      "views": 6930,
+      "readMin": 5,
+      "tags_ro": [
+        "poduri",
+        "siguranță rutieră",
+        "expertiză tehnică",
+        "Răut"
+      ],
+      "tags_ru": [
+        "мосты",
+        "дорожная безопасность",
+        "техническая экспертиза",
+        "Реут"
+      ],
+      "sources": [
+        {
+          "label": "Raportul de expertiză tehnică nr. ET-214/2026, Administrația de Stat a Drumurilor",
+          "url": "#"
+        },
+        {
+          "label": "Dispoziția de sistare a circulației din 5 septembrie 2026",
+          "url": "#"
+        },
+        {
+          "label": "Programul național de reabilitare a podurilor 2026–2030",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a17",
+      "slug": "modernizarea-drumului-r14-costuri-crescute-38-la-suta-peste-deviz",
+      "category": "infrastructura",
+      "title_ro": "Modernizarea drumului R14: costurile au urcat cu 38% peste deviz, iar termenul s-a mutat a treia oară",
+      "title_ru": "Модернизация дороги R14: стоимость выросла на 38% сверх сметы, а срок сдвинулся в третий раз",
+      "summary_ro": "Contractul semnat în 2023 pentru 52 de kilometri de drum național a ajuns de la 780 de milioane la aproape 1,08 miliarde de lei, prin șapte acorduri adiționale. Corbul.md a reconstituit traseul fiecărei scumpiri.",
+      "summary_ru": "Контракт 2023 года на 52 километра национальной дороги вырос с 780 миллионов почти до 1,08 миллиарда леев через семь дополнительных соглашений. Corbul.md восстановил историю каждого удорожания.",
+      "content_ro": "<p>Când a fost semnat, în aprilie 2023, contractul de modernizare a sectorului de 52 de kilometri din drumul național R14 părea un exemplu de licitație reușită: consorțiul câștigător, condus de compania „Magistrala Construct”, oferise 780 de milioane de lei, cu 9% sub estimarea proiectantului, și promitea finalizarea în 30 de luni. Trei ani și șapte acorduri adiționale mai târziu, valoarea contractului a ajuns la 1,078 miliarde de lei — un plus de 38% —, iar termenul de recepție a fost mutat pentru a treia oară, acum pentru august 2027.</p><h2>Anatomia scumpirii</h2><p>Documentele obținute de Corbul.md în baza legii privind accesul la informație arată că majorările s-au produs în trei valuri. Primul, în toamna lui 2023, a invocat clauza de ajustare a prețurilor la bitum și motorină — 92 de milioane de lei, justificabile cel puțin parțial prin evoluția cotațiilor. Al doilea val, în 2024, a adăugat 118 milioane pentru „lucrări neprevăzute”: consolidarea unui versant care aluneca și refacerea a 14 kilometri de fundație descrisă în proiect drept „reutilizabilă”. Al treilea val, cel din primăvara acestui an, este și cel mai greu de explicat: 88 de milioane pentru modificări de soluție tehnică cerute chiar de antreprenor și avizate în doar 11 zile.</p><p>Întrebarea centrală privește calitatea proiectului tehnic, elaborat în 2021 pentru 24 de milioane de lei. Dacă fundația drumului era în realitate degradată, de ce nu au arătat-o forajele de prospectare? Iar dacă au arătat-o, de ce a licitat autoritatea un proiect subevaluat? „Un deviz subestimat câștigă ușor avizele și finanțarea, iar diferența se recuperează din adiționale, când nimeni nu mai poate opri șantierul”, explică un expert în achiziții publice consultat de redacție.</p><blockquote>„Adiționalele nu sunt ilegale. Dar când ele devin regulă, licitația inițială e doar un ritual: prețul real se negociază după, în birouri, fără concurenți”, ne-a declarat un fost membru al Agenției Naționale pentru Soluționarea Contestațiilor.</blockquote><h2>Comparația care doare</h2><p>Raportat la kilometru, sectorul R14 va costa în final aproximativ 20,7 milioane de lei — echivalentul a circa 1,07 milioane de euro. Pentru un drum de două benzi în teren de dificultate medie, media licitațiilor recente din România se situează între 0,7 și 0,9 milioane de euro pe kilometru, iar proiectele similare finanțate de BERD în regiune rareori depășesc pragul de un milion. Cu alte cuvinte, Moldova plătește un preț de teren muntos pentru un drum de câmpie.</p><h2>Cine verifică și ce urmează</h2><p>Curtea de Conturi a inclus contractul în programul de audit al achizițiilor din infrastructura rutieră, cu raport așteptat în primăvara lui 2027 — adică, foarte probabil, după recepția lucrărilor. Ministerul afirmă că „toate acordurile adiționale au fost avizate conform legii” și invocă inflația din construcții, care, într-adevăr, a erodat devizele întregii regiuni. Rămâne însă o aritmetică incomodă: din cele 298 de milioane adăugate, doar 92 pot fi legate direct de indicii de preț publicați oficial.</p><p>Până la publicarea auditului, R14 rămâne un studiu de caz despre felul în care se scumpesc drumurile în Moldova: nu printr-o decizie mare și vizibilă, ci prin șapte semnături mici, așezate la intervale suficient de lungi încât nicio scumpire, luată separat, să nu pară scandaloasă.</p>",
+      "content_ru": "<p>Когда в апреле 2023 года подписывался контракт на модернизацию 52-километрового участка национальной дороги R14, он выглядел примером удавшегося тендера: победивший консорциум во главе с компанией «Магистрала Констракт» предложил 780 миллионов леев — на 9% ниже оценки проектировщика — и обещал завершение за 30 месяцев. Три года и семь дополнительных соглашений спустя стоимость контракта достигла 1,078 миллиарда леев — плюс 38%, — а срок сдачи перенесён в третий раз, теперь на август 2027 года.</p><h2>Анатомия удорожания</h2><p>Документы, полученные Corbul.md на основании закона о доступе к информации, показывают, что рост шёл тремя волнами. Первая, осенью 2023 года, опиралась на оговорку о корректировке цен на битум и дизтопливо — 92 миллиона леев, хотя бы частично объяснимые динамикой котировок. Вторая волна, в 2024 году, добавила 118 миллионов на «непредвиденные работы»: укрепление оползневого склона и переустройство 14 километров основания, описанного в проекте как «пригодное к повторному использованию». Третья волна, весной этого года, объяснима труднее всего: 88 миллионов на изменения технических решений, запрошенные самим подрядчиком и согласованные всего за 11 дней.</p><p>Центральный вопрос касается качества технического проекта, разработанного в 2021 году за 24 миллиона леев. Если основание дороги действительно было деградировано, почему этого не показало разведочное бурение? А если показало — почему заказчик выставил на тендер заниженный проект? «Заниженная смета легко получает согласования и финансирование, а разница добирается через допсоглашения, когда стройку уже никто не может остановить», — объясняет консультировавший редакцию эксперт по госзакупкам.</p><blockquote>«Допсоглашения не запрещены. Но когда они становятся правилом, первоначальный тендер — лишь ритуал: настоящая цена согласовывается потом, в кабинетах, без конкурентов», — сказал нам бывший член Национального агентства по разрешению споров.</blockquote><h2>Сравнение, которое ранит</h2><p>В пересчёте на километр участок R14 в итоге обойдётся примерно в 20,7 миллиона леев — около 1,07 миллиона евро. Для двухполосной дороги на местности средней сложности средняя цена недавних тендеров в Румынии находится между 0,7 и 0,9 миллиона евро за километр, а аналогичные проекты ЕБРР в регионе редко превышают порог в миллион. Иными словами, Молдова платит цену горной местности за равнинную дорогу.</p><h2>Кто проверяет и что дальше</h2><p>Счётная палата включила контракт в программу аудита закупок в дорожной инфраструктуре, отчёт ожидается весной 2027 года — то есть, скорее всего, уже после приёмки работ. Министерство утверждает, что «все дополнительные соглашения согласованы в соответствии с законом», и ссылается на строительную инфляцию, которая действительно съела сметы по всему региону. Но остаётся неудобная арифметика: из добавленных 298 миллионов лишь 92 можно напрямую связать с официально опубликованными ценовыми индексами.</p><p>До публикации аудита R14 остаётся хрестоматийным примером того, как в Молдове дорожают дороги: не одним большим и заметным решением, а семью маленькими подписями, расставленными с такими интервалами, чтобы ни одно удорожание по отдельности не выглядело скандальным.</p>",
+      "author": "victor-munteanu",
+      "date": "2026-07-27T10:05:00",
+      "updated": null,
+      "coverSeed": 342,
+      "featured": false,
+      "breaking": false,
+      "views": 3510,
+      "readMin": 7,
+      "tags_ro": [
+        "drumuri",
+        "achiziții publice",
+        "acorduri adiționale",
+        "Curtea de Conturi"
+      ],
+      "tags_ru": [
+        "дороги",
+        "госзакупки",
+        "допсоглашения",
+        "Счётная палата"
+      ],
+      "sources": [
+        {
+          "label": "Contractul de antrepriză nr. 47-AP/2023 și acordurile adiționale 1–7",
+          "url": "#"
+        },
+        {
+          "label": "Răspunsul Ministerului Infrastructurii la solicitarea de informații nr. 118/2026",
+          "url": "#"
+        },
+        {
+          "label": "Programul de audit 2026–2027 al Curții de Conturi",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a18",
+      "slug": "economia-moldovei-la-jumatatea-lui-2026-crestere-fragila",
+      "category": "analize",
+      "title_ro": "Economia la jumătatea lui 2026: creștere de 2,7%, trasă de consum și frânată de investiții",
+      "title_ru": "Экономика в середине 2026 года: рост на 2,7%, движимый потреблением и сдерживаемый инвестициями",
+      "summary_ro": "Datele pentru primul semestru arată o economie care merge, dar nu aleargă: consumul duce tot greul, investițiile private stagnează, iar agricultura rămâne loteria anuală. Analiza indicatorilor esențiali.",
+      "summary_ru": "Данные за первое полугодие показывают экономику, которая идёт, но не бежит: всю тяжесть несёт потребление, частные инвестиции стагнируют, а сельское хозяйство остаётся ежегодной лотереей. Разбор ключевых индикаторов.",
+      "content_ro": "<p>Produsul intern brut al Moldovei a crescut cu 2,7% în primul semestru din 2026, potrivit datelor preliminare ale Biroului Național de Statistică — un ritm care așază țara undeva la mijlocul clasamentului regional: peste stagnarea din unele economii vecine, dar departe de cele 4–5 procente de care ar fi nevoie pentru o convergență reală cu Uniunea Europeană. Cifra agregată, însă, spune mai puțin decât structura ei — și structura este cea care ar trebui să ne îngrijoreze.</p><h2>Un motor cu un singur cilindru</h2><p>Descompunerea creșterii arată o economie care merge aproape exclusiv pe consumul gospodăriilor, alimentat de majorările salariale din sectorul public, de creditul de consum în expansiune și de transferurile sociale indexate. Comerțul cu amănuntul a urcat cu 6,1% în termeni reali, iar importurile de bunuri de consum cu aproape 9% — un tipar clasic în care cererea internă se scurge în deficit comercial, nu în producție locală. Formarea brută de capital fix, în schimb, a crescut cu doar 0,8%: firmele private amână investițiile, iar marile șantiere publice abia compensează declinul.</p><p>Industria prelucrătoare rămâne veriga slabă: minus 1,9% față de același semestru din 2025, cu scăderi accentuate la textile și cabluri auto — sectoare legate ombilical de comenzile din vestul Europei, ele însele în încetinire. Excepția notabilă este industria alimentară, care crește al treilea an la rând pe seama exporturilor către piața UE, unde cotele de acces s-au lărgit succesiv.</p><blockquote>„Avem o economie care consumă cu poftă și investește cu teamă. Diferența dintre cele două atitudini este exact diferența dintre creșterea de azi și stagnarea de mâine”, rezumă economista Corina Vrabie, de la centrul analitic Prospect.</blockquote><h2>Fiscalul: spațiu care se îngustează</h2><p>Deficitul bugetar a ajuns la finele lui iunie la 2,9% din PIB în expresie anualizată, în condițiile în care veniturile fiscale au crescut sub ritmul cheltuielilor curente. Grantul european din Planul de creștere acoperă o parte confortabilă a golului, dar tocmai acest confort este capcana: fiecare leu european care intră în cheltuieli curente, nu în investiții, cumpără liniște politică pe termen scurt cu prețul dependenței pe termen lung. Datoria publică rămâne moderată, la circa 37% din PIB, însă serviciul ei crește pe măsură ce împrumuturile concesionale vechi sunt înlocuite cu finanțare la dobânzi de piață.</p><h2>Ce ar putea schimba tabloul</h2><p>Trei variabile vor decide dacă anul se închide peste sau sub 3%. Prima este agricultura: seceta din iulie a redus prognozele la porumb și floarea-soarelui, iar un semestru doi slab agricol taie ușor jumătate de punct din PIB. A doua este energia: o iarnă cu tarife stabile ar elibera venit disponibil pentru consum, una cu șocuri l-ar confisca. A treia, cea mai importantă și cea mai lentă, este investiția privată — blocată nu de lipsa banilor, cât de lipsa de predictibilitate percepută de antreprenori.</p><p>Concluzia semestrului este, așadar, una de echilibru precar: economia moldovenească nu mai este în criză, dar nici nu a intrat în faza în care creșterea se autoîntreține. Ea trăiește dintr-un consum finanțat pe datorie publică și transferuri — un model care funcționează exact atât timp cât nimeni nu îl testează.</p>",
+      "content_ru": "<p>Валовой внутренний продукт Молдовы вырос в первом полугодии 2026 года на 2,7%, согласно предварительным данным Национального бюро статистики, — темп, помещающий страну в середину регионального рейтинга: выше стагнации некоторых соседних экономик, но далеко от 4–5 процентов, необходимых для реальной конвергенции с Европейским союзом. Однако агрегированная цифра говорит меньше, чем её структура, — и именно структура должна нас тревожить.</p><h2>Двигатель с одним цилиндром</h2><p>Декомпозиция роста показывает экономику, которая едет почти исключительно на потреблении домохозяйств, подпитанном повышением зарплат в бюджетном секторе, расширяющимся потребительским кредитованием и индексированными социальными выплатами. Розничная торговля выросла на 6,1% в реальном выражении, а импорт потребительских товаров — почти на 9%: классическая картина, в которой внутренний спрос утекает в торговый дефицит, а не в местное производство. Валовое накопление основного капитала, напротив, прибавило лишь 0,8%: частные фирмы откладывают инвестиции, а крупные государственные стройки едва компенсируют спад.</p><p>Обрабатывающая промышленность остаётся слабым звеном: минус 1,9% к тому же полугодию 2025 года, с ощутимым падением в текстиле и автомобильных кабелях — секторах, пуповиной связанных с заказами из Западной Европы, которая сама замедляется. Заметное исключение — пищевая промышленность, растущая третий год подряд за счёт экспорта на рынок ЕС, где квоты доступа последовательно расширялись.</p><blockquote>«У нас экономика, которая потребляет с аппетитом и инвестирует со страхом. Разница между этими двумя настроениями — это ровно разница между сегодняшним ростом и завтрашней стагнацией», — резюмирует экономист Корина Врабие из аналитического центра «Проспект».</blockquote><h2>Бюджет: сужающееся пространство</h2><p>Бюджетный дефицит к концу июня достиг 2,9% ВВП в годовом выражении, при том что налоговые доходы росли медленнее текущих расходов. Европейский грант из Плана роста закрывает комфортную часть разрыва, но именно этот комфорт и есть ловушка: каждый европейский лей, уходящий в текущие расходы, а не в инвестиции, покупает краткосрочное политическое спокойствие ценой долгосрочной зависимости. Государственный долг остаётся умеренным — около 37% ВВП, однако его обслуживание дорожает по мере того, как старые льготные кредиты замещаются финансированием по рыночным ставкам.</p><h2>Что может изменить картину</h2><p>Три переменные решат, закроется ли год выше или ниже 3%. Первая — сельское хозяйство: июльская засуха снизила прогнозы по кукурузе и подсолнечнику, а слабое аграрное второе полугодие легко срезает полпункта ВВП. Вторая — энергетика: зима со стабильными тарифами высвободит располагаемый доход для потребления, зима с шоками его конфискует. Третья, самая важная и самая медленная, — частные инвестиции, заблокированные не столько нехваткой денег, сколько дефицитом предсказуемости в восприятии предпринимателей.</p><p>Итог полугодия — шаткое равновесие: молдавская экономика уже не в кризисе, но ещё не вошла в фазу самоподдерживающегося роста. Она живёт потреблением, финансируемым государственным долгом и трансфертами, — модель, которая работает ровно до тех пор, пока её никто не проверяет на прочность.</p>",
+      "author": "doina-rusnac",
+      "date": "2026-08-06T08:30:00",
+      "updated": null,
+      "coverSeed": 768,
+      "featured": true,
+      "breaking": false,
+      "views": 5470,
+      "readMin": 8,
+      "tags_ro": [
+        "PIB",
+        "macroeconomie",
+        "investiții",
+        "deficit bugetar"
+      ],
+      "tags_ru": [
+        "ВВП",
+        "макроэкономика",
+        "инвестиции",
+        "бюджетный дефицит"
+      ],
+      "sources": [
+        {
+          "label": "Biroul Național de Statistică — conturile naționale, semestrul I 2026 (date preliminare)",
+          "url": "#"
+        },
+        {
+          "label": "Raportul privind executarea bugetului public național, ianuarie–iunie 2026",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a19",
+      "slug": "justitia-dupa-evaluarea-externa-ce-spun-cifrele",
+      "category": "analize",
+      "title_ro": "Justiția după evaluarea externă: ce spun cifrele despre dosarele care contează",
+      "title_ru": "Юстиция после внешней оценки: что говорят цифры о делах, которые имеют значение",
+      "summary_ro": "La patru ani de la startul verificării integrității judecătorilor, sistemul arată altfel pe hârtie. Dar durata dosarelor mari de corupție abia s-a clintit. O analiză la rece a datelor, dincolo de retorica taberelor.",
+      "summary_ru": "Через четыре года после старта проверки добросовестности судей система на бумаге выглядит иначе. Но длительность крупных коррупционных дел почти не изменилась. Хладнокровный разбор данных — по ту сторону риторики лагерей.",
+      "content_ro": "<p>Evaluarea externă a judecătorilor și procurorilor — reforma cu cea mai mare încărcătură simbolică din ultimul deceniu — a produs până în prezent cifre care pot susține două narațiuni opuse. Susținătorii arată spre cei 41 de magistrați care au părăsit sistemul în urma verificărilor sau chiar înainte de a ajunge în fața comisiilor. Criticii arată spre altă statistică: durata medie a unui dosar de mare corupție, de la trimiterea în judecată până la sentința definitivă, a scăzut doar de la 6,2 la 5,8 ani. Ambele cifre sunt corecte. Întrebarea este care dintre ele descrie mai bine starea justiției.</p><h2>Ce s-a schimbat măsurabil</h2><p>Trei indicatori s-au mișcat clar în direcția bună. Întâi, componența instanțelor-cheie: la curtea de apel a capitalei și la instanța supremă, peste jumătate dintre judecătorii actuali au trecut prin evaluare — un filtru pe care nicio generație anterioară nu l-a cunoscut. Apoi, transparența: hotărârile motivate se publică în termen în proporție de 87%, față de 61% acum patru ani. În sfârșit, fluxul de dosare noi: numărul cauzelor de corupție trimise în judecată de procurorii anticorupție a crescut cu aproape 40%, semn că blocajul nu mai este la intrare.</p><p>Blocajul s-a mutat, însă, în interior. Rata de amânare a ședințelor în dosarele complexe rămâne la 44%, alimentată de un mecanism pe care evaluarea nu îl putea atinge: penuria de judecători. Sistemul funcționează cu aproape un sfert din posturi vacante, iar concursurile de admitere nu acoperă nici măcar plecările naturale. Un judecător verificat, integru și supraîncărcat pronunță, statistic, cam tot atâtea amânări ca unul neverificat.</p><blockquote>„Am confundat două reforme diferite: curățarea sistemului și capacitatea lui. Prima se face cu comisii de evaluare, a doua cu buget, posturi și ani de răbdare. Am livrat-o parțial doar pe prima”, observă un fost membru al Consiliului Superior al Magistraturii.</blockquote><h2>Testul adevărat: dosarele-simbol</h2><p>Percepția publică despre justiție nu se formează din statistici agregate, ci din soarta a cinci-șase dosare emblematice — fraudele bancare, schemele de devalizare a întreprinderilor de stat, marile achiziții trucate. Aici bilanțul este cel mai fragil: din cele opt cauze pe care presa le-a numit constant „dosarele deceniului”, doar două au sentințe definitive, trei riscă prescripția în următoarele 18 luni, iar una a fost retrimisă la rejudecare pentru vicii de procedură. Fiecare termen prescris valorează, în percepție publică, cât o sută de rapoarte de progres.</p><p>Concluzia analitică este incomodă pentru ambele tabere: evaluarea externă nu a fost nici degeaba, cum susțin scepticii, nici suficientă, cum promiteau entuziaștii. Ea a schimbat compoziția sistemului, dar nu încă randamentul lui. Următorii doi ani — în care fie se închid dosarele-simbol, fie se prescriu — vor decide dacă reforma rămâne în istorie drept punct de cotitură sau drept încă o promisiune administrată corect și consumată fără efect.</p>",
+      "content_ru": "<p>Внешняя оценка судей и прокуроров — реформа с наибольшей символической нагрузкой последнего десятилетия — на сегодня дала цифры, способные поддержать два противоположных нарратива. Сторонники указывают на 41 магистрата, покинувших систему по итогам проверок или ещё до выхода к комиссиям. Критики указывают на другую статистику: средняя длительность крупного коррупционного дела от передачи в суд до окончательного приговора снизилась лишь с 6,2 до 5,8 года. Обе цифры верны. Вопрос в том, какая из них точнее описывает состояние юстиции.</p><h2>Что изменилось измеримо</h2><p>Три индикатора явно сдвинулись в правильную сторону. Во-первых, состав ключевых инстанций: в апелляционной палате столицы и в высшей судебной инстанции больше половины нынешних судей прошли через оценку — фильтр, которого не знало ни одно предыдущее поколение. Во-вторых, прозрачность: мотивированные решения публикуются в срок в 87% случаев против 61% четыре года назад. Наконец, поток новых дел: число коррупционных дел, переданных в суд антикоррупционными прокурорами, выросло почти на 40% — знак, что затор больше не на входе.</p><p>Однако затор переместился внутрь. Доля отложенных заседаний по сложным делам остаётся на уровне 44%, и питает её механизм, до которого оценка дотянуться не могла: нехватка судей. Система работает с почти четвертью вакантных должностей, а конкурсы на замещение не покрывают даже естественный отток. Проверенный, добросовестный и перегруженный судья статистически выносит примерно столько же отложений, сколько непроверенный.</p><blockquote>«Мы перепутали две разные реформы: очищение системы и её пропускную способность. Первая делается оценочными комиссиями, вторая — бюджетом, штатами и годами терпения. Мы частично выполнили только первую», — замечает бывший член Высшего совета магистратуры.</blockquote><h2>Настоящий тест: дела-символы</h2><p>Общественное восприятие юстиции формируется не из агрегированной статистики, а из судьбы пяти-шести знаковых дел — банковских афер, схем разграбления госпредприятий, крупных сфальсифицированных закупок. Здесь баланс самый хрупкий: из восьми дел, которые пресса устойчиво называла «делами десятилетия», лишь по двум есть окончательные приговоры, три рискуют истечением срока давности в ближайшие 18 месяцев, а одно возвращено на пересмотр из-за процессуальных нарушений. Каждый истёкший срок давности стоит в общественном восприятии сотни отчётов о прогрессе.</p><p>Аналитический вывод неудобен для обоих лагерей: внешняя оценка не была ни напрасной, как утверждают скептики, ни достаточной, как обещали энтузиасты. Она изменила состав системы, но пока не её отдачу. Следующие два года — в которые дела-символы либо завершатся, либо истекут по давности — решат, останется ли реформа в истории поворотной точкой или ещё одним обещанием, корректно администрированным и израсходованным без эффекта.</p>",
+      "author": "sergiu-balan",
+      "date": "2026-07-15T14:20:00",
+      "updated": null,
+      "coverSeed": 129,
+      "featured": false,
+      "breaking": false,
+      "views": 1980,
+      "readMin": 7,
+      "tags_ro": [
+        "justiție",
+        "evaluare externă",
+        "reformă",
+        "dosare de corupție"
+      ],
+      "tags_ru": [
+        "юстиция",
+        "внешняя оценка",
+        "реформа",
+        "коррупционные дела"
+      ],
+      "sources": [
+        {
+          "label": "Rapoartele anuale ale comisiilor de evaluare 2023–2026",
+          "url": "#"
+        },
+        {
+          "label": "Statistica judiciară consolidată, Agenția de Administrare a Instanțelor",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a20",
+      "slug": "remitentele-in-declin-cum-se-rescrie-motorul-consumului",
+      "category": "analize",
+      "title_ro": "Remitențele nu mai sunt ce au fost: cum se rescrie, în tăcere, motorul consumului din Moldova",
+      "title_ru": "Денежные переводы уже не те: как незаметно переписывается двигатель потребления в Молдове",
+      "summary_ro": "Transferurile bănești ale diasporei au coborât sub 9% din PIB, jumătate din ponderea de acum un deceniu. Nu e o criză — e o mutație structurală, cu efecte pe care băncile, bugetul și satele le simt deja diferit.",
+      "summary_ru": "Денежные переводы диаспоры опустились ниже 9% ВВП — вдвое меньше, чем десятилетие назад. Это не кризис, а структурная мутация, последствия которой банки, бюджет и сёла уже ощущают по-разному.",
+      "content_ro": "<p>Timp de două decenii, economia moldovenească a avut un motor pe care niciun guvern nu l-a construit și niciunul nu l-a putut controla: banii trimiși acasă de cei plecați. La apogeu, transferurile depășeau un sfert din PIB și finanțau totul, de la acoperișuri noi până la importurile de mașini second-hand. Datele pentru primul semestru din 2026 confirmă însă o tendință care nu mai poate fi citită drept fluctuație: remitențele au coborât la echivalentul a 8,7% din PIB, al cincilea an consecutiv de scădere relativă.</p><h2>Nu banii dispar — se schimbă oamenii</h2><p>Explicația nu este sărăcirea diasporei, ci maturizarea ei. Valul de migrație orientat istoric spre est a fost înlocuit de unul așezat în Uniunea Europeană, iar migrantul stabilit în UE se comportă diferit: își duce familia după el, cumpără locuință acolo, iar transferurile lunare către părinți se subțiază în favoarea economisirii la destinație. Statistica surprinde exact acest tipar — numărul transferurilor scade lent, dar valoarea medie a unui transfer scade mai repede, iar ponderea banilor veniți din zona euro a urcat la peste 70%.</p><p>În paralel, s-a schimbat și destinația banilor. Sondajele băncii centrale arată că tot mai puține gospodării folosesc remitențele pentru consum curent — de la 68% acum zece ani la 44% astăzi — și tot mai multe pentru educația copiilor, mici investiții sau rambursarea creditelor. E o veste bună deghizată în statistică proastă: banii mai puțini sunt cheltuiți mai chibzuit.</p><blockquote>„Remitențele au fost aspirina economiei moldovenești: au calmat durerea suficient de mult încât să putem amâna tratamentul. Scăderea lor ne obligă, în sfârșit, să discutăm despre boală — productivitatea internă”, spune un cercetător al unui institut economic din Chișinău.</blockquote><h2>Cine pierde primul</h2><p>Efectele nu se distribuie uniform. Cel mai expus este mediul rural din nordul țării, unde remitențele reprezentau și 40% din veniturile gospodăriilor — acolo scăderea se traduce direct în consum local mai mic și în accelerarea depopulării. Băncile pierd un flux ieftin de valută, dar câștigă altceva: o parte din diaspora matură s-a transformat din expeditor de bani în investitor imobiliar și, mai nou, în cumpărător de titluri de stat prin platformele online — sume mici, dar cu o simbolistică puternică.</p><p>Pentru buget, ecuația e mai delicată. Consumul finanțat din remitențe a alimentat ani la rând încasările din TVA, cel mai important impozit al țării. O erodare cu un punct procentual din PIB a transferurilor înseamnă, prin efect de rundă, aproximativ 400 de milioane de lei mai puțin la venituri — bani care trebuie înlocuiți fie din economia formală în creștere, fie din datorie.</p><p>Pe termen lung, mutația remitențelor este testul de maturitate al întregului model economic: o țară nu poate importa la nesfârșit prosperitate prin Western Union. Vestea cu adevărat importantă din datele acestui an nu este că banii diasporei scad — este că, pentru prima dată, salariile plătite în interiorul țării cresc suficient de repede încât să preia o parte din rolul lor. Rămâne de văzut dacă ritmul acesta rezistă primei ierni grele.</p>",
+      "content_ru": "<p>Два десятилетия у молдавской экономики был двигатель, который не строило ни одно правительство и который ни одно не могло контролировать: деньги, отправляемые домой уехавшими. На пике переводы превышали четверть ВВП и финансировали всё — от новых крыш до импорта подержанных автомобилей. Данные за первое полугодие 2026 года, однако, подтверждают тенденцию, которую уже нельзя считать колебанием: переводы опустились до эквивалента 8,7% ВВП — пятый год относительного снижения подряд.</p><h2>Исчезают не деньги — меняются люди</h2><p>Объяснение не в обеднении диаспоры, а в её взрослении. Волну миграции, исторически ориентированную на восток, сменила волна, осевшая в Европейском союзе, а обосновавшийся в ЕС мигрант ведёт себя иначе: перевозит семью, покупает там жильё, и ежемесячные переводы родителям истончаются в пользу накоплений по месту жительства. Статистика фиксирует ровно этот паттерн: число переводов снижается медленно, но средняя сумма перевода падает быстрее, а доля денег из еврозоны поднялась выше 70%.</p><p>Параллельно изменилось и назначение денег. Опросы центрального банка показывают, что всё меньше домохозяйств тратят переводы на текущее потребление — с 68% десять лет назад до 44% сегодня — и всё больше на образование детей, небольшие инвестиции или погашение кредитов. Это хорошая новость, замаскированная под плохую статистику: меньших денег расходуются разумнее.</p><blockquote>«Переводы были аспирином молдавской экономики: они снимали боль достаточно долго, чтобы можно было откладывать лечение. Их снижение наконец заставляет нас говорить о болезни — внутренней производительности», — говорит исследователь одного из экономических институтов Кишинёва.</blockquote><h2>Кто теряет первым</h2><p>Эффекты распределяются неравномерно. Наиболее уязвимы сельские районы севера страны, где переводы составляли до 40% доходов домохозяйств: там снижение напрямую означает падение местного потребления и ускорение депопуляции. Банки теряют дешёвый валютный поток, но приобретают другое: часть зрелой диаспоры превратилась из отправителя денег в инвестора в недвижимость, а с недавних пор — в покупателя государственных бумаг через онлайн-платформы. Суммы небольшие, но символика сильная.</p><p>Для бюджета уравнение деликатнее. Потребление, финансируемое переводами, годами питало поступления НДС — важнейшего налога страны. Эрозия переводов на один процентный пункт ВВП означает по цепочке примерно 400 миллионов леев недополученных доходов, которые придётся замещать либо ростом формальной экономики, либо долгом.</p><p>В долгосрочной перспективе мутация переводов — тест на зрелость всей экономической модели: страна не может бесконечно импортировать благосостояние через Western Union. По-настоящему важная новость этого года не в том, что деньги диаспоры сокращаются, а в том, что впервые зарплаты внутри страны растут достаточно быстро, чтобы взять на себя часть их роли. Останется ли этот темп после первой тяжёлой зимы — вопрос открытый.</p>",
+      "author": "doina-rusnac",
+      "date": "2026-08-25T09:45:00",
+      "updated": null,
+      "coverSeed": 455,
+      "featured": false,
+      "breaking": false,
+      "views": 2760,
+      "readMin": 6,
+      "tags_ro": [
+        "remitențe",
+        "diasporă",
+        "consum",
+        "macroeconomie"
+      ],
+      "tags_ru": [
+        "переводы",
+        "диаспора",
+        "потребление",
+        "макроэкономика"
+      ],
+      "sources": [
+        {
+          "label": "BNM — statistica transferurilor de mijloace bănești, S1 2026",
+          "url": "#"
+        },
+        {
+          "label": "Studiul privind utilizarea remitențelor în gospodării, ediția 2026",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a21",
+      "slug": "tacerea-institutiilor-costa-mai-scump-decat-orice-scandal",
+      "category": "opinie",
+      "title_ro": "Tăcerea instituțiilor costă mai scump decât orice scandal",
+      "title_ru": "Молчание институтов обходится дороже любого скандала",
+      "summary_ro": "Am numărat zilele în care o instituție publică a tăcut la o întrebare simplă: 34. În acest interval, versiunile neoficiale au umplut golul. Un editorial despre prețul real al comunicării prin comunicate.",
+      "summary_ru": "Я посчитал дни, в течение которых государственное учреждение молчало в ответ на простой вопрос: 34. За это время пустоту заполнили неофициальные версии. Колонка о настоящей цене общения через пресс-релизы.",
+      "content_ro": "<p>În luna mai am trimis unei instituții publice o întrebare care încăpea într-o singură frază: câți bani s-au cheltuit dintr-un fond de urgență și pe ce. Nu cerea analize, nu cerea interpretări — cerea un tabel. Răspunsul a venit după 34 de zile, cu două zile înainte de termenul-limită prelungit legal, și conținea, pe o pagină cu antet, promisiunea solemnă că informația „va fi făcută publică la momentul oportun”. Am recitit fraza de câteva ori, ca să mă conving că nu e o parodie. Nu era. Era doar felul obișnuit în care statul vorbește cu oamenii pe care îi servește.</p><h2>Golul nu rămâne niciodată gol</h2><p>Ce s-a întâmplat în cele 34 de zile este partea cu adevărat instructivă. Neavând cifre oficiale, spațiul public le-a inventat. Un politician de opoziție a avansat o sumă — greșită, cum avea să se vadă. Un canal de Telegram a adăugat o poveste cu o firmă-fantomă — nefondată, dar irezistibilă. Când răspunsul oficial a sosit în sfârșit, el nu a mai corectat nimic: concurau deja trei versiuni, iar a patra, cea adevărată, a intrat pe piață cu o lună întârziere, ca un ziar de ieri. Instituția a plătit pentru tăcere mai mult decât ar fi plătit pentru orice adevăr incomod spus în prima zi.</p><p>Aceasta este aritmetica pe care birocrațiile noastre refuză să o învețe: informația funcționează ca natura, are oroare de vid. Fiecare zi de tăcere oficială este o zi în care versiunile alternative acumulează dobândă. Iar când minciuna are avans de o lună, adevărul nu mai ajunge din urmă — la scandalul următor, publicul își amintește versiunea care a sosit prima, nu pe cea care a sosit corectă.</p><blockquote>Transparența nu este o virtute morală a statului. Este cea mai ieftină poliță de asigurare pe care o poate cumpăra: se plătește în ore de sinceritate și scutește ani de reparat încredere.</blockquote><h2>Ce ar schimba, concret, jocul</h2><p>Nu pledez pentru naivitate instituțională — există informații care se protejează legitim: anchete în curs, date personale, secrete comerciale reale. Pledez pentru inversarea sarcinii: regula să fie publicarea, iar excepția să fie motivată în scris, cu semnătură, de cineva care își asumă răspunderea. Astăzi trăim în oglinda acestei reguli — secretul e gratuit și implicit, transparența cere efort și curaj. Cât timp niciun funcționar nu a pățit nimic pentru că a tăcut nejustificat, dar câțiva au avut probleme pentru că au vorbit, alegerea rațională a fiecărui birou va fi tăcerea.</p><p>Îmi asum să spun și partea mai puțin comodă pentru breasla mea: noi, presa, am contribuit la acest echilibru prost. Am tratat prea des comunicatele drept știri și tăcerile drept normalitate, am pus întrebarea o dată și am renunțat la a doua. Un stat tace exact atât cât îl lasă publicul lui să tacă.</p><p>De aceea, la fiecare întrebare rămasă fără răspuns, redacția noastră va publica de acum înainte și întrebarea, și numărul zilelor de tăcere. Nu ca gest de război, ci ca serviciu public: un contor simplu, la vedere, pentru un cost pe care îl plătim toți și pe care nimeni nu îl trece în vreun buget. Tăcerea instituțiilor nu e absența comunicării — e o comunicare foarte clară. Spune: nu vă datorăm nimic. Datoria noastră, a celor care întrebăm, este să nu ne obișnuim cu acest răspuns.</p>",
+      "content_ru": "<p>В мае я отправил государственному учреждению вопрос, умещавшийся в одну фразу: сколько денег потрачено из чрезвычайного фонда и на что. Он не требовал анализа, не требовал интерпретаций — он требовал таблицу. Ответ пришёл через 34 дня, за два дня до законно продлённого крайнего срока, и содержал на странице с официальным бланком торжественное обещание, что информация «будет обнародована в надлежащий момент». Я перечитал фразу несколько раз, чтобы убедиться, что это не пародия. Это не была пародия. Это был обычный способ, которым государство разговаривает с людьми, которым служит.</p><h2>Пустота никогда не остаётся пустой</h2><p>По-настоящему поучительно то, что происходило в эти 34 дня. Не имея официальных цифр, публичное пространство их изобрело. Оппозиционный политик назвал сумму — как выяснится, неверную. Telegram-канал добавил историю о фирме-призраке — бездоказательную, но неотразимую. Когда официальный ответ наконец прибыл, он уже ничего не исправил: конкурировали три версии, а четвёртая, правдивая, вышла на рынок с месячным опозданием, как вчерашняя газета. Учреждение заплатило за молчание больше, чем заплатило бы за любую неудобную правду, сказанную в первый день.</p><p>Вот арифметика, которую наши бюрократии отказываются учить: информация устроена как природа — она не терпит пустоты. Каждый день официального молчания — это день, в который альтернативные версии накапливают проценты. А когда у лжи месяц форы, правда уже не догоняет: при следующем скандале публика вспоминает версию, пришедшую первой, а не пришедшую верной.</p><blockquote>Прозрачность — не моральная добродетель государства. Это самый дешёвый страховой полис, который оно может купить: платится часами искренности и избавляет от лет починки доверия.</blockquote><h2>Что конкретно изменило бы игру</h2><p>Я не ратую за институциональную наивность — есть информация, которую защищают законно: текущие расследования, персональные данные, настоящие коммерческие тайны. Я ратую за инверсию бремени: правилом должна быть публикация, а исключение должно быть мотивировано письменно, за подписью человека, берущего на себя ответственность. Сегодня мы живём в зеркальном отражении этого правила: секретность бесплатна и включена по умолчанию, прозрачность требует усилий и смелости. Пока ни один чиновник не пострадал за неоправданное молчание, но некоторые имели проблемы за то, что говорили, рациональным выбором каждого кабинета будет молчание.</p><p>Возьму на себя смелость сказать и менее удобную для моего цеха часть: мы, пресса, внесли вклад в это дурное равновесие. Мы слишком часто принимали пресс-релизы за новости, а молчание — за норму, задавали вопрос один раз и отказывались от второго. Государство молчит ровно столько, сколько ему позволяет молчать его публика.</p><p>Поэтому отныне на каждый оставшийся без ответа вопрос наша редакция будет публиковать и сам вопрос, и число дней молчания. Не как жест войны, а как общественную услугу: простой счётчик на виду для цены, которую платим мы все и которую никто не вносит ни в один бюджет. Молчание институтов — не отсутствие коммуникации, это очень ясная коммуникация. Она говорит: мы вам ничего не должны. Долг наш — тех, кто спрашивает, — не привыкнуть к этому ответу.</p>",
+      "author": "andrei-lupu",
+      "date": "2026-07-09T17:30:00",
+      "updated": null,
+      "coverSeed": 803,
+      "featured": false,
+      "breaking": false,
+      "views": 4100,
+      "readMin": 5,
+      "tags_ro": [
+        "transparență",
+        "acces la informație",
+        "editorial",
+        "instituții publice"
+      ],
+      "tags_ru": [
+        "прозрачность",
+        "доступ к информации",
+        "колонка",
+        "госучреждения"
+      ],
+      "sources": [
+        {
+          "label": "Legea privind accesul la informațiile de interes public",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a22",
+      "slug": "panglica-taiata-de-trei-ori-drumurile-pe-care-le-inauguram",
+      "category": "opinie",
+      "title_ro": "Panglica tăiată de trei ori: despre drumurile pe care le inaugurăm și nu le terminăm",
+      "title_ru": "Лента, разрезанная трижды: о дорогах, которые мы открываем, но не достраиваем",
+      "summary_ro": "Am fost la trei inaugurări ale aceluiași sector de drum, în trei formule guvernamentale diferite. Un eseu despre cultul panglicii — cea mai longevivă instituție a statului nostru — și despre ce s-ar întâmpla dacă am inaugura mentenanța.",
+      "summary_ru": "Я был на трёх церемониях открытия одного и того же участка дороги — при трёх разных составах правительства. Эссе о культе ленточки, самом долговечном институте нашего государства, и о том, что было бы, если бы мы торжественно открывали техобслуживание.",
+      "content_ro": "<p>Există un sector de drum, la vreo oră de Chișinău, pe care l-am văzut inaugurat de trei ori. Prima dată s-a tăiat panglica la începerea lucrărilor — foarfecă, aplauze, promisiunea că „acest drum va schimba regiunea”. A doua oară, la finalizarea primului tronson: altă panglică, alt discurs, aceleași cuvinte cu altă ștampilă. A treia oară, după reabilitarea porțiunii care se degradase între timp — pentru că între prima și a treia panglică trecuseră șapte ani, suficient cât un drum făcut mediocru să moară și să învie din nou, pe bani noi. Dacă drumurile noastre ar fi măcar pe jumătate atât de durabile ca festivitățile lor, am avea infrastructură scandinavă.</p><h2>Panglica, instituția noastră cea mai solidă</h2><p>Nu ironizez gratuit. Cultul inaugurării are o logică politică impecabilă: o panglică produce imagini, imaginile produc percepția acțiunii, iar percepția acțiunii câștigă alegeri. Mentenanța, în schimb, nu produce nimic fotografiabil. Nimeni nu a tăiat vreodată o panglică deasupra unui șanț curățat, nimeni nu a chemat televiziunile la schimbarea la timp a unui rost de dilatare. Astfel, banul public curge natural spre ce se vede — obiectul nou — și seacă exact acolo unde se decide, de fapt, durata de viață a obiectului: întreținerea lui plictisitoare, anuală, invizibilă.</p><p>Cifrele spun povestea fără metafore: din bugetul rutier al ultimului deceniu, partea leului a mers către construcție și „reabilitare capitală”, iar mentenanța curentă a primit, an de an, sub jumătate din necesarul calculat chiar de administratorii drumurilor. Rezultatul e un ciclu pe care îl cunoaștem toți: construim scump, întreținem deloc, degradăm rapid, reabilităm și mai scump. Panglica de la capătul fiecărui ciclu e singura constantă.</p><blockquote>Un stat matur se recunoaște nu după ce inaugurează, ci după ce întreține. Monumentele adevărate ale administrației nu sunt obiectele noi — sunt obiectele vechi care încă funcționează.</blockquote><h2>Propunerea mea, doar pe jumătate în glumă</h2><p>Îmi imaginez uneori o țară în care festivitățile s-ar organiza invers. Ministrul vine, cu presă cu tot, la un drum care are zece ani și arată ca la cinci — și taie panglica longevității. Primarul premiat nu e cel care a atras fonduri pentru încă un obiect, ci cel al cărui apeduct n-a avut nicio avarie majoră în cinci ani. Sună absurd doar pentru că am fost dresați să confundăm dezvoltarea cu șantierul. În realitate, o țară săracă nu își permite tocmai luxul de a construi lucruri pe care nu le poate întreține.</p><p>Știu contraargumentul: oamenii vor lucruri noi, iar politicienii le oferă ce cer. Dar am văzut și sondajele mai puțin citate, în care aceiași oameni, întrebați ce îi exasperează zilnic, nu pomenesc lipsa obiectelor noi — pomenesc groapa reapărută în asfaltul de anul trecut. Publicul nostru e mai matur decât festivitățile care i se organizează.</p><p>Până una-alta, îmi păstrez obiceiul de reporter bătrân: la fiecare inaugurare la care sunt invitat, notez data în agendă și pun o alarmă peste trei ani. Mă întorc fără invitație, fără foarfecă și fără discursuri, doar cu aparatul foto. Fotografia de la a doua vizită este, întotdeauna, articolul adevărat. Iar dacă vreodată voi găsi drumul intact, promit să scriu cel mai entuziast text al carierei mele — despre o panglică pe care nu a mai trebuit să o taie nimeni a doua oară.</p>",
+      "content_ru": "<p>Есть участок дороги примерно в часе езды от Кишинёва, открытие которого я видел трижды. Первый раз ленту разрезали в начале работ — ножницы, аплодисменты, обещание, что «эта дорога изменит регион». Второй раз — при завершении первого отрезка: другая лента, другая речь, те же слова с другой печатью. Третий раз — после реабилитации участка, успевшего тем временем деградировать, потому что между первой и третьей лентой прошло семь лет: достаточно, чтобы посредственно сделанная дорога умерла и воскресла заново, на новые деньги. Будь наши дороги хотя бы вполовину так долговечны, как их торжества, у нас была бы скандинавская инфраструктура.</p><h2>Ленточка — наш самый прочный институт</h2><p>Я иронизирую не бесплатно. У культа открытий безупречная политическая логика: лента производит картинки, картинки производят ощущение действия, а ощущение действия выигрывает выборы. Техобслуживание же не производит ничего фотогеничного. Никто никогда не разрезал ленту над прочищенной водоотводной канавой, никто не звал телевидение на своевременную замену деформационного шва. Так публичные деньги естественно текут туда, где видно, — к новому объекту — и пересыхают ровно там, где на самом деле решается срок его жизни: в скучном, ежегодном, невидимом уходе.</p><p>Цифры рассказывают эту историю без метафор: в дорожном бюджете последнего десятилетия львиная доля уходила на строительство и «капитальную реабилитацию», а текущее содержание год за годом получало меньше половины потребности, рассчитанной самими дорожными администраторами. Результат — цикл, знакомый каждому: строим дорого, не обслуживаем вовсе, быстро деградируем, реабилитируем ещё дороже. Лента в конце каждого цикла — единственная константа.</p><blockquote>Зрелое государство узнаётся не по тому, что оно открывает, а по тому, что оно содержит. Настоящие памятники администрации — не новые объекты, а старые, которые всё ещё работают.</blockquote><h2>Моё предложение — лишь наполовину в шутку</h2><p>Иногда я представляю страну, где торжества устроены наоборот. Министр приезжает, с прессой, к дороге, которой десять лет, а выглядит она на пять, — и разрезает ленту долговечности. Премию получает не мэр, добывший фонды на ещё один объект, а тот, чей водопровод пять лет не знал крупных аварий. Это звучит абсурдно лишь потому, что нас выдрессировали путать развитие со стройплощадкой. В действительности бедная страна не может позволить себе именно роскошь строить то, что не в состоянии содержать.</p><p>Знаю контраргумент: люди хотят нового, а политики дают то, что просят. Но я видел и менее цитируемые опросы, в которых те же люди, отвечая, что изводит их ежедневно, не упоминают нехватку новых объектов — они упоминают яму, вновь проступившую в прошлогоднем асфальте. Наша публика взрослее устраиваемых для неё торжеств.</p><p>А пока я сохраняю привычку старого репортёра: на каждом открытии, куда меня приглашают, записываю дату в блокнот и ставлю напоминание через три года. Возвращаюсь без приглашения, без ножниц и без речей — только с фотоаппаратом. Снимок со второго визита — всегда и есть настоящая статья. И если однажды я найду дорогу невредимой, обещаю написать самый восторженный текст своей карьеры — о ленте, которую никому не пришлось разрезать во второй раз.</p>",
+      "author": "andrei-lupu",
+      "date": "2026-08-30T16:10:00",
+      "updated": null,
+      "coverSeed": 267,
+      "featured": false,
+      "breaking": false,
+      "views": 3320,
+      "readMin": 5,
+      "tags_ro": [
+        "eseu",
+        "infrastructură",
+        "cultură politică",
+        "mentenanță"
+      ],
+      "tags_ru": [
+        "эссе",
+        "инфраструктура",
+        "политическая культура",
+        "содержание дорог"
+      ],
+      "sources": [
+        {
+          "label": "Rapoartele anuale privind execuția fondului rutier, 2016–2025",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a23",
+      "slug": "is-moldtrans-cargo-pierderi-180-milioane-consiliu-inactiv",
+      "category": "business-public",
+      "title_ro": "ÎS „Moldtrans-Cargo”: pierderi de 180 de milioane de lei și un consiliu de administrație care nu s-a întrunit un an",
+      "title_ru": "ГП «Молдтранс-Карго»: убытки в 180 миллионов леев и административный совет, не собиравшийся целый год",
+      "summary_ro": "Auditul Curții de Conturi la operatorul de stat de transport de mărfuri descrie un caz-școală de guvernanță eșuată: tarife sub cost, flotă cu vechime medie de 29 de ani și decizii majore luate fără organul care trebuia să le supravegheze.",
+      "summary_ru": "Аудит Счётной палаты на государственном грузовом операторе описывает хрестоматийный случай провалившегося управления: тарифы ниже себестоимости, парк со средним возрастом 29 лет и ключевые решения, принятые без органа, который должен был их контролировать.",
+      "content_ro": "<p>Întreprinderea de stat „Moldtrans-Cargo”, unul dintre cei mai mari operatori publici de transport de mărfuri din țară, a acumulat în ultimii trei ani pierderi de 180 de milioane de lei, iar consiliul său de administrație nu s-a întrunit în nicio ședință timp de 12 luni consecutive — perioadă în care conducerea executivă a semnat totuși contracte de peste 90 de milioane de lei. Sunt concluziile centrale ale raportului de audit al conformității publicat săptămâna aceasta de Curtea de Conturi, un document de 84 de pagini care se citește ca un manual despre cum nu trebuie administrată proprietatea publică.</p><h2>Mecanica pierderii</h2><p>Auditorii descompun pierderea în trei straturi. Primul este tarifar: pentru aproximativ 40% din volumul transportat, întreprinderea a practicat tarife sub costul calculat pe kilometru, unele stabilite prin contracte-cadru semnate încă din 2019 și neactualizate nici după scumpirea motorinei cu peste 60%. Al doilea strat este flota: vechimea medie a parcului este de 29 de ani, rata de imobilizare în reparații a atins 38%, iar cheltuielile de mentenanță pe kilometru sunt duble față de operatorii privați comparabili. Al treilea strat este cel mai sensibil — locațiunile: depozite și terenuri ale întreprinderii închiriate la prețuri de până la cinci ori sub media zonei, către un cerc restrâns de firme, unele cu fondatori care se regăsesc printre foștii angajați ai întreprinderii.</p><blockquote>„Nu am identificat un mecanism unic de fraudă, ci ceva mai grav: absența oricărui mecanism de control. Acolo unde nimeni nu supraveghează, nu e nevoie de o schemă sofisticată — ajunge inerția”, a declarat, la prezentarea raportului, membrul Curții responsabil de audit.</blockquote><h2>Consiliul-fantomă</h2><p>Partea cea mai spectaculoasă a raportului privește guvernanța. Consiliul de administrație — organul care ar fi trebuit să aprobe bugetul, investițiile și tranzacțiile mari — a existat în acte, dar nu și în fapt: două posturi din cinci vacante din 2023, iar membrii rămași convocați ultima dată în urmă cu un an. În lipsa cvorumului, deciziile au migrat tăcut către directorul general și către fondator — autoritatea publică de resort —, adică exact configurația pe care legea guvernanței întreprinderilor de stat, adoptată cu surle în 2023, promitea să o elimine. Indemnizațiile membrilor, în schimb, au fost plătite integral.</p><p>Agenția Proprietății Publice a reacționat în stilul consacrat: a luat act, a instituit o comisie și a promis un plan de restructurare până la finele anului. Opțiunile reale sunt trei și niciuna comodă — recapitalizare din buget (adică din banii tuturor), restructurare dură cu tăierea rutelor neprofitabile (adică un conflict social), sau privatizarea activelor viabile (adică o discuție despre preț pe care nimeni nu vrea să o poarte într-un an electoral).</p><p>Dincolo de cazul concret, raportul reaprinde întrebarea structurală: statul moldovean deține încă zeci de întreprinderi în sectoare unde nu mai are niciun motiv strategic să fie operator. Fiecare an de amânare a răspunsului are un preț contabilizabil — la „Moldtrans-Cargo”, el s-a măsurat în 60 de milioane de lei pe an. Următorul raport al Curții va contabiliza, probabil, prețul următoarei amânări.</p>",
+      "content_ru": "<p>Государственное предприятие «Молдтранс-Карго», один из крупнейших публичных операторов грузовых перевозок страны, за последние три года накопило 180 миллионов леев убытков, а его административный совет не провёл ни одного заседания в течение 12 месяцев подряд — периода, за который исполнительное руководство тем не менее подписало контракты более чем на 90 миллионов леев. Таковы центральные выводы аудита соответствия, опубликованного на этой неделе Счётной палатой, — документа на 84 страницах, который читается как учебник о том, как нельзя управлять публичной собственностью.</p><h2>Механика убытка</h2><p>Аудиторы раскладывают убыток на три слоя. Первый — тарифный: примерно для 40% перевезённого объёма предприятие применяло тарифы ниже расчётной себестоимости километра, часть из них установлена рамочными контрактами ещё 2019 года и не пересматривалась даже после подорожания дизтоплива более чем на 60%. Второй слой — парк: средний возраст техники 29 лет, доля простоя в ремонтах достигла 38%, а затраты на обслуживание на километр вдвое выше, чем у сопоставимых частных операторов. Третий слой самый чувствительный — аренда: склады и участки предприятия сдавались по ценам до пяти раз ниже средних по зоне узкому кругу фирм, среди учредителей которых встречаются бывшие сотрудники предприятия.</p><blockquote>«Мы не выявили единого механизма мошенничества — мы выявили нечто худшее: отсутствие какого-либо механизма контроля. Там, где никто не надзирает, изощрённая схема не нужна — достаточно инерции», — заявил при презентации отчёта ответственный за аудит член Палаты.</blockquote><h2>Совет-призрак</h2><p>Самая впечатляющая часть отчёта касается управления. Административный совет — орган, который должен был утверждать бюджет, инвестиции и крупные сделки, — существовал на бумаге, но не в реальности: две из пяти позиций вакантны с 2023 года, а оставшиеся члены последний раз созывались год назад. В отсутствие кворума решения тихо мигрировали к генеральному директору и к учредителю — профильному публичному органу, то есть ровно к той конфигурации, которую закон об управлении госпредприятиями, торжественно принятый в 2023 году, обещал устранить. Вознаграждения членам совета, впрочем, выплачивались полностью.</p><p>Агентство публичной собственности отреагировало в устоявшемся стиле: приняло к сведению, создало комиссию и пообещало план реструктуризации до конца года. Реальных опций три, и ни одна не удобна: рекапитализация из бюджета (то есть из денег всех), жёсткая реструктуризация с закрытием убыточных маршрутов (то есть социальный конфликт) или приватизация жизнеспособных активов (то есть разговор о цене, который никто не хочет вести в предвыборный год).</p><p>За рамками конкретного случая отчёт вновь зажигает структурный вопрос: молдавское государство всё ещё владеет десятками предприятий в секторах, где у него не осталось никакого стратегического повода быть оператором. Каждый год отсрочки ответа имеет исчислимую цену — на «Молдтранс-Карго» она составила 60 миллионов леев в год. Следующий отчёт Палаты, вероятно, подсчитает цену следующей отсрочки.</p>",
+      "author": "victor-munteanu",
+      "date": "2026-07-21T08:55:00",
+      "updated": null,
+      "coverSeed": 612,
+      "featured": false,
+      "breaking": false,
+      "views": 2890,
+      "readMin": 7,
+      "tags_ro": [
+        "întreprinderi de stat",
+        "Curtea de Conturi",
+        "guvernanță",
+        "audit"
+      ],
+      "tags_ru": [
+        "госпредприятия",
+        "Счётная палата",
+        "управление",
+        "аудит"
+      ],
+      "sources": [
+        {
+          "label": "Raportul auditului conformității la ÎS „Moldtrans-Cargo”, Curtea de Conturi, 2026",
+          "url": "#"
+        },
+        {
+          "label": "Legea nr. 246/2023 privind guvernanța întreprinderilor de stat",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "a24",
+      "slug": "dividendele-intreprinderilor-de-stat-doar-14-din-92-au-virat",
+      "category": "business-public",
+      "title_ro": "Doar 14 din 92 de întreprinderi de stat au virat dividende la buget: harta banilor care nu ajung niciodată",
+      "title_ru": "Лишь 14 из 92 государственных предприятий перечислили дивиденды в бюджет: карта денег, которые никогда не доходят",
+      "summary_ro": "Statul-acționar a încasat anul trecut 218 milioane de lei din dividende — mai puțin decât profitul unei singure companii din portofoliu. Corbul.md a analizat rapoartele financiare: unde se opresc banii și cine decide, de fapt, că nu pleacă spre buget.",
+      "summary_ru": "Государство-акционер получило в прошлом году 218 миллионов леев дивидендов — меньше, чем прибыль одной-единственной компании из портфеля. Corbul.md проанализировал финансовые отчёты: где останавливаются деньги и кто на самом деле решает, что они не уходят в бюджет.",
+      "content_ro": "<p>Pe hârtie, statul moldovean este cel mai mare proprietar de afaceri din țară: 92 de întreprinderi de stat și societăți cu capital public majoritar, active însumând zeci de miliarde de lei, poziții de monopol sau cvasimonopol în energie, utilități și transport. La casierie, însă, acest imperiu produce cât o firmă mijlocie: 218 milioane de lei au intrat anul trecut la buget sub formă de dividende și defalcări din profit, iar 14 entități — adică una din șapte — au asigurat aproape întreaga sumă. Corbul.md a parcurs rapoartele financiare depuse de companiile din portofoliul statului pentru a înțelege unde se evaporă diferența.</p><h2>Trei robinete închise</h2><p>Primul robinet este pierderea pură: 31 de întreprinderi au raportat rezultate negative, de la operatori mici de utilități până la giganți ai infrastructurii, iar de la cine pierde nu ai ce distribui. Al doilea robinet este „profitul reinvestit”: alte 29 de companii au raportat profit, dar au obținut de la autoritatea de resort scutirea integrală sau parțială de la virarea lui, invocând programe de investiții. Verificarea acestor programe este partea unde documentele devin subțiri: la 11 dintre ele, auditul intern al fondatorului nu a găsit nicio corespondență între investițiile promise și cele executate. Profitul rămâne, investiția ba.</p><p>Al treilea robinet este cel mai puțin vizibil: profitul care nu apare deloc, pentru că se consumă înainte de linia finală a raportului — în cheltuieli de personal peste grilele comparabile, în contracte de consultanță și sponsorizări, în provizioane constituite generos exact în anii cu rezultate bune. Un fost administrator dintr-o companie publică de utilități descrie mecanismul cu o franchețe rară: bugetul se construiește pornind de la profitul-țintă aproape de zero, pentru că orice leu de profit raportat este un leu pe care fondatorul îl poate cere.</p><blockquote>„Dividendele întreprinderilor de stat nu sunt o problemă contabilă, sunt un termometru al guvernanței. Acolo unde consiliile sunt profesioniste, banii ajung la acționar. Acolo unde sunt sinecuri, banii găsesc întotdeauna un motiv să rămână acasă”, rezumă un expert în guvernanță corporativă consultat de redacție.</blockquote><h2>Cât ar putea aduce portofoliul, de fapt</h2><p>Un calcul conservator, aplicând portofoliului public rata medie de distribuție practicată de statele OCDE pentru companiile lor — în jur de jumătate din profitul net —, indică un potențial de 600–700 de milioane de lei anual, de trei ori peste încasările actuale. Nu este o sumă care schimbă destinul bugetului, dar este exact ordinul de mărime al unor programe pentru care guvernul caută anual finanțare externă. Diferența dintre potențial și realitate este, în esență, costul anual al guvernanței slabe — un impozit invizibil plătit de toți contribuabilii către un sistem de confort administrativ.</p><p>Reforma promisă — consilii profesionalizate, politică de dividende predictibilă, raportare consolidată a portofoliului — există ca proiect din 2023 și avansează în ritmul obișnuit al lucrurilor care deranjează multă lume și nu grăbesc pe nimeni. Până la implementare, regula jocului rămâne cea veche: profitul public este opțional, iar opțiunea aparține celor care îl produc, nu celor în numele cărora se produce. Într-o țară care numără fiecare leu din granturi externe, cei șase-șapte sute de milioane lăsați anual „acasă” la întreprinderile proprii sunt, poate, cea mai tăcută gaură din buget.</p>",
+      "content_ru": "<p>На бумаге молдавское государство — крупнейший владелец бизнеса в стране: 92 государственных предприятия и общества с мажоритарным публичным капиталом, активы на десятки миллиардов леев, монопольные или квазимонопольные позиции в энергетике, коммунальных услугах и транспорте. Но в кассе эта империя приносит столько же, сколько средняя фирма: 218 миллионов леев поступило в прошлом году в бюджет в виде дивидендов и отчислений из прибыли, причём 14 организаций — то есть одна из семи — обеспечили почти всю сумму. Corbul.md изучил финансовые отчёты компаний государственного портфеля, чтобы понять, где испаряется разница.</p><h2>Три закрытых крана</h2><p>Первый кран — чистый убыток: 31 предприятие отчиталось об отрицательных результатах, от мелких коммунальных операторов до инфраструктурных гигантов, а с убыточного взять нечего. Второй кран — «реинвестированная прибыль»: ещё 29 компаний показали прибыль, но получили от профильного органа полное или частичное освобождение от её перечисления, ссылаясь на инвестиционные программы. Проверка этих программ — то место, где документы становятся тонкими: у 11 из них внутренний аудит учредителя не нашёл никакого соответствия между обещанными и выполненными инвестициями. Прибыль остаётся, инвестиций нет.</p><p>Третий кран наименее заметен: прибыль, которая не появляется вовсе, потому что расходуется до итоговой строки отчёта — на персонал сверх сопоставимых сеток, на консалтинговые контракты и спонсорство, на резервы, щедро создаваемые именно в удачные годы. Бывший администратор одной публичной коммунальной компании описывает механизм с редкой откровенностью: бюджет строится от целевой прибыли, близкой к нулю, потому что каждый лей показанной прибыли — это лей, который учредитель может потребовать.</p><blockquote>«Дивиденды госпредприятий — не бухгалтерская проблема, а термометр качества управления. Там, где советы профессиональны, деньги доходят до акционера. Там, где это синекуры, деньги всегда находят причину остаться дома», — резюмирует консультировавший редакцию эксперт по корпоративному управлению.</blockquote><h2>Сколько портфель мог бы приносить на самом деле</h2><p>Консервативный расчёт — если применить к публичному портфелю среднюю норму распределения, практикуемую странами ОЭСР для своих компаний, около половины чистой прибыли, — указывает на потенциал в 600–700 миллионов леев в год, втрое выше нынешних поступлений. Это не сумма, меняющая судьбу бюджета, но ровно тот порядок величин, под который правительство ежегодно ищет внешнее финансирование. Разница между потенциалом и реальностью — по сути, годовая цена слабого управления: невидимый налог, который все налогоплательщики платят системе административного комфорта.</p><p>Обещанная реформа — профессиональные советы, предсказуемая дивидендная политика, консолидированная отчётность портфеля — существует как проект с 2023 года и движется обычным темпом вещей, которые мешают многим и не срочны никому. До её внедрения правило игры остаётся прежним: публичная прибыль опциональна, и опция принадлежит тем, кто её производит, а не тем, от чьего имени она производится. В стране, считающей каждый лей внешних грантов, шестьсот-семьсот миллионов, ежегодно остающихся «дома» у собственных предприятий, — возможно, самая тихая дыра в бюджете.</p>",
+      "author": "doina-rusnac",
+      "date": "2026-08-12T12:25:00",
+      "updated": null,
+      "coverSeed": 938,
+      "featured": false,
+      "breaking": false,
+      "views": 1720,
+      "readMin": 6,
+      "tags_ro": [
+        "dividende",
+        "buget de stat",
+        "întreprinderi de stat",
+        "guvernanță corporativă"
+      ],
+      "tags_ru": [
+        "дивиденды",
+        "госбюджет",
+        "госпредприятия",
+        "корпоративное управление"
+      ],
+      "sources": [
+        {
+          "label": "Raportul consolidat privind administrarea proprietății publice, 2025",
+          "url": "#"
+        },
+        {
+          "label": "Rapoartele financiare anuale ale întreprinderilor de stat (depozitarul public)",
+          "url": "#"
+        },
+        {
+          "label": "OECD Guidelines on Corporate Governance of State-Owned Enterprises",
+          "url": "#"
+        }
+      ]
+    }
+  ]
+}

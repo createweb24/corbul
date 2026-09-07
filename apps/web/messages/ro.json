@@ -1,0 +1,963 @@
+{
+  "nav": {
+    "home": "Acasă",
+    "sections": "Secțiuni",
+    "categories": "Categorii",
+    "tools": "Instrumente",
+    "about": "Despre",
+    "team": "Echipa",
+    "contact": "Contact",
+    "subscribe": "Abonează-te",
+    "premium": "Corbul Premium",
+    "search": "Caută",
+    "admin": "Redacție",
+    "menu": "Meniu",
+    "openMenu": "Deschide meniul",
+    "closeMenu": "Închide meniul",
+    "openSearch": "Deschide căutarea",
+    "mainLabel": "Navigare principală",
+    "sectionsLabel": "Secțiuni editoriale",
+    "footerLabel": "Navigare secundară",
+    "topLabel": "Bară de serviciu",
+    "skipToContent": "Sari la conținut",
+    "language": "Limbă",
+    "languageRo": "Română",
+    "languageRu": "Rusă",
+    "switchTo": "Comută pe {language}",
+    "cat": {
+      "investigatii": "Investigații",
+      "politica": "Politică",
+      "economie": "Economie",
+      "energie": "Energie",
+      "juridic": "Juridic",
+      "finante": "Finanțe",
+      "infrastructura": "Infrastructură",
+      "coruptie": "Corupție",
+      "analize": "Analize",
+      "opinie": "Opinie",
+      "business-public": "Business public"
+    },
+    "theme": {
+      "toLight": "Comută pe tema luminoasă",
+      "toDark": "Comută pe tema întunecată"
+    }
+  },
+  "common": {
+    "siteName": "Corbul.md",
+    "siteNameShort": "Corbul",
+    "tagline": "Analiză și investigație din Republica Moldova",
+    "readMore": "Citește mai departe",
+    "readFull": "Citește integral",
+    "readingTime": "{count, plural, one {# minut de lectură} few {# minute de lectură} other {# de minute de lectură}}",
+    "minRead": "{count} min",
+    "views": "{count, plural, one {# vizualizare} few {# vizualizări} other {# de vizualizări}}",
+    "viewsShort": "{count} afișări",
+    "articles": "{count, plural, one {# articol} few {# articole} other {# de articole}}",
+    "results": "{count, plural, one {# rezultat} few {# rezultate} other {# de rezultate}}",
+    "loading": "Se încarcă…",
+    "error": "A apărut o eroare",
+    "retry": "Încearcă din nou",
+    "close": "Închide",
+    "cancel": "Renunță",
+    "confirm": "Confirmă",
+    "save": "Salvează",
+    "send": "Trimite",
+    "sending": "Se trimite…",
+    "sent": "Trimis",
+    "submit": "Trimite",
+    "back": "Înapoi",
+    "next": "Înainte",
+    "previous": "Înapoi",
+    "page": "Pagina",
+    "pageOf": "Pagina {page} din {pages}",
+    "all": "Toate",
+    "allArticles": "Toate articolele",
+    "seeAll": "Vezi tot",
+    "more": "Mai mult",
+    "less": "Mai puțin",
+    "share": "Distribuie",
+    "copyLink": "Copiază linkul",
+    "copied": "Link copiat",
+    "updated": "Actualizat",
+    "publishedOn": "Publicat la",
+    "by": "de",
+    "author": "Autor",
+    "source": "Sursă",
+    "sources": "Surse",
+    "tags": "Etichete",
+    "premium": "Premium",
+    "breaking": "Ultima oră",
+    "featured": "Selecția redacției",
+    "exclusive": "Exclusiv",
+    "new": "Nou",
+    "optional": "opțional",
+    "required": "obligatoriu",
+    "email": "E-mail",
+    "emailPlaceholder": "nume@exemplu.md",
+    "name": "Nume",
+    "subject": "Subiect",
+    "message": "Mesaj",
+    "phone": "Telefon",
+    "address": "Adresă",
+    "website": "Site web",
+    "company": "Companie",
+    "yes": "Da",
+    "no": "Nu",
+    "notAvailable": "Indisponibil",
+    "today": "Azi",
+    "tomorrow": "Mâine",
+    "live": "În direct",
+    "backToTop": "Sus",
+    "noResults": "Niciun rezultat",
+    "filter": "Filtrează",
+    "reset": "Resetează",
+    "date": "Data",
+    "category": "Categorie",
+    "status": "Stare",
+    "currency": "Valută",
+    "from": "Din",
+    "to": "În",
+    "amount": "Sumă",
+    "total": "Total",
+    "and": "și",
+    "privacyConsent": "Prin trimitere confirmi că ai citit <link>politica de confidențialitate</link> și ești de acord cu prelucrarea datelor conform Legii nr. 133/2011."
+  },
+  "home": {
+    "title": "Corbul.md — investigații și analiză",
+    "description": "Jurnalism de investigație, analiză economică și juridică din Republica Moldova. Documente, cifre, context.",
+    "kicker": "Ediția de azi",
+    "breaking": "Ultima oră",
+    "latest": "Cele mai recente",
+    "hero": {
+      "kicker": "Deschiderea ediției",
+      "lead": "Materialul zilei"
+    },
+    "investigations": {
+      "kicker": "Dosar",
+      "title": "Investigațiile Corbului",
+      "subtitle": "Documente verificate, bani urmăriți până la capăt, nume rostite pe față.",
+      "cta": "Toate investigațiile"
+    },
+    "bands": {
+      "politics": {
+        "title": "Politică",
+        "kicker": "Putere și decizie"
+      },
+      "economy": {
+        "title": "Economie și Finanțe",
+        "kicker": "Bani publici, piețe, bănci"
+      },
+      "energy": {
+        "title": "Energie și Infrastructură",
+        "kicker": "Rețele, tarife, proiecte"
+      },
+      "legal": {
+        "title": "Juridic și Corupție",
+        "kicker": "Justiție, dosare, integritate"
+      },
+      "opinion": {
+        "title": "Opinie și Analize",
+        "kicker": "Argumente și context"
+      }
+    },
+    "featured": {
+      "kicker": "Selecția redacției",
+      "title": "Recomandate"
+    },
+    "latestSection": {
+      "kicker": "Flux editorial",
+      "title": "Ultimele materiale"
+    },
+    "mostRead": {
+      "kicker": "Cititorii Corbului",
+      "title": "Cele mai citite"
+    },
+    "empty": "Nu există încă materiale în această secțiune.",
+    "more": "Mai multe materiale"
+  },
+  "article": {
+    "breadcrumbHome": "Acasă",
+    "kicker": "Articol",
+    "readingTime": "Timp de lectură",
+    "views": "Vizualizări",
+    "updated": "Actualizat la {date}",
+    "published": "Publicat la {date}",
+    "byline": "Text de {author}",
+    "sourcesTitle": "Surse și documente",
+    "sourcesNote": "Fiecare afirmație factuală din acest material se sprijină pe documentele de mai jos.",
+    "trust": {
+      "title": "Verificat editorial",
+      "text": "Material verificat din cel puțin două surse independente. Corecțiile se publică deschis, cu dată și explicație."
+    },
+    "tags": "Etichete",
+    "related": "Materiale conexe",
+    "relatedKicker": "Continuă lectura",
+    "aboutAuthor": "Despre autor",
+    "moreByAuthor": "Toate materialele autorului",
+    "share": "Distribuie materialul",
+    "shareOn": "Distribuie pe {network}",
+    "copyLink": "Copiază linkul",
+    "copied": "Linkul a fost copiat",
+    "print": "Tipărește",
+    "premiumBadge": "Material Premium",
+    "paywall": {
+      "kicker": "Restul materialului",
+      "title": "Continuă cu Corbul Premium",
+      "text": "Ai citit începutul. Restul investigației — documentele, cifrele și concluziile — este disponibil abonaților Corbul Premium.",
+      "monthly": "{price} pe lună",
+      "annual": "{price} pe an",
+      "annualNote": "două luni gratuite",
+      "cta": "Vezi abonamentul",
+      "secondary": "Am deja abonament",
+      "note": "Un abonament finanțează munca de documentare: cereri de acces la informație, expertize, deplasări.",
+      "benefit1": "Acces integral la investigații și analize",
+      "benefit2": "Buletin editorial săptămânal, înaintea publicării",
+      "benefit3": "Arhiva completă de documente și surse"
+    },
+    "notFound": "Materialul căutat nu există sau a fost retras."
+  },
+  "category": {
+    "kicker": "Secțiune",
+    "title": "{name}",
+    "metaTitle": "{name}",
+    "count": "{count, plural, one {# material} few {# materiale} other {# de materiale}}",
+    "lead": "Materialul principal",
+    "all": "Toate materialele din secțiune",
+    "empty": "Secțiune în lucru",
+    "emptyText": "Nu am publicat încă materiale în această secțiune. Revino în curând.",
+    "notFound": "Secțiunea căutată nu există.",
+    "pageSuffix": "pagina {page}"
+  },
+  "search": {
+    "title": "Căutare",
+    "kicker": "Arhiva Corbul",
+    "subtitle": "Caută în titluri, rezumate și în textul integral al materialelor, în română și în rusă.",
+    "placeholder": "Cuvânt-cheie, nume, instituție…",
+    "submit": "Caută",
+    "clear": "Golește",
+    "resultsFor": "Rezultate pentru „{query}”",
+    "count": "{count, plural, one {# rezultat} few {# rezultate} other {# de rezultate}}",
+    "start": {
+      "title": "Ce cauți?",
+      "text": "Scrie un nume, o instituție, un număr de dosar sau un termen din text."
+    },
+    "empty": {
+      "title": "Niciun rezultat",
+      "text": "Nu am găsit nimic pentru „{query}”. Încearcă un termen mai scurt sau caută în cealaltă limbă."
+    },
+    "hint": "Minimum două caractere.",
+    "metaTitle": "Căutare în arhivă"
+  },
+  "about": {
+    "title": "Despre Corbul.md",
+    "kicker": "Cine suntem",
+    "subtitle": "O redacție mică, un singur criteriu: documentul.",
+    "mission": {
+      "title": "Misiunea",
+      "body": "Corbul.md publică jurnalism de investigație și analiză economico-juridică din Republica Moldova. Urmărim banul public de la decizie până la contul final, explicăm legislația în termeni verificabili și dăm cifrelor contextul fără de care ele nu înseamnă nimic. Nu producem știri de viteză; producem dosare."
+    },
+    "principles": {
+      "title": "Principii editoriale",
+      "intro": "Aceste cinci reguli nu sunt decorative. Ele decid ce publicăm și ce nu.",
+      "independence": {
+        "title": "Independență",
+        "body": "Nu avem proprietari politici și nu acceptăm finanțare condiționată. Sponsorii și partenerii comerciali sunt afișați public și nu au acces la conținutul editorial înainte de publicare."
+      },
+      "verification": {
+        "title": "Verificare din două surse",
+        "body": "Nicio afirmație factuală nu ajunge în pagină pe baza unei singure surse. Documentele primare au întâietate în fața declarațiilor."
+      },
+      "corrections": {
+        "title": "Corecții publice",
+        "body": "Greșelile se corectează deschis, în josul materialului, cu data și natura corecției. Nu ștergem în tăcere."
+      },
+      "separation": {
+        "title": "Fapte separate de opinii",
+        "body": "Analizele și opiniile sunt marcate ca atare. Ce este constatare și ce este interpretare se vede din prima privire."
+      },
+      "transparency": {
+        "title": "Transparența finanțării",
+        "body": "Ne finanțăm din abonamente Corbul Premium și din parteneriate B2B declarate. Structura veniturilor este publicată anual."
+      }
+    },
+    "corrections": {
+      "title": "Politica de corecții",
+      "body": "Dacă ai găsit o eroare într-un material, scrie-ne. Verificăm în cel mult 48 de ore lucrătoare. Corecțiile de fond apar cu mențiune vizibilă în articol; cele de formă se notează în subsol.",
+      "cta": "Semnalează o eroare"
+    },
+    "funding": {
+      "title": "Cum ne finanțăm",
+      "body": "Abonamentele cititorilor acoperă redacția. Parteneriatele B2B — cabinete de avocatură, bănci, industrie, consultanță — susțin secțiuni întregi, sub etichetă vizibilă „Susținut de”, fără drept de veto editorial."
+    },
+    "team": {
+      "title": "Redacția",
+      "body": "Șase jurnaliști și analiști, fiecare cu semnătură și adresă de contact publică.",
+      "cta": "Vezi echipa"
+    },
+    "contactCta": {
+      "title": "Ai un document?",
+      "body": "Primim ponturi și documente prin canal securizat. Nu îți cerem identitatea.",
+      "cta": "Trimite un pont"
+    }
+  },
+  "team": {
+    "title": "Echipa",
+    "kicker": "Redacția Corbul",
+    "subtitle": "Fiecare material poartă o semnătură. Fiecare semnătură are o adresă.",
+    "role": "Rol",
+    "bio": "Biografie",
+    "articles": "Materiale",
+    "articleCount": "{count, plural, one {# material} few {# materiale} other {# de materiale}}",
+    "viewArticles": "Vezi materialele",
+    "profile": "Profil",
+    "contact": "Scrie autorului",
+    "empty": "Echipa se completează.",
+    "authorNotFound": "Autorul căutat nu există.",
+    "byAuthor": "Materiale semnate de {name}",
+    "noArticles": "Autorul nu are încă materiale publicate.",
+    "metaTitle": "Echipa editorială",
+    "metaDescription": "Jurnaliștii și analiștii Corbul.md: biografii, domenii de expertiză, date de contact și articolele semnate de fiecare."
+  },
+  "contact": {
+    "title": "Contact",
+    "kicker": "Scrie-ne",
+    "subtitle": "Pentru redacție, drepturi la replică, parteneriate sau semnalarea unei erori.",
+    "details": {
+      "title": "Date de contact",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "address": "Adresă",
+      "hours": "Program",
+      "hoursValue": "Luni–vineri, 09:00–18:00 (EET)"
+    },
+    "form": {
+      "title": "Formular de contact",
+      "name": "Numele tău",
+      "namePlaceholder": "Nume și prenume",
+      "email": "E-mail",
+      "emailPlaceholder": "nume@exemplu.md",
+      "subject": "Subiect",
+      "subjectPlaceholder": "Despre ce este vorba",
+      "message": "Mesaj",
+      "messagePlaceholder": "Scrie-ne pe scurt…",
+      "send": "Trimite mesajul",
+      "sending": "Se trimite…",
+      "success": "Mesajul a ajuns la redacție. Răspundem în cel mult două zile lucrătoare.",
+      "error": "Mesajul nu a putut fi trimis. Încearcă din nou peste câteva minute."
+    },
+    "tip": {
+      "kicker": "Canal securizat",
+      "title": "Trimite un pont securizat",
+      "text": "Ai un document, un contract sau o informație care ar trebui să fie publică? Scrie-ne fără să îți dai numele. Nu înregistrăm adresa IP și nu îți cerem identitatea.",
+      "placeholder": "Descrie pe scurt ce ai și de unde. Poți lăsa un mod de contact, dacă vrei.",
+      "contactOptional": "Contact (opțional)",
+      "send": "Trimite pontul",
+      "sending": "Se trimite…",
+      "success": "Pontul a ajuns la redacție. Îl verificăm și revenim doar dacă ne-ai lăsat un contact.",
+      "error": "Pontul nu a putut fi trimis. Încearcă din nou.",
+      "note": "Pentru documente voluminoase sau situații sensibile, scrie-ne mai întâi un rând și îți indicăm un canal criptat."
+    },
+    "press": {
+      "title": "Presă și republicare",
+      "text": "Materialele pot fi citate cu link activ spre sursă. Republicarea integrală se face doar cu acordul redacției."
+    },
+    "metaTitle": "Contact și ponturi securizate",
+    "metaDescription": "Scrie redacției Corbul.md: date de contact, formular și canal securizat pentru ponturi și documente. Confidențialitatea surselor este garantată."
+  },
+  "subscribe": {
+    "title": "Corbul Premium",
+    "kicker": "Abonament",
+    "subtitle": "Investigațiile costă timp, cereri oficiale și expertiză. Abonamentul le plătește.",
+    "plans": {
+      "title": "Alege planul",
+      "monthly": {
+        "name": "Lunar",
+        "period": "pe lună",
+        "note": "Se reînnoiește automat. Poți renunța oricând."
+      },
+      "annual": {
+        "name": "Anual",
+        "period": "pe an",
+        "note": "Echivalentul a zece luni plătite.",
+        "save": "Economisești {amount}"
+      }
+    },
+    "benefits": {
+      "title": "Ce include abonamentul",
+      "b1": "Acces integral la toate investigațiile și analizele Premium",
+      "b2": "Buletin editorial săptămânal, cu documentele din spatele materialelor",
+      "b3": "Arhiva completă, fără limită de vechime",
+      "b4": "Prioritate la răspunsul redacției pentru întrebări de fond",
+      "b5": "Zero reclame, zero urmărire publicitară"
+    },
+    "form": {
+      "emailLabel": "E-mailul tău",
+      "emailPlaceholder": "nume@exemplu.md",
+      "cta": "Continuă spre plată",
+      "loading": "Se pregătește plata…",
+      "error": "Nu am putut deschide pagina de plată. Încearcă din nou.",
+      "note": "Plata se procesează securizat de Stripe. Nu stocăm datele cardului."
+    },
+    "demo": {
+      "title": "Mod demonstrativ",
+      "text": "Plățile nu sunt încă activate pe această instalare. Formularul funcționează, dar nu se face nicio tranzacție reală."
+    },
+    "faq": {
+      "title": "Întrebări frecvente",
+      "q1": "Ce se întâmplă cu articolele gratuite?",
+      "a1": "Rămân gratuite. Abonamentul deschide materialele marcate Premium — investigațiile de amploare și analizele extinse.",
+      "q2": "Pot renunța oricând?",
+      "a2": "Da. Abonamentul se anulează dintr-un clic și rămâne activ până la finalul perioadei plătite.",
+      "q3": "Cum îmi accesez abonamentul pe alt dispozitiv?",
+      "a3": "După plată primești un link de acces pe e-mail. Deschizându-l pe orice dispozitiv, accesul se activează acolo.",
+      "q4": "Emiteți factură pentru companii?",
+      "a4": "Da. Scrie-ne la adresa redacției cu datele firmei și emitem factura pentru abonamentele de echipă.",
+      "q5": "Cine are acces la datele mele?",
+      "a5": "Doar redacția și procesatorul de plăți. Nu vindem și nu cedăm liste de abonați."
+    },
+    "success": {
+      "title": "Bine ai venit în Corbul Premium",
+      "kicker": "Abonament activ",
+      "text": "Plata a fost confirmată. Accesul este activ pe acest dispozitiv pentru următoarele 180 de zile, iar linkul de acces a plecat pe e-mail.",
+      "cta": "Începe cu investigațiile",
+      "note": "Dacă schimbi dispozitivul, deschide linkul din e-mail ca să reactivezi accesul.",
+      "pending": "Confirmăm plata…",
+      "failed": "Nu am putut confirma această sesiune de plată. Scrie-ne și rezolvăm."
+    },
+    "partners": {
+      "kicker": "B2B",
+      "title": "Parteneriate",
+      "subtitle": "Asociază-ți numele cu jurnalism verificat. Fără drept de veto editorial, cu vizibilitate declarată.",
+      "why": {
+        "title": "De ce Corbul.md",
+        "i1": "Cititori de decizie: avocați, bancheri, manageri, consultanți",
+        "i2": "Context editorial serios, fără vecinătăți compromițătoare",
+        "i3": "Etichetă vizibilă „Susținut de” pe secțiunea aleasă",
+        "i4": "Raport lunar de vizibilitate, cifre reale"
+      },
+      "tiers": {
+        "bronze": {
+          "name": "Bronz",
+          "desc": "Prezență discretă pe o secțiune tematică.",
+          "f1": "Badge „Susținut de” pe o secțiune",
+          "f2": "Mențiune în buletinul lunar",
+          "f3": "Raport de vizibilitate"
+        },
+        "silver": {
+          "name": "Argint",
+          "desc": "Vizibilitate pe două secțiuni și în buletin.",
+          "f1": "Badge pe două secțiuni tematice",
+          "f2": "Prezență în buletinul săptămânal",
+          "f3": "Profil de partener pe pagina Despre",
+          "f4": "Raport lunar detaliat"
+        },
+        "gold": {
+          "name": "Aur",
+          "desc": "Parteneriat principal, inclusiv pe investigații.",
+          "f1": "Badge pe secțiunea Investigații",
+          "f2": "Prezență pe prima pagină",
+          "f3": "Profil extins și interviu de partener",
+          "f4": "Raport lunar și întâlnire trimestrială"
+        }
+      },
+      "perMonth": "pe lună",
+      "months": "{count, plural, one {# lună} few {# luni} other {# de luni}}",
+      "form": {
+        "title": "Cere o ofertă",
+        "company": "Compania",
+        "companyPlaceholder": "Denumirea juridică",
+        "contactName": "Persoană de contact",
+        "contactPlaceholder": "Nume și prenume",
+        "email": "E-mail de contact",
+        "website": "Site web",
+        "websitePlaceholder": "https://",
+        "tier": "Pachet",
+        "months": "Durată",
+        "cta": "Continuă spre plată",
+        "loading": "Se pregătește plata…",
+        "success": "Cererea a fost înregistrată. Revenim cu detaliile contractuale.",
+        "error": "Cererea nu a putut fi trimisă. Încearcă din nou."
+      },
+      "note": "Conținutul editorial rămâne integral în decizia redacției. Partenerii nu văd materialele înainte de publicare."
+    },
+    "metaTitle": "Corbul Premium — abonament și parteneriate"
+  },
+  "tools": {
+    "title": "Instrumente",
+    "kicker": "Calculatoare fiscale",
+    "subtitle": "Șase calculatoare pentru deciziile financiare curente din Republica Moldova: salariu, devamare, TVA, valută, credit și impozit imobiliar. Fiecare recalculează la tastă, cu cotele la vedere și editabile.",
+    "metaTitle": "Instrumente fiscale — salariu, devamare, TVA, credit",
+    "metaDescription": "Calculatoare pentru Republica Moldova: salariu net ⇄ brut, devamare auto, TVA, convertor valutar BNM, credit cu anuitate și impozit pe bunuri imobiliare. Cote editabile, rezultate instantanee.",
+    "disclaimer": "Rezultat estimativ, cu scop informativ. Cotele se modifică prin lege — verificați legislația în vigoare și consultați un specialist înainte de orice decizie.",
+    "advanced": "Parametri avansați",
+    "advancedNote": "Valorile implicite reflectă cotele uzuale. Modificați-le pentru a testa un scenariu propriu; calculul se actualizează instantaneu.",
+    "navLabel": "Alegerea instrumentului",
+    "navNote": "Fiecare instrument are adresă proprie: linkul din bara de adrese păstrează calculatorul deschis.",
+    "breadcrumbHome": "Acasă",
+    "breadcrumbLabel": "Traseu de navigare",
+    "ratesLive": "Curs oficial BNM din {date}, preluat automat.",
+    "ratesFallback": "Cursul valutar nu a putut fi actualizat; se folosesc valori de rezervă, editabile în fiecare instrument.",
+    "aboutTitle": "Despre aceste instrumente",
+    "aboutBody": "Calculatoarele sunt întreținute de redacția Corbul.md și pornesc de la cotele publicate în Codul fiscal și în actele normative conexe. Nimic din ce introduceți nu părăsește browserul: nu stocăm și nu transmitem datele.",
+    "aboutContact": "Ați observat o cotă depășită sau o formulă discutabilă? <link>Scrieți-ne</link> — corectăm public și rapid.",
+    "tabs": {
+      "salary": "Salariu net ⇄ brut",
+      "customs": "Devamare auto",
+      "vat": "TVA",
+      "converter": "Convertor valutar",
+      "credit": "Credit",
+      "property": "Impozit imobiliar"
+    },
+    "tabsHint": {
+      "salary": "Impozit pe venit, asigurare medicală, cost total angajator",
+      "customs": "Acciză pe capacitate și vechime, TVA, taxe vamale",
+      "vat": "Adaugă sau extrage taxa, pe toate cotele legale",
+      "converter": "Orice valută, prin leu, la cursul oficial",
+      "credit": "Anuitate, dobândă totală, grafic de amortizare",
+      "property": "Cota anuală și ratele periodice"
+    },
+    "common": {
+      "amount": "Sumă",
+      "rate": "Cotă",
+      "currency": "Valută",
+      "from": "Din",
+      "to": "În",
+      "swap": "Inversează valutele",
+      "year": "An",
+      "month": "Lună",
+      "months": "Luni",
+      "years": "Ani",
+      "total": "Total",
+      "perMonth": "pe lună",
+      "perYear": "pe an",
+      "quarterly": "Trimestrial",
+      "annually": "Anual",
+      "mdl": "MDL",
+      "eur": "EUR",
+      "percent": "%",
+      "note": "Notă",
+      "result": "Rezultat",
+      "details": "Detaliere"
+    },
+    "salary": {
+      "title": "Salariu net ⇄ brut",
+      "description": "Convertește salariul în ambele direcții și arată complet reținerile angajatului, alături de costul real suportat de angajator.",
+      "direction": "Direcția calculului",
+      "grossToNet": "Brut → net",
+      "netToGross": "Net → brut",
+      "gross": "Salariu brut",
+      "net": "Salariu net",
+      "amountHint": "Sumă lunară. La schimbarea direcției, valoarea calculată este preluată automat.",
+      "annualNet": "{value} pe an, la 12 salarii",
+      "groupEmployee": "Reținerile angajatului",
+      "medical": "Asigurare medicală (angajat)",
+      "medicalShort": "Asigurare medicală",
+      "exemptionApplied": "Scutire personală aplicată",
+      "taxable": "Venit impozabil",
+      "incomeTax": "Impozit pe venit",
+      "incomeTaxShort": "Impozit pe venit",
+      "groupEmployer": "Costul angajatorului",
+      "socialEmployer": "Contribuții sociale (angajator)",
+      "employerCost": "Cost total angajator",
+      "groupIndicators": "Indicatori",
+      "employeeBurden": "Sarcina fiscală a angajatului",
+      "totalBurden": "Sarcina fiscală totală",
+      "perDay": "Net pe zi lucrătoare (21 de zile)",
+      "legalNote": "Scutirea personală ({exemption} lunar) se aplică doar la locul de muncă de bază, în baza cererii depuse. Contribuția individuală de asigurări sociale a angajatului este zero de la reforma din 2019 — sarcina socială revine angajatorului.",
+      "params": {
+        "taxRate": "Impozit pe venit",
+        "medicalRate": "Asigurare medicală, angajat",
+        "exemption": "Scutire personală lunară",
+        "socialRate": "Contribuții sociale, angajator"
+      }
+    },
+    "customs": {
+      "title": "Devamare auto",
+      "description": "Estimează acciza, taxa vamală, TVA și taxa pentru proceduri vamale la importul unui autoturism, cu cursul EUR al Băncii Naționale.",
+      "engine": "Tip motor",
+      "petrol": "Benzină",
+      "diesel": "Diesel",
+      "hybrid": "Hibrid",
+      "electric": "Electric",
+      "capacity": "Capacitate cilindrică",
+      "year": "An de fabricație",
+      "age": "{years, plural, =0 {sub un an vechime} one {# an vechime} few {# ani vechime} other {# de ani vechime}}",
+      "electricExempt": "Vehiculele electrice sunt scutite de acciză.",
+      "customsValue": "Valoare vamală",
+      "customsValueHint": "Prețul de tranzacție acceptat de vamă, plus transportul și asigurarea până la frontieră.",
+      "eurRate": "Curs EUR",
+      "rateFrom": "Curs oficial BNM din {date} — editabil.",
+      "rateStale": "Curs de rezervă, neactualizat — editabil.",
+      "totalDue": "Total taxe de plată",
+      "totalEur": "{value} la vamă",
+      "columns": "EUR · MDL",
+      "groupBreakdown": "Detalierea plăților",
+      "customsDuty": "Taxă vamală",
+      "excise": "Acciză",
+      "exempt": "scutit",
+      "vatBase": "Baza de calcul a TVA",
+      "vat": "TVA",
+      "procedureFee": "Taxă pentru proceduri vamale",
+      "groupHow": "Cum s-a calculat acciza",
+      "bracket": "Treaptă de capacitate",
+      "exciseRate": "Cotă de bază",
+      "ageCoefficient": "Coeficient de vechime",
+      "fuelCoefficient": "Coeficient de combustibil",
+      "landed": "Cost total la poartă (valoare + taxe)",
+      "estimateWarning": "ESTIMATIV. Calculul nu ține locul deciziei vamale: cotele, coeficienții și valoarea în vamă se stabilesc de Serviciul Vamal pentru fiecare vehicul în parte.",
+      "legalNote": "Nu sunt incluse taxa de dispoziție, tariful de examinare tehnică, înmatricularea, comisioanele brokerului și eventualele penalități. Originea preferențială (UE) aduce de regulă taxa vamală la zero.",
+      "bracketUpTo": "până la {max} cm³",
+      "bracketRange": "{min}–{max} cm³",
+      "bracketOver": "peste {min} cm³",
+      "ageUpTo": "până la {years} ani",
+      "ageRange": "{from}–{to} ani",
+      "ageOver": "peste {years} ani",
+      "params": {
+        "vatRate": "Cota TVA la import",
+        "dutyRate": "Taxă vamală",
+        "feeRate": "Taxă proceduri vamale",
+        "feeMin": "Minim",
+        "feeMax": "Maxim",
+        "dieselCoef": "Coeficient diesel",
+        "hybridCoef": "Coeficient hibrid",
+        "exciseTable": "Trepte de acciză (EUR/cm³)",
+        "ageTable": "Coeficienți de vechime",
+        "pluginCoef": "Coeficient hibrid plug-in",
+        "luxuryThreshold": "Prag acciză suplimentară"
+      },
+      "unitCc": "cm³",
+      "unitExcise": "EUR/cm³",
+      "plugin": "Hibrid plug-in",
+      "ageBandNew": "0–2 ani",
+      "ageBandYear": "{years, plural, one {# an} other {# ani}}",
+      "ageBand": "{from}–{to} ani",
+      "ageBandOver": "peste {years, plural, one {# an} other {# ani}}",
+      "vatNote": "Se aplică la valoarea vamală + taxa vamală + acciza.",
+      "luxuryExcise": "Acciză suplimentară (valoare mare)"
+    },
+    "vat": {
+      "title": "Calculator TVA",
+      "description": "Adaugă taxa la o bază de impozitare sau o extrage dintr-o sumă care o conține deja, pe cotele din Codul fiscal.",
+      "mode": "Operațiune",
+      "add": "Adaugă TVA",
+      "extract": "Extrage TVA",
+      "amountWith": "Sumă cu TVA",
+      "amountWithout": "Sumă fără TVA",
+      "addHint": "Suma la care se adaugă taxa.",
+      "extractHint": "Suma finală, din care se separă taxa.",
+      "rate": "Cotă TVA",
+      "custom": "Cotă personalizată",
+      "vatOf": "TVA {value} la cota de {rate}",
+      "groupBreakdown": "Detaliere",
+      "base": "Bază de impozitare",
+      "vat": "TVA",
+      "total": "Total cu TVA",
+      "share": "Ponderea TVA în total",
+      "groupReference": "Cotele în vigoare",
+      "refStandard": "Cota standard",
+      "refStandardHint": "regula generală",
+      "refReduced12": "Cotă redusă",
+      "refReduced12Hint": "cazare, alimentație publică",
+      "refReduced8": "Cotă redusă",
+      "refReduced8Hint": "pâine, lapte, medicamente, zahăr",
+      "refReduced6": "Cotă redusă",
+      "refReduced6Hint": "gaze naturale și lichefiate"
+    },
+    "converter": {
+      "title": "Convertor valutar BNM",
+      "description": "Conversie între oricare două valute, prin leul moldovenesc, la cursul oficial al Băncii Naționale a Moldovei.",
+      "mdlName": "Leu moldovenesc",
+      "viaMdl": "Conversia trece prin leu: suma se transformă întâi în MDL, apoi în valuta țintă.",
+      "result": "Rezultat",
+      "rateDate": "Curs oficial din {date}",
+      "rateStale": "Curs de rezervă — nu a putut fi actualizat",
+      "groupRates": "Cursurile folosite",
+      "unitRate": "1 {code}",
+      "crossRate": "1 {from} în {to}",
+      "groupTable": "Toate valutele",
+      "perUnit": "MDL / unitate",
+      "disclaimer": "Cursul oficial BNM este de referință. Băncile și casele de schimb aplică propriile cotații și comisioane."
+    },
+    "credit": {
+      "title": "Calculator de credit",
+      "description": "Rată lunară constantă, dobândă totală și graficul de amortizare pe ani pentru un credit cu anuități.",
+      "principal": "Suma creditului",
+      "interest": "Dobândă anuală",
+      "interestHint": "Rata nominală anuală, fără comisioane.",
+      "term": "Durata",
+      "termHint": "{months} luni de plată",
+      "termUnit": "Unitate",
+      "monthlyPayment": "Rata lunară",
+      "paymentsCount": "{count, plural, =0 {fără rate} one {# rată lunară} few {# rate lunare} other {# de rate lunare}}",
+      "groupSummary": "Rezumat",
+      "totalInterest": "Total dobândă",
+      "totalPaid": "Total plătit",
+      "firstPaymentInterest": "Dobânda din prima rată",
+      "schedule": "Amortizare pe ani",
+      "principalPart": "Principal",
+      "interestPart": "Dobândă",
+      "yearLabel": "Anul {year}",
+      "remaining": "Sold rămas",
+      "tableNote": "Sumele sunt rotunjite la leu. Ultima rată absoarbe diferențele de rotunjire.",
+      "disclaimer": "Estimare pentru un credit cu anuitate. Comisionul de acordare, asigurările și eventualele comisioane de administrare nu sunt incluse — DAE reală va fi mai mare."
+    },
+    "property": {
+      "title": "Impozit pe bunuri imobiliare",
+      "description": "Impozitul anual și ratele periodice, calculate pe valoarea estimată în scopuri fiscale a bunului.",
+      "value": "Valoarea bunului",
+      "valueHint": "Valoarea estimată de organul cadastral, nu prețul de piață sau cel din contract.",
+      "presets": "Destinația bunului",
+      "preset": {
+        "residential": "Locuință",
+        "commercial": "Comercial și industrial",
+        "agricultural": "Teren agricol"
+      },
+      "rate": "Cota impozitului",
+      "rateHint": "Cota concretă se aprobă anual de consiliul local, în limitele legii.",
+      "rateOverLimit": "Cota introdusă depășește plafonul de {max} % folosit ca reper pentru bunurile locative.",
+      "annual": "Impozit anual",
+      "annualSub": "{rate} din {value}",
+      "groupBreakdown": "Detaliere",
+      "installment": "Rată periodică ({count} pe an)",
+      "quarterly": "Rată trimestrială",
+      "monthlyReserve": "Rezervă lunară",
+      "perThousand": "Impozit la 1 000 MDL valoare",
+      "legalNote": "Termenele obișnuite de plată sunt 30 iunie și 25 septembrie. Scutirile personale, coeficienții de zonă și cotele aprobate de consiliul local pot schimba semnificativ rezultatul.",
+      "params": {
+        "installments": "Număr de rate pe an",
+        "maxRate": "Plafon de referință al cotei"
+      }
+    }
+  },
+  "widgets": {
+    "asideLabel": "Coloană laterală",
+    "stale": "Date de rezervă",
+    "staleNote": "Sursa externă nu a răspuns; se afișează ultimele valori cunoscute.",
+    "updatedAt": "Actualizat la {time}",
+    "weather": {
+      "title": "Vremea",
+      "city": "Chișinău",
+      "now": "Acum",
+      "wind": "Vânt",
+      "humidity": "Umiditate",
+      "forecast": "Următoarele zile",
+      "kmh": "km/h",
+      "codes": {
+        "clear": "Senin",
+        "mainlyClear": "Predominant senin",
+        "partly": "Parțial noros",
+        "overcast": "Înnorat",
+        "fog": "Ceață",
+        "drizzle": "Burniță",
+        "freezingDrizzle": "Burniță înghețată",
+        "rain": "Ploaie",
+        "freezingRain": "Ploaie înghețată",
+        "snow": "Ninsoare",
+        "snowGrains": "Măzăriche",
+        "showers": "Averse",
+        "snowShowers": "Averse de ninsoare",
+        "thunder": "Furtună",
+        "thunderHail": "Furtună cu grindină",
+        "unknown": "Nedeterminat"
+      },
+      "today": "Azi"
+    },
+    "rates": {
+      "title": "Curs valutar BNM",
+      "shortTitle": "Curs BNM",
+      "code": "Valută",
+      "rate": "Curs",
+      "change": "Variație",
+      "source": "Banca Națională a Moldovei",
+      "note": "Lei moldovenești pentru o unitate de valută.",
+      "up": "În creștere",
+      "down": "În scădere",
+      "flat": "Neschimbat",
+      "converter": {
+        "title": "Convertor rapid",
+        "amount": "Sumă",
+        "from": "Din",
+        "to": "În",
+        "swap": "Inversează valutele",
+        "note": "Conversie prin leul moldovenesc, la cursul de mai sus."
+      }
+    },
+    "mostRead": {
+      "kicker": "Cititorii Corbului",
+      "title": "Cele mai citite",
+      "empty": "Clasamentul se construiește."
+    },
+    "newsletter": {
+      "kicker": "Buletin editorial",
+      "title": "Dosarul săptămânii",
+      "text": "Un e-mail pe săptămână: ce am publicat, ce urmează și documentele din spate.",
+      "placeholder": "nume@exemplu.md",
+      "cta": "Abonează-mă",
+      "sending": "Se trimite…",
+      "success": "Gata. Verifică-ți e-mailul pentru confirmare.",
+      "error": "Înscrierea nu a reușit. Încearcă din nou.",
+      "invalid": "Introdu o adresă de e-mail validă.",
+      "privacy": "Fără spam. Te poți dezabona dintr-un clic."
+    },
+    "support": {
+      "kicker": "Independență",
+      "title": "Susține jurnalismul independent",
+      "text": "Corbul.md nu are proprietari politici. Cititorii plătesc investigațiile — și de aceea rămân ale cititorilor.",
+      "cta": "Devino abonat",
+      "note": "De la {price} pe lună."
+    }
+  },
+  "footer": {
+    "about": {
+      "title": "Corbul.md",
+      "text": "Portal de jurnalism de investigație și analiză economico-juridică din Republica Moldova. Documente, cifre, context — fără grabă și fără stăpâni."
+    },
+    "sections": {
+      "title": "Secțiuni"
+    },
+    "pages": {
+      "title": "Redacția"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "newsletter": {
+      "title": "Buletin",
+      "text": "Dosarul săptămânii, direct pe e-mail."
+    },
+    "links": {
+      "about": "Despre noi",
+      "team": "Echipa",
+      "contact": "Contact",
+      "tools": "Instrumente",
+      "subscribe": "Abonament",
+      "partners": "Parteneriate",
+      "search": "Căutare",
+      "tip": "Trimite un pont",
+      "corrections": "Politica de corecții",
+      "privacy": "Confidențialitate",
+      "terms": "Termeni de utilizare",
+      "admin": "Acces redacție",
+      "write": "Scrie redacției",
+      "newsletter": "Buletin editorial",
+      "cookies": "Cookie-uri"
+    },
+    "disclaimer": "Materialele pot fi citate cu link activ către sursă. Republicarea integrală necesită acordul redacției.",
+    "editorial": "Redacția răspunde pentru fiecare afirmație publicată. Corecțiile se fac deschis.",
+    "rights": "© {year} Corbul.md. Toate drepturile rezervate.",
+    "backToTop": "Sus",
+    "ads": {
+      "title": "Publicitate",
+      "advertorials": "Advertoriale",
+      "directory": "Partener în director",
+      "backlinks": "Backlinkuri",
+      "guestPost": "Guest post",
+      "event": "Promovare eveniment",
+      "visibility": "Vizibilitate media",
+      "all": "Toate serviciile",
+      "mediaKit": "Media kit"
+    },
+    "legal": {
+      "title": "Legal"
+    }
+  },
+  "errors": {
+    "notFound": {
+      "kicker": "Eroare 404",
+      "title": "Pagina nu există",
+      "text": "Corbul a zburat spre o pagină care nu mai e acolo. Poate a fost mutată, poate nu a existat niciodată.",
+      "cta": "Înapoi la prima pagină",
+      "search": "Caută în arhivă"
+    },
+    "serverError": {
+      "kicker": "Eroare 500",
+      "title": "Ceva s-a rupt",
+      "text": "A apărut o eroare neașteptată. Am notat-o. Încearcă din nou peste câteva momente.",
+      "cta": "Reîncarcă pagina",
+      "home": "Înapoi acasă"
+    },
+    "generic": "A apărut o eroare neașteptată.",
+    "network": "Conexiunea cu serverul a eșuat.",
+    "offline": "Nu există conexiune la internet.",
+    "apiDown": "Datele nu sunt disponibile momentan.",
+    "rateLimit": "Prea multe încercări. Reîncearcă peste câteva minute.",
+    "tryAgain": "Încearcă din nou",
+    "form": {
+      "required": "Câmp obligatoriu",
+      "email": "Adresă de e-mail invalidă",
+      "minLength": "Minimum {count} caractere",
+      "maxLength": "Maximum {count} caractere",
+      "invalid": "Valoare invalidă",
+      "checkFields": "Verifică datele introduse."
+    }
+  },
+  "legal": {
+    "updated": "Ultima actualizare: {date}",
+    "privacy": {
+      "title": "Politica de confidențialitate",
+      "description": "Cum colectează, folosește și protejează Corbul.md datele cititorilor, abonaților și surselor, conform Legii nr. 133/2011 privind protecția datelor cu caracter personal.",
+      "intro": "Corbul.md tratează datele personale cu aceeași rigoare cu care verifică o sursă. Această politică explică ce date colectăm, de ce, cât timp le păstrăm și ce drepturi ai. Se aplică site-ului, buletinului informativ, abonamentului Premium și canalului de ponturi.",
+      "sections": {
+        "operator": {
+          "title": "Operatorul de date",
+          "body": "Operatorul datelor este {legalName}, cu sediul în {address}. Pentru orice întrebare legată de datele tale ne poți scrie la {email}; răspundem în cel mult 30 de zile."
+        },
+        "data": {
+          "title": "Ce date colectăm",
+          "body": "Colectăm doar datele pe care ni le transmiți direct: adresa de e-mail la abonarea la buletin sau la Corbul Premium, numele, e-mailul și mesajul din formularul de contact, datele de plată procesate de Stripe. Nu cumpărăm și nu vindem baze de date și nu construim profiluri publicitare."
+        },
+        "tips": {
+          "title": "Ponturi și protecția surselor",
+          "body": "Formularul de ponturi nu cere niciun câmp de identificare. Nu înregistrăm adresa IP a expeditorului și nu asociem pontul cu alte date. Identitatea surselor care ni se dezvăluie este protejată de redacție conform Legii cu privire la libertatea de exprimare și nu este divulgată terților decât cu acordul explicit al sursei."
+        },
+        "purpose": {
+          "title": "Scopul și temeiul prelucrării",
+          "body": "Folosim datele pentru a livra serviciul cerut: trimiterea buletinului, activarea și gestionarea abonamentului, răspunsul la mesaje. Temeiul este consimțământul tău sau executarea contractului de abonament. Statisticile de audiență le folosim doar în formă agregată, fără identificarea persoanelor."
+        },
+        "retention": {
+          "title": "Cât timp păstrăm datele",
+          "body": "Adresa de e-mail din buletin rămâne în bază până la dezabonare. Datele abonamentului se păstrează pe durata acestuia și încă 3 ani după încetare, pentru obligațiile contabile. Mesajele din formularul de contact sunt șterse la 12 luni după soluționare."
+        },
+        "rights": {
+          "title": "Drepturile tale",
+          "body": "Ai dreptul de acces, rectificare, ștergere, restricționare a prelucrării, portabilitate și opoziție, precum și dreptul de a depune o plângere la Centrul Național pentru Protecția Datelor cu Caracter Personal. Cererile se trimit la {email} și sunt soluționate gratuit."
+        },
+        "cookies": {
+          "title": "Cookie-uri și stocare locală",
+          "body": "Site-ul folosește exclusiv cookie-uri strict necesare: preferința de limbă și, pentru abonați, un jeton de acces la conținutul Premium (180 de zile). Nu folosim cookie-uri de urmărire publicitară și nu încărcăm trackere terțe."
+        }
+      }
+    },
+    "terms": {
+      "title": "Termeni și condiții",
+      "description": "Condițiile de utilizare a site-ului Corbul.md, a abonamentului Premium, a instrumentelor fiscale și a conținutului editorial.",
+      "intro": "Accesând Corbul.md accepți termenii de mai jos. I-am scris scurt și fără limbaj juridic inutil, dar ei produc efecte reale — citește-i înainte de a te abona sau de a republica un material.",
+      "sections": {
+        "content": {
+          "title": "Conținutul editorial",
+          "body": "Materialele publicate reflectă cercetarea redacției la data publicării și sunt verificate din cel puțin două surse independente. Opiniile sunt marcate ca atare și nu reprezintă poziția {legalName}. Erorile semnalate se corectează public, conform politicii de corecții."
+        },
+        "ip": {
+          "title": "Proprietate intelectuală",
+          "body": "Textele, analizele, graficele și identitatea vizuală aparțin {legalName} și sunt protejate de Legea privind dreptul de autor și drepturile conexe. Citarea este permisă cu menționarea sursei și link activ, în limita a 300 de cuvinte. Republicarea integrală necesită acordul scris al redacției, solicitat la {email}."
+        },
+        "subscription": {
+          "title": "Abonamentul Corbul Premium",
+          "body": "Abonamentul se plătește în avans, lunar sau anual, prin Stripe, și se reînnoiește automat până la anulare. Accesul este personal și netransferabil. Poți anula oricând; accesul rămâne activ până la sfârșitul perioadei plătite. Plățile deja efectuate se rambursează doar în cazul unei erori tehnice care a împiedicat accesul."
+        },
+        "tools": {
+          "title": "Instrumentele fiscale",
+          "body": "Calculatoarele (salariu, devamare, TVA, credit, impozit imobiliar, convertor valutar) sunt estimative și au caracter informativ. Cotele pot fi editate de utilizator și se pot schimba prin lege. Rezultatele nu constituie consultanță fiscală, juridică sau financiară și nu înlocuiesc decizia autorității competente."
+        },
+        "liability": {
+          "title": "Limitarea răspunderii",
+          "body": "Depunem toate eforturile pentru acuratețe, dar nu garantăm că site-ul este disponibil fără întrerupere. {legalName} nu răspunde pentru deciziile luate pe baza conținutului sau a instrumentelor și nici pentru conținutul site-urilor terțe spre care trimitem prin linkuri."
+        },
+        "law": {
+          "title": "Legea aplicabilă",
+          "body": "Acești termeni sunt guvernați de legislația Republicii Moldova. Litigiile se soluționează amiabil, iar în lipsa unei înțelegeri, de instanțele competente din Republica Moldova. Ne rezervăm dreptul de a actualiza termenii; data ultimei modificări este afișată în antetul paginii."
+        }
+      }
+    }
+  }
+}

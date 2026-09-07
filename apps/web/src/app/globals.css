@@ -1,0 +1,1107 @@
+@import "tailwindcss";
+
+/* ==================================================================
+   CORBUL.MD — design system (SPEC §5)
+   Obsidian + auriu, serif editorial, dosar de investigație.
+   Temă unică, permanent întunecată: nu există variantă luminoasă.
+   ================================================================== */
+
+/* ------------------------------------------------------------------
+   1. Familii tipografice
+   Root layout-ul (A0) pune pe <html> variabilele next/font
+   --font-display / --font-serif / --font-sans. Numele lor coincid cu
+   cele ale spațiului de nume `--font-*` din Tailwind v4, așa că le
+   trecem printr-un alias propriu (--corbul-font-*): altfel tokenul de
+   temă s-ar referi la el însuși și declarația ar deveni ciclică.
+   ------------------------------------------------------------------ */
+:root {
+  --corbul-font-display: var(--font-display), "Iowan Old Style",
+    "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --corbul-font-serif: var(--font-serif), Georgia, Cambria,
+    "Times New Roman", serif;
+  --corbul-font-sans: var(--font-sans), system-ui, "Segoe UI",
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+@theme inline {
+  --font-display: var(--corbul-font-display);
+  --font-serif: var(--corbul-font-serif);
+  --font-sans: var(--corbul-font-sans);
+}
+
+/* ------------------------------------------------------------------
+   2. Tokeni de temă
+   ------------------------------------------------------------------ */
+@theme {
+  /* paleta — SPEC §5 */
+  --color-obsidian: #0b0d12;
+  --color-coal: #12151d;
+  --color-coal-2: #191d28;
+  --color-line: #262c3a;
+  --color-line-2: #333a4c;
+  --color-ivory: #f3f0e7;
+  --color-fog: #9aa2b5;
+  /* mist: SPEC §5 propune #6b7288, dar acel ton cade sub 4,5:1 (WCAG AA)
+     pe toate suprafețele; #8189a0 păstrează ierarhia (mai stins decât fog)
+     și trece AA pe obsidian (5,6:1), coal (5,2:1) și coal-2 (4,8:1). */
+  --color-mist: #8189a0;
+  --color-gold: #d4af37;
+  --color-gold-2: #b28e2b;
+  --color-ember: #e0564e;
+  --color-sage: #5fae7f;
+
+  /* Auriul are două roluri, iar în tema luminoasă ele se despart:
+     — `gold` este accentul „de cerneală" (text, borduri, linii fine).
+       Pe hârtie deschisă coboară la un auriu adânc, ca să treacă AA.
+     — `gold-solid` este auriul metalic al suprafețelor pline (butoane,
+       file active). Rămâne identic în ambele teme.
+     — `on-gold` este cerneala așezată PE auriul plin. Nu se inversează,
+       altfel textul butonului ar deveni deschis pe deschis. */
+  --color-gold-solid: #d4af37;
+  --color-gold-solid-2: #b28e2b;
+  --color-on-gold: #0b0d12;
+
+  /* Fundalul coperților generate (lib/cover.ts). Tokeni proprii, pentru că
+     pe hârtie ilustrația are nevoie de mai mult corp decât suprafețele UI:
+     dacă ar folosi coal/obsidian, în tema luminoasă ar ieși aproape albă. */
+  --cover-1: #191d28;
+  --cover-2: #12151d;
+  --cover-3: #0b0d12;
+
+  /* colțuri aproape drepte — eleganță tipografică, nu rotunjimi de aplicație */
+  --radius: 4px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --radius-2xl: 10px;
+
+  /* mișcare */
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-fade: corbul-fade 260ms var(--ease-editorial) both;
+  --animate-rise: corbul-rise 320ms var(--ease-editorial) both;
+  --animate-sheen: corbul-sheen 1400ms linear infinite;
+
+  /* umbre — discrete, doar pentru straturile care plutesc */
+  --shadow-panel: 0 24px 60px -24px rgb(0 0 0 / 0.85);
+  --shadow-raise: 0 12px 32px -18px rgb(0 0 0 / 0.9);
+}
+
+/* ------------------------------------------------------------------
+   2b. Tema luminoasă
+   Aceiași tokeni, alte valori: fiecare utilitar Tailwind (`bg-obsidian`,
+   `text-ivory`, `border-line`…) trimite la `var(--color-*)`, așa că
+   întregul site se întoarce fără a atinge nicio componentă.
+   Numele rămân literale din tema întunecată (obsidian = fundalul paginii,
+   ivory = textul principal); în tema luminoasă rolurile se păstrează, doar
+   valorile se inversează.
+   Fără alegere explicită, tema urmează sistemul prin regula `@media` de mai
+   jos — pur CSS, deci fără licărire. Alegerea cititorului pune `data-theme`
+   pe <html> (vezi ThemeScript) și are prioritate.
+   ------------------------------------------------------------------ */
+:root[data-theme="light"] {
+  /* hârtie caldă, nu alb clinic — registrul unui cotidian de calitate */
+  --color-obsidian: #faf8f3;
+  --color-coal: #ffffff;
+  --color-coal-2: #f2eee3;
+  --color-line: #e3ded0;
+  --color-line-2: #cbc3ae;
+  /* cerneală caldă, nu negru pur: 15,8:1 pe hârtie */
+  --color-ivory: #16181d;
+  --color-fog: #4c5361;
+  /* 5,1:1 pe hârtie — rămâne sub `fog` în ierarhie, dar trece AA */
+  --color-mist: #6a7280;
+  /* auriu adânc: 5,4:1 pe hârtie, față de 1,9:1 cât ar da #d4af37 */
+  --color-gold: #8a6a17;
+  --color-gold-2: #6d5310;
+  --color-ember: #b3372f;
+  --color-sage: #35704a;
+
+  /* pergament cald, cu suficient contrast cât geometria și corbul să se
+     citească fără să devină o pată gri */
+  --cover-1: #f1ebda;
+  --cover-2: #e7dfc9;
+  --cover-3: #dbd1b6;
+
+  /* umbrele pe hârtie sunt aproape invizibile: pe fundal deschis, o umbră
+     tare arată ca murdărie, nu ca relief */
+  --shadow-panel: 0 20px 48px -28px rgb(31 26 12 / 0.28);
+  --shadow-raise: 0 10px 26px -18px rgb(31 26 12 / 0.22);
+}
+
+/* Aceleași valori, dar pentru cititorii care nu au ales nimic: tema urmează
+   sistemul, fără JavaScript și fără licărire. Alegerea explicită pune
+   `data-theme` pe <html> și are prioritate față de această regulă. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    /* hârtie caldă, nu alb clinic — registrul unui cotidian de calitate */
+    --color-obsidian: #faf8f3;
+    --color-coal: #ffffff;
+    --color-coal-2: #f2eee3;
+    --color-line: #e3ded0;
+    --color-line-2: #cbc3ae;
+    /* cerneală caldă, nu negru pur: 15,8:1 pe hârtie */
+    --color-ivory: #16181d;
+    --color-fog: #4c5361;
+    /* 5,1:1 pe hârtie — rămâne sub `fog` în ierarhie, dar trece AA */
+    --color-mist: #6a7280;
+    /* auriu adânc: 5,4:1 pe hârtie, față de 1,9:1 cât ar da #d4af37 */
+    --color-gold: #8a6a17;
+    --color-gold-2: #6d5310;
+    --color-ember: #b3372f;
+    --color-sage: #35704a;
+
+    /* pergament cald, cu suficient contrast cât geometria și corbul să se
+       citească fără să devină o pată gri */
+    --cover-1: #f1ebda;
+    --cover-2: #e7dfc9;
+    --cover-3: #dbd1b6;
+
+    /* umbrele pe hârtie sunt aproape invizibile: pe fundal deschis, o umbră
+       tare arată ca murdărie, nu ca relief */
+    --shadow-panel: 0 20px 48px -28px rgb(31 26 12 / 0.28);
+    --shadow-raise: 0 10px 26px -18px rgb(31 26 12 / 0.22);
+}
+}
+
+/* ------------------------------------------------------------------
+   3. Animații
+   ------------------------------------------------------------------ */
+@keyframes corbul-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes corbul-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes corbul-sheen {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes corbul-ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ------------------------------------------------------------------
+   4. Bază
+   ------------------------------------------------------------------ */
+@layer base {
+  :root {
+    color-scheme: dark;
+    accent-color: var(--color-gold);
+  }
+
+  /* controalele native (bare de derulare, calendare, selectoare) urmează tema */
+  :root[data-theme="light"] {
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme]) {
+      color-scheme: light;
+    }
+  }
+
+  /* Perechi de elemente care se arată doar într-o temă (comutatorul de temă
+     randează ambele pictograme și ambele etichete, iar CSS-ul alege).
+     Așa serverul trimite același HTML în ambele teme: fără dezacord de
+     hidratare și fără licărire până pornește React.
+     Cele trei cazuri sunt aceleași ca la tokeni: bază întunecată, alegere
+     explicită, preferința sistemului. */
+  .theme-only-light {
+    display: none;
+  }
+  :root[data-theme="light"] .theme-only-dark {
+    display: none;
+  }
+  :root[data-theme="light"] .theme-only-light {
+    display: inline;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme]) .theme-only-dark {
+      display: none;
+    }
+    :root:not([data-theme]) .theme-only-light {
+      display: inline;
+    }
+  }
+
+  /* Schimbarea temei se face pe un fundal care se stinge, nu care sare.
+     Tranziția stă doar pe suprafețele mari; textul nu „curge" prin culori. */
+  :root.theme-switching,
+  :root.theme-switching body {
+    transition:
+      background-color 220ms var(--ease-editorial),
+      color 220ms var(--ease-editorial);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :root.theme-switching,
+    :root.theme-switching body {
+      transition: none;
+    }
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--color-line-2) var(--color-obsidian);
+  }
+
+  body {
+    min-height: 100dvh;
+    background-color: var(--color-obsidian);
+    color: var(--color-ivory);
+    font-family: var(--corbul-font-sans);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-synthesis-weight: none;
+  }
+
+  /* fundal viu, dar aproape imperceptibil: o aură aurie rece în colțul
+     de sus și un vignetaj care închide marginile paginii */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    /* strict în spatele conținutului: fundalul lui <body> se propagă la
+       canvas, așa că stratul rămâne vizibil peste el, dar sub text */
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(
+        60rem 34rem at 12% -8%,
+        rgb(212 175 55 / 0.06),
+        transparent 62%
+      ),
+      radial-gradient(
+        48rem 30rem at 108% 4%,
+        rgb(95 174 127 / 0.035),
+        transparent 60%
+      );
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--corbul-font-display);
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+
+  small {
+    font-size: 0.8125rem;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--color-line);
+  }
+
+  /* cifrele din interfață: aliniate în coloană, cu zero tăiat */
+  time,
+  .tabular,
+  table {
+    font-variant-numeric: tabular-nums;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-obsidian);
+    text-shadow: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* niciun element nu primește contur la click cu mouse-ul */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font: inherit;
+    color: inherit;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-mist);
+  }
+
+  /* Chrome/Safari: umple automat câmpurile cu alb — îl anulăm */
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill {
+    -webkit-text-fill-color: var(--color-ivory);
+    -webkit-box-shadow: 0 0 0 1000px var(--color-coal) inset;
+    caret-color: var(--color-ivory);
+  }
+
+  img,
+  svg {
+    max-width: 100%;
+  }
+
+  a,
+  button,
+  summary {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* evidențierea termenului căutat */
+  mark {
+    background: transparent;
+    color: var(--color-gold);
+    box-shadow: inset 0 -0.34em 0 rgb(212 175 55 / 0.16);
+    padding-inline: 0.06em;
+  }
+
+  /* bara de derulare — webkit */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-obsidian);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-line);
+    border: 2px solid var(--color-obsidian);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-line-2);
+  }
+  ::-webkit-scrollbar-corner {
+    background: var(--color-obsidian);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------------------------------------------------------
+   5. Clase de brand
+   ------------------------------------------------------------------ */
+
+/* Titlu editorial — Playfair, strâns, echilibrat pe rânduri */
+.headline {
+  font-family: var(--corbul-font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+.headline-tight {
+  line-height: 1.02;
+  letter-spacing: -0.028em;
+}
+
+/* Supratitlu / etichetă — Archivo, versale, spațiat, auriu */
+.kicker {
+  font-family: var(--corbul-font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+.kicker-muted {
+  color: var(--color-mist);
+}
+
+/* Meta de articol — mic, calm, cifre tabulare */
+.meta {
+  font-family: var(--corbul-font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--color-mist);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Linia aurie fină — semnătura vizuală a brandului */
+.rule-gold {
+  height: 1px;
+  border: 0;
+  background: linear-gradient(
+    90deg,
+    var(--color-gold) 0%,
+    rgb(212 175 55 / 0.35) 22%,
+    rgb(212 175 55 / 0.08) 60%,
+    transparent 100%
+  );
+}
+.rule-gold-center {
+  height: 1px;
+  border: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(212 175 55 / 0.45) 50%,
+    transparent
+  );
+}
+.rule-hair {
+  height: 1px;
+  border: 0;
+  background: var(--color-line);
+}
+
+/* Chenar auriu dublu — secțiunea „Investigațiile Corbului" */
+.double-frame {
+  position: relative;
+  border: 1px solid rgb(212 175 55 / 0.42);
+  background:
+    linear-gradient(180deg, rgb(212 175 55 / 0.05), transparent 38%),
+    var(--color-coal);
+}
+.double-frame::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgb(212 175 55 / 0.18);
+  pointer-events: none;
+}
+/* colțuri marcate discret, ca pe un dosar sigilat */
+.double-frame::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--color-gold), var(--color-gold)) 0 0 / 14px 1px
+      no-repeat,
+    linear-gradient(var(--color-gold), var(--color-gold)) 0 0 / 1px 14px
+      no-repeat,
+    linear-gradient(var(--color-gold), var(--color-gold)) 100% 100% / 14px 1px
+      no-repeat,
+    linear-gradient(var(--color-gold), var(--color-gold)) 100% 100% / 1px 14px
+      no-repeat;
+  opacity: 0.9;
+}
+
+/* Numerotare romană pe contoare CSS ------------------------------- */
+
+/* capete de secțiune: <div class="roman-sections"> … <h2 class="roman-mark"> */
+.roman-sections {
+  counter-reset: corbul-section;
+}
+.roman-mark {
+  counter-increment: corbul-section;
+}
+.roman-mark::before {
+  content: counter(corbul-section, upper-roman);
+  font-family: var(--corbul-font-display);
+  font-weight: 600;
+  font-size: 0.8em;
+  letter-spacing: 0.08em;
+  color: var(--color-gold);
+}
+
+/* liste numerotate roman: „Cele mai citite", principii editoriale */
+.roman-list {
+  counter-reset: corbul-item;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.roman-list > li {
+  counter-increment: corbul-item;
+  position: relative;
+}
+.roman-list > li::before {
+  content: counter(corbul-item, upper-roman);
+  font-family: var(--corbul-font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--color-gold);
+  font-variant-numeric: tabular-nums;
+}
+/* varianta cu numărul scos în margine */
+.roman-list-hang > li {
+  padding-left: 2.5rem;
+}
+.roman-list-hang > li::before {
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  width: 1.75rem;
+  text-align: right;
+  color: var(--color-mist);
+  transition: color 200ms var(--ease-editorial);
+}
+.roman-list-hang > li:hover::before {
+  color: var(--color-gold);
+}
+
+/* Bandă rulantă infinită (Ticker) --------------------------------- */
+.ticker-track {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  will-change: transform;
+  animation: corbul-ticker 64s linear infinite;
+}
+.ticker-viewport:hover .ticker-track,
+.ticker-track:hover,
+.ticker-track:focus-within {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+    transform: none;
+  }
+}
+
+/* Cardul editorial — hover: suprafață ridicată + linie aurie sus --- */
+.card-editorial {
+  position: relative;
+  background-color: var(--color-coal);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  transition:
+    background-color 200ms var(--ease-editorial),
+    border-color 200ms var(--ease-editorial),
+    transform 200ms var(--ease-editorial);
+}
+.card-editorial::before {
+  content: "";
+  position: absolute;
+  /* în interiorul casetei: cardurile au `overflow-hidden`, iar o linie
+     ieșită afară ar fi tăiată pe jumătate */
+  inset-inline: 0;
+  top: 0;
+  z-index: 1;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--color-gold),
+    rgb(212 175 55 / 0.25) 70%,
+    transparent
+  );
+  opacity: 0;
+  transform: scaleX(0.25);
+  transform-origin: left;
+  transition:
+    opacity 200ms var(--ease-editorial),
+    transform 260ms var(--ease-editorial);
+  pointer-events: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .card-editorial:hover {
+    background-color: var(--color-coal-2);
+    border-color: var(--color-line-2);
+  }
+  .card-editorial:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+.card-editorial:focus-within {
+  border-color: var(--color-line-2);
+}
+.card-editorial:focus-within::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* imaginea de copertă respiră la hover-ul cardului */
+.card-editorial .cover-zoom {
+  transition: transform 420ms var(--ease-editorial);
+}
+@media (hover: hover) and (pointer: fine) {
+  .card-editorial:hover .cover-zoom {
+    transform: scale(1.03);
+  }
+}
+
+/* Titlu de card: subliniere aurie care crește de la stânga */
+.title-link {
+  background-image: linear-gradient(var(--color-gold), var(--color-gold));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition: background-size 260ms var(--ease-editorial);
+}
+@media (hover: hover) and (pointer: fine) {
+  .card-editorial:hover .title-link,
+  .title-link:hover {
+    background-size: 100% 1px;
+  }
+}
+
+/* Legătură de text cu subliniere discretă */
+.link-gold {
+  color: var(--color-gold);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 180ms var(--ease-editorial);
+}
+.link-gold:hover {
+  color: var(--color-ivory);
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-gold);
+}
+
+/* Ghilimele mari — carduri de opinie */
+.quote-mark::before {
+  content: "\201C";
+  display: block;
+  font-family: var(--corbul-font-display);
+  font-size: 4.5rem;
+  line-height: 0.72;
+  color: rgb(212 175 55 / 0.4);
+}
+
+/* Text scurtat pe n rânduri */
+.clamp-2,
+.clamp-3,
+.clamp-4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.clamp-2 {
+  -webkit-line-clamp: 2;
+}
+.clamp-3 {
+  -webkit-line-clamp: 3;
+}
+.clamp-4 {
+  -webkit-line-clamp: 4;
+}
+
+/* Utilitare mărunte */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.press {
+  transition: transform 140ms var(--ease-editorial);
+}
+.press:active {
+  transform: scale(0.985);
+}
+.paper-grid {
+  background-image:
+    linear-gradient(var(--color-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.35;
+}
+
+/* ------------------------------------------------------------------
+   6. Conținutul articolelor — .prose-corbul
+   HTML venit din baza de date (Source Serif 4, lectură lungă)
+   ------------------------------------------------------------------ */
+.prose-corbul {
+  font-family: var(--corbul-font-serif);
+  font-size: 1.125rem;
+  line-height: 1.78;
+  color: color-mix(in oklab, var(--color-ivory) 88%, var(--color-fog));
+  letter-spacing: 0.001em;
+  overflow-wrap: break-word;
+}
+
+.prose-corbul > * + * {
+  margin-top: 1.15em;
+}
+
+.prose-corbul p {
+  margin-block: 0 1.15em;
+}
+.prose-corbul p:last-child {
+  margin-bottom: 0;
+}
+
+/* prima literă a articolului — capitulară discretă */
+.prose-corbul.has-dropcap > p:first-of-type::first-letter {
+  float: left;
+  font-family: var(--corbul-font-display);
+  font-size: 3.6em;
+  line-height: 0.82;
+  font-weight: 700;
+  color: var(--color-gold);
+  padding-right: 0.09em;
+  margin-top: 0.08em;
+}
+
+.prose-corbul h2 {
+  font-family: var(--corbul-font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  line-height: 1.2;
+  color: var(--color-ivory);
+  margin-top: 2.25em;
+  margin-bottom: 0.6em;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--color-line);
+  position: relative;
+}
+.prose-corbul h2::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 3.25rem;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.prose-corbul h3 {
+  font-family: var(--corbul-font-display);
+  font-size: 1.235rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-ivory);
+  margin-top: 1.9em;
+  margin-bottom: 0.45em;
+}
+
+.prose-corbul h4 {
+  font-family: var(--corbul-font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-top: 1.8em;
+  margin-bottom: 0.4em;
+}
+
+.prose-corbul a {
+  color: var(--color-ivory);
+  text-decoration: underline;
+  text-decoration-color: rgb(212 175 55 / 0.55);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition:
+    color 180ms var(--ease-editorial),
+    text-decoration-color 180ms var(--ease-editorial);
+}
+.prose-corbul a:hover {
+  color: var(--color-gold);
+  text-decoration-color: var(--color-gold);
+}
+
+.prose-corbul strong {
+  color: var(--color-ivory);
+  font-weight: 600;
+}
+
+.prose-corbul em {
+  font-style: italic;
+}
+
+.prose-corbul blockquote {
+  margin: 1.9em 0;
+  padding: 0.15em 0 0.15em 1.5rem;
+  border-left: 2px solid var(--color-gold);
+  font-family: var(--corbul-font-display);
+  font-size: 1.28rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--color-ivory);
+}
+.prose-corbul blockquote p {
+  margin: 0;
+}
+.prose-corbul blockquote p + p {
+  margin-top: 0.6em;
+}
+.prose-corbul blockquote cite,
+.prose-corbul blockquote footer {
+  display: block;
+  margin-top: 0.7em;
+  font-family: var(--corbul-font-sans);
+  font-size: 0.75rem;
+  font-style: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-mist);
+}
+
+.prose-corbul ul,
+.prose-corbul ol {
+  margin: 1.2em 0;
+  padding-left: 1.35rem;
+}
+.prose-corbul li {
+  margin-block: 0.42em;
+  padding-left: 0.35rem;
+}
+.prose-corbul li::marker {
+  color: var(--color-gold);
+}
+.prose-corbul ul {
+  list-style: none;
+  padding-left: 1.1rem;
+}
+.prose-corbul ul > li {
+  position: relative;
+}
+.prose-corbul ul > li::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  /* pe mijlocul primului rând, nu pe umărul lui */
+  top: 0.88em;
+  width: 7px;
+  height: 1px;
+  background: var(--color-gold);
+}
+.prose-corbul ol {
+  list-style: decimal;
+  font-variant-numeric: tabular-nums;
+}
+.prose-corbul li > ul,
+.prose-corbul li > ol {
+  margin-block: 0.4em;
+}
+
+.prose-corbul figure {
+  margin: 2em 0;
+}
+.prose-corbul figure img,
+.prose-corbul figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+}
+.prose-corbul figcaption {
+  margin-top: 0.7rem;
+  padding-left: 0.85rem;
+  border-left: 1px solid var(--color-gold);
+  font-family: var(--corbul-font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--color-mist);
+}
+
+.prose-corbul hr {
+  margin: 2.4em 0;
+  border: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgb(212 175 55 / 0.5),
+    var(--color-line) 45%,
+    transparent
+  );
+}
+
+.prose-corbul code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: 0.86em;
+  background: var(--color-coal-2);
+  border: 1px solid var(--color-line);
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  color: var(--color-ivory);
+}
+.prose-corbul pre {
+  margin: 1.6em 0;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  background: var(--color-coal-2);
+  border: 1px solid var(--color-line);
+  border-left: 2px solid var(--color-gold);
+  border-radius: var(--radius);
+}
+.prose-corbul pre code {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: 0.82em;
+  line-height: 1.6;
+}
+
+.prose-corbul table {
+  width: 100%;
+  margin: 1.8em 0;
+  border-collapse: collapse;
+  font-family: var(--corbul-font-sans);
+  font-size: 0.875rem;
+}
+.prose-corbul th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  border-bottom: 1px solid var(--color-line-2);
+  padding: 0.55rem 0.75rem 0.55rem 0;
+}
+.prose-corbul td {
+  padding: 0.6rem 0.75rem 0.6rem 0;
+  border-bottom: 1px solid var(--color-line);
+  color: var(--color-fog);
+  vertical-align: top;
+}
+
+.prose-corbul img {
+  border-radius: var(--radius);
+}
+
+/* variantă compactă — sumar, casete laterale */
+.prose-corbul.prose-sm {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.prose-corbul.prose-lg {
+  font-size: 1.1875rem;
+}
+
+/* ------------------------------------------------------------------
+   7. Tipar (@media print) — detaliu de prestigiu:
+   articolul se listează pe hârtie albă, cu text negru și surse vizibile
+   ------------------------------------------------------------------ */
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  body::before {
+    display: none !important;
+  }
+
+  .no-print,
+  nav,
+  aside,
+  footer,
+  form,
+  button,
+  .ticker-viewport {
+    display: none !important;
+  }
+
+  main,
+  article,
+  .card-editorial {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .headline {
+    color: #000000 !important;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  .kicker,
+  .meta {
+    color: #4a4a4a !important;
+  }
+
+  .prose-corbul {
+    font-size: 11.5pt;
+    line-height: 1.55;
+    color: #111111 !important;
+  }
+  .prose-corbul h2 {
+    border-top: 1px solid #cccccc !important;
+  }
+  .prose-corbul h2::before,
+  .prose-corbul ul > li::before {
+    background: #000000 !important;
+  }
+  .prose-corbul blockquote {
+    border-left: 2px solid #000000 !important;
+    color: #000000 !important;
+  }
+  .prose-corbul a {
+    color: #000000 !important;
+    text-decoration: underline !important;
+  }
+  /* pe hârtie, adresa unei legături trebuie să rămână verificabilă */
+  .prose-corbul a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-family: var(--corbul-font-sans);
+    font-size: 8.5pt;
+    color: #555555;
+    word-break: break-all;
+  }
+  .prose-corbul p,
+  .prose-corbul blockquote,
+  .prose-corbul figure {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    orphans: 3;
+    widows: 3;
+  }
+
+  @page {
+    margin: 18mm 16mm;
+  }
+}
