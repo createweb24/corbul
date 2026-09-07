@@ -283,33 +283,53 @@ NEXT_PUBLIC_API_URL=https://<api-ul-tău>/api   # citit în browser (admin, recl
 NEXT_PUBLIC_SITE_URL=https://<domeniul-tău>    # canonical, hreflang, sitemap, OG
 ```
 
-### 2. API + bază de date
+### 2. Baza de date — Neon
 
-API-ul nu poate rula ca funcție serverless fără adaptare, așa că merge pe o
-platformă cu proces persistent — Railway, Render sau Fly.io — plus o bază
-PostgreSQL gestionată (Neon, Supabase, Railway Postgres).
+<https://neon.tech> → proiect nou, regiunea Frankfurt. Din tabul **Connect**
+copiază două adrese:
+
+| Variabilă | Care adresă |
+|---|---|
+| `DATABASE_URL` | cea **cu `-pooler`** în gazdă — conexiuni scurte și multe, cum face un API |
+| `DIRECT_URL` | aceeași, dar **fără `-pooler`** — migrările au nevoie de o sesiune reală |
+
+Ambele se termină cu `?sslmode=require`. Planul gratuit Neon nu expiră.
+
+### 3. API-ul — Render
+
+Depozitul conține `render.yaml`, deci nu trebuie configurat nimic manual:
+render.com → **New → Blueprint** → alege depozitul. Render cere doar
+variabilele marcate `sync: false` (cele două adrese Neon, `WEB_URL` și,
+opțional, cheile Stripe), apoi rulează singur migrările și seed-ul.
+
+Alternativ, manual, pe orice platformă cu proces persistent:
 
 ```
-Root Directory : apps/api
-Build          : npm install && npx prisma generate && npm run build
-Start          : npx prisma migrate deploy && node dist/main.js
+Build : npm install && npm run build --workspace=api && npm run db:seed
+Start : npm run start --workspace=api
 ```
 
-Variabile:
+Când serviciul e pornit, verifică <https://NUMELE.onrender.com/api/health> —
+trebuie să întoarcă `{"ok":true,...,"articles":24}`.
+
+### 4. Legarea celor două
+
+În Vercel → Environment Variables:
 
 ```
-DATABASE_URL=postgresql://...
-JWT_SECRET=<șir lung, aleator>          # obligatoriu în producție
-WEB_URL=https://<domeniul-tău>          # CORS + redirecturi Stripe
-PORT=4100
-TRUST_PROXY=1                            # în spatele unui proxy/CDN
-STRIPE_SECRET_KEY=                       # gol ⇒ mod demonstrativ
-STRIPE_WEBHOOK_SECRET=
+API_URL=https://NUMELE.onrender.com/api
+NEXT_PUBLIC_API_URL=https://NUMELE.onrender.com/api
+NEXT_PUBLIC_SITE_URL=https://DOMENIUL-TĂU
 ```
 
-După prima pornire, populează conținutul: `npm run db:seed`.
+În Render, `WEB_URL` = adresa de pe Vercel (fără slash final), altfel CORS
+respinge cererile din browser. Apoi **Redeploy** în Vercel.
 
-### 3. Fără API
+> Planul gratuit Render adoarme serviciul după 15 minute fără trafic;
+> prima cerere de după poate dura ~30 de secunde. Paginile publice tolerează
+> asta (afișează stări goale și se completează la reîncărcare).
+
+### 5. Fără API
 
 Site-ul se randează și dacă API-ul lipsește — toate citirile de date sunt
 tolerante la eroare — dar paginile vor arăta stări goale, iar panoul de

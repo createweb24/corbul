@@ -6,7 +6,14 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+  // Conexiunea de lucru. La furnizorii serverless (Neon, Supabase) aceasta
+  // este adresa PRIN POOLER (`-pooler` în gazdă): suportă multe conexiuni
+  // scurte, cum sunt cele ale unui API web.
   url      = env("DATABASE_URL")
+  // Conexiunea directă, folosită doar de `prisma migrate` și `db push`:
+  // migrările au nevoie de o sesiune adevărată, pe care pooler-ul nu o dă.
+  // Local, unde nu există pooler, se pune aceeași valoare ca DATABASE_URL.
+  directUrl = env("DIRECT_URL")
 }
 
 model Category {

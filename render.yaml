@@ -1,0 +1,49 @@
+# Blueprint Render — API-ul NestJS pentru Corbul.md
+#
+# Împărțirea rolurilor:
+#   • Vercel  → aplicația web (Next.js), vezi vercel.json
+#   • Render  → acest serviciu, API-ul NestJS (are nevoie de proces pornit)
+#   • Neon    → baza PostgreSQL (plan gratuit permanent)
+#
+# Folosire: render.com → New → Blueprint → alege depozitul.
+# Render creează serviciul, îi cere cele două adrese de bază de date, apoi
+# rulează migrările și încarcă cele 24 de articole. Seed-ul este idempotent,
+# deci se poate relua la fiecare deploy fără să dubleze nimic.
+#
+# După prima pornire, ia adresa serviciului (https://<nume>.onrender.com) și
+# pune-o în Vercel ca API_URL și NEXT_PUBLIC_API_URL, cu sufixul /api.
+
+services:
+  - type: web
+    name: corbul-api
+    runtime: node
+    plan: free
+    region: frankfurt
+    branch: main
+    # instalarea pornește din rădăcina monorepo-ului (npm workspaces),
+    # apoi se generează clientul Prisma, se compilează și se populează baza
+    buildCommand: npm install && npm run build --workspace=api && npm run db:seed
+    startCommand: npm run start --workspace=api
+    healthCheckPath: /api/health
+    envVars:
+      # Neon → Connection string CU „-pooler" în gazdă (conexiuni scurte, multe)
+      - key: DATABASE_URL
+        sync: false
+      # Neon → aceeași adresă, dar FĂRĂ „-pooler": migrările au nevoie de o
+      # sesiune adevărată, pe care pooler-ul nu o oferă
+      - key: DIRECT_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: NODE_ENV
+        value: production
+      - key: TRUST_PROXY
+        value: "1"
+      # adresa aplicației de pe Vercel — CORS și redirecturile Stripe
+      - key: WEB_URL
+        sync: false
+      # lasă-le goale: plățile rămân în mod demonstrativ, restul site-ului merge
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
