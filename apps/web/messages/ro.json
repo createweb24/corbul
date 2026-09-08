@@ -7,7 +7,7 @@
     "about": "Despre",
     "team": "Echipa",
     "contact": "Contact",
-    "subscribe": "Abonează-te",
+    "subscribe": "Acces gratuit",
     "premium": "Corbul Premium",
     "search": "Caută",
     "admin": "Redacție",
@@ -20,10 +20,6 @@
     "footerLabel": "Navigare secundară",
     "topLabel": "Bară de serviciu",
     "skipToContent": "Sari la conținut",
-    "language": "Limbă",
-    "languageRo": "Română",
-    "languageRu": "Rusă",
-    "switchTo": "Comută pe {language}",
     "cat": {
       "investigatii": "Investigații",
       "politica": "Politică",
@@ -384,7 +380,8 @@
         "period": "pe an",
         "note": "Echivalentul a zece luni plătite.",
         "save": "Economisești {amount}"
-      }
+      },
+      "free": "Gratuit acum"
     },
     "benefits": {
       "title": "Ce include abonamentul",
@@ -835,7 +832,7 @@
       "team": "Echipa",
       "contact": "Contact",
       "tools": "Instrumente",
-      "subscribe": "Abonament",
+      "subscribe": "Acces gratuit",
       "partners": "Parteneriate",
       "search": "Căutare",
       "tip": "Trimite un mesaj",

@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
-import { Button, RavenMark } from "@/components/ui";
+import { Button } from "@/components/ui";
 import { apiFetch } from "@/lib/api";
 import type { PaymentSessionDto } from "@/lib/types";
 
@@ -101,7 +101,6 @@ export default function SuccessPanel({ sessionId }: { sessionId: string | null }
   return (
     <div className="double-frame mx-auto max-w-2xl px-6 py-14 text-center md:px-14">
       <div className="flex justify-center">
-        <RavenMark size={56} />
       </div>
 
       <p className="kicker mt-8">{t("subscribe.success.kicker")}</p>

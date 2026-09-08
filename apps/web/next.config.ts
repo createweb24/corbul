@@ -26,6 +26,10 @@ const nextConfig: NextConfig = {
       // browserele cer /favicon.ico din oficiu; marca este SVG (SPEC §0.7),
       // servită de ruta-convenție `app/icon.svg`
       { source: "/favicon.ico", destination: "/icon.svg", permanent: true },
+      // Ediția rusă a fost retrasă: vechile adrese /ru/... duc la echivalentul
+      // românesc, ca legăturile deja indexate să nu cadă în 404.
+      { source: "/ru", destination: "/ro", permanent: true },
+      { source: "/ru/:path*", destination: "/ro/:path*", permanent: true },
     ];
   },
 };

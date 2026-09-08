@@ -1,9 +1,9 @@
 import { defineRouting } from "next-intl/routing";
 
 export const routing = defineRouting({
-  locales: ["ro", "ru"],
+  locales: ["ro"],
   defaultLocale: "ro",
-  // ambele limbi au prefix explicit: /ro/... și /ru/...
+  // o singură limbă, cu prefix explicit: /ro/...
   localePrefix: "always",
 });
 

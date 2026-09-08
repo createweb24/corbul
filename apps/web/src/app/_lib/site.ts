@@ -7,7 +7,7 @@ import type { Locale, SettingsDto } from "@/lib/types";
 
 export const SITE_NAME = "Corbul.md";
 export const SITE_LEGAL_NAME = "Corbul.md — jurnalism de investigație";
-export const LOCALES: readonly Locale[] = ["ro", "ru"] as const;
+export const LOCALES: readonly Locale[] = ["ro"] as const;
 export const DEFAULT_LOCALE: Locale = "ro";
 
 /** Adresa publică, fără slash final. */

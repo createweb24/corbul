@@ -11,11 +11,10 @@ import {
   WeatherIcon,
   weatherLabelKey,
 } from "@/components/widgets/WeatherWidget";
-import { LanguageSwitcher } from "./LanguageSwitcher";
 
 /**
  * Bara de serviciu: data completă + ceas viu la stânga, vremea și
- * cursul compact la mijloc, serviciile și comutatorul de limbă la dreapta.
+ * cursul compact la mijloc, serviciile la dreapta.
  *
  * Ceasul pornește gol și se umple abia după montare: serverul randează
  * pagina la build (SSG), deci orice oră tipărită pe server ar produce un
@@ -64,7 +63,7 @@ export function TopBar({ widgets }: TopBarProps) {
   const usd = rates.find((rate) => rate.code === "USD") ?? null;
 
   const serviceLink =
-    "text-mist transition-colors duration-200 hover:text-gold focus:outline-none focus-visible:ring-1 focus-visible:ring-gold";
+    "text-fog transition-colors duration-200 hover:text-gold focus:outline-none focus-visible:ring-1 focus-visible:ring-gold";
 
   const compactRate = (value: number) =>
     formatNumber(value, locale, {
@@ -74,13 +73,13 @@ export function TopBar({ widgets }: TopBarProps) {
 
   return (
     <section
-      className="border-b border-line bg-obsidian text-[11px]"
+      className="border-b border-line bg-obsidian text-[13px]"
       aria-label={t("topLabel")}
     >
-      <Container className="flex items-center gap-4 py-1.5">
+      <Container className="flex items-center gap-4 py-2.5">
         {/* data + ceas */}
         <div className="flex min-w-0 items-center gap-2">
-          <span className="hidden truncate text-mist first-letter:uppercase sm:inline">
+          <span className="hidden truncate text-fog first-letter:uppercase sm:inline">
             {dateLabel || " "}
           </span>
           <span aria-hidden="true" className="hidden text-line-2 sm:inline">
@@ -95,7 +94,7 @@ export function TopBar({ widgets }: TopBarProps) {
         </div>
 
         {/* vreme + curs compact */}
-        <div className="hidden items-center gap-4 text-mist md:flex">
+        <div className="hidden items-center gap-4 text-fog md:flex">
           {weather ? (
             <span className="flex items-center gap-1.5">
               <WeatherIcon
@@ -115,13 +114,13 @@ export function TopBar({ widgets }: TopBarProps) {
             <span className="flex items-center gap-3 tabular-nums">
               {eur ? (
                 <span>
-                  <span className="text-mist">EUR </span>
+                  <span className="text-fog">EUR </span>
                   <span className="text-fog">{compactRate(eur.rate)}</span>
                 </span>
               ) : null}
               {usd ? (
                 <span>
-                  <span className="text-mist">USD </span>
+                  <span className="text-fog">USD </span>
                   <span className="text-fog">{compactRate(usd.rate)}</span>
                 </span>
               ) : null}
@@ -137,7 +136,6 @@ export function TopBar({ widgets }: TopBarProps) {
           <Link href="/contact" className={`hidden sm:inline ${serviceLink}`}>
             {t("contact")}
           </Link>
-          <LanguageSwitcher />
           <ThemeToggle
             labelToLight={t("theme.toLight")}
             labelToDark={t("theme.toDark")}

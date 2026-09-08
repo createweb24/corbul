@@ -11,7 +11,3 @@ export {
 } from "./MainNav";
 export { Ticker, type TickerProps, type TickerItem } from "./Ticker";
 export { SiteFooter, type SiteFooterProps } from "./SiteFooter";
-export {
-  LanguageSwitcher,
-  type LanguageSwitcherProps,
-} from "./LanguageSwitcher";

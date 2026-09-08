@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
-import { Button, Container, RavenMark } from "@/components/ui";
+import { Button, Container } from "@/components/ui";
 
 /**
  * Limita de eroare a segmentului public. Nu expune niciodată mesajul brut al
@@ -25,7 +25,6 @@ export default function LocaleError({
     <Container size="narrow" className="py-24 lg:py-36">
       <div className="mx-auto max-w-2xl text-center">
         <div className="flex justify-center opacity-70">
-          <RavenMark size={64} />
         </div>
 
         <p className="kicker mt-10 text-ember">{t("errors.serverError.kicker")}</p>

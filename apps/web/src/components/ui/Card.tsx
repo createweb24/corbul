@@ -221,7 +221,7 @@ export function Card({
     return (
       <article
         className={cn(
-          "card-editorial group flex flex-col overflow-hidden",
+          "card-editorial group grid gap-6 overflow-hidden lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:items-center lg:gap-10",
           className,
         )}
       >
@@ -231,7 +231,6 @@ export function Card({
             hue={article.categoryHue}
             title={article.title}
             ratio="16 / 9"
-            className="border-b border-line"
           >
             <div
               aria-hidden="true"
@@ -247,7 +246,7 @@ export function Card({
           </Cover>
         ) : null}
 
-        <div className="flex flex-1 flex-col gap-4 p-5 sm:p-7">
+        <div className="flex flex-1 flex-col gap-4">
           {!withCover ? (
             <Flags
               article={article}
@@ -257,7 +256,7 @@ export function Card({
             />
           ) : null}
 
-          <Heading className="headline headline-tight text-[1.85rem] sm:text-[2.35rem] lg:text-[2.7rem]">
+          <Heading className="headline headline-tight text-[1.7rem] sm:text-[2.1rem] lg:text-[2.4rem]">
             {titleLink}
           </Heading>
 

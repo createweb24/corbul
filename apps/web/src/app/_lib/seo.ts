@@ -38,7 +38,7 @@ export interface PageSeo {
 export function buildMetadata(seo: PageSeo): Metadata {
   const path = seo.path ?? "";
   const canonical = absoluteUrl(seo.locale, seo.canonicalPath ?? path);
-  const ogLocale = seo.locale === "ru" ? "ru_RU" : "ro_RO";
+  const ogLocale = "ro_RO";
 
   // titlurile lungi de articol rămân întregi: brandul e deja în og:site_name
   // și în JSON-LD, iar un sufix tăiat la mijloc arată neîngrijit în rezultate
@@ -71,7 +71,6 @@ export function buildMetadata(seo: PageSeo): Metadata {
       url: canonical,
       siteName: SITE_NAME,
       locale: ogLocale,
-      alternateLocale: seo.locale === "ru" ? "ro_RO" : "ru_RU",
       images: [image],
       ...(seo.type === "article"
         ? {

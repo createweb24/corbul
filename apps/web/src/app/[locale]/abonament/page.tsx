@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Container, RavenMark } from "@/components/ui";
+import { Container } from "@/components/ui";
 import type { Locale, PartnerTier } from "@/lib/types";
 import JsonLd from "../../_lib/JsonLd";
 import { getSettings } from "../../_lib/data";
@@ -15,10 +15,13 @@ const FAQ = [1, 2, 3, 4, 5] as const;
 const WHY = ["i1", "i2", "i3", "i4"] as const;
 
 const DEFAULT_TIERS: Record<PartnerTier, number> = {
-  bronze: 9900,
-  silver: 19900,
-  gold: 39900,
+  bronze: 99,
+  silver: 199,
+  gold: 299,
 };
+
+/** Parteneriatele B2B se contractează în euro, spre deosebire de abonament. */
+const PARTNER_CURRENCY = "EUR";
 
 export async function generateMetadata({
   params,
@@ -113,7 +116,6 @@ export default async function SubscribePage({
         <Container className="py-16 lg:py-24">
           <div className="max-w-3xl">
             <div className="flex items-center gap-4">
-              <RavenMark size={34} />
               <p className="kicker">{t("subscribe.kicker")}</p>
             </div>
             <h1 className="headline headline-tight mt-6 text-5xl text-ivory md:text-7xl">
@@ -218,7 +220,7 @@ export default async function SubscribePage({
           </div>
 
           <div className="mt-14">
-            <PartnerForm tiers={tiers} currency={currency} />
+            <PartnerForm tiers={tiers} currency={PARTNER_CURRENCY} />
           </div>
         </Container>
       </section>

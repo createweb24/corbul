@@ -85,7 +85,6 @@ export function PremiumPlans({
   const [demoUrl, setDemoUrl] = useState<string | null>(null);
   const [emailError, setEmailError] = useState<string | undefined>();
 
-  const saving = Math.max(0, monthly * 12 - annual);
 
   const plans: {
     id: Plan;
@@ -159,19 +158,22 @@ export function PremiumPlans({
               />
               <span className="flex items-center justify-between gap-3">
                 <span className="kicker">{item.label}</span>
-                {item.id === "annual" && saving > 0 ? (
-                  <span className="border border-gold/50 px-2 py-0.5 font-sans text-[0.6rem] uppercase tracking-[0.16em] text-gold">
-                    {t("subscribe.plans.annual.save", {
-                      amount: `${formatNumber(saving, locale)} ${currency}`,
-                    })}
-                  </span>
-                ) : null}
+                <span className="border border-gold/60 px-2 py-0.5 font-sans text-[0.65rem] uppercase tracking-[0.16em] text-gold">
+                  {t("subscribe.plans.free")}
+                </span>
               </span>
 
-              <span className="headline mt-5 block text-4xl text-ivory">
-                {formatNumber(item.price, locale)}{" "}
-                <span className="font-sans text-sm font-medium text-fog">
-                  {currency} {item.period}
+              <span className="mt-5 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                {/* prețul de listă rămâne vizibil, dar tăiat — accesul este
+                    deocamdată deschis tuturor */}
+                <span className="headline text-2xl text-mist line-through decoration-mist/70">
+                  {formatNumber(item.price, locale)}{" "}
+                  <span className="font-sans text-sm font-medium">
+                    {currency} {item.period}
+                  </span>
+                </span>
+                <span className="headline text-4xl tracking-[0.02em] text-gold">
+                  GRATIS
                 </span>
               </span>
 

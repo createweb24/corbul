@@ -1,14 +1,19 @@
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
-import { RavenMark } from "@/components/ui/RavenMark";
 import { NewsletterBox } from "@/components/widgets/NewsletterBox";
 import { Link } from "@/i18n/navigation";
 import type { ContactSettings } from "@/lib/types";
 import { CATEGORY_SLUGS, type NavCategory } from "./MainNav";
 
 /**
- * Subsolul: cinci coloane (identitate, secțiuni, redacție, publicitate,
- * contact + legal + buletin), disclaimerul editorial și linia de copyright.
+ * Subsolul, în trei benzi:
+ *   1. identitatea publicației și înscrierea la buletin;
+ *   2. patru coloane egale de legături — secțiuni, redacție, publicitate,
+ *      contact și legal;
+ *   3. disclaimerul editorial și linia de copyright.
+ *
+ * Coloanele au aceeași lățime la orice lățime de ecran (1 / 2 / 4), ca
+ * subsolul să nu mai aibă rânduri rupte în trepte.
  */
 
 /** Adresa comercială — separată de cea a redacției, ca la orice publicație. */
@@ -36,21 +41,18 @@ export interface SiteFooterProps {
 export function SiteFooter({ categories, contact, tagline }: SiteFooterProps) {
   const t = useTranslations("footer");
   const tn = useTranslations("nav");
-  const tc = useTranslations("common");
-  const locale = useLocale();
 
   const items: NavCategory[] =
     categories && categories.length > 0
       ? categories
       : CATEGORY_SLUGS.map((slug) => ({ slug, name: tn(`cat.${slug}`) }));
 
-  const address =
-    contact && (locale === "ru" ? contact.address_ru : contact.address_ro);
+  const address = contact?.address_ro;
 
   const columnTitle =
-    "text-[10px] font-semibold uppercase tracking-[0.2em] text-gold";
+    "text-[11px] font-semibold uppercase tracking-[0.18em] text-gold";
   const listLink =
-    "block py-1 text-[13px] text-fog transition-colors duration-200 hover:text-ivory";
+    "block py-1.5 text-[14px] text-fog transition-colors duration-200 hover:text-ivory";
 
   return (
     <footer className="mt-16 border-t border-line bg-coal">
@@ -59,28 +61,32 @@ export function SiteFooter({ categories, contact, tagline }: SiteFooterProps) {
         className="h-px bg-gradient-to-r from-transparent via-gold/35 to-transparent"
       />
 
-      <Container className="py-12">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-          {/* identitate */}
+      <Container className="py-14">
+        {/* ---------- 1. identitate + buletin ---------- */}
+        <div className="grid gap-10 border-b border-line pb-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:gap-20">
           <div>
-            <div className="flex items-center gap-3">
-              <RavenMark size={38} className="text-gold" />
-              <span className="font-[family-name:var(--font-display)] text-[24px] leading-none font-bold tracking-tight text-ivory">
-                CORBUL<span className="text-gold">.md</span>
-              </span>
-            </div>
-            <p className="mt-4 text-[13px] leading-relaxed text-fog">
+            <Link
+              href="/"
+              className="font-[family-name:var(--font-display)] text-[26px] leading-none font-bold tracking-tight text-ivory"
+            >
+              CORBUL<span className="text-gold">.md</span>
+            </Link>
+            <p className="mt-4 max-w-prose text-[14px] leading-relaxed text-fog">
               {tagline ?? t("about.text")}
             </p>
-            <p className="mt-3 text-[12px] leading-relaxed text-mist">
+            <p className="mt-3 max-w-prose text-[13px] leading-relaxed text-mist">
               {t("editorial")}
             </p>
           </div>
 
-          {/* secțiuni */}
+          <NewsletterBox variant="footer" className="scroll-mt-24" id="buletin" />
+        </div>
+
+        {/* ---------- 2. coloane de legături ---------- */}
+        <div className="grid gap-10 pt-12 sm:grid-cols-2 lg:grid-cols-4">
           <nav aria-label={t("sections.title")}>
             <h2 className={columnTitle}>{t("sections.title")}</h2>
-            <ul className="mt-4 grid grid-cols-2 gap-x-4 lg:grid-cols-1 lg:gap-x-0">
+            <ul className="mt-4">
               {items.map((category) => (
                 <li key={category.slug}>
                   <Link href={`/${category.slug}`} className={listLink}>
@@ -91,7 +97,6 @@ export function SiteFooter({ categories, contact, tagline }: SiteFooterProps) {
             </ul>
           </nav>
 
-          {/* redacție */}
           <nav aria-label={t("pages.title")}>
             <h2 className={columnTitle}>{t("pages.title")}</h2>
             <ul className="mt-4">
@@ -126,14 +131,16 @@ export function SiteFooter({ categories, contact, tagline }: SiteFooterProps) {
                 </Link>
               </li>
               <li>
-                <Link href="/contact#pont" className={`${listLink} text-gold/90 hover:text-gold`}>
+                <Link
+                  href="/contact#pont"
+                  className={`${listLink} text-gold hover:text-gold-2`}
+                >
                   {t("links.tip")}
                 </Link>
               </li>
             </ul>
           </nav>
 
-          {/* publicitate — fiecare serviciu are pagina lui */}
           <nav aria-label={t("ads.title")}>
             <h2 className={columnTitle}>{t("ads.title")}</h2>
             <ul className="mt-4">
@@ -166,28 +173,13 @@ export function SiteFooter({ categories, contact, tagline }: SiteFooterProps) {
             </ul>
           </nav>
 
-          {/* contact + buletin */}
           <div>
             <h2 className={columnTitle}>{t("contact.title")}</h2>
-            <ul className="mt-4">
-              <li>
-                <Link href="/contact" className={listLink}>
-                  {t("links.write")}
-                </Link>
-              </li>
-              <li>
-                {/* caseta de înscriere e chiar mai jos, în acest subsol:
-                    ancora funcționează de pe orice pagină */}
-                <a href="#buletin" className={listLink}>
-                  {t("links.newsletter")}
-                </a>
-              </li>
-            </ul>
-            <ul className="mt-3 space-y-2 text-[13px] text-fog">
+            <ul className="mt-4 space-y-2 text-[14px] text-fog">
               <li>
                 <a
                   href={`mailto:${ADS_EMAIL}`}
-                  className="transition-colors duration-200 hover:text-gold"
+                  className="transition-colors duration-200 hover:text-ivory"
                 >
                   {ADS_EMAIL}
                 </a>
@@ -196,7 +188,7 @@ export function SiteFooter({ categories, contact, tagline }: SiteFooterProps) {
                 <li>
                   <a
                     href={`mailto:${contact.email}`}
-                    className="transition-colors duration-200 hover:text-gold"
+                    className="transition-colors duration-200 hover:text-ivory"
                   >
                     {contact.email}
                   </a>
@@ -206,7 +198,7 @@ export function SiteFooter({ categories, contact, tagline }: SiteFooterProps) {
                 <li>
                   <a
                     href={`tel:${contact.phone.replace(/\s/g, "")}`}
-                    className="tabular-nums transition-colors duration-200 hover:text-gold"
+                    className="tabular-nums transition-colors duration-200 hover:text-ivory"
                   >
                     {contact.phone}
                   </a>
@@ -215,9 +207,9 @@ export function SiteFooter({ categories, contact, tagline }: SiteFooterProps) {
               {address ? <li className="text-mist">{address}</li> : null}
             </ul>
 
-            <nav aria-label={t("legal.title")} className="mt-6">
+            <nav aria-label={t("legal.title")} className="mt-7">
               <h2 className={columnTitle}>{t("legal.title")}</h2>
-              <ul className="mt-3">
+              <ul className="mt-4">
                 <li>
                   <Link href="/termeni" className={listLink}>
                     {t("links.terms")}
@@ -235,17 +227,16 @@ export function SiteFooter({ categories, contact, tagline }: SiteFooterProps) {
                 </li>
               </ul>
             </nav>
-
-            <NewsletterBox variant="footer" className="mt-6 scroll-mt-24" id="buletin" />
           </div>
         </div>
 
+        {/* ---------- 3. disclaimer + copyright ---------- */}
         <div className="mt-12 border-t border-line pt-6">
-          <p className="text-[12px] leading-relaxed text-mist">
+          <p className="text-[13px] leading-relaxed text-mist">
             {t("disclaimer")}
           </p>
           <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-[12px] text-mist">
+            <p className="text-[13px] text-mist">
               {t("rights", { year: String(new Date().getFullYear()) })}
               {" · "}
               <span className="whitespace-nowrap">
@@ -260,7 +251,7 @@ export function SiteFooter({ categories, contact, tagline }: SiteFooterProps) {
                 </a>
               </span>
             </p>
-            <div className="flex items-center gap-4 text-[12px]">
+            <div className="flex items-center gap-5 text-[13px]">
               {/* Adminul este un root layout paralel: navigarea trebuie să fie o
                   încărcare completă, nu una prin router. */}
               {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
@@ -275,7 +266,7 @@ export function SiteFooter({ categories, contact, tagline }: SiteFooterProps) {
                 href="#top"
                 className="text-mist transition-colors duration-200 hover:text-gold"
               >
-                {tc("backToTop")} ↑
+                ↑
               </a>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Avatar, Button, Container, RavenMark } from "@/components/ui";
+import { Avatar, Button, Container } from "@/components/ui";
 import { Link } from "@/i18n/navigation";
 import { truncate } from "@/lib/format";
 import type { Locale } from "@/lib/types";
@@ -88,7 +88,6 @@ export default async function AboutPage({
         <Container className="py-16 lg:py-24">
           <div className="max-w-4xl">
             <div className="flex items-center gap-4">
-              <RavenMark size={32} />
               <p className="kicker">{t("about.kicker")}</p>
             </div>
             <h1 className="headline headline-tight mt-6 text-5xl text-ivory md:text-7xl">

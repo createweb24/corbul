@@ -471,7 +471,7 @@ async function main(): Promise<void> {
         premiumMonthly: 149,
         premiumAnnual: 1490,
         currency: 'MDL',
-        tiers: { bronze: 9900, silver: 19900, gold: 39900 },
+        tiers: { bronze: 99, silver: 199, gold: 299 },
       },
     },
     {
@@ -479,8 +479,8 @@ async function main(): Promise<void> {
       value: {
         email: 'redactia@corbul.md',
         phone: '+373 22 84 19 60',
-        address_ro: 'str. Alexandru cel Bun 51, of. 12, Chișinău, MD-2012',
-        address_ru: 'ул. Александру чел Бун 51, оф. 12, Кишинёв, MD-2012',
+        address_ro: 'str. Mihai Viteazul 2A, Chișinău',
+        address_ru: 'str. Mihai Viteazul 2A, Chișinău',
       },
     },
   ];

@@ -1,12 +1,13 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { RavenMark } from "@/components/ui/RavenMark";
 import { Link } from "@/i18n/navigation";
 
 /**
- * Capul de ziar: marca de corb, logotipul „CORBUL.md", tagline-ul din
- * setări și cele două acțiuni permanente — căutare și abonament.
+ * Capul de ziar: logotipul „CORBUL.md" și tagline-ul din setări.
+ *
+ * Căutarea și accesul stau doar pe ecran mare (`lg`): pe telefon și tabletă
+ * înghesuiau capul de pagină, iar ambele sunt oricum în meniu și în subsol.
  */
 
 export interface MastheadProps {
@@ -28,23 +29,19 @@ export function Masthead({ tagline }: MastheadProps) {
             className="group flex items-center gap-3 focus:outline-none focus-visible:ring-1 focus-visible:ring-gold sm:gap-4"
             aria-label={tc("siteName")}
           >
-            <RavenMark
-              size={54}
-              className="text-gold transition-colors duration-200 group-hover:text-gold-2"
-            />
             <span className="flex flex-col">
-              <span className="font-[family-name:var(--font-display)] text-[38px] leading-[0.92] font-extrabold tracking-[-0.02em] text-ivory sm:text-[46px]">
+              <span className="font-[family-name:var(--font-display)] text-[40px] leading-[0.92] font-extrabold tracking-[-0.02em] text-ivory sm:text-[50px]">
                 CORBUL
                 <span className="text-gold">.md</span>
               </span>
-              <span className="mt-1.5 max-w-[34ch] text-[10px] leading-snug uppercase tracking-[0.22em] text-mist">
+              <span className="mt-2 max-w-[34ch] text-[11px] leading-snug uppercase tracking-[0.2em] text-fog">
                 {tagline ?? tc("tagline")}
               </span>
             </span>
           </Link>
 
           {/* acțiuni */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="hidden items-center gap-3 lg:flex">
             <Button
               href="/cautare"
               variant="ghost"

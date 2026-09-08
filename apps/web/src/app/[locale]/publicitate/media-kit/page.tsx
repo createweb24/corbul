@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Button, Container, RavenMark } from "@/components/ui";
+import { Button, Container } from "@/components/ui";
 import { Link } from "@/i18n/navigation";
 import { formatMoney, formatNumber } from "@/lib/format";
 import type { Locale } from "@/lib/types";
@@ -93,7 +93,6 @@ export default async function MediaKitPage({
 
           <div className="mt-8 max-w-4xl">
             <div className="flex items-center gap-4">
-              <RavenMark size={32} />
               <p className="kicker">{s("ads.kicker")}</p>
             </div>
             <h1 className="headline headline-tight mt-6 text-5xl text-ivory md:text-7xl">

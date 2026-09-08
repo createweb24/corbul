@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
-import { Button, Container, RavenMark } from "@/components/ui";
+import { Button, Container } from "@/components/ui";
 
 /**
  * 404 pe identitatea vizuală: corb, cifră mare Playfair, linie aurie.
@@ -28,7 +28,6 @@ export default async function LocaleNotFound() {
     <Container size="narrow" className="py-24 lg:py-36">
       <div className="mx-auto max-w-2xl text-center">
         <div className="flex justify-center opacity-70">
-          <RavenMark size={64} />
         </div>
 
         <p className="kicker mt-10">{t("errors.notFound.kicker")}</p>

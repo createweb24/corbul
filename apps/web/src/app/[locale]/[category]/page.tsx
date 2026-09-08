@@ -3,7 +3,6 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ads";
 import { Card, Container, EmptyState, Pagination } from "@/components/ui";
-import { Sidebar } from "@/components/widgets";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/lib/types";
 import JsonLd from "../../_lib/JsonLd";
@@ -11,15 +10,15 @@ import { categoryName, isCategorySlug } from "../../_lib/categories";
 import {
   getArticles,
   getCategory,
-  getSettings,
-  getSidebarData,
 } from "../../_lib/data";
 import { buildMetadata } from "../../_lib/seo";
 import { absoluteUrl } from "../../_lib/site";
 
 export const revalidate = 300;
 
-const PER_PAGE = 12;
+// Patru materiale pe pagină: deschiderea rubricii și trei sub ea. Restul
+// se ajunge prin paginare, ca pagina să rămână scurtă și lizibilă.
+const PER_PAGE = 4;
 
 interface RouteParams {
   locale: string;
@@ -87,11 +86,9 @@ export default async function CategoryPage({
   const page = pageNumber(query.page);
 
   const t = await getTranslations({ locale });
-  const [dto, list, sidebar, settings] = await Promise.all([
+  const [dto, list] = await Promise.all([
     getCategory(category, locale),
     getArticles({ locale, category, page, perPage: PER_PAGE }),
-    getSidebarData(locale),
-    getSettings(),
   ]);
 
   // ?page= dincolo de ultima pagină nu este o „secțiune în lucru", ci un 404
@@ -173,7 +170,7 @@ export default async function CategoryPage({
             />
           </div>
         ) : (
-          <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-16">
+          <div className="mt-12">
             <div>
               {lead ? (
                 <div className="border-b border-line pb-12">
@@ -185,9 +182,7 @@ export default async function CategoryPage({
               {grid.length > 0 ? (
                 <div className={lead ? "pt-12" : undefined}>
                   <div
-                    className={`grid gap-10 sm:grid-cols-2 ${
-                      grid.length >= 3 ? "xl:grid-cols-3" : ""
-                    }`}
+                    className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3"
                   >
                     {grid.map((article) => (
                       <Card
@@ -212,12 +207,6 @@ export default async function CategoryPage({
                 </div>
               ) : null}
             </div>
-
-            <Sidebar
-              widgets={sidebar.widgets}
-              mostRead={sidebar.mostRead}
-              pricing={settings?.pricing ?? null}
-            />
           </div>
         )}
       </Container>
