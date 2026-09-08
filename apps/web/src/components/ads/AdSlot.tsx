@@ -117,6 +117,8 @@ export function AdSlot({ zoneKey, className, label = true }: AdSlotProps) {
 
   const ad = state.status === "filled" ? state.ad : null;
   const isAdsense = ad?.provider === "ADSENSE";
+  const boxRef = useRef<HTMLDivElement | null>(null);
+  const [scale, setScale] = useState(1);
 
   // AdSense cere o singură împingere per element <ins>; în modul strict al
   // React efectul rulează de două ori, de unde straja.
@@ -130,10 +132,26 @@ export function AdSlot({ zoneKey, className, label = true }: AdSlotProps) {
     }
   }, [isAdsense]);
 
+  const size = sizeOf(ad?.zone, zoneKey);
+
+  // Bannerele directe sunt desenate la mărimea nominală a zonei (970×90 și
+  // așa mai departe). Pe ecrane mai înguste caseta se micșorează, dar
+  // conținutul nu ar ști asta și ar da pe dinafară, așa că îl micșorăm în
+  // aceeași proporție. Nu mărim niciodată peste 1: un banner întins peste
+  // mărimea lui reală ar arăta neclar.
+  useEffect(() => {
+    const el = boxRef.current;
+    if (!el || typeof ResizeObserver === "undefined") return;
+    const observer = new ResizeObserver(([entry]) => {
+      const width = entry.contentRect.width;
+      setScale(width > 0 ? Math.min(1, width / size.width) : 1);
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [size.width]);
+
   // fără reclamă: niciun chenar gol, nicio urmă în pagină
   if (state.status === "empty") return null;
-
-  const size = sizeOf(ad?.zone, zoneKey);
   // Textele au rezervă locală: cheile `ads.*` se adaugă în messages/*.json de
   // proprietarul lor, iar până atunci eticheta trebuie să arate corect, nu să
   // afișeze numele cheii.
@@ -165,6 +183,7 @@ export function AdSlot({ zoneKey, className, label = true }: AdSlotProps) {
             care apare și dispare la fiecare încărcare arată ca un defect.
             Chenarul se aprinde abia când există efectiv o reclamă. */}
         <div
+          ref={boxRef}
           className={cn(
             "relative w-full overflow-hidden transition-colors duration-200",
             ad ? "border border-line bg-coal" : "border border-transparent",
@@ -172,7 +191,12 @@ export function AdSlot({ zoneKey, className, label = true }: AdSlotProps) {
           style={{ aspectRatio: `${size.width} / ${size.height}` }}
         >
           {ad?.provider === "DIRECT" ? (
-            <DirectAd ad={ad} size={size} fallbackAlt={linkLabel} />
+            <DirectAd
+              ad={ad}
+              size={size}
+              scale={scale}
+              fallbackAlt={linkLabel}
+            />
           ) : null}
 
           {ad?.provider === "ADSENSE" ? (
@@ -203,10 +227,13 @@ export function AdSlot({ zoneKey, className, label = true }: AdSlotProps) {
 function DirectAd({
   ad,
   size,
+  scale,
   fallbackAlt,
 }: {
   ad: Extract<ServedAdDto, { provider: "DIRECT" }>;
   size: { width: number; height: number };
+  /** cât de mult s-a îngustat caseta față de mărimea nominală a zonei */
+  scale: number;
   fallbackAlt: string;
 }) {
   const href = resolveClickUrl(ad.clickUrl);
@@ -235,7 +262,12 @@ function DirectAd({
         /* marcajul vine din panoul de administrare (sursă de încredere),
            nu de la vizitatori — la fel ca HTML-ul articolelor */
         <div
-          className="h-full w-full"
+          style={{
+            width: `${size.width}px`,
+            height: `${size.height}px`,
+            transform: `scale(${scale})`,
+            transformOrigin: "top left",
+          }}
           dangerouslySetInnerHTML={{ __html: ad.html ?? "" }}
         />
       )}
